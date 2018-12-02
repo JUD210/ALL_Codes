@@ -22,5 +22,3 @@ elif season == 'winter':
     print('stay indoors!')
 else:
     print('unrecognized season')
-
-# stay indoors!
