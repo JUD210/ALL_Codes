@@ -4,11 +4,8 @@ range() is a built-in function used to create an iterable sequence of numbers. Y
 
 """
 
-for i in range(3):
-    print("Hello!")
-# Hello!
-# Hello!
-# Hello!
+for n in range(10):
+    print("n={}, 1<=n<=10 is {}".format(n, 5 <= n <= 8))
 
 
 """ range(start, stop, step)

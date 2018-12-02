@@ -1,5 +1,7 @@
 """ 
 Used to "iterate", or do something repeatedly, over an iterable.
+
+The loop's body is run a predefined number of times. 
 """
 
 
