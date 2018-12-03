@@ -5,8 +5,8 @@
 # fruits.  Use the dictionary and list to count the total number
 # of fruits and not_fruits.
 
-basket_items = {'apples': 4, 'oranges': 19, 'kites': 3, 'sandwiches': 8}
-fruits = ['apples', 'oranges', 'pears', 'peaches', 'grapes', 'bananas']
+basket_items = {"apples": 4, "oranges": 19, "kites": 3, "sandwiches": 8}
+fruits = ["apples", "oranges", "pears", "peaches", "grapes", "bananas"]
 
 # Iterate through the dictionary
 fruit_count, not_fruit_count = 0, 0
@@ -20,5 +20,8 @@ for item, ea in basket_items.items():
     else:
         not_fruit_count += ea
 
-print("The number of fruits is {}.\nThere are {} items that are not fruits.".format(
-    fruit_count, not_fruit_count))
+print(
+    "The number of fruits is {}.\nThere are {} items that are not fruits.".format(
+        fruit_count, not_fruit_count
+    )
+)

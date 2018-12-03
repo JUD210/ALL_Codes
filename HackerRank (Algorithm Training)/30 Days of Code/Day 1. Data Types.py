@@ -1,6 +1,8 @@
+# https://www.hackerrank.com/challenges/30-data-types/problem
+
 i = 4
 d = 4.0
-s = 'HackerRank '
+s = "HackerRank "
 
 # Declare second integer, double, and String variables.
 input_i = int(input())

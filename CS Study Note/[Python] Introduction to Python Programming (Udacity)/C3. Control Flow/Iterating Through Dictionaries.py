@@ -5,7 +5,6 @@ cast = {
     "Michael Richards": "Cosmo Kramer"
 }
 
-
 for key in cast:
     print(key)
 

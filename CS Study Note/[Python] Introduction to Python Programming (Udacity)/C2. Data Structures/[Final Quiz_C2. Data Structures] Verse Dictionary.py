@@ -40,5 +40,9 @@ print(sorted_keys[0])
 
 
 # find the element with the highest value in the list of keys
+# meaning alphabetical value.
+
 print(sorted_keys[-1])
+
+# Don't be confused with below
 # print(max(sorted_keys))
