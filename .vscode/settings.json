@@ -1,4 +1,22 @@
 {
     "python.pythonPath": "C:\\Anaconda3\\python.exe",
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "textmarker.savedHighlights": [
+        {
+            "pattern": {
+                "type": "string",
+                "expression": "TODO:",
+                "ignoreCase": false,
+                "wholeMatch": false
+            }
+        },
+        {
+            "pattern": {
+                "type": "string",
+                "expression": "FIXME:",
+                "ignoreCase": false,
+                "wholeMatch": false
+            }
+        }
+    ]
 }
