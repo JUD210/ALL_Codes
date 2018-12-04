@@ -1,1 +1,0 @@
-print(tuple(enumerate(win_count_dict.items())))

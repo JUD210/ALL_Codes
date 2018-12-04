@@ -10,8 +10,8 @@ import sys
 # Complete the solve function below.
 def get_total_cost_of_meal(meal_cost, tip_percent, tax_percent):
     meal_cost
-    tip = meal_cost * (tip_percent/100)
-    tax = meal_cost * (tax_percent/100)
+    tip = meal_cost * (tip_percent / 100)
+    tax = meal_cost * (tax_percent / 100)
 
     return round(meal_cost + tip + tax)
 
