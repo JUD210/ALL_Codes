@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "D:\\Google Drive\\ALL CODES"
+		}
+    ],
+    "files": [
+        {
+            "path": "C:\\Users\\Jud210_Hyuk\\"
+        }
+    ],
+    "settings": {
+        "textmarker.savedHighlights": [
+            {
+                "pattern": {
+                    "type": "string",
+                    "expression": "TODO:",
+                    "ignoreCase": false,
+                    "wholeMatch": false
+                }
+            },
+            {
+                "pattern": {
+                    "type": "string",
+                    "expression": "FIXME:",
+                    "ignoreCase": false,
+                    "wholeMatch": false
+                }
+            }
+        ],
+        "python.pythonPath": "C:\\Anaconda3\\python.exe"
+    }
+}
