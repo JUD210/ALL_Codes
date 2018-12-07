@@ -17,11 +17,15 @@ alias gcf="git config"
 alias gcfl="git config -l"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 alias grs="git reset"
 =======
 >>>>>>> 409cb98... [Python Intro] C: 5/6 (17/33)
 =======
 >>>>>>> 409cb98... [Python Intro] C: 5/6 (17/33)
+=======
+alias grs="git reset"
+>>>>>>> f686808... add: alias in .bashrc
 
 export PATH="$PATH:/c/Anaconda3:/c/Anaconda3/Scripts"
 alias python="winpty python.exe"
