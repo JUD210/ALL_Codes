@@ -1,0 +1,36 @@
+# https://stackoverflow.com/questions/9439480/from-import-vs-import
+
+""" Q.
+
+I'm wondering if there's any difference between the code fragment
+
+from urllib import request
+and the fragment
+
+import urllib.request
+or if they are interchangeable. If they are interchangeable, which is the "standard"/"preferred" syntax (if there is one)?
+
+
+    A.
+
+It depends on how you want to access the import when you refer to it.
+
+from urllib import request
+# access request directly.
+mine = request()
+
+import urllib.request
+# used as urllib.request
+mine = urllib.request()
+You can also alias things yourself when you import for simplicity or to avoid masking built ins:
+
+from os import open as open_
+# lets you use os.open without destroying the 
+# built in open() which returns file handles.
+"""
+
+
+
+
+
+

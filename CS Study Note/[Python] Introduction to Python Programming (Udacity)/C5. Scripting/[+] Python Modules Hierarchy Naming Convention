@@ -1,0 +1,27 @@
+# https://stackoverflow.com/questions/15237806/python-modules-hierarchy-naming-convention
+
+
+You are dealing with a package. The package structure you should have is:
+
+/some-parent-directory # This needs to be on sys.path
+    /mymodule  # This is not really a module - it's a package
+        __init__.py  # import mymodule
+        # init is loaded when you `import mymodule` or anything below it
+        some.py  # import mymodule.some
+        implementation.py  # import mymodule.implementation
+        files.py  # import mymodule.files
+        /submodule
+            __init__.py  # import mymodule.submodule
+            # init is loaded when you `import mymodule.submodule` or anything below it
+            submodule_impl.py  # import mymodule.submodule.submodule_impl
+            goes.py  # import mymodule.submodule.goes
+            here.py  # import mymodule.submodule.here
+As long as the parent directory is on sys.path you will be able to call import mymodule or from mymodule.submodule import something without issue.
+
+If you want something to be available from the root level of a package (i. e. from mymodule import SomeItem or from a sub-package from mymodule.submodule import AnotherItem) then you can import it into the appropriate __init__.py file.
+
+So, for example, let's say you wanted the class CustomClass defined in the submodule_impl.py module to be importable directly from submodule. Your submodule/__init__.py would have to contain the following:
+
+from .submodule_impl import CustomClass
+Then you would be able to import CustomClass directly from submodule (i. e. from mymodule.submodule import CustomClass)
+
