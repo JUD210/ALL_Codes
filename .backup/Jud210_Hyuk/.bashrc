@@ -15,7 +15,10 @@ alias gcm="git checkout master"
 alias grb="git rebase"
 alias gcf="git config"
 alias gcfl="git config -l"
+<<<<<<< HEAD
 alias grs="git reset"
+=======
+>>>>>>> 409cb98... [Python Intro] C: 5/6 (17/33)
 
 export PATH="$PATH:/c/Anaconda3:/c/Anaconda3/Scripts"
 alias python="winpty python.exe"
