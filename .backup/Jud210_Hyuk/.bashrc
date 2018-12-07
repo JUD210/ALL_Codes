@@ -16,7 +16,10 @@ alias grb="git rebase"
 alias gcf="git config"
 alias gcfl="git config -l"
 <<<<<<< HEAD
+<<<<<<< HEAD
 alias grs="git reset"
+=======
+>>>>>>> 409cb98... [Python Intro] C: 5/6 (17/33)
 =======
 >>>>>>> 409cb98... [Python Intro] C: 5/6 (17/33)
 
