@@ -22,3 +22,9 @@ print(sum_d)
 # Concatenate and print the String variables on a new line
 # The 's' variable above should be printed first.
 print(s + input_s)
+# 20
+# 50.4321
+# sdfsdf
+# 24
+# 54.4321
+# HackerRank sdfsdf

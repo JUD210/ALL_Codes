@@ -37,3 +37,26 @@ for i in range(0, t):
     p.amIOld()
 
     print("")
+# 5
+# 13
+# You are a teenager.
+# You are a teenager.
+
+# 15
+# You are a teenager.
+# You are old.
+
+# -5
+# Age is not valid, setting age to 0.
+# You are young.
+# You are young.
+
+# 0
+# You are young.
+# You are young.
+
+# n
+# Traceback (most recent call last):
+#   File "d:\Google Drive\ALL CODES\HackerRank (Algorithm Training)\[Python] 30 Days of Code\Day 4. Class vs Instance.py", line 31, in <module>
+#     age = int(input())
+# ValueError: invalid literal for int() with base 10: 'n'

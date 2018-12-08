@@ -2,6 +2,7 @@
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
+result = []
 for i in range(int(input())):
     text = input()
 
@@ -13,8 +14,10 @@ for i in range(int(input())):
             text_even += text[j]
         else:
             text_odd += text[j]
+        
+    result.append(text_even+" "+text_odd)
 
-    print(text_even, text_odd)
+print("\n".join(result))
 # 3
 # 3
 # Hacker

@@ -21,3 +21,7 @@ tip_percent = int(input())
 tax_percent = int(input())
 
 print(get_total_cost_of_meal(meal_cost, tip_percent, tax_percent))
+# 20
+# 8
+# 3
+# 22

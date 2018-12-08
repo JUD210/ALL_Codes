@@ -23,3 +23,5 @@ def evaluate(n):
 
 
 test_n = print(evaluate(int(input())))
+# 5
+# Weird

@@ -21,3 +21,4 @@ numbers = [
 
 averages = list(map(lambda x: sum(x) / len(x), numbers))
 print(averages)
+# [57.0, 58.2, 50.6, 27.2]
