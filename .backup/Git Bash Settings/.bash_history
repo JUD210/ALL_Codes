@@ -167,3 +167,19 @@ mkdir .backup
 touch test
 touch .test
 touch .............test
+mkdir c:test
+mkdir c:/
+touch Jud210_Hyuk
+mkdir Jud210_Hyuk
+mkdir Jud210_Hyuk
+activate base
+activate base
+exit
+cd
+start .
+activate base
+gla
+gla
+gc -m
+bc
+exit

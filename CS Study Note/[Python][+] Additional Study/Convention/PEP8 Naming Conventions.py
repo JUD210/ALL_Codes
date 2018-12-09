@@ -1,7 +1,7 @@
 # https://www.datacamp.com/community/tutorials/pep8-tutorial-python-code
 
 
-""" General Naming Conventions
+""" General Naming Conventions (PEP8)
 
 |   Identifier   | Convention |
 | -------------- | ---------- |

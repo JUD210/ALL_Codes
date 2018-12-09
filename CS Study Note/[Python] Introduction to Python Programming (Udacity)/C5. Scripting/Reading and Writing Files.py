@@ -1,30 +1,16 @@
 import os, sys, inspect
 
-# This is not from the course.
 # realpath() will make your script run, even if you symlink it :)
 cmd_folder = os.path.realpath(
     os.path.abspath(os.path.split(inspect.getfile(inspect.currentframe()))[0])
 )
+
 if cmd_folder not in sys.path:
     sys.path.insert(0, cmd_folder)
 
+##### Above is not from this course.
 
 test_hello_path = cmd_folder + "/Sub Files/test_hello.txt"
-
-
-""" Writing to a File
-
-1. Open the file in writing ('w') mode. If the file does not exist, Python will create it for you. If you open an existing file in writing mode, any content that it had contained previously will be deleted. If you're interested in adding to an existing file, without deleting its content, you should use the append ('a') mode instead of write.
-
-2. Use the write method to add text to the file.
-
-3. Close the file when finished.
-
-"""
-
-f = open(test_hello_path, "w")
-f.write("Hello there!")
-f.close()
 
 
 """ Reading a File
@@ -38,8 +24,24 @@ f.close()
 4. When finished with the file, use the close method to free up any system resources taken up by the file.
 """
 
-f = open(test_hello_path, "r")
+f = open(test_hello_path)
+# f = open(test_hello_path, "r")
 file_data = f.read()
+f.close()
+
+
+""" Writing to a File
+
+1. Open the file in writing ('w') mode. If the file does not exist, Python will create it for you. If you open an existing file in writing mode, any content that it had contained previously will be deleted. If you're interested in adding to an existing file, without deleting its content, you should use the append ('a') mode instead of write.
+
+2. Use the write method to add text to the file.
+
+3. Close the file when finished.
+
+"""
+
+f = open(test_hello_path, "w")
+f.write("Hello there!\nGood to See you.")
 f.close()
 
 
@@ -63,11 +65,30 @@ This with keyword allows you to open a file, do operations on it, and automatica
 Now, we don’t have to call f.close()! You can only access the file object, f, within this indented block.
 """
 
-with open("my_path/my_file.txt", "r") as f:
+with open(test_hello_path) as f:
     file_data = f.read()
-
-# This is similar with below.
-
 # f = open('another_file.txt', 'r')
 # file_data = f.read()
 # f.close()
+
+print(file_data)
+# Hello there!
+# Good to See you.
+
+""" Calling the read Method with an Integer """
+
+with open(test_hello_path) as f:
+    file_data = f.read(2), f.read(8), f.read()
+print("\n".join(file_data))
+# He
+# llo ther
+# e!
+# Good to See you.
+
+""" Reading Line by Line """
+
+with open(test_hello_path) as f:
+    file_data = f.readline(), f.readline(), f.readline()
+print(*file_data)
+# Hello there!
+#  Good to See you.
