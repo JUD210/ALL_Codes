@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/python-loops/problem?h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/python-loops/problem
 
 n = int(input())
 
