@@ -23,10 +23,18 @@ line = None
 # *line = "1 2 3 4 5 6"
 # SyntaxError: starred assignment target must be in a list or tuple
 
-t1, t2, t3, *line = "1 2 3 4 5 6"
+tpl = t1, t2, t3, *line = "1 2 3 4 5 6"
+print(tpl)
+# 1 2 3 4 5 6
+print(t1,t2,t3)
+# 1   2
 print(line)
 # [' ', '3', ' ', '4', ' ', '5', ' ', '6']
 
-t1, t2, t3, *line = "1 2 3 4 5 6".split()
+tpl = t1, t2, t3, *line = "1 2 3 4 5 6".split()
+print(tpl)
+# ['1', '2', '3', '4', '5', '6']
+print(t1,t2,t3)
+# 1 2 3
 print(line)
 # ['4', '5', '6']

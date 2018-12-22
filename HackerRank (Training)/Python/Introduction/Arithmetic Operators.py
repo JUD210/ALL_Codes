@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/challenges/python-arithmetic-operators/problem
 
+
 a = int(input())
 b = int(input())
 # 1

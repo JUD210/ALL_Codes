@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/challenges/python-print/problem
 
+
 import sys
 
 n = int(input())
