@@ -47,20 +47,20 @@ test3 = (
     if (i + j + k != n)
 )
 
-# print(
-#     type(test0),
-#     test0,
-#     "",
-#     type(test1),
-#     test1,
-#     "",
-#     type(test2),
-#     test2,
-#     "",
-#     type(test3),
-#     test3,
-#     sep="\n",
-# )
+print(
+    type(test0),
+    test0,
+    "",
+    type(test1),
+    test1,
+    "",
+    type(test2),
+    test2,
+    "",
+    type(test3),
+    test3,
+    sep="\n",
+)
 
 # <class 'list'>
 # [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
@@ -73,6 +73,3 @@ test3 = (
 
 # <class 'generator'>
 # <generator object <genexpr> at 0x000001BDC7351ED0>
-
-
-print(test0)
