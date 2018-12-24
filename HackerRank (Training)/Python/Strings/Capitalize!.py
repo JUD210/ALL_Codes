@@ -13,9 +13,11 @@ def solve(s):
 
 
 s = input()
-result = solve(s)
+# chris alan 123a
 
+result = solve(s)
 print(result)
+# Chris Alan 123a
 
 
 """ HackerRank Format

@@ -30,4 +30,9 @@ def coordinate_pointer(arr, x, y):
 
 if __name__ == "__main__":
     coordinate_pointer(arr, 4, 1)
-
+    # 1 1 1 0 0 0
+    # 0 1 0 0 C 0
+    # 1 1 1 0 0 0
+    # 0 0 2 4 4 0
+    # 0 0 0 2 0 0
+    # 0 0 1 2 4 0

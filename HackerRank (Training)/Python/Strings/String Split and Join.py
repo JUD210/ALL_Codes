@@ -2,10 +2,12 @@
 
 
 def split_and_join(line):
-    # write your code here
     return "-".join(line.split(" "))
 
 
 line = input()
+# this is a string   
+
 result = split_and_join(line)
 print(result)
+# this-is-a-string

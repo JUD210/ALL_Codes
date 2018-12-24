@@ -2,11 +2,25 @@
 
 
 num = int(input())
+# 12
+
 
 lst = []
 
 for _ in range(num):
     cmd = input().strip().split()
+    # insert 0 5
+    # insert 1 10
+    # insert 0 6
+    # print
+    # remove 6
+    # append 9
+    # append 1
+    # sort
+    # print
+    # pop
+    # reverse
+    # print
 
     if cmd[0] == "insert":
         lst.insert(int(cmd[1]), int(cmd[2]))
@@ -22,11 +36,16 @@ for _ in range(num):
         lst.pop()
     elif cmd[0] == "reverse":
         lst.reverse()
-    
-# insert i e: Insert integer  at position .
-# print: Print the list.
-# remove e: Delete the first occurrence of integer .
-# append e: Insert integer  at the end of the list.
-# sort: Sort the list.
-# pop: Pop the last element from the list.
-# reverse: Reverse the list.
+
+    # insert i e: Insert integer  at position .
+    # print: Print the list.
+    # remove e: Delete the first occurrence of integer .
+    # append e: Insert integer  at the end of the list.
+    # sort: Sort the list.
+    # pop: Pop the last element from the list.
+    # reverse: Reverse the list.
+
+# [6, 5, 10]
+# [1, 5, 9, 10]
+# [9, 5, 1]
+
