@@ -1,11 +1,17 @@
 # https://medium.com/understand-the-python/understanding-the-asterisk-of-python-8b9daaa4a558
 
 
-# Initialize the zero-valued list with 100 length
-zeros_list = [0] * 100 
+# Initialize the zero-valued list with 10 length
+zeros_list = [0] * 10
+print(zeros_list)
+# [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-# Declare the zero-valued tuple with 100 length
-zeros_tuple = (0,) * 100  
+
+# Declare the zero-valued tuple with 10 length
+zeros_tuple = (0,) * 10  
+print(zeros_tuple)
+# (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
 
 # Extending the "vector_list" by 3 times
 vector_list = [[1, 2, 3]] 

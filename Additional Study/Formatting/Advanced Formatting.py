@@ -56,12 +56,29 @@ print("~" + "{:20.10}".format("00112233445566778899") + "~")
 
 
 """ Numbers """
-print("{:d}".format(42))
-# 42
+# Decimal
+print("{:d}".format(100))
+# 100
 
+# Floating Point Decimal
 print("{:f}".format(3.141592653589793))
 # 3.141593
 
+# Octal
+print("{:o}".format(100))
+# 12
+
+# Hexadecimal (lowercase)
+print("{:x}".format(10))
+# a
+
+# Hexadecimal (uppercase)
+print("{:X}".format(10))
+# A
+
+# Binary
+print("{:b}".format(100))
+# 1100100
 
 """ Padding numbers """
 print("~" + "{:4d}".format(42) + "~")
