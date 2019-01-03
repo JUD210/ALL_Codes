@@ -21,6 +21,7 @@ cities = [
 # short_cities = list(filter(is_short, cities))
 # print(short_cities)
 
+
 short_cities = list(filter(lambda x: len(x) < 10, cities))
 print(short_cities)
-
+# ['Chicago', 'Denver', 'Boston']
