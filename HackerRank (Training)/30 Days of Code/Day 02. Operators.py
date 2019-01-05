@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/challenges/30-operators/problem
 
+
 import math
 import os
 import random
@@ -7,7 +8,9 @@ import re
 import sys
 
 
-# Complete the solve function below.
+""" Complete the solve function below. """
+
+
 def get_total_cost_of_meal(meal_cost, tip_percent, tax_percent):
     meal_cost
     tip = meal_cost * (tip_percent / 100)
@@ -19,9 +22,9 @@ def get_total_cost_of_meal(meal_cost, tip_percent, tax_percent):
 meal_cost = float(input())
 tip_percent = int(input())
 tax_percent = int(input())
-
-print(get_total_cost_of_meal(meal_cost, tip_percent, tax_percent))
+# 12.00
 # 20
 # 8
-# 3
-# 22
+
+print(get_total_cost_of_meal(meal_cost, tip_percent, tax_percent))
+# 15

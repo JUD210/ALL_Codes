@@ -1,6 +1,5 @@
 # https://www.hackerrank.com/challenges/30-loops/problem
 
-#!/bin/python3
 
 import math
 import os
@@ -9,10 +8,10 @@ import re
 import sys
 
 n = int(input())
+# 4
 
 for i in range(1, 10 + 1):
     print("{} x {} = {}".format(n, i, n * i))
-# 4
 # 4 x 1 = 4
 # 4 x 2 = 8
 # 4 x 3 = 12

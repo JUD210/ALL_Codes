@@ -1,6 +1,5 @@
 # https://www.hackerrank.com/challenges/30-binary-numbers/problem
 
-#!/bin/python3
 
 import math
 import os
@@ -20,7 +19,7 @@ def decimal_to_binary(num):
     return num_bin
 
 
-def maximum_consecutive_1(num_bin):
+def maximum_consecutive(num_bin):
 
     maximum_count = 0
     count = 0
@@ -39,5 +38,7 @@ def maximum_consecutive_1(num_bin):
 if __name__ == "__main__":
 
     num_bin = decimal_to_binary(input())
-    result = maximum_consecutive_1(num_bin)
+    # 13
+    result = maximum_consecutive(num_bin)
     print(result)
+    # 2

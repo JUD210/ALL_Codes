@@ -1,9 +1,15 @@
 # https://www.hackerrank.com/challenges/30-review-loop/problem
 
-# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+""" Enter your code here. Read input from STDIN. Print output to STDOUT """
 
 for i in range(int(input())):
+    # 3
+
     text = input()
+    # Hacker
+    # Rank
+    # is Goooooood
 
     text_even = ""
     text_odd = ""
@@ -15,11 +21,6 @@ for i in range(int(input())):
             text_odd += text[j]
 
     print(text_even, text_odd)
-# 3
-# 3
-# Hacker
-# Hce akr
-# Rank
-# Rn ak
-# is Goooooood
-# i oooo sGoood
+    # Hce akr
+    # Rn ak
+    # i oooo sGoood

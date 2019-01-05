@@ -3,7 +3,7 @@
 
 class Person:
     def __init__(self, initialAge):
-        # Add some more code to run some checks on initialAge
+        """ Add some more code to run some checks on initialAge """
         if initialAge < 0:
             print("Age is not valid, setting age to 0.")
             self.age = 0
@@ -11,7 +11,7 @@ class Person:
             self.age = initialAge
 
     def amIOld(self):
-        # Do some computations in here and print out the correct statement to the console
+        """ Do some computations in here and print out the correct statement to the console """
         if self.age >= 18:
             print("You are old.")
         elif self.age >= 13:
@@ -20,12 +20,12 @@ class Person:
             print("You are young.")
 
     def yearPasses(self):
-        # Increment the age of the person in here
+        """ Increment the age of the person in here """
         self.age += 1
 
 
 t = int(input())
-
+# 5
 
 for i in range(0, t):
     age = int(input())
@@ -37,7 +37,6 @@ for i in range(0, t):
     p.amIOld()
 
     print("")
-# 5
 # 13
 # You are a teenager.
 # You are a teenager.

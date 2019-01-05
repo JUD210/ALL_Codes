@@ -1,12 +1,9 @@
 # https://www.hackerrank.com/challenges/capitalize/problem
 
 
-#!/bin/python3
-
-
 def solve(s):
 
-    for line in s.split():      
+    for line in s.split():
         s = s.replace(line, line.capitalize())
 
     return s
