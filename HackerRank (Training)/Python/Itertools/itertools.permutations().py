@@ -3,8 +3,9 @@
 
 from itertools import permutations
 
-""" permutations(iterable[, r]) 
+""" permutations(iterable, r)
 returns successive r length permutations of elements in an iterable.
+: nPr = n!/(n-r)!
 
 
 print(list(permutations([1, 2, 3])))
@@ -52,10 +53,10 @@ for chars in permutations(sorted(s), r=int(n)):
     # AC
 """
 
-l = ["".join(chars) for chars in permutations(sorted(s), int(n))]
+# ["".join(chars) for chars in permutations(sorted(s), int(n))]
 # ['AC', 'AH', 'AK', 'CA', 'CH', 'CK', 'HA', 'HC', 'HK', 'KA', 'KC', 'KH']
 
-print(*l, sep="\n")
+print(*["".join(chars) for chars in permutations(sorted(s), int(n))], sep="\n")
 # AC
 # AH
 # AK
