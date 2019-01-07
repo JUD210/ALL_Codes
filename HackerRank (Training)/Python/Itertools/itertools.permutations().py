@@ -30,7 +30,7 @@ s, n = input().split()
 # HACK 2
 
 
-""" Refence
+""" Reference
 
 for chars in permutations(sorted(s), r=int(n)):
     print(chars)

@@ -1,6 +1,13 @@
-# Use Shortcut to fold by region.
-# TODO: Make a custom snippet
+""" READ ME!
 
+I don't recommend to use region. 
+It's actually an anti-pattern. 
+
+Instead of using #region, refactor your class or method.
+
+"""
+
+# Use Shortcut to fold by region.
 
 # region: Rg1
 print("Region 1")

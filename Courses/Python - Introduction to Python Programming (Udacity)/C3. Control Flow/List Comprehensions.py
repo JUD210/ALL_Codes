@@ -26,8 +26,6 @@ squares = [x**2 for x in range(9) if x % 2 == 0]
 The code above sets squares equal to the list [0, 4, 16, 36, 64], as x to the power of 2 is only evaluated if x is even. If you want to add an else, you will get a syntax error doing this.
 
 
-squares = [x**2 for x in range(9) if x % 2 == 0 else x + 3]
-
 If you would like to add else, you have to move the conditionals to the beginning of the listcomp, right after the expression, like this.
 
 

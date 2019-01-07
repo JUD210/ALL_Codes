@@ -1,5 +1,5 @@
 """
-[ Mutable , Unordered ] 
+[ Mutable , Insertion Ordered (python 3.6+) <- Unordered ]
 
 ㅇStores mappings of unique keys to values.
 ㅇNot even necessary for every key to have the same type.

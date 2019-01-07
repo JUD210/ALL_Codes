@@ -25,6 +25,10 @@ print(
 )
 # 111
 
+print(*map(lambda a, b, c: a * 1 + b * 3 + c * 5, *"ABC"))
+# ABBBCCCCC
+
+
 """ TypeError: 'int' object is not iterable
 
 print(

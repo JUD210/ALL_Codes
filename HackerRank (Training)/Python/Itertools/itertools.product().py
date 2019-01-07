@@ -22,7 +22,6 @@ print(list(product([1, 2, 3], [10, 20], [100, 200])))
 
 """
 
-
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 # 1 2

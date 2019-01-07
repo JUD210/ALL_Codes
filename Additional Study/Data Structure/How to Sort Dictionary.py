@@ -6,7 +6,7 @@ Dictionaries can't be sorted -- a mapping has no ordering! -- so, when you feel 
 # (IMHO) the simplest approach:
 def sortedDictValues1(adict):
     items = adict.items()
-    items.sort()
+    items = sorted(items)
     return [value for key, value in items]
 
 
@@ -15,13 +15,23 @@ def sortedDictValues1(adict):
 # dictionaries on my machine:
 def sortedDictValues2(adict):
     keys = adict.keys()
-    keys.sort()
-    return [dict[key] for key in keys]
+    keys = sorted(keys)
+    return [adict[key] for key in keys]
 
 
 # a further slight speed-up on my box
 # is to map a bound-method:
 def sortedDictValues3(adict):
     keys = adict.keys()
-    keys.sort()
-    return map(adict.get, keys)
+    keys = sorted(keys)
+    return list(map(adict.get, keys))
+
+
+d = {5: 50, 2: 20, 3: 30}
+
+print(sortedDictValues1(d))
+print(sortedDictValues2(d))
+print(sortedDictValues3(d))
+# [20, 30, 50]
+# [20, 30, 50]
+# [20, 30, 50]
