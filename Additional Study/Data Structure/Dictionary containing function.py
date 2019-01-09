@@ -1,3 +1,12 @@
+""" Using Dictionary : NOT Recommended!!!
+
+Do I really wanna type all the methods in the code?
+It's ridiculous!
+
+It's just for practice ONLY.
+
+"""
+
 methods = {
     'p' : print,
     's' : sum

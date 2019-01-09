@@ -30,41 +30,43 @@ for headline in headlines:
 print(news_ticker)
 
 
-""" [My Answer] """
+""" My Answer
 
-# headlines = [
-#     "Local Bear Eaten by Man",
-#     "Legislature Announces New Laws",
-#     "Peasant Discovers Violence Inherent in System",
-#     "Cat Rescues Fireman Stuck in Tree",
-#     "Brave Knight Runs Away",
-#     "Papperbok Review: Totally Triffic",
-# ]
+headlines = [
+    "Local Bear Eaten by Man",
+    "Legislature Announces New Laws",
+    "Peasant Discovers Violence Inherent in System",
+    "Cat Rescues Fireman Stuck in Tree",
+    "Brave Knight Runs Away",
+    "Papperbok Review: Totally Triffic",
+]
 
-# news_ticker = ""
-# # write your loop here
-# for headline in headlines:
+news_ticker = ""
+# write your loop here
+for headline in headlines:
 
-#     if len(news_ticker) == 140:
-#         print("Length of news_ticker: {}".format(len(news_ticker)))
-#         break
+    if len(news_ticker) == 140:
+        print("Length of news_ticker: {}".format(len(news_ticker)))
+        break
 
-#     elif len(news_ticker) > 140:
-#         print("ERROR! Something's Wrong!")
-#         break
+    elif len(news_ticker) > 140:
+        print("ERROR! Something's Wrong!")
+        break
 
-#     elif len(news_ticker) + len(headline) <= 140:
-#         news_ticker += headline
+    elif len(news_ticker) + len(headline) <= 140:
+        news_ticker += headline
 
-#     elif len(news_ticker) + len(headline) > 140:
-#         for text in headline:
-#             if len(news_ticker) < 140:
-#                 news_ticker += text
-#             else:
-#                 break
-#         break
+    elif len(news_ticker) + len(headline) > 140:
+        for text in headline:
+            if len(news_ticker) < 140:
+                news_ticker += text
+            else:
+                break
+        break
 
-#     news_ticker += "\n"
+    news_ticker += "\n"
 
-# print(news_ticker)
-# print(len(news_ticker))
+print(news_ticker)
+print(len(news_ticker))
+
+"""

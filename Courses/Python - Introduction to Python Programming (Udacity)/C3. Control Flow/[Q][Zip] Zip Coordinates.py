@@ -12,7 +12,7 @@ labels = ["F", "J", "A", "Q", "Y", "B", "W", "X"]
 points = []
 # write your for loop here
 
-"""  [Solution] is more efficient way. """
+""" Solution """
 for point in zip(labels, x_coord, y_coord, z_coord):
     # (Test Zone)
     print(point)
@@ -33,12 +33,14 @@ for point in points:
 # X: -5, 445, -1
 
 
-""" [My Answer] """
-#
-# for label, x, y, z in zip(labels, x_coord, y_coord, z_coord):
-#     point = "{}: {}, {}, {}".format(label, x, y, z)
-#     point = "{}: {}, {}, {}".format(label, x, y, z)
-#     points.append(point)
-# 
-# for point in points:
-#     print(point)
+""" My Answer
+
+for label, x, y, z in zip(labels, x_coord, y_coord, z_coord):
+    point = "{}: {}, {}, {}".format(label, x, y, z)
+    point = "{}: {}, {}, {}".format(label, x, y, z)
+    points.append(point)
+
+for point in points:
+    print(point)
+    
+"""

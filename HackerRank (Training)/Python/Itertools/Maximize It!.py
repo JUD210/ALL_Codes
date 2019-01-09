@@ -3,7 +3,8 @@
 
 from itertools import product
 
-"""
+""" Quiz
+
 given f(X) = X^2
 
 given K lists.
@@ -21,6 +22,8 @@ Maximum S value : ?
 
 """
 
+
+""" Solution """
 K, M = map(int, input().split())
 # 7 952
 

@@ -14,6 +14,7 @@ https://stackoverflow.com/questions/39980323/are-dictionaries-ordered-in-python-
 https://mail.python.org/pipermail/python-dev/2017-December/151283.html
 
 #########################################################################
+
 dictionary = {}
 dictionary["a"] = 1
 dictionary["b"] = 2

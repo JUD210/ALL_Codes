@@ -7,22 +7,26 @@ n = int(input())
 s = set(map(int, input().split()))
 # 1 2 3 4 5 6 7 8 9
 
-methods = {
-    'pop' : s.pop,
-    'remove' : s.remove,
-    'discard' : s.discard
-}
+methods = {"pop": s.pop, "remove": s.remove, "discard": s.discard}
 
-args = None
 for _ in range(int(input())):
-# 5
+    # 5
     method, *args = input().split()
 
     if len(args) > 1:
+        for arg in args:
+            methods[method](*map(int, arg))
+
+        """ I used below code, and it's not good.
+
         [methods[method](*map(int, arg)) for arg in args]
+        
+        for a sequence of actions: Loop
+        for a sequence of values: List or generator comprehension
+        """
     else:
         methods[method](*map(int, args))
-        
+
 # pop
 # {2, 3, 4, 5, 6, 7, 8, 9}
 # pop
