@@ -18,7 +18,7 @@ for i, height in enumerate(heights):
 
 print(cast)
 
-"""  [Solution] """
+""" Solution """
 
 # for i, character in enumerate(cast):
 #     cast[i] = character + " " + str(heights[i])

@@ -1,8 +1,8 @@
-_input = "Test String"
+s = "Test String"
 
-string1 = _input if _input is None else "Nothing"
-string2 = _input if _input is not None else "Nothing"
+s1 = s if s is None else "Nothing"
+s2 = s if s is not None else "Nothing"
 
-print(string1, string2, sep="\n")
+print(s1, s2, sep="\n")
 # Nothing
 # Test String

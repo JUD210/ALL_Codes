@@ -20,8 +20,8 @@ class Data(object):
         return "r★pr"
 
 
-print("{0!s} {0!r} {0!a}".format(Data()))
-# str r★pr r\u2605pr
+print("{0} {0!s} {0!r} {0!a}".format(Data()))
+# str str r★pr r\u2605pr
 
 
 """ Padding and aligning strings """
@@ -88,6 +88,14 @@ print("~" + "{:4d}".format(42) + "~")
 print("{:04d}".format(42))
 # 0042
 
+print("{:04d}".format(-42))
+# -042
+
+print("{:+.2f}".format(0))
+# +0.00
+
+print("{:.2f}".format(0))
+# 0.00
 
 print("{:01.2f}".format(31.41592653589793))
 # 31.42
@@ -200,12 +208,28 @@ print("~" + "{:{}{sign}{}.{}}".format(2.7182818284, ">", 10, 3, sign="+") + "~")
 
 
 class HAL9000(object):
+    txt = "TEXT"
+
     def __format__(self, format):
         if format == "open-the-pod-bay-doors":
             return "I'm afraid I can't do that."
-        return "HAL 9000"
+        return "YEAH"
+
+    def __str__(self):
+        return "in __str__ method"
+
+    def test(self):
+        return "in test method"
 
 
-print("{:open-the-pod-bay-doors}\n{:nothing}".format(HAL9000(), HAL9000()))
+# return '{0.real:.2f}{0.imag:+.2f}i'.format(self)
+
+
+print("{:open-the-pod-bay-doors}".format(HAL9000()))
 # I'm afraid I can't do that.
+print("{:nothing}".format(HAL9000()))
 # HAL 9000
+print("{.txt}".format(HAL9000()))
+# TEXT
+print(HAL9000().test())
+# in test method

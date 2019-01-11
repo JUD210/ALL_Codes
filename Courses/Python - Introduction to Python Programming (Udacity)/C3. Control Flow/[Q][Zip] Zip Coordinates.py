@@ -33,7 +33,7 @@ for point in points:
 # X: -5, 445, -1
 
 
-""" My Answer
+""" My Answer """
 
 for label, x, y, z in zip(labels, x_coord, y_coord, z_coord):
     point = "{}: {}, {}, {}".format(label, x, y, z)
@@ -42,5 +42,3 @@ for label, x, y, z in zip(labels, x_coord, y_coord, z_coord):
 
 for point in points:
     print(point)
-    
-"""

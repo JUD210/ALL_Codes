@@ -8,7 +8,7 @@ Remember that break works in both for and while loops. Use whichever loop seems 
 
 # HINT: modify the headlines list to verify your loop works with different inputs
 
-"""  [Solution] is more efficient way """
+""" Solution """
 
 headlines = [
     "Local Bear Eaten by Man",
@@ -30,7 +30,7 @@ for headline in headlines:
 print(news_ticker)
 
 
-""" My Answer
+""" My Answer """
 
 headlines = [
     "Local Bear Eaten by Man",
@@ -68,5 +68,3 @@ for headline in headlines:
 
 print(news_ticker)
 print(len(news_ticker))
-
-"""

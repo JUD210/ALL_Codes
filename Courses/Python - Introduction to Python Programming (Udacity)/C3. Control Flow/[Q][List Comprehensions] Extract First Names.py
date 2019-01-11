@@ -17,7 +17,7 @@ first_names = [name.partition(" ")[0].lower() for name in names]
 print(first_names)
 
 
-"""  [Solution] """
+""" Solution """
 
 # first_names = [name.split(" ")[0].lower() for name in names]
 # print(first_names)

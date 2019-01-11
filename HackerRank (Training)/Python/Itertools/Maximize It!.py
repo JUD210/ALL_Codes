@@ -40,7 +40,7 @@ results = map(lambda x: sum(i ** 2 for i in x) % M, product(*N))
 print(max(results))
 # 943
 
-""" My Answer
+""" My Answer """
 
 k = []
 
@@ -70,5 +70,3 @@ for t in tuples:
 print(max(s))
 # print(k, sum(k[0]))
 # 943
-
-"""

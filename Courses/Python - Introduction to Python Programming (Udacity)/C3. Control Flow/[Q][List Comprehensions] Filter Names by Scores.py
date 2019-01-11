@@ -17,8 +17,7 @@ scores = {
 passed = [name for name, score in scores.items() if score >= 65]
 print(passed)
 
-""" My Answer
+""" My Answer """
 passed = [score[0] for score in scores.items() if score[1] >= 65]
 print(passed)
 
-"""

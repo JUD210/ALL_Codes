@@ -9,7 +9,7 @@ from collections import deque
 d = deque()
 for _ in range(int(input())):
     # 4
-    
+
     method, *args = input().split()
     # append 1
     # append 2
@@ -22,7 +22,8 @@ for _ in range(int(input())):
 print(*d)
 # 1 2
 
-""" My Answer
+
+""" My Answer """
 
 dq = deque()
 
@@ -48,5 +49,3 @@ for _ in range(int(input())):
 
 print(*dq)
 # 1 2
-
-"""

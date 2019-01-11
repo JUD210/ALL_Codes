@@ -5,7 +5,7 @@ from collections import Counter
 
 """
 s = "daaababcc"
-# same result with
+# result is same with
 # s = ['d','a','a','a','b','a','b','c','c']
 
 print(Counter(s))
@@ -20,7 +20,15 @@ print(Counter(s).keys())
 print(Counter(s).values())
 # dict_values([1, 4, 2, 2])
 
+print(Counter(s).most_common())
+# [('a', 4), ('b', 2), ('c', 2), ('d', 1)]
+
+print(Counter(s).most_common(2))
+# [('a', 4), ('b', 2)]
+
 """
+
+
 
 num_shoes, sizes = int(input()), Counter(map(int, input().split()))
 # 10
