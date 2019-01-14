@@ -1,0 +1,14 @@
+https://regexone.com/lesson/excluding_characters
+
+^ : Exclude
+[^abc] : exclude a, b or c
+
+
+Task	Text
+Match	hog
+Match	dog
+Skip	bog
+
+[^b]og
+
+[hd]og
