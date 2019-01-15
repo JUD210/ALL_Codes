@@ -13,8 +13,8 @@ Match	wazzzzzup
 Match	wazzzup
 Skip	wazup
 
-waz{3,5}
-
 waz{3}
+
+waz{3,5}
 
 [waz]{5}

@@ -1,6 +1,5 @@
 https://regexone.com/lesson/excluding_characters
 
-^ : Exclude
 [^abc] : exclude a, b or c
 
 

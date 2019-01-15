@@ -1,7 +1,8 @@
 https://regexone.com/lesson/kleene_operators?
 
-a+ : one or more a's
+a+ : one or more 'a's
 [abc]+ : one or more of any a, b, or c character
+.+ : one or more of any character
 .* : zero or more of any character
 
 

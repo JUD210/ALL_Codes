@@ -1,0 +1,18 @@
+https://regexone.com/lesson/optional_characters?
+
+ab?c : match either the strings "abc" or "ac" (because the b is considered optional.)
+
+\d{1,2} files? : match either any 1~2 digit, whitespace, and the strings "file" or "files" (because the s is considered optional.)
+
+\? : match a plain question mark character in a string.
+
+
+Task	Text
+Match	1 file found?
+Match	2 files found?
+Match	24 files found?
+Skip	No files found.
+
+\?
+
+\d+ files? found\?

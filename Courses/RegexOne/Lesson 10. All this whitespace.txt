@@ -1,0 +1,17 @@
+https://regexone.com/lesson/whitespaces?
+
+\t : tab
+\n : new line
+\r : carriage return
+\s : match any of the specific whitespaces above and is extremely useful when dealing with raw input text.
+
+
+Task	Text 
+Match   1.   abc
+Match   2.	abc
+Match	3.           abc
+Skip    4.abc
+
+\s
+
+\d\.\s+abc
