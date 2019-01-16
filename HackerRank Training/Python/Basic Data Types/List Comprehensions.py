@@ -62,3 +62,6 @@ print(type(test3), test3, *test3, sep="\n")
 # [0, 1, 0]
 # [1, 0, 0]
 # [1, 1, 1]
+
+
+test2

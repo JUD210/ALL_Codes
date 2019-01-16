@@ -8,10 +8,12 @@ ab?c : match either the strings "abc" or "ac" (because the b is considered optio
 
 
 Task	Text
+
 Match	1 file found?
 Match	2 files found?
 Match	24 files found?
 Skip	No files found.
+
 
 \?
 

@@ -6,9 +6,11 @@ Note : Writing patterns with many conditions can be hard to read, so you should 
 
 
 Task	Text	 
+
 Match	I love cats
 Match	I love dogs
 Skip	I love logs
 Skip	I love cogs
+
 
 I love (cats|dogs)

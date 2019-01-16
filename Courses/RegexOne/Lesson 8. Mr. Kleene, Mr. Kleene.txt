@@ -7,10 +7,12 @@ a+ : one or more 'a's
 
 
 Task	Text
+
 Match	aaaabcc
 Match	aabbbbc
 Match	aacc
 Skip	a
+
 
 aa+
 

@@ -10,9 +10,11 @@ back referencing : It varies depending on the implementation. However, many syst
 
 
 Task	Text
+
 Match	The quick brown fox jumps over the lazy dog.
 Match	There were 614 instances of students getting 90.0% or above.
 Match	The FCC had to censor the network for saying &$#*@!.
+
 
 \w*\s\S*\W*\d?\w+ (\w|\s|\.|\%|\&|\$|#|\*|@|!)*
 

@@ -7,9 +7,11 @@ Note : This is different than the hat used inside a set of bracket [^...] for ex
 
 
 Task	Text	 
+
 Match	Mission: successful
 Skip	Last Mission: unsuccessful
 Skip	Next Mission: successful upon capture of target
+
 
 ^M.*: successful$
 

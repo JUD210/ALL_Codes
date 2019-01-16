@@ -1,0 +1,27 @@
+https://regexone.com/problem/matching_html?
+
+NOTE : Regex are usually not the answer due to the fragility of html pages on the internet today -- common mistakes like missing end tags, mismatched tags, forgetting to close an attribute quote, would all derail a perfectly good regular expression.
+
+Instead, you can use libraries like Beautiful Soup or html5lib (both Python) or phpQuery (PHP) which not only parse the HTML but allow you to walk to DOM quickly and easily.
+
+
+
+Task	    Text	                                    Capture Groups              	 
+
+Capture	    <a>This is a link</a>	                    a
+Capture	    <a href='https://regexone.com'>Link</a>	    a
+Capture	    <div class='test_style'>Test</div>	        div
+Capture	    <div>Hello <span>world</span></div>	        div
+
+
+^\<(?:(?:a|div)).*\<\/?(\w+)\>$
+
+
+It is a best practice to use a proper library to parse html, but to find simple tag names, you can use the expression 
+<(\w+).
+
+You can also capture tag contents 
+>([\w\s]*)<
+
+or even attribute values 
+='([\w://.]*)' if desired (not the goal of this problem though).
