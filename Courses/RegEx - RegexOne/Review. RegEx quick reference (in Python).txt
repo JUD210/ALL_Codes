@@ -1,4 +1,4 @@
-PATTERN         | MATCHES
+This PATTERN    | MATCHES (+Description)
 
 === I know ===
 
@@ -48,11 +48,8 @@ abc|123         | abc or 123
 (abc|123)?      | Zero or one "abc" or "123", and Capture one of it  (Null:" ")
 abc|123?        | "abc" or "12" + Zero or one "3"
 
-(abc(123))      | Capture "abc" in group 1, "123" in group 2
-(.*)            | Capture all
-
-abc(?<=123)     
-abc(?<!123)     
+(abc(123))      | abc123, Capture "abc" in group 1, "123" in group 2
+(.*)            | All, Capture all 
 
 abc(?=123|456)  | abc that is followed by 123 or 456 (A positive lookahead)
 abc(?!123|456)  | abc that is not followed by 123 or 456 (A negative lookahead)
@@ -63,14 +60,31 @@ abc(?<!123|456) | abc that is not preceded by 123 or 456 (A negative lookbehind)
 123$            | Line ends after 123
 ^123$           | Line starts before abc, and ends after 123
 
-\num	        | The num'th captured group (in VS Code, $n)
+\1	            | Backreference: The First captured group
+(\w)\1+         | A word character that is repeated more than 2 times.
+(\w)(\1)(\2)    | A word character that is repeated exactly 3 times.
 
+
+
+\b              | Word boundary
+\B              | Non-word boundary
+
+..\d+\:         | "v 2.5.016: Test" -> Matches '..016:'
+\b\b\d+\b       | "v 2.5.016: Test" -> Matches '5' '016'
+(?<=..)\d+(?=\:)| "v 2.5.016: Test" -> Matches '016'
+
+=== Non-Python ===
+
+VS Code uses JavaScript's regular expressions as specified in ECMAScript 5, which doesn't support look behinds (https://github.com/Microsoft/vscode/issues/8635).
+
+
+
+$0              | 
+$1              | (in VS Code Replace): Use(!=Match) the first captured group
 
 
 === I don't know ===
 
-\b              | Word boundary
-\B              | Non-word boundary
 
 a??	            | Zero or one a (lazy)
 a*?	            | Zero or more a's (lazy)
