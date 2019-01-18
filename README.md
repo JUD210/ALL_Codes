@@ -26,3 +26,16 @@ Add> README.md> Introduction
 [Python Intro] C: 5/6 (27/33)
 [HackerRank - 30 Days of Code] D: 11/30
 ```
+
+## Meaning of Folders & Files' Prefix
+```
+! : New Feature of Language
+ex) ! F Strings.py
+
+~ : Ignored from git because the file is on edit.
+ex) ~
+
+~~~ : Ignored from git because the file is temporary.
+ex) ~~~ TEMPORARY FILE
+
+```
