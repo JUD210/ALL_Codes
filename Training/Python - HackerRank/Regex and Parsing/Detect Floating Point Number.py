@@ -32,7 +32,6 @@ for _ in range(int(input())):
     # False
     # False
 
-# ^[-+]?[0-9]*\.[0-9]+$
 
 """ My Answer """
 

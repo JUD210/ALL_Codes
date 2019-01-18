@@ -25,9 +25,10 @@ abc 123         | "abc 123"
 
 
 a{4}	        | Exactly 4 a's
-a{4,8}	        | Between (inclusive) 4 and 8 a's
+a{0,8}	        | Between (inclusive) zero and 8 a's
 a{9,}	        | 9 or more a's
 
+a{3}{1,2}       | == a{3} or a{6}
 
 a?	            | Zero or one a (greedy)
 a*	            | Zero or more a's (greedy)
@@ -60,6 +61,8 @@ abc(?<!123|456) | abc that is not preceded by 123 or 456 (A negative lookbehind)
 123$            | Line ends after 123
 ^123$           | Line starts before abc, and ends after 123
 
+(?<!^)          | Don't match the start of line
+
 \1	            | Backreference: The First captured group
 (\w)\1+         | A word character that is repeated more than 2 times.
 (\w)(\1)(\2)    | A word character that is repeated exactly 3 times.
@@ -77,10 +80,8 @@ abc(?<!123|456) | abc that is not preceded by 123 or 456 (A negative lookbehind)
 
 VS Code uses JavaScript's regular expressions as specified in ECMAScript 5, which doesn't support look behinds (https://github.com/Microsoft/vscode/issues/8635).
 
-
-
-$0              | 
-$1              | (in VS Code Replace): Use(!=Match) the first captured group
+$0              | (in Replace): Write(!=Match) the string
+$1              | (in Replace): Write(!=Match) the first captured group
 
 
 === I don't know ===
