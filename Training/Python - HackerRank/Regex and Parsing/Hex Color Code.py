@@ -20,7 +20,6 @@
 # Color codes used as selectors must be excepted.
 
 
-
 import re
 
 for _ in range(int(input())):
@@ -42,8 +41,6 @@ for _ in range(int(input())):
     m = re.findall(r"(?<!^)(#(?:[\da-fA-F]{3}){1,2})", s)
     if m:
         print("\n".join(m))
-
-
 # #FfFdF8
 # #aef
 # #f9f9f9
