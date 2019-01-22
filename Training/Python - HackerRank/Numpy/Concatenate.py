@@ -1,6 +1,7 @@
 # https://www.hackerrank.com/challenges/np-concatenate/problem
 
 
+# inputs for Solution
 standard_input = """4 3 2
 1 2
 1 2
@@ -10,6 +11,7 @@ standard_input = """4 3 2
 3 4
 3 4
 """
+# inputs for My Solution
 standard_input += """4 3 2
 1 2
 1 2

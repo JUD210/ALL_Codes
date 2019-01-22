@@ -33,7 +33,10 @@ Add> README.md> Introduction
 ex) ! F Strings.py
 
 ~ : Ignored from git because the file is on edit.
-ex) ~
+ex) ~ Overriding.py
+
+~~ : Ignored from git because the file is private.
+ex) ~~ password.txt
 
 ~~~ : Ignored from git because the file is temporary.
 ex) ~~~ TEMPORARY FILE
