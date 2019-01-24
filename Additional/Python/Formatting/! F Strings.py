@@ -26,3 +26,19 @@ print(message)
 f"YES!!"
 
 ######################
+
+print(f"{623.71294:09.3f}")
+# 00623.713
+
+temp = len(str("870.223441248"))
+print(f"{870.223441248:.{temp-10}f}")
+# 870.223
+
+"""
+
+You can use advanced formatting Too!
+
+For detail, take a look around the 
+Advanced Formatting.py
+
+"""

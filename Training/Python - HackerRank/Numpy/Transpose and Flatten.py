@@ -3,6 +3,7 @@
 
 import numpy
 
+
 len_row, len_column = [int(s) for s in input().split()]
 # 4 3
 

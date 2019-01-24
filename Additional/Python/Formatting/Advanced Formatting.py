@@ -17,11 +17,11 @@ class Data(object):
         return "str"
 
     def __repr__(self):
-        return "r★pr"
+        return "r~pr"
 
 
 print("{0} {0!s} {0!r} {0!a}".format(Data()))
-# str str r★pr r\u2605pr
+# str str r~pr r\u2605pr
 
 
 """ Padding and aligning strings """

@@ -1,7 +1,7 @@
 # https://www.hackerrank.com/challenges/np-concatenate/problem
 
 
-# inputs for Solution
+# Inputs for Solution
 standard_input = """4 3 2
 1 2
 1 2
@@ -11,7 +11,7 @@ standard_input = """4 3 2
 3 4
 3 4
 """
-# inputs for My Solution
+# Inputs for My Solution
 standard_input += """4 3 2
 1 2
 1 2
@@ -23,6 +23,7 @@ standard_input += """4 3 2
 
 
 import numpy
+
 
 """ Solution """
 n, m, p = [int(n) for n in input().split()]

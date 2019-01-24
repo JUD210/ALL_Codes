@@ -3,6 +3,7 @@
 
 import numpy
 
+
 arr = numpy.array([int(s) for s in input().split()])
 # 1 2 3 4 5 6 7 8 9
 

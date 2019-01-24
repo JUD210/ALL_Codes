@@ -14,6 +14,7 @@ def product(fracs):
 if __name__ == "__main__":
 
     fracs = []
+
     for _ in range(int(input())):
         # 3
         fracs.append(Fraction(*map(int, input().split())))
