@@ -1,6 +1,10 @@
 # https://www.hackerrank.com/challenges/30-recursion/problem
 
 
+# Inputs
+standard_input = """6"""
+
+
 import math
 import os
 import random
@@ -14,7 +18,7 @@ def input_num():
     while True:
         try:
             num = int(input())
-            # 3
+            # 6
             if num <= 0:
                 print("The number must be larger than 0")
                 continue
@@ -37,4 +41,4 @@ if __name__ == "__main__":
     num = input_num()
     result = factorial(num)
     print(result)
-    # 6
+    # 720

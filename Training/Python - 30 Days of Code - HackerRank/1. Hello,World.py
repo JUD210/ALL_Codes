@@ -1,6 +1,10 @@
 # https://www.hackerrank.com/challenges/30-hello-world/problem
 
 
+# Inputs
+standard_input = """Welcome to 30 Days of Code!"""
+
+
 """ Read a full line of input from stdin and save it to our dynamically typed variable, input_string. """
 input_string = input()
 # Welcome to 30 Days of Code!

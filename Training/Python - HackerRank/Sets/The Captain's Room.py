@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/py-the-captains-room/problem?h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/py-the-captains-room/problem
 
 
 """ Answer """

@@ -1,6 +1,10 @@
 # https://www.hackerrank.com/challenges/30-binary-numbers/problem
 
 
+# Inputs
+standard_input = """13"""
+
+
 import math
 import os
 import random

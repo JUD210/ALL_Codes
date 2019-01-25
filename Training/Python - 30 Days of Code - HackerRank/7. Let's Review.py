@@ -1,6 +1,13 @@
 # https://www.hackerrank.com/challenges/30-review-loop/problem
 
 
+# Inputs
+standard_input = """3
+Hacker
+Rank
+is Goooooood"""
+
+
 """ Enter your code here. Read input from STDIN. Print output to STDOUT """
 
 for i in range(int(input())):

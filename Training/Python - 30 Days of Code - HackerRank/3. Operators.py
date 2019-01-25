@@ -1,6 +1,12 @@
 # https://www.hackerrank.com/challenges/30-operators/problem
 
 
+# Inputs
+standard_input = """12.00
+20
+8"""
+
+
 import math
 import os
 import random

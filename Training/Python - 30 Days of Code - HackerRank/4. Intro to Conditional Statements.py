@@ -1,6 +1,10 @@
 # https://www.hackerrank.com/challenges/30-conditional-statements/problem
 
 
+# Inputs
+standard_input = """5"""
+
+
 import math
 import os
 import random

@@ -42,7 +42,8 @@ def my_function(name):
     return name
 
 
-print(my_function("Emma"))  # 'Hi Emma, hello dear'
+print(my_function("Emma"))  
+# 'Hi Emma, hello dear'
 
 
 #######################################

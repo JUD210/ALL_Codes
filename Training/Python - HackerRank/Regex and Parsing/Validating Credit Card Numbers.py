@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/validating-credit-card-number/problem?h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/validating-credit-card-number/problem
 
 
 import re

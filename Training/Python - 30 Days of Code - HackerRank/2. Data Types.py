@@ -1,6 +1,12 @@
 # https://www.hackerrank.com/challenges/30-data-types/problem
 
 
+# Inputs
+standard_input = """12
+4.0
+is the best place to learn and practice coding!"""
+
+
 i = 4
 d = 4.0
 s = "HackerRank "

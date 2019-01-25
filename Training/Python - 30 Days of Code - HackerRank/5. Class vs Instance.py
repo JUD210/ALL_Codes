@@ -1,6 +1,14 @@
 # https://www.hackerrank.com/challenges/30-class-vs-instance/problem
 
 
+# Inputs
+standard_input = """4
+13
+15
+-5
+0"""
+
+
 class Person:
     def __init__(self, initialAge):
         """ Add some more code to run some checks on initialAge """
@@ -25,7 +33,7 @@ class Person:
 
 
 t = int(input())
-# 5
+# 4
 
 for i in range(0, t):
     age = int(input())

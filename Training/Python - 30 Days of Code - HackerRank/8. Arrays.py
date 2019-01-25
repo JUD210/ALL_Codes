@@ -1,6 +1,11 @@
 # https://www.hackerrank.com/challenges/30-arrays/problem
 
 
+# Inputs
+standard_input = """4
+5 3 2 1"""
+
+
 import math
 import os
 import random

@@ -1,6 +1,10 @@
 # https://www.hackerrank.com/challenges/30-loops/problem
 
 
+# Inputs
+standard_input = """4"""
+
+
 import math
 import os
 import random

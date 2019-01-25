@@ -1,6 +1,15 @@
 # https://www.hackerrank.com/challenges/30-2d-arrays/problem
 
 
+# Inputs
+standard_input = """1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0"""
+
+
 import math
 import os
 import random

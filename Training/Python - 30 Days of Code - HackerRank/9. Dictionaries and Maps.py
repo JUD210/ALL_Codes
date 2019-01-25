@@ -1,6 +1,16 @@
 # https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
 
 
+# Inputs
+standard_input = """3
+sam 99912222
+tom 11122222
+harry 12299933
+sam
+edwar
+harry"""
+
+
 """ Enter your code here. Read input from STDIN. Print output to STDOUT """
 
 
@@ -33,3 +43,6 @@ n = int(input())
 # 3
 contact = create_contact()
 check_name(contact)
+# sam=99912222
+# Not found
+# harry=12299933

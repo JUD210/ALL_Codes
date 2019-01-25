@@ -20,7 +20,7 @@ def score_words(words):
         if num_vowels % 2 == 0:
             score += 2
         else:
-            # FIX THIS!
+            # Edit THIS!
             # ++score
             score += 1
     return score
