@@ -1,0 +1,22 @@
+aset | otherset	
+aset.union(otherset)
+
+: Returns a new set with all elements from both sets
+
+
+aset & otherset	
+aset.intersection(otherset)
+
+: Returns a new set with only those elements common to both sets
+
+
+aset - otherset	
+aset.difference(otherset)
+
+: Returns a new set with all items from the first set not in second
+
+
+aset <= otherset
+aset.issubset(otherset)
+
+: Asks whether all elements of the first set are in the second
