@@ -1,4 +1,4 @@
-# no-use-before-def
+# no [use-before-def]
 x = None
 y = None
 z = None

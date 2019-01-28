@@ -7,7 +7,7 @@ standard_input = """3 3
 1 1 1
 1 1 1"""
 
-# no-use-before-def
+# no [use-before-def]
 m = None
 
 

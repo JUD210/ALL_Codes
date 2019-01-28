@@ -1,32 +1,33 @@
 # https://www.python-course.eu/python3_abstract_classes.php
 
 
-""" Why should we use abstract method? 
+""" Concept of Abstract Class
 
 Think about Animal
 
 | Abstract Class | Abstract Class | Object Class |
 | -------------- | -------------- | ------------ |
 | Animal ------- | Feline ------- | Lion         |
-|        │       |        └------ | Cat          |
-|        │       |        └------ | Tiger        |
-|        │       |                |              |
-|        └------ | Canine ------- | Wolf         |
-|                |        └------ | Dog          |
+|        |       |        |------ | Cat          |
+|        |       |        |------ | Tiger        |
+|        |       |                |              |
+|        |------ | Canine ------- | Wolf         |
+|                |        |------ | Dog          |
 
 Can you instantiate Animal?
 
 NO!
 
-You can't describe the animal's state.
-What is the animal's color? size?, etc...
+You can't describe the Animal's state and behavior.
+What is the Animal's color? size?,...
+What does the Animal do? eat? run? talk?,...
 
-If you instantiate that 'animal', it's not an animal, but monster.
+If you instantiate that 'Animal' class, it's not an animal, but monster!
 
 Object should have 'state' and 'behavior'.
 
 
-That's why you can't instantiate abstract class.
+That's the reason why you can't instantiate abstract class.
 
 """
 
@@ -35,9 +36,9 @@ from abc import ABC, abstractmethod
 
 
 class AbstractClassExample1(ABC):
-    # If there is no @abstractmethod decorator,
-    # It's not considered as a abstract class.
+    # If there is no @abstractmethod decorator, It's not considered as a abstract class.
 
+    # If you use Abstract Method, you MUST override that method, or you will get some error.
     @abstractmethod
     def do_something1(self):
         # You can just use pass.
@@ -86,3 +87,4 @@ x1.do_something2()
 # x2 = AnotherSubclass2()
 # TypeError: Can't instantiate abstract class AnotherSubclass2 with abstract methods _and_this_too
 
+# Yeah. If you use Abstract Method, you MUST override that method, or you will get some error.
