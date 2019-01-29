@@ -27,7 +27,6 @@ That made me think about priority, and this is the conclusion.
 """
 
 
-
 """ Comapre below 2 """
 len_students, len_subjects = [int(s) for s in input().split()]
 

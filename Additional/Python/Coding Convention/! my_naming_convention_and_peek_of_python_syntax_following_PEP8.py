@@ -1,17 +1,16 @@
 # https://~~~ (References)
 
 
-from abc import ABC, abstractmethod
-import re
+from abc import abstractmethod
 
 
-standard_input = """4
+standard_input: str = """4
 This is for
 AREPL for Python
 Extension's
 Automatic Input"""
 
-ConSTANT_NAME = 123_456_789
+CONSTANT_NAME: int = 123_456_789
 
 # fmt:off
 # This comment blocks code formatting
@@ -20,24 +19,25 @@ ConSTANT_NAME = 123_456_789
 # This comment unblocks code formatting
 
 
-# I prefer Top-Down order for classes because it allows quick peek.
-#
-# Top
-# Middle 1
-# Middle 2
-# Bottom 1-1
-# Bottom 1-2
-# Bottom 2-1
-# Bottom 2-2
+""" I prefer Top-Down order for classes because it allows quick peek.
+
+Top
+Middle 1
+Middle 2
+Bottom 1-1
+Bottom 1-2
+Bottom 2-1
+Bottom 2-2
+"""
 
 
 class TopHierarchy:
-    # I prefer this order for inner part of a class
-    #
-    # Class Var
-    # Magic Methods
-    # Property
-    #
+    """ I prefer this order for inner part of a class.
+    
+    Class Var
+    Magic Methods
+    Property
+    """
 
     class_var = "some_value"
 
@@ -46,7 +46,7 @@ class TopHierarchy:
         self._internal_var = args[1]
         self.__private_var = args[2]
 
-        """ The Meaning of _ and __
+        """ The Meaning of '_' and '__'.
 
         # https://dbader.org/blog/meaning-of-underscores-in-python
 
@@ -71,7 +71,7 @@ class TopHierarchy:
         : Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes.
 
         _
-        : Sometimes used as a name for temporary or insignificant variables ("don't care"). 
+        : Sometimes used as a name for temporary or insignificant variables ("don't care").
         : Also, The result of the last expression in a Python REPL.
 
         """
@@ -93,7 +93,7 @@ class TopHierarchy:
     def condition(self):
         del self.__private_var
 
-######################################################################  
+    ######################################################################
 
     def public_method(self, *args, **kwargs):
         # ...
@@ -103,11 +103,11 @@ class TopHierarchy:
         # almost same concept like __private_var
         pass
 
-######################################################################
+    ######################################################################
 
     @abstractmethod
     def abstract_method(self, *args, **kwargs):
-        """ Cencept of Abstract Class
+        """ Concept of Abstract Class.
 
         # https://www.python-course.eu/python3_abstract_classes.php
         (for detail description)
@@ -144,17 +144,17 @@ class TopHierarchy:
 
     @classmethod
     def class_method(cls, *args, **kwargs):
-        """ What is a class method?
-            
+        """ About class method.
+
         A class method is a method that is bound to a class rather than its object. It doesn't require creation of a class instance, much like staticmethod.
 
         The difference between a static method and a class method is:
 
-       
-       Static method knows nothing about the class and just deals with the parameters
-       
-       Class method works with the class since its parameter is always the class itself.
-        
+
+        Static method knows nothing about the class and just deals with the parameters
+
+        Class method works with the class since its parameter is always the class itself.
+
         The class method can be called both by the class and its object.
 
         Class.classmethod()
@@ -172,7 +172,7 @@ class TopHierarchy:
 
     @staticmethod
     def static_method(*args, **kwargs):
-        """ What is a static method?
+        """ About static method.
         
         Static methods, much like class methods, are methods that are bound to a class rather than its object.
 
@@ -181,9 +181,9 @@ class TopHierarchy:
         The difference between a static method and a class method is:
 
        
-       Static method knows nothing about the class and just deals with the parameters.
-       
-       Class method works with the class since its parameter is always the class itself.
+        Static method knows nothing about the class and just deals with the parameters.
+        
+        Class method works with the class since its parameter is always the class itself.
         
         They can be called both by the class and its object.
 
@@ -205,29 +205,32 @@ class MiddleHierarchy2(TopHierarchy):
     pass
 
 
-class BottomHierarchy1_1(MiddleHierarchy1):
+class BottomHierarchy11(MiddleHierarchy1):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        if kwargs.get("override_var") == True:
+        if kwargs.get("override_var"):
             self.public_var = "Overridden 1"
             self._internal_var = "Overridden 2"
             # self.__private_var = "Overridden 3"
             # AttributeError occurs: this object has no attribute '__private_var'
             self._TopHierarchy__private_var = "Overridden 3"
 
+    def abstract_method(self, *args, **kwargs):
+        return super().abstract_method(*args, **kwargs)
 
-class BottomHierarchy1_2(MiddleHierarchy1):
+
+class BottomHierarchy12(MiddleHierarchy1):
     # ...
     pass
 
 
-class BottomHierarchy2_1(MiddleHierarchy2):
+class BottomHierarchy21(MiddleHierarchy2):
     # ...
     pass
 
 
-class BottomHierarchy2_2(MiddleHierarchy2):
+class BottomHierarchy22(MiddleHierarchy2):
     # ...
     pass
 
@@ -250,16 +253,16 @@ print(
 # 1, 2, 3, False
 
 
-instance_name = BottomHierarchy1_1(
+instance_name = BottomHierarchy11(
     global_var_name1, global_var_name2, global_var_name3, override=is_override_var_mode
 )
 # ==
-# instance_name = BottomHierarchy1_1(1, 2, 3, False)
+# instance_name = BottomHierarchy11(1, 2, 3, False)
 
 
 print(f"{instance_name}")
 # vars : {'public_var': 1, '_internal_var': 2, '_TopHierarchy__private_var': 3}
-print(f"{BottomHierarchy1_1(1,2,3,override_var=True)}")
+print(f"{BottomHierarchy11(1,2,3,override_var=True)}")
 # vars : {'public_var': 'Overridden 1', '_internal_var': 'Overridden 2', '_TopHierarchy__private_var': 'Overridden 3'}
 
 
@@ -309,7 +312,7 @@ for _ in range(int(input())):
 # https://www.python.org/dev/peps/pep-0008/#naming-conventions
 # https://medium.com/@dasagrivamanu/python-naming-conventions-the-10-points-you-should-know-149a9aa9f8c7
 
-""" 
+"""
 
 1. General
 Avoid names that are too general or too wordy. Strike a good balance between the two.

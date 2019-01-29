@@ -1,6 +1,9 @@
 # https://www.hackerrank.com/challenges/np-sum-and-prod/problem
 
 
+import numpy
+
+
 # Inputs
 standard_input = """3 3
 1 1 1
@@ -11,10 +14,7 @@ standard_input = """3 3
 m = None
 
 
-import numpy
-
-
-m,n = [int(s) for s in input().split()]
+m, n = [int(s) for s in input().split()]
 # 3 3
 
 arr = numpy.array([input().split() for _ in range(m)], int)
@@ -22,7 +22,7 @@ arr = numpy.array([input().split() for _ in range(m)], int)
 # 1 1 1
 # 1 1 1
 
-result = numpy.sum(arr, axis = 0)
+result = numpy.sum(arr, axis=0)
 # print(result)
 # [3 3 3]
 

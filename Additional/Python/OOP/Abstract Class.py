@@ -1,7 +1,7 @@
 # https://www.python-course.eu/python3_abstract_classes.php
 
 
-""" Concept of Abstract Class
+""" Concept of Abstract Class.
 
 Think about Animal
 

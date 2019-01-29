@@ -1,11 +1,11 @@
 # https://www.hackerrank.com/challenges/np-zeros-and-ones/problem
 
 
+import numpy
+
+
 # Inputs
 standard_input = """3 2 2 5"""
-
-
-import numpy
 
 
 shape = [int(s) for s in input().split()]

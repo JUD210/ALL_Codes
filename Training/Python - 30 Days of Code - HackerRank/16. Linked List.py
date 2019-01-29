@@ -26,9 +26,9 @@ class Solution:
             current = current.next
 
     def insert(self, head, data):
-        if head == None:
+        if not head:
             head = Node(data)
-        elif head.next == None:
+        elif not head.next:
             head.next = Node(data)
         else:
             self.insert(head.next, data)

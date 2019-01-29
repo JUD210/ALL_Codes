@@ -1,7 +1,7 @@
 # https://runestone.academy/runestone/static/pythonds/Introduction/ObjectOrientedProgramminginPythonDefiningClasses.html
 
 
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
 class LogicGate:
@@ -29,13 +29,13 @@ class BinaryGate(LogicGate):
         self.__pin_b = None
 
     def get_pin_a(self, num=None):
-        if num == None:
+        if not num:
             return int(input(f"Enter Pin A input for gate {self.get_label()} --> "))
         else:
             return num
 
     def get_pin_b(self, num=None):
-        if num == None:
+        if not num:
             return int(input(f"Enter Pin A input for gate {self.get_label()} --> "))
         else:
             return num

@@ -1,6 +1,9 @@
 # https://www.hackerrank.com/challenges/validate-list-of-email-address-with-filter/problem
 
 
+import re
+
+
 """ Not Using Regex """
 
 
@@ -27,7 +30,6 @@ def fun(email):
 
 
 """ Using Regex """
-import re
 
 
 def fun2(email):

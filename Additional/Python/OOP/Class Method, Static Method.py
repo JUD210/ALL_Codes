@@ -53,10 +53,10 @@ class KoreanLanguage(Language):
     default_language = "Korean"
 
 
-a = KoreanLanguage.static_my_language()
-a.print_language()
+l1 = KoreanLanguage.static_my_language()
+l1.print_language()
 # My language is: English
 
-b = KoreanLanguage.class_my_language()
-b.print_language()
+l2 = KoreanLanguage.class_my_language()
+l2.print_language()
 # My language is: Korean

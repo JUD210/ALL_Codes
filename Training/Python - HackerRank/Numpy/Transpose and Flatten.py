@@ -7,15 +7,15 @@ import numpy
 len_row, len_column = [int(s) for s in input().split()]
 # 4 3
 
-arr = []
+arr_l = []
 for _ in range(len_row):
-    arr.append([int(s) for s in input().split()])
+    arr_l.append([int(s) for s in input().split()])
 # 1 2 3 4
 # 5 6 7 8
 # 9 10 11 12
 # 13 14 15 16
 
-arr = numpy.array(arr)
+arr = numpy.array(arr_l)
 # print(arr)
 # [[ 1  2  3  4]
 #  [ 5  6  7  8]
