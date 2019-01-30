@@ -10,11 +10,11 @@ standard_input = """1 1 1 0 0 0
 0 0 1 2 4 0"""
 
 
-l = []
+lst = []
 for _ in range(6):
-    l.append([int(s) for s in input().split()])
+    lst.append([int(s) for s in input().split()])
 
-# print(*l, sep="\n")
+# print(*lst, sep="\n")
 # [1, 1, 1, 0, 0, 0]
 # [0, 1, 0, 0, 0, 0]
 # [1, 1, 1, 0, 0, 0]
@@ -27,9 +27,9 @@ hourglass_sum = []
 for y in range(4):
     for x in range(4):
         hourglass_sum.append(
-            sum([sum(ly[x : x + 3]) for ly in l[y : y + 3]])
-            - l[y + 1][x]
-            - l[y + 1][x + 2]
+            sum([sum(ly[x : x + 3]) for ly in lst[y : y + 3]])
+            - lst[y + 1][x]
+            - lst[y + 1][x + 2]
         )
 
 # print(hourglass_sum)
