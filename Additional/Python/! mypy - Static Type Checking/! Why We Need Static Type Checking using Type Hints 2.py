@@ -2,7 +2,7 @@
 # https://m.blog.naver.com/PostView.nhn?blogId=passion053&logNo=221070020739&proxyReferer=https%3A%2F%2Fwww.google.com%2F (KOREAN)
 
 
-""" Case 1: Before """
+""" Case 1: Before Type Checking """
 
 
 def get_first_name(full_name):
@@ -30,7 +30,7 @@ print(f"Hi, {first_name}!")
 ############################################################
 
 
-""" Case 2: After """
+""" Case 2: After Type Checking """
 
 # I only changed this line
 def get_first_name2(full_name2: str) -> str:
@@ -78,3 +78,28 @@ if not first_name3:
 # I typed this to prevent mypy's error message on this file.
 
 print(f"Hi, {first_name3}!")
+
+
+############################################################
+
+""" Case 4: Let's fix the bug! """
+
+from typing import Dict
+
+
+def get_first_name4(full_name4: str) -> str:
+    return full_name4.split(" ")[0]
+
+
+fallback_name4: Dict[str, str] = {
+    "first_name": "UserFirstName",
+    "last_name": "UserLastName",
+}
+first_name4 = get_first_name4(input("Please enter your name: "))
+
+if not first_name4:
+    first_name4 = get_first_name4(
+        fallback_name4.get("first_name", "No fallback value!")
+    )
+
+print(f"Hi, {first_name4}!")

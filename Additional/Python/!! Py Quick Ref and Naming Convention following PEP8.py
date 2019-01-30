@@ -3,6 +3,31 @@
 
 from abc import abstractmethod
 
+""" This is for abstract class and method """
+
+
+from typing import Any, List, Tuple, Set, Dict, NamedTuple
+
+""" This is for mypy linter's static type checking
+
+The static type definition is able from Python 3.6
+
+    
+    Should I use static type checking in my own code? 
+
+Well, it's not an all-or-nothing question. Luckily, Python supports the concept of gradual typing. This means that I can gradually introduce types into my code.
+
+Code without type hints will be ignored by the static type checker. Therefore, I can start adding types to critical components, and continue as long as it adds value to me.
+
+
+    Type annotation example
+
+def func(arg: arg_type_annotation, optarg: arg_type_annotation = default) -> return_type_annotation:
+    #...
+    pass
+
+"""
+
 
 standard_input: str = """4
 This is for
@@ -11,35 +36,62 @@ Extension's
 Automatic Input"""
 
 CONSTANT_NAME: int = 123_456_789
+# for mypy linter's static type checking
+
 
 # fmt:off
-# This comment blocks code formatting
-
+# This comment disable code formatting
+#
 # fmt:on
-# This comment unblocks code formatting
+# This comment enable code formatting
+#
+### As I use the wonderful formatter 'Black', sometimes it does unnecessary formatting.
 
 
 """ I prefer Top-Down order for classes because it allows quick peek.
 
 Top
+
+############################################################
+
 Middle 1
 Middle 2
-Bottom 1-1
-Bottom 1-2
-Bottom 2-1
-Bottom 2-2
+
+############################################################
+
+Bottom 11
+Bottom 12
+Bottom 21
+Bottom 22
+
 """
+
+
+############################################################
 
 
 class TopHierarchy:
     """ I prefer this order for inner part of a class.
     
     Class Var
+
+    ############################################################
+
     Magic Methods
-    Property
+
+    ############################################################
+
+    # Property  # If I "have to" use getter/setter
+
+    ############################################################
+
+    public, private, abstract, class, static method
+    
     """
 
     class_var = "some_value"
+
+    ############################################################
 
     def __init__(self, *args, **kwargs):
         self.public_var = args[0]
@@ -76,23 +128,64 @@ class TopHierarchy:
 
         """
 
-    def __str__(self):
+    def __str__(self) -> str:
+        # for mypy linter's static type checking
+
         # return instance's vars when print(instance_name)
         return f"vars : {self.__dict__}"
 
+    """ I'm not gonna use getter/setter because it's not pythonic way.
+
+    I'd definitely stick with the Zen of Python's "Simple is better than complex."
+
+
+
+        But, If I have to use getter/setter, I'll use property.
+
+    It's more advanced and simple and pythonic getter/setter because it
+    makes able to use getter/settered variable like a public variable.
+
+
+
+        See below example for detail.
+
     @property
-    def condition(self):
-        # == @condition.getter
+    def private_var(self):  # Think like it's @private_var.getter
         return self.__private_var
 
-    @condition.setter
-    def condition(self, value):
+    @private_var.setter
+    def private_var(self, value):
         self.__private_var = value
 
-    @condition.deleter
-    def condition(self):
+    @private_var.deleter
+    def private_var(self):
         del self.__private_var
 
+    
+    instance_name.private_var = 255
+    print(instance_name.private_var)
+    # 255
+    
+
+        Is it pythonic to use properties to limit the mutability of class attributes (variables and methods)?
+
+    For attributes/properties/variables at either the class or instance level: yes, absolutely! The decorator @property is built in specifically to give control over read, write, and delete. Common use cases include:
+
+    - enforcing read-only or write-only
+    - ensuring valid values
+    - ensuring consistency with other state
+    - presenting limited internal state in multiple ways
+    - triggering other system logic
+    - persistence
+    
+
+        But really the most authoritative I can get is to quote PEP-8, the Python style guide.
+
+    For simple public data attributes, it is best to expose just the attribute name, without complicated accessor/mutator methods. Keep in mind that Python provides an easy path to future enhancement, should you find that a simple data attribute needs to grow functional behavior. 
+    
+    In that case, use properties to hide functional implementation behind simple data attribute access syntax.
+
+    """
     ######################################################################
 
     def public_method(self, *args, **kwargs):
@@ -195,6 +288,9 @@ class TopHierarchy:
         pass
 
 
+############################################################
+
+
 class MiddleHierarchy1(TopHierarchy):
     # ...
     pass
@@ -203,6 +299,9 @@ class MiddleHierarchy1(TopHierarchy):
 class MiddleHierarchy2(TopHierarchy):
     # ...
     pass
+
+
+############################################################
 
 
 class BottomHierarchy11(MiddleHierarchy1):
@@ -235,14 +334,32 @@ class BottomHierarchy22(MiddleHierarchy2):
     pass
 
 
+############################################################
+
+
 def function_name(arg_name1, arg_name2, keyword="value"):
     # ...
     pass
 
 
-# if __name__ == "__main__":
+############################################################
 
-_, _, global_var_name1, global_var_name2, global_var_name3 = range(-1, 4)
+
+# if __name__ == "__main__":
+#
+# '__main__' is the name of the scope in which top-level code executes. A module's __name__ is set equal to '__main__' when read from standard input, a script, or from an interactive prompt.
+
+
+# fmt: off
+_, _, global_var_name1, global_var_name2, global_var_name3 = (-1, "0", 1, 2, 3)   # type: ignore
+
+# I'll type: ignore comment when I use temporary variable '_'
+# Because it
+#
+# [mypy] Incompatible types in assignment (expression has type "str", variable has type "int")  [error]
+
+# fmt: on
+
 # -1, 0, 1, 2, 3
 is_override_var_mode = False
 

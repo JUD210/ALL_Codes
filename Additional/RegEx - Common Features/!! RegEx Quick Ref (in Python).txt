@@ -24,7 +24,7 @@ abc 123         | "abc 123"
 \n              | A Newline
 
 
-a{4}	        | Exactly 4 a's
+a{4}	        | Exactly 4 a'ss
 a{0,8}	        | Between (inclusive) zero and 8 a's
 a{9,}	        | 9 or more a's
 
@@ -82,6 +82,7 @@ abc(?<!123|456) | abc that is not preceded by 123 or 456 (A negative lookbehind)
 ..\d+\:         | "v 2.5.016: Test" -> Matches '..016:'
 \b\b\d+\b       | "v 2.5.016: Test" -> Matches '5' '016'
 (?<=..)\d+(?=\:)| "v 2.5.016: Test" -> Matches '016'
+
 
 === Non-Python ===
 

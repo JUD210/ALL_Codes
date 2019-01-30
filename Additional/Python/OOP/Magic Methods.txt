@@ -141,3 +141,22 @@ Implements type conversion to hexadecimal.
 
 
 
+    
+    + Type Checking related
+
+__annotations__
+
+example)
+
+
+import math
+
+def circumference(radius: float) -> float:
+    return 2 * math.pi * radius
+When running the code, you can also inspect the annotations. They are stored in a special .__annotations__ attribute on the function:
+
+>>> circumference(1.23)
+7.728317927830891
+
+>>> circumference.__annotations__
+{'radius': <class 'float'>, 'return': <class 'float'>}
