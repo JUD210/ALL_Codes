@@ -29,8 +29,12 @@ Add> README.md> Introduction
 
 ## Meaning of Folders & Files' Prefix
 ```
-! : New Feature of Language
+! : New Feature of a Language
 ex) ! F Strings.py
+
+!! : Quick Peek of a Language
+ex) !! RegEx Quick Reference
+ex) !! 
 
 ~ : Ignored from git because the file is on edit.
 ex) ~ Overriding.py
