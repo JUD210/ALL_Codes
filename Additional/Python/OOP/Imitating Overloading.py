@@ -1,6 +1,10 @@
 # Python Don't support Overloading!
 
 
+from functools import singledispatch
+from decimal import Decimal
+
+
 """ Manual """
 
 
@@ -22,9 +26,6 @@ std.hello("Nicholas")
 
 
 """ Using Single Dispatch """
-
-from functools import singledispatch
-from decimal import Decimal
 
 
 @singledispatch

@@ -29,7 +29,8 @@ for _ in range(int(input())):
 #   elif a*b > 10 || a/b < 1:
 #       stop()
 #   print set(list(a)) | set(list(b))
-#   !Note: do not change &&& or ||| or & or |
+
+#   Note: do not change &&& or ||| or & or |
 #   #Only change those '&&' which have space on both sides.
 #   #Only change those '|| which have space on both sides.
 
@@ -43,6 +44,7 @@ for _ in range(int(input())):
 #   elif a*b > 10 or a/b < 1:
 #       stop()
 #   print set(list(a)) | set(list(b))
-#   !Note: do not change &&& or ||| or & or |
+
+#   Note: do not change &&& or ||| or & or |
 #   #Only change those '&&' which have space on both sides.
 #   #Only change those '|| which have space on both sides.

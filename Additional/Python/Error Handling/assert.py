@@ -1,21 +1,14 @@
-for c in "abcABC":
-    try:
-        assert c.islower()
-    except:
-        print(f"{c} is not lower case.")
-    else:
-        print(f"{c} is lower case.")
-    finally:
-        print("===")
-# a is lower case.
-# ===
-# b is lower case.
-# ===
-# c is lower case.
-# ===
-# A is not lower case.
-# ===
-# B is not lower case.
-# ===
-# C is not lower case.
-# ===
+# for char in "abc123":
+#     assert not char.isdigit(), f"{char} is digit! Enter alphabet ONLY."
+#     print(f"{char} is not digit")
+
+# AssertionError: 1 is digit! Enter alphabet ONLY.
+
+
+for char in "abc":
+    assert not char.isdigit(), f"{char} is digit"
+    print(f"{char} is not digit")
+
+# a is not digit
+# b is not digit
+# c is not digit

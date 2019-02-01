@@ -10,7 +10,7 @@ standard_input = """6
 4
 2"""
 
-# TODO: Study Again Later
+# !TODO: Study Again!
 
 
 class Node:
@@ -22,13 +22,13 @@ class Node:
 class Solution:
     def insert(self, head, data):
         p = Node(data)
-        if head == None:
+        if head is None:
             head = p
-        elif head.next == None:
+        elif head.next is None:
             head.next = p
         else:
             start = head
-            while start.next != None:
+            while start.next is not None:
                 start = start.next
             start.next = p
         return head
@@ -39,12 +39,12 @@ class Solution:
             print(current.data, end=" ")
             current = current.next
 
-    def removeDuplicates(self, head):
+    def remove_duplicates(self, head):
         # Write your code here
         current = head
         while current:
 
-            checker = current.data        
+            checker = current.data
             subcurrent = current
             while subcurrent.next:
                 if subcurrent.next.data == checker:
@@ -72,6 +72,6 @@ for i in range(T):
     # 2
 
     head = mylist.insert(head, data)
-head = mylist.removeDuplicates(head)
+head = mylist.remove_duplicates(head)
 mylist.display(head)
 # 4 2 1 3

@@ -6,14 +6,16 @@ from abc import abstractmethod
 """ This is for abstract class and method """
 
 
-from typing import Any, List, Tuple, Set, Dict, NamedTuple
+from typing import Any, List, Tuple, Set, Dict, NamedTuple  # noqa
 
-""" This is for mypy linter's static type checking
+# noqa disables flake8 linter in a single line.
+
+""" This is for mypy linter's advanced static type checking
 
 The static type definition is able from Python 3.6
-
+ 
     
-    Should I use static type checking in my own code? 
+    Should I use static type checking in my own code?
 
 Well, it's not an all-or-nothing question. Luckily, Python supports the concept of gradual typing. This means that I can gradually introduce types into my code.
 
@@ -28,12 +30,19 @@ def func(arg: arg_type_annotation, optarg: arg_type_annotation = default) -> ret
 
 """
 
+# Variable Annotation while undefined
+standard_input: str
 
-standard_input: str = """4
+# print(standard_input)
+# NameError: name 'standard_input' is not defined
+
+
+standard_input = """4
 This is for
 AREPL for Python
 Extension's
 Automatic Input"""
+
 
 CONSTANT_NAME: int = 123_456_789
 # for mypy linter's static type checking
@@ -77,7 +86,7 @@ class TopHierarchy:
 
     ############################################################
 
-    Magic Methods
+    __init__ (with Instance Var), Magic Methods
 
     ############################################################
 
@@ -93,7 +102,7 @@ class TopHierarchy:
 
     ############################################################
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args: str):
         self.public_var = args[0]
         self._internal_var = args[1]
         self.__private_var = args[2]
@@ -134,23 +143,8 @@ class TopHierarchy:
         # return instance's vars when print(instance_name)
         return f"vars : {self.__dict__}"
 
-    """ I'm not gonna use getter/setter because it's not pythonic way.
-
-    I'd definitely stick with the Zen of Python's "Simple is better than complex."
-
-
-
-        But, If I have to use getter/setter, I'll use property.
-
-    It's more advanced and simple and pythonic getter/setter because it
-    makes able to use getter/settered variable like a public variable.
-
-
-
-        See below example for detail.
-
     @property
-    def private_var(self):  # Think like it's @private_var.getter
+    def private_var(self):  # Treat it as a @private_var.getter
         return self.__private_var
 
     @private_var.setter
@@ -161,12 +155,26 @@ class TopHierarchy:
     def private_var(self):
         del self.__private_var
 
+    """ I'm not gonna use getter/setter because it's not pythonic way.
+
+    I'd definitely stick with the Zen of Python's "Simple is better than complex."
+
+
+        But, If I need to use getter/setter, I'll use property instead.
+
+    It's more advanced, simple, and pythonic getter/setter because it
+    makes able to use getter/settered variable like a public variable.
+
+
+        See below example.
     
     instance_name.private_var = 255
     print(instance_name.private_var)
     # 255
     
-
+    
+    ############################################################
+    
         Is it pythonic to use properties to limit the mutability of class attributes (variables and methods)?
 
     For attributes/properties/variables at either the class or instance level: yes, absolutely! The decorator @property is built in specifically to give control over read, write, and delete. Common use cases include:
@@ -181,7 +189,7 @@ class TopHierarchy:
 
         But really the most authoritative I can get is to quote PEP-8, the Python style guide.
 
-    For simple public data attributes, it is best to expose just the attribute name, without complicated accessor/mutator methods. Keep in mind that Python provides an easy path to future enhancement, should you find that a simple data attribute needs to grow functional behavior. 
+    For simple public data attributes, it is best to expose just the attribute name, without complicated accessor/mutator methods. Keep in mind that Python provides an easy path to future enhancement, should you find that a simple data attribute needs to grow functional behavior.
     
     In that case, use properties to hide functional implementation behind simple data attribute access syntax.
 
@@ -198,6 +206,7 @@ class TopHierarchy:
 
     ######################################################################
 
+    # If I define abstractmethod, this class become abstract class.
     @abstractmethod
     def abstract_method(self, *args, **kwargs):
         """ Concept of Abstract Class.
@@ -305,8 +314,8 @@ class MiddleHierarchy2(TopHierarchy):
 
 
 class BottomHierarchy11(MiddleHierarchy1):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, *args: str, **kwargs: Any):
+        super().__init__(*args)
 
         if kwargs.get("override_var"):
             self.public_var = "Overridden 1"
@@ -316,7 +325,8 @@ class BottomHierarchy11(MiddleHierarchy1):
             self._TopHierarchy__private_var = "Overridden 3"
 
     def abstract_method(self, *args, **kwargs):
-        return super().abstract_method(*args, **kwargs)
+        # ...
+        pass
 
 
 class BottomHierarchy12(MiddleHierarchy1):
@@ -351,16 +361,16 @@ def function_name(arg_name1, arg_name2, keyword="value"):
 
 
 # fmt: off
-_, _, global_var_name1, global_var_name2, global_var_name3 = (-1, "0", 1, 2, 3)   # type: ignore
+_, _, global_var_name1, global_var_name2, global_var_name3 = ("-1", 0, "1", "2", "3")  # type: ignore
 
-# I'll type: ignore comment when I use temporary variable '_'
-# Because it
+# I'll use type: ignore comment when I use temporary variable '_'
+# Because it could cause below  error.
 #
-# [mypy] Incompatible types in assignment (expression has type "str", variable has type "int")  [error]
+# [mypy] Incompatible types in assignment (expression has type "int", variable has type "str") [error]
 
 # fmt: on
 
-# -1, 0, 1, 2, 3
+
 is_override_var_mode = False
 
 print(
@@ -374,12 +384,12 @@ instance_name = BottomHierarchy11(
     global_var_name1, global_var_name2, global_var_name3, override=is_override_var_mode
 )
 # ==
-# instance_name = BottomHierarchy11(1, 2, 3, False)
+# instance_name = BottomHierarchy11("1", "2", "3", False)
 
 
 print(f"{instance_name}")
-# vars : {'public_var': 1, '_internal_var': 2, '_TopHierarchy__private_var': 3}
-print(f"{BottomHierarchy11(1,2,3,override_var=True)}")
+# vars : {'public_var': '1', '_internal_var': '2', '_TopHierarchy__private_var': '3'}
+print(f"{BottomHierarchy11('1','2','3',override_var=True)}")
 # vars : {'public_var': 'Overridden 1', '_internal_var': 'Overridden 2', '_TopHierarchy__private_var': 'Overridden 3'}
 
 
@@ -398,7 +408,7 @@ print(
 # True
 #
 
-for _ in range(int(input())):
+for _ in range(int(input())):  # type: ignore
     # 4
     line = input().split()
     # This is for

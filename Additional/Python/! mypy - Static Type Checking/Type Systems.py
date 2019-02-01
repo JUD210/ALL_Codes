@@ -2,6 +2,8 @@
 
 
 """ Dynamic Typing """
+
+
 if False:
     1 + "two"  # This line never runs, so no TypeError is raised
 else:
@@ -12,6 +14,8 @@ else:
 
 
 """ Static Typing """
+
+
 x: int = 5
 x = "test"  # type: ignore
 # [mypy] Incompatible types in assignment (expression has type "str", variable has type "int")  [error]
@@ -19,6 +23,8 @@ x = "test"  # type: ignore
 
 """ Duck Typing """
 # You can call len() on any Python object that defines a .__len__() method:
+
+
 class TheHobbit:
     def __len__(self):
         return 95022

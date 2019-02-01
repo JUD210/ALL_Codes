@@ -10,10 +10,7 @@ standard_input = """6
 2
 1"""
 
-# TODO: Study Again Later
-
-
-import sys
+# !TODO: Study Again!
 
 
 class Node:
@@ -24,7 +21,7 @@ class Node:
 
 class Solution:
     def insert(self, root, data):
-        if root == None:
+        if root is None:
             return Node(data)
         else:
             if data <= root.data:
@@ -35,7 +32,7 @@ class Solution:
                 root.right = current
         return root
 
-    def levelOrder(self, root):
+    def level_order(self, root):
         # Write your code here
         queue = [root] if root else []
         while queue:
@@ -64,7 +61,7 @@ for i in range(T):
     # 1
 
     root = myTree.insert(root, data)
-myTree.levelOrder(root)
+myTree.level_order(root)
 
 # 3 2 5 1 4 7
 
