@@ -14,10 +14,12 @@ abc 123         | "abc 123"
 
 \d	            | A character digit character (same as [0-9])
 \D	            | A non-digit character (same as [^0-9])
-\w              | A word character (same as [_a-zA-Z0-9] = Alphanumeric)
-\W              | A non-word character (same as [^_a-zA-Z0-9])
+\w              | A word character (same as [_a-zA-Z0-9] , [^\W])
+\W              | A non-word character (same as [^_a-zA-Z0-9] , [^\w])
 
-\s              | A whitespace character
+[^\W_]          | Same as Alphanumeric [a-zA-Z0-9] 
+
+\s              | A whitespace character (including a Tab)
 \S              | A non-whitespace character
 
 \t              | A Tab
