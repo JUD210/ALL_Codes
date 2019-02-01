@@ -32,9 +32,11 @@ Add> README.md> Introduction
 ! : New Feature of a Language
 ex) ! F Strings.py
 
-!! : Quick Peek of a Language
-ex) !! RegEx Quick Reference
-ex) !! 
+!! : Remind & Review!
+ex) !! Logic Gate (IS-A, HAS-A Relationship).py
+
+!!! : Quick Peek of a Language
+ex) !!! RegEx Quick Reference
 
 ~ : Ignored from git because the file is on edit.
 ex) ~ Overriding.py
