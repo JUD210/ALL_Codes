@@ -1,13 +1,13 @@
-l = ["1", "100", 63, "4", 2, "900", 0]
-print(sorted(l, key=str))
+lst = ["1", "100", 63, "4", 2, "900", 0]
+print(sorted(lst, key=str))
 # [0, '1', '100', 2, '4', 63, '900']
 
-l.sort(key=int)
-print(l)
+lst.sort(key=int)  # type: ignore
+print(lst)
 # [0, '1', 2, '4', 63, '100', '900']
 
-l = [int(n) for n in l]
-print(l)
+lst = [int(n) for n in lst]  # type: ignore
+print(lst)
 # [0, 1, 2, 4, 63, 100, 900]
 
 

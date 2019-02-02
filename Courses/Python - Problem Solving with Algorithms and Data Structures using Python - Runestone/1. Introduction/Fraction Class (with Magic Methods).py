@@ -17,7 +17,7 @@ def gcd(m, n):
 
 class Fraction:
     def __init__(self, top, bottom):
-        """ 
+        """
         Constructor (Initializer)
         """
 
@@ -38,7 +38,7 @@ class Fraction:
         print(f"{self.num}/{self.den}")
 
     def __add__(self, other):
-        """ 
+        """
         This solves below error.
 
         TypeError: unsupported operand type(s) for +:
@@ -51,7 +51,7 @@ class Fraction:
         return Fraction(newnum // common, newden // common)
 
     def __eq__(self, other):
-        """ 
+        """
         Two different objects with the same numerators and denominators would not be equal under default implementation. This is called shallow equality
 
         We can create deep equality equality by the same value, not the same reference by overriding the __eq__ method.
@@ -85,4 +85,3 @@ f3 = Fraction(3, 5)
 
 print(f1 == f3)
 # True  # Because we overrode __eq__ method.
-

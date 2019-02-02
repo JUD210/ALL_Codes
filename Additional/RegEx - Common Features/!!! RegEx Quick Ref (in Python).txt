@@ -105,3 +105,41 @@ $1              | (in Replace): Write(!=Match) the first captured group
 
 (?P=n)	        | The captured group named 'n'
 (?#...)	        | A comment
+
+
+
+############################################################
+
+### My back reference problem ###
+
+
+    Task
+
+Full Match Below List,
+
+ABC ABC ABC ABC
+1234 1234
+1234 1234 1234 1234
+1234 1234 1234 1234 1234 1234
+
+and Never Match Below List
+
+ABC DEF GHI 425
+1234
+1234 1234 1234
+1234 1234 1234 1234 1234
+
+
+    Answer
+
+^((.*?)\s)\2$
+
+
+    Description
+
+\1 and \2 divides half of whole match...
+but how does it work?
+
+I don't know.
+
+Maybe I should question later.
