@@ -29,22 +29,27 @@ Add> README.md> Introduction
 
 ## Meaning of Folders & Files' Prefix
 ```
-! : New Feature of a Language
-ex) ! F Strings.py
+!<Language> !nf : New Feature of a Language
+ex) !py !nf F Strings.py
 
-!! : Remind & Review!
-ex) !! Logic Gate (IS-A, HAS-A Relationship).py
+!<Language> !re : Remind & Review of a Language
+ex) !py !re Logic Gate (IS-A, HAS-A Relationship).py
 
-!!! : Quick Peek of a Language
-ex) !!! RegEx Quick Reference
+!<Language> !snp : Code Snippet of Python
+ex) !py !snp Get Real Path.py
+
+!<Language> !qrf : Quick Reference of a Language
+ex) !regex !qrf RegEx Quick Reference.txt
+ex) !py !qrf Peek Syntax and Naming Convention following PEP8
+
 
 ~ : Ignored from git because the file is on edit.
-ex) ~ Overriding.py
+ex) ~Overriding.py
 
-~~ : Ignored from git because the file is private.
-ex) ~~ password.txt
+~pvt : Ignored from git because the file is private.
+ex) ~pvt password.txt
 
-~~~ : Ignored from git because the file is temporary.
-ex) ~~~ TEMPORARY FILE
+~tmp : Ignored from git because the file is temporary.
+ex) ~tmp TEMPORARY FILE
 
 ```
