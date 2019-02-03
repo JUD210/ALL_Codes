@@ -1,6 +1,8 @@
 # https://stackoverflow.com/questions/279237/import-a-module-from-a-relative-path/6098238
 
-import os, sys, inspect
+import os
+import sys
+import inspect
 
 # realpath() will make your script run, even if you symlink it :)
 cmd_folder = os.path.realpath(
@@ -24,7 +26,7 @@ if cmd_subfolder not in sys.path:
 
 
 # [WARNING] DO NOT USE __file__ !!!
-cmd_folder = os.path.dirname(os.path.abspath(__file__)) 
+cmd_folder = os.path.dirname(os.path.abspath(__file__))
 # __file__ fails if the script is called in different ways on Windows.
 # __file__ fails if someone does os.chdir() before.
 # sys.argv[0] also fails, because it does not always contains the path.

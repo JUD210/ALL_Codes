@@ -20,6 +20,13 @@
 # | sort             | O(n log n)       |
 # | multiply         | O(nk)            |
 
+# Why List.pop(0) is O(n)?
+#
+# Because list's memory address is 'base+index' based.
+
+
+# The contains operator for lists is O(n) and the contains operator for dictionaries is O(1).
+
 
 import timeit
 

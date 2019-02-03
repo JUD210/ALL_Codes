@@ -29,18 +29,18 @@ Add> README.md> Introduction
 
 ## Meaning of Folders & Files' Prefix
 ```
-!<Language> !nf : New Feature of a Language
-ex) !py !nf F Strings.py
+!<Language>-nf : New Feature of a Language
+ex) !py-nf F Strings.py
 
-!<Language> !re : Remind & Review of a Language
-ex) !py !re Logic Gate (IS-A, HAS-A Relationship).py
+!<Language>-re : Remind & Review of a Language
+ex) !py-re Logic Gate (IS-A, HAS-A Relationship).py
 
-!<Language> !snp : Code Snippet of Python
-ex) !py !snp Get Real Path.py
+!<Language>-snp : Code Snippet of Python
+ex) !py-snp Get Real Path.py
 
-!<Language> !qrf : Quick Reference of a Language
-ex) !regex !qrf RegEx Quick Reference.txt
-ex) !py !qrf Peek Syntax and Naming Convention following PEP8
+!<Language>-qrf : Quick Reference of a Language
+ex) !regex-qrf RegEx Quick Reference.txt
+ex) !py-qrf Peek Syntax and Naming Convention following PEP8
 
 
 ~ : Ignored from git because the file is on edit.

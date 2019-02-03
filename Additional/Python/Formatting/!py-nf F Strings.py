@@ -38,7 +38,7 @@ print(f"{870.223441248:.{temp-10}f}")
 
 You can use advanced formatting Too!
 
-For detail, take a look around the 
+For detail, take a look around the
 Advanced Formatting.py
 
 """
