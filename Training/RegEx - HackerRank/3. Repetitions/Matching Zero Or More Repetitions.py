@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/matching-zero-or-more-repetitions/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/matching-zero-or-more-repetitions/problem
 
 
 import re

@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/matching-word-non-word/problem?h_r=next-challenge&h_v=zen
+# https://www.hackerrank.com/challenges/matching-word-non-word/problem
 
 
 import re

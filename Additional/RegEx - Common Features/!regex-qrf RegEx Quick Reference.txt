@@ -81,6 +81,15 @@ abc(?!123|456)  | abc that is not followed by 123 or 456 (A negative lookahead)
 (\w)(\1)(\2)    | A word character that is repeated exactly 3 times.
 
 
+ex)
+
+o
+
+(a?)o\1           | Matches 'o'
+(a)?o\1           | Fails to match 'o' (excluding JavaScript)
+
+
+
 \b, \B (Word Boundaries)
 : The metacharacter \b is an anchor like the caret and the dollar sign. It matches at a position that is called a "word boundary". This match is zero-length.
 
@@ -94,7 +103,7 @@ Simply put: \b allows you to perform a "whole words only" search using a regular
 Exactly which characters are word characters depends on the regex flavor you're working with. In most flavors, characters that are matched by the short-hand character class \w are the characters that are treated as word characters by word boundaries.
 
 
-example)
+ex)
 
 v 2.5.016: Test
 
@@ -104,7 +113,6 @@ v 2.5.016: Test
 \b[\d]+:\b        | Not Matches
 \b[\d]+\b:        | Matches '016:'
 (?<=\b)\d+(?=\:)  | Matches '016'
-
 
 
 === Non-Python ===
