@@ -1,10 +1,10 @@
 # Study-Note
 > Daily Commit from 2018.12.02
 
-* Daily Commit & YouTube Live Streaming\
-☞ https://goo.gl/qnehEQhttps://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg
+* YouTube Live Streaming\
+☞ https://goo.gl/XWksga
 
-* Life RPG : My Public Scheduler on Google Sheet (Excel)\
+* Life RPG : My Personal Scheduler on Google Sheet (Excel)\
 ☞ https://goo.gl/qnehEQ
 
 
