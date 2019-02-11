@@ -3,6 +3,7 @@
 
 import re
 
+
 # Inputs
 standard_input = """3threeormorealphabets."""
 
