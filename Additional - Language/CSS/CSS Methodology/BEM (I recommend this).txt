@@ -1,0 +1,23 @@
+<div class="media media--inverted">
+  <a href="#" class="media__image-wrapper">
+    <img class="media__image" src="" alt="" />
+  </a>
+  <div class="media__content"></div>
+</div>
+
+
+.media {...}
+.media--inverter {...}
+.media__image-wrapper {...}
+.media__image {...}
+.media__content {...}
+
+// With SASS - which will output the code above
+
+.media {
+  ...
+  &--inverter {...}
+  &__image-wrapper {...}
+  &__image {...}
+  &__content {...}
+}
