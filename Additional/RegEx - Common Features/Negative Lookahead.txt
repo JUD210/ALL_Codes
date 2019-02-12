@@ -1,5 +1,0 @@
-\w+(?!\s) 
-matches a character that is not followed by a Whitespace.
-
-\w+(?=\s) 
-matches a character that is followed by a Whitespace.

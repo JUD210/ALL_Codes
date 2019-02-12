@@ -1,7 +1,0 @@
-# https://stackoverflow.com/questions/4383571/importing-files-from-different-folder
-
-# some_file.py
-import sys
-sys.path.insert(0, '/path/to/application/app/folder')
-
-import file
