@@ -29,7 +29,11 @@ Add> README.md> Introduction
 
 ## Meaning of Folders & Files' Prefix
 ```
-!<Language>-nf : New Feature of a Language
+!<Language or Subject>-img : An Image
+ex) !devops-img Peek
+ex) !html-img Top 25 elements
+
+!<Language>-nf : A New Feature of a Language
 ex) !py-nf F Strings.py
 
 !<Language>-re : Remind & Review of a Language
