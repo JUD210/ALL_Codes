@@ -10,6 +10,6 @@ s = input()
 
 try:
     print(int(s))
-except:
+except ValueError:
     print("Bad String")
 # Bad String
