@@ -1,0 +1,48 @@
+<!-- Default HTML Document Structure -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+  <!--- for HTML Source File Importer (Ref. Code Snippet) --->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+
+  <script type='text/javascript'>
+    $(document).ready(function () {
+      // Example (snippet: `ipt)
+      $("#content1-navbar").load("content1/navbar.html");
+      $("#content1-h1").load("content1/h.html #h1");
+      $("#content1-h2").load("content1/h.html #h2");
+
+      $(".content2-navbar").load("content2/navbar.html");
+      $(".content2-h1").load("content2/h.html #h1");
+      $(".content2-h2").load("content2/h.html #h2");
+    });
+  </script>
+  <!--------------------------------------------------------->
+
+  <title>example</title>
+
+</head>
+
+<body>
+
+  <p>--------------------------------------</p>
+  <div id="content1-navbar"></div>
+  <div id="content1-navbar"></div>
+  <div id="content1-h1"></div>
+  <div id="content1-h2"></div>
+  <p>--------------------------------------</p>
+  <div class="content2-navbar"></div>
+  <div class="content2-navbar"></div>
+  <div class="content2-h1"></div>
+  <div class="content2-h2"></div>
+  <p>--------------------------------------</p>
+
+</body>
+
+</html>
