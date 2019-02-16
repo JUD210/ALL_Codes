@@ -1,0 +1,3066 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=unicode">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="keywords" content="gooroomee 구루미 실시간커뮤니케이션플랫폼 RealtimeCommunicationPlatform webrtc html5 videoconference 화상IR video audio free">
+  <meta name="description" content="WebRTC Free real-time video communication service">
+
+
+  <meta property="og:url" content="https://gooroomee.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="구루미(Gooroomee)">
+  <meta property="og:description" content="국내 최고의 웹기반 화상통신 서비스 '구루미' 화상회의, 화상교육,웨비나, 화상IR, 캠스터디는  구루미입니다.">
+  <meta property="og:image" content="https://gooroomee.com/images/logo/cover_1200x630.png">
+
+
+  <!-- naver -->
+  <meta name="naver-site-verification" content="2e3e3fa0700beda4f605cfb4d4905a976a09c940">
+
+
+  <base href="https://gooroomee.com/">
+
+  <title data-orititle="구루미(Gooroomee)">(1) 구루미(Gooroomee) - 1231232187</title>
+
+  <link rel="manifest" href="manifest.jso">
+
+  <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="ref/common/css/common.css?_dm=0212-01">
+
+
+
+
+  <!-- jQuery -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+  <!-- <script src="//code.jquery.com/jquery-3.1.1.js"></script> -->
+  <script id="facebook-jssdk" src="//connect.facebook.net/ko_KR/sdk.js#xfbml=1&amp;version=v2.7&amp;appId=988289321262078"></script>
+  <script src="https://connect.facebook.net/ko_KR/sdk.js?hash=a8b51b5e621e064eb2708d493d7678ee&amp;ua=modern_es6" async=""></script>
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+  <script src="common/lib/external/jquery/jquery-3.1.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+  <script src="common/lib/external/jquery/jquery.cookie.min.js"></script>
+
+
+
+
+  <!-- jQuery i18n -->
+  <script src="common/lib/external/jquery/jquery.i18n.properties.js"></script>
+  <!-- jQuery lazyload -->
+  <script src="common/lib/external/jquery/jquery.lazyload.min.js"></script>
+
+  <!-- date pickr -->
+  <link rel="stylesheet" href="common/lib/external/flatpickr/flatpickr.min.css">
+  <script src="common/lib/external/flatpickr/flatpickr.min.js"></script>
+  <script src="common/lib/external/flatpickr/l10n/ko.js"></script>
+
+  <!-- perfect scrollbar -->
+  <link rel="stylesheet" href="common/lib/external/perfect-scrollbar/0.6.16/css/perfect-scrollbar.min.css">
+  <script src="common/lib/external/perfect-scrollbar/0.6.16/js/perfect-scrollbar.jquery.min.js"></script>
+
+  <!-- Device -->
+  <script src="common/lib/external/device/device.min.js"></script>
+  <script src="common/lib/external/bowser/bowser.min.js"></script>
+
+  <!-- Common -->
+  <script src="common/js/common.js?_dm=0212-01"></script>
+  <script src="common/js/Util.js"></script>
+  <script src="common/js/UI-1.2.js"></script>
+
+  <script src="ref/common/js/common.ui.js?_dm=0212-01"></script>
+
+  <script>
+    //document.addEventListener('DOMContentLoaded', function(){
+    // jquery i18n
+    (function (lang) {
+      var htmlLang = lang;
+
+      if (lang.indexOf('ko') == 0) {
+        htmlLang = 'ko';
+        //lang = '';
+      }
+
+      document.documentElement.setAttribute('lang', htmlLang);
+
+      $.i18n.language = lang;
+      $.i18n.properties({
+        name: 'message',
+        path: 'common/messages/',
+        mode: 'both',
+        language: lang,
+        cache: true,
+        callback: function () {
+        }
+      });
+
+      window.i18n = function () {
+        return $.i18n.prop.apply($.i18n, arguments);
+      }
+
+      if (window.flatpickr && htmlLang === 'ko') {
+        window.flatpickr.localize(flatpickr.l10ns.ko);
+      }
+    })('en');
+	//});
+  </script>
+
+  <link rel="stylesheet" href="ref/room/css/room_renew.css?_dm=0212-01">
+  <link rel="stylesheet" href="ref/room/css/room_rights.css?_dm=0212-01">
+  <link rel="stylesheet" href="ref/room/css/room_camstudy.css?_dm=0212-01">
+  <link rel="stylesheet" href="ref/room/css/room_mobile.css?_dm=0212-01">
+  <link rel="stylesheet" href="ref/room/css/room-exam.css?_dm=0212-01">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+
+
+
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    try {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2402861463076832');
+      fbq('track', 'PageView');
+    } catch (e) {
+      console.error(e);
+    }
+  </script>
+  <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=2402861463076832&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+
+
+  <!-- Global site tag (gtag.js) - Google Ads: 776021148 -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-776021148"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-776021148'); </script>
+
+  <style data-grm-room-style="" type="text/css">
+    .mixing-guide-layer .mixing-user.none-user:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      background-image: url("group/_free/roomBlankVideoBg?defaultImg=false");
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+  </style>
+  <link rel="chrome-webstore-item" grm-cext="cdnmddhnbgepkaeogphkppeobbjkcpke" href="https://chrome.google.com/webstore/detail/cdnmddhnbgepkaeogphkppeobbjkcpke">
+  <style type="text/css">
+    .fb_hidden {
+      position: absolute;
+      top: -10000px;
+      z-index: 10001
+    }
+
+    .fb_reposition {
+      overflow: hidden;
+      position: relative
+    }
+
+    .fb_invisible {
+      display: none
+    }
+
+    .fb_reset {
+      background: none;
+      border: 0;
+      border-spacing: 0;
+      color: #000;
+      cursor: auto;
+      direction: ltr;
+      font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+      font-size: 11px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      letter-spacing: normal;
+      line-height: 1;
+      margin: 0;
+      overflow: visible;
+      padding: 0;
+      text-align: left;
+      text-decoration: none;
+      text-indent: 0;
+      text-shadow: none;
+      text-transform: none;
+      visibility: visible;
+      white-space: normal;
+      word-spacing: normal
+    }
+
+    .fb_reset>div {
+      overflow: hidden
+    }
+
+    @keyframes fb_transform {
+      from {
+        opacity: 0;
+        transform: scale(.95)
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    .fb_animate {
+      animation: fb_transform .3s forwards
+    }
+
+    .fb_dialog {
+      background: rgba(82, 82, 82, .7);
+      position: absolute;
+      top: -10000px;
+      z-index: 10001
+    }
+
+    .fb_dialog_advanced {
+      border-radius: 8px;
+      padding: 10px
+    }
+
+    .fb_dialog_content {
+      background: #fff;
+      color: #373737
+    }
+
+    .fb_dialog_close_icon {
+      background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+      cursor: pointer;
+      display: block;
+      height: 15px;
+      position: absolute;
+      right: 18px;
+      top: 17px;
+      width: 15px
+    }
+
+    .fb_dialog_mobile .fb_dialog_close_icon {
+      left: 5px;
+      right: auto;
+      top: 5px
+    }
+
+    .fb_dialog_padding {
+      background-color: transparent;
+      position: absolute;
+      width: 1px;
+      z-index: -1
+    }
+
+    .fb_dialog_close_icon:hover {
+      background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+    }
+
+    .fb_dialog_close_icon:active {
+      background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+    }
+
+    .fb_dialog_iframe {
+      line-height: 0
+    }
+
+    .fb_dialog_content .dialog_title {
+      background: #6d84b4;
+      border: 1px solid #365899;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0
+    }
+
+    .fb_dialog_content .dialog_title>span {
+      background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+      float: left;
+      padding: 5px 0 7px 26px
+    }
+
+    body.fb_hidden {
+      height: 100%;
+      left: 0;
+      margin: 0;
+      overflow: visible;
+      position: absolute;
+      top: -10000px;
+      transform: none;
+      width: 100%
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading {
+      background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+      min-height: 100%;
+      min-width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 10001
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading.centered {
+      background: none;
+      height: auto;
+      min-height: initial;
+      min-width: initial;
+      width: auto
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+      width: 100%
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+      background: none
+    }
+
+    .loading.centered #fb_dialog_loader_close {
+      clear: both;
+      color: #fff;
+      display: block;
+      font-size: 18px;
+      padding-top: 20px
+    }
+
+    #fb-root #fb_dialog_ipad_overlay {
+      background: rgba(0, 0, 0, .4);
+      bottom: 0;
+      left: 0;
+      min-height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 10000
+    }
+
+    #fb-root #fb_dialog_ipad_overlay.hidden {
+      display: none
+    }
+
+    .fb_dialog.fb_dialog_mobile.loading iframe {
+      visibility: hidden
+    }
+
+    .fb_dialog_mobile .fb_dialog_iframe {
+      position: sticky;
+      top: 0
+    }
+
+    .fb_dialog_content .dialog_header {
+      background: linear-gradient(from(#738aba), to(#2c4987));
+      border-bottom: 1px solid;
+      border-color: #1d3c78;
+      box-shadow: white 0 1px 1px -1px inset;
+      color: #fff;
+      font: bold 14px Helvetica, sans-serif;
+      text-overflow: ellipsis;
+      text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+      vertical-align: middle;
+      white-space: nowrap
+    }
+
+    .fb_dialog_content .dialog_header table {
+      height: 43px;
+      width: 100%
+    }
+
+    .fb_dialog_content .dialog_header td.header_left {
+      font-size: 12px;
+      padding-left: 5px;
+      vertical-align: middle;
+      width: 60px
+    }
+
+    .fb_dialog_content .dialog_header td.header_right {
+      font-size: 12px;
+      padding-right: 5px;
+      vertical-align: middle;
+      width: 60px
+    }
+
+    .fb_dialog_content .touchable_button {
+      background: linear-gradient(from(#4267B2), to(#2a4887));
+      background-clip: padding-box;
+      border: 1px solid #29487d;
+      border-radius: 3px;
+      display: inline-block;
+      line-height: 18px;
+      margin-top: 3px;
+      max-width: 85px;
+      padding: 4px 12px;
+      position: relative
+    }
+
+    .fb_dialog_content .dialog_header .touchable_button input {
+      background: none;
+      border: none;
+      color: #fff;
+      font: bold 12px Helvetica, sans-serif;
+      margin: 2px -12px;
+      padding: 2px 6px 3px 6px;
+      text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+    }
+
+    .fb_dialog_content .dialog_header .header_center {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: center;
+      vertical-align: middle
+    }
+
+    .fb_dialog_content .dialog_content {
+      background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+      border: 1px solid #4a4a4a;
+      border-bottom: 0;
+      border-top: 0;
+      height: 150px
+    }
+
+    .fb_dialog_content .dialog_footer {
+      background: #f5f6f7;
+      border: 1px solid #4a4a4a;
+      border-top-color: #ccc;
+      height: 40px
+    }
+
+    #fb_dialog_loader_close {
+      float: left
+    }
+
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+      text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+    }
+
+    .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+      visibility: hidden
+    }
+
+    #fb_dialog_loader_spinner {
+      animation: rotateSpinner 1.2s linear infinite;
+      background-color: transparent;
+      background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 24px
+    }
+
+    @keyframes rotateSpinner {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+
+    .fb_iframe_widget {
+      display: inline-block;
+      position: relative
+    }
+
+    .fb_iframe_widget span {
+      display: inline-block;
+      position: relative;
+      text-align: justify
+    }
+
+    .fb_iframe_widget iframe {
+      position: absolute
+    }
+
+    .fb_iframe_widget_fluid_desktop,
+    .fb_iframe_widget_fluid_desktop span,
+    .fb_iframe_widget_fluid_desktop iframe {
+      max-width: 100%
+    }
+
+    .fb_iframe_widget_fluid_desktop iframe {
+      min-width: 220px;
+      position: relative
+    }
+
+    .fb_iframe_widget_lift {
+      z-index: 1
+    }
+
+    .fb_iframe_widget_fluid {
+      display: inline
+    }
+
+    .fb_iframe_widget_fluid span {
+      width: 100%
+    }
+  </style>
+</head>
+
+<body data-gr-c-s-loaded="true" style="cursor: url('chrome-extension://jlgkpaicikihijadgifklkbpdajbkhjo/image/cursors/006.png'), default;">
+
+  <div class="room" tabindex="-1" data-room-mode="call" data-user-screenshare="false" data-right-side-on="true" data-right-side-view="true" data-subvideo-direction="0" data-live-presenter="true" data-buildtype="" data-call-ui-type="default" user-device-videoinput-len="3" user-device-audioinput-len="6" user-device-audiooutput-len="6" data-r-id="882ef2bea8cc48c3977776ac79c3e9f4" data-group-license-id="free" data-app-type="" data-passwd="false" data-lock="false" data-call-type="p2p" data-live="false" data-live-mix-user="false" data-qnamode="false" data-role-camera="true" data-roleid="speaker" data-role-mic="true" data-role-speaker="true" data-role-draw="true" data-record-enabled="false">
+
+    <div class="room-wrapper">
+      <nav class="room-menu">
+        <div class="logo" data-change="true">
+          <div class="logo-icon logo-icon-grm"></div>
+          <div class="logo-icon logo-icon-2" style="background-image: url('group/_free/roomLogo');"></div>
+        </div>
+        <div class="room-timer">00:29:02</div>
+        <ul class="room-menu-body">
+          <li data-menu="call"></li>
+          <li data-menu="screenshare"></li>
+          <li data-menu="docshare"></li>
+          <li data-menu="mediashare" class="hidden"></li>
+          <li data-menu="exam" class="hidden"></li>
+          <li data-menu="camstudy" data-allowed="all" style="display: none;"></li>
+
+          <!-- IR 큐더스 - 주소록 -->
+          <li data-menu="address" class="hidden"></li>
+          <!-- 윤선생영어교실 교재 -->
+          <li data-menu="yoonsBook" class="hidden"></li>
+          <li data-menu="qna" data-allowed="all">
+            <span class="qna-count-badge qna-count"></span>
+          </li>
+        </ul>
+        <ul class="room-menu-footer">
+
+          <li data-menu="feedback" data-allowed="all"></li>
+
+          <li data-menu="exit" data-allowed="all">
+            <button class="default"></button>
+            <button class="over"></button>
+          </li>
+        </ul>
+      </nav>
+      <div class="room-main">
+        <div class="grm-dialog-msg-layer room-setting">
+          <div class="grm-dialog-top">
+            <h4 class="grm-dialog-title">Room Infomation</h4>
+
+            <div class="room-setting-top-btns">
+              <div class="room-setting-top-btn" data-type="close"><span>Cancel</span></div>
+              <div class="room-setting-top-btn" data-type="ok"><span class="confirm">OK</span></div>
+            </div>
+          </div>
+          <div class="grm-dialog-body">
+            <div class="room-setting-form-wrapper">
+              <div class="room-setting-form">
+                <label>RoomTitle</label>
+                <div>
+                  <input type="text" name="roomTitle">
+                </div>
+              </div>
+              <div class="room-setting-form">
+                <label>Public Mode</label>
+                <div class="openType">
+                  <input type="text" name="passwd" maxlength="30">
+                  <div id="roomPublic" class="closed" data-grm-checkbox="toggle" data-grm-on="true" data-grm-text-on="Public" data-grm-text-off="Private" data-grm-name="isPublic"><span>Public</span></div>
+                </div>
+              </div>
+              <div class="room-setting-form">
+                <label>Default Role</label>
+                <div>
+                  <span class="grm-select">
+                    <select name="defaultRoomUserRoleId">
+
+
+
+
+                      <option value="emcee">Emcee</option>
+
+
+
+                      <option value="participant">Participant</option>
+
+
+                    </select>
+                  </span>
+                </div>
+              </div>
+              <div class="room-setting-form" style="display:none;">
+                <label>입장시 카메라</label>
+                <div>
+                  <div class="closed" data-grm-checkbox="toggle" data-grm-on="true" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="defaultRoleCamera"><span>On</span></div>
+                </div>
+              </div>
+              <div class="room-setting-form" style="display:none;">
+                <label>입장시 마이크</label>
+                <div>
+                  <div class="closed" data-grm-checkbox="toggle" data-grm-on="true" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="defaultRoleMic"><span>On</span></div>
+                </div>
+              </div>
+              <div class="room-setting-form">
+                <label>Live Mode</label>
+                <div>
+                  <div id="roomLiveMode" data-grm-checkbox="toggle" data-grm-on="false" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="isPublic"><span>Off</span></div>
+                </div>
+              </div>
+              <div class="room-setting-form livemode-mix-user">
+                <label>View other videos</label>
+                <div>
+                  <div id="liveModeMixUser" data-grm-checkbox="toggle" data-grm-on="false" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="isLiveModeMixUser"><span>Off</span></div>
+                </div>
+              </div>
+              <div class="room-setting-form livemode-ext-stream">
+                <label>스트리밍 방송</label>
+                <!-- 
+                <div>
+                  <span class="grm-select">
+                    <select name="ext-stream-type">
+                      <option value="facebook">Facebook</option>
+                      <option value="youtube">YouTube</option>
+                    </select>
+                  </span>
+                </div>
+                <div class="streaming">
+                  <input type="text" name="ext-stream-key" class="" value="" placeholder="스트리밍 키를 입력하세요" autocomplete="off" />
+                </div>
+                 -->
+                <div>
+                  <button class="streamingBtn">스트리밍 설정</button>
+                </div>
+                <div class="streaming">
+                  <ul>
+                    <li>
+                      <p data-type="youtube" data-broadcast="true"></p>
+                    </li>
+                    <li>
+                      <p data-type="facebook"></p>
+                    </li>
+                    <li>
+                      <p data-type="external">기타</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="room-setting-form qnamode">
+                <label>Get a question</label>
+                <div>
+                  <div id="qnaMode" data-grm-checkbox="toggle" data-grm-on="false" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="isQnaMode"><span>Off</span></div>
+                </div>
+              </div>
+              <div class="room-setting-form rightSideView" style="display:none;">
+                <label>Hide UserList &amp; Chat</label>
+                <div class="toggleRec">
+                  <div id="rightSideView" data-grm-checkbox="toggle" data-grm-on="false" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name=""><span>Off</span></div>
+                </div>
+                <div class="rightSideViewOption" style="display: none;">
+                  <div class="selectUserRec">
+                    <label>Speaker</label>
+                    <div class="toggleRec">
+                      <div data-user-type="speaker" data-grm-checkbox="toggle" data-grm-checkboxsize="S" data-grm-on="true" data-grm-name=""><span></span></div>
+                    </div>
+                  </div>
+                  <div class="selectUserRec">
+                    <label>Emcee</label>
+                    <div class="toggleRec">
+                      <div data-user-type="emcee" data-grm-checkbox="toggle" data-grm-checkboxsize="S" data-grm-on="true" data-grm-name=""><span></span></div>
+                    </div>
+                  </div>
+                  <div class="imgRegRec">
+                    <button class="imgRegBtn">이미지 등록</button>
+                  </div>
+                </div>
+              </div>
+              <div class="room-setting-form video-layout-setting">
+                <label>
+                  Video Layout
+                </label>
+                <div>
+                  <div class="video-layout-type selected preview" data-layout-type="auto"></div>
+                </div>
+                <div class="video-layout-type-list ps-container ps-theme-default" data-ps-id="e22d7ff8-36cb-1aed-6957-8e8b3239e4a6">
+                  <div class="video-layout-type-list-body">
+                    <div class="video-layout-type" data-layout-type="auto" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_01_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_02_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_03_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_04_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_05_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_06_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_07_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_08_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_09_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_10_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_11_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_12_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_13_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_16_00" data-license-type="free"></div>
+                    <div class="video-layout-type" data-layout-type="ml_17_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_19_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_20_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_22_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_25_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_30_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_33_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_36_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_43_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_46_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_49_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_58_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_61_00" data-license-type="premium"></div>
+                    <div class="video-layout-type" data-layout-type="ml_64_00" data-license-type="premium"></div>
+                  </div>
+                  <script>
+                    (function () {
+                      //var s = $('<select style="color: #000"></select>');
+                      var list = ['auto,free',
+                        //'ml_01_00', 'ml_02_00', 'ml_02_01', 'ml_03_00', 'ml_03_01', 'ml_04_00', 'ml_04_01',
+                        //'ml_01_00,premium', 'ml_02_00', 'ml_03_00', 'ml_04_00',
+                        'ml_01_00,premium', 'ml_02_00', 'ml_03_00', 'ml_04_00',
+                        'ml_05_00,free', 'ml_06_00', 'ml_07_00', 'ml_08_00', 'ml_09_00',
+                        'ml_10_00', 'ml_11_00', 'ml_12_00', 'ml_13_00', 'ml_16_00',
+                        'ml_17_00,premium', 'ml_19_00',
+                        'ml_20_00', 'ml_22_00', 'ml_25_00',
+                        'ml_30_00', 'ml_33_00', 'ml_36_00',
+                        'ml_43_00', 'ml_46_00', 'ml_49_00',
+                        'ml_58_00',
+                        'ml_61_00', 'ml_64_00'
+                      ]
+
+                      var license = 'free';
+                      var src = [];
+                      list.forEach(function (typeStr, i) {
+                        var types = typeStr.split(',');
+                        var type = types[0].trim();
+                        var lic = types[1] && types[1].trim();
+                        if (lic) {
+                          license = lic;
+                        }
+                        src.push('<div class="video-layout-type" data-layout-type="' + type + '" data-license-type="' + license + '"></div>');
+                      });
+                      $('.video-layout-type-list-body').html(src.join(''));
+                    })();
+                  </script>
+                  <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                    <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                  </div>
+                  <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                    <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grm-dialog-footer">
+            <button class="grm-btn cancel">Cancel</button>
+            <button class="grm-btn ok">OK</button>
+          </div>
+        </div>
+
+        <div class="grm-dialog updateVersion externalStreamInputLayer" data-show="">
+          <div class="grm-dialog-wrapper">
+            <div class="grm-dialog-msg-layer streamingLayer">
+              <div class="grm-dialog-top">
+                <h4 class="grm-dialog-title">스트리밍 설정</h4>
+              </div>
+              <div class="grm-dialog-body">
+                <ul>
+                  <li data-type="youtube">
+                    <input type="text" placeholder="스트리밍 키를 입력해주세요">
+                  </li>
+                  <li data-type="facebook">
+                    <input type="text" placeholder="스트리밍 키를 입력해주세요">
+                  </li>
+                  <li data-type="external">
+                    <input type="text" class="etcUrl" placeholder="URL">
+                    <input type="text" placeholder="스트리밍 키를 입력해주세요">
+                  </li>
+                </ul>
+              </div>
+              <div class="grm-dialog-footer">
+                <button class="grm-btn cancel">Cancel</button>
+                <button class="grm-btn ok">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-status-msg-layer">
+          <div class="room-status-msg-views">
+          </div>
+        </div>
+
+        <div class="room-main-top">
+          <div class="room-main-top-left">
+            <div class="roomLock"></div>
+            <div class="room-title">1231232187</div>
+            <div class="room-title-line"></div>
+            <div class="room-live-status">
+              <p>LIVE</p>
+            </div>
+            <div class="room-join-count">1</div>
+          </div>
+          <div class="room-main-controls" data-my-mic="on" data-my-speaker="on" data-my-camera="on" data-my-fullscreen="off">
+            <span class="icon-global-mic" data-btn-type="mic"></span>
+            <span class="icon-global-mic-off" data-btn-type="mic" data-btn-off="true"></span>
+            <span class="icon-volume-medium" data-btn-type="speaker"></span>
+            <span class="icon-volume-mute2" data-btn-type="speaker" data-btn-off="true"></span>
+            <span class="icon-global-camera" data-btn-type="camera"></span>
+            <span class="icon-global-camera-off" data-btn-type="camera" data-btn-off="true"></span>
+            <span class="icon-global-settings" data-btn-type="deviceSetting"></span>
+            <span class="icon-global-size-increase" data-btn-type="fullscreen" data-btn-off="true"></span>
+            <span class="icon-global-size-decrease" data-btn-type="fullscreen"></span>
+          </div>
+          <div class="room-main-sub-controls clearfix">
+            <div class="rec-controls">
+              <div class="icon-global-rec btn-rec" data-type="start">
+                <div class="btn-record">
+                  <div class="circle"></div>
+                  <div class="txt">REC</div>
+                </div>
+                <div class="recordingTime "></div>
+              </div>
+              <div class="rec-control-btns btn-rec">
+                <div class="btn-play">
+                  <div class="play" data-type="resume"></div>
+                  <div class="pause" data-type="pause"></div>
+                </div>
+                <div class="btn-stop" data-type="stop">
+                  <div class="stop"></div>
+                </div>
+              </div>
+
+              <div class="grm-tooltip rec-stop-progress" data-tooltip-direction="bottom">
+                <!-- <div class="grm-tooltip-arrow"></div> -->
+                <div class="grm-tooltip-body bgAlert">
+                  <p>Creating recording file.</p>
+                  <p>Don't leave the room.</p>
+                  <div class="progress">
+                    <div class="progress-bar"></div>
+                  </div>
+                  <div class="percent"></div>
+                  <div class="remainTimeRec">
+                    <p class="remainTx">
+                      Remain time</p>
+                    <p class="remainTime"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="icon-global-invite btn-invite" data-type="invite"></span>
+            <span class="mobileCameraRotateBtn" data-type="cameraRotate"></span>
+            <span class="icon-global-menu btn-right-side-toggle" data-type="menu"></span>
+            <span class="icon-global-close btn-right-side-toggle" data-type="close"></span>
+            <span class="icon-global-chat btn-right-side-toggle" data-type="chat">
+              <span class="chat-badge-count"></span>
+            </span>
+          </div>
+        </div>
+        <!-- .room-main-top -->
+
+        <!-- user-setting -->
+        <div class="grm-dialog-msg-layer user-device-list" tabindex="-1">
+          <div class="userSetting">
+            <div class="grm-dialog-body">
+              <div class="video" data-useimage="true">
+                <label>Camera</label>
+                <div class="grm-video-setting">
+                  <div class="grm-select"><select>
+                      <option value="790acdafde23e60146145f09ce6ac55c796be28cdd272aac677ea066e27c9681">video 1</option>
+                      <option value="4844e67f9de05840ffb117cf4ba5df755e9001366563a50f0165f2a81ade211f">video 2</option>
+                      <option value="62fe3d0f94fe109c15189457f08ba0ee6a77938a9122d2914e0a38b8fcecf46f">video 3</option>
+                    </select></div>
+                  <div class="resolution-select" style="display: none;">
+                    <div data-resolution="360" class="selected">360p</div>
+                    <div data-resolution="720">720p</div>
+                    <div data-resolution="1080">1080p</div>
+                  </div>
+                  <div class="video-high-res toggle-layer hidden">
+                    <p class="tx">고해상도</p>
+                    <div class="btnToggle" data-grm-checkbox="toggle" data-grm-on="false" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="isPublic"><span>Off</span></div>
+                  </div>
+                  <div class="video-reverse toggle-layer">
+                    <p class="tx">My Video Mirror mode</p>
+                    <div class="btnToggle" data-grm-checkbox="toggle" data-grm-on="true" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="isPublic"><span>On</span></div>
+                  </div>
+                  <div class="useImage" style="display: none;">
+                    <p class="tx">대체 이미지 사용</p>
+                    <div class="btnToggle" data-grm-checkbox="toggle" data-grm-on="false" data-grm-text-on="On" data-grm-text-off="Off" data-grm-name="isPublic"><span>Off</span></div>
+                  </div>
+                  <div class="useImageLayer" style="display: none;">
+                    <ul>
+                      <li>
+                        <button class="defaultImg01 selected"></button>
+                      </li>
+                      <li>
+                        <button class="defaultImg02"></button>
+                      </li>
+                      <li>
+                        <button class="customImg"></button>
+                      </li>
+                      <li>
+                        <button class="uploadBtn">이미지<br>업로드</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="audio">
+                <label>MIC</label>
+                <span class="grm-select"><select>
+                    <option value="default">audio 1</option>
+                    <option value="communications">audio 2</option>
+                    <option value="5eeb10d23ce3205a6d2b8505f68867f12fdeb3ae5ba6ea97bf28d7e31c42a1e4">audio 3</option>
+                    <option value="d09afc29af748efc858b3cf7b8111b575e50116c0ffb74f765c09f4de1ea73a1">audio 4</option>
+                    <option value="6e57b217c801c3d4a6febdd9a3368c8bc5ae919ccc7089f726c3ee371aaa1479">audio 5</option>
+                    <option value="9f3183fe5dabe651ecdd3441e4a3808f607a81e132bb71ba793c5531a064feac">audio 6</option>
+                  </select></span>
+              </div>
+              <div class="audiooutput">
+                <label>Speaker</label>
+                <span class="grm-select"><select>
+                    <option value="default">audiooutput 1</option>
+                    <option value="communications">audiooutput 2</option>
+                    <option value="f70122610c77915d0c1edc3e3120aa05ea5b123dfbcd1837b5926a4d7677483a">audiooutput 3</option>
+                    <option value="a87983430511d29e98a548872c317212205963ae40148af71ed18a0b74598f45">audiooutput 4</option>
+                    <option value="bedecc477ee38f128b24fba7a4292bb085c4bac5bfb1ab97040279aec9b187f8">audiooutput 5</option>
+                    <option value="6616fa1db01c4744b7f682fca870cb309ea7cf63772cd652d7d1e6a681feb17b">audiooutput 6</option>
+                  </select></span>
+              </div>
+              <div class="highClassSetting" data-expandshow="true">
+                <h2 class="titleTx">고급 설정</h2>
+                <div class="protocolTypeRec">
+                  <label>영상품질 우선</label>
+                  <div class="protocolType">
+                    <div data-protocoltype="udp" class="selected">ON</div>
+                    <div data-protocoltype="tcp" class="">OFF</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grm-dialog-footer">
+              <button class="grm-btn cancel">Cancel</button>
+              <button class="grm-btn ok">OK</button>
+            </div>
+          </div>
+        </div>
+        <!-- user-setting -->
+
+        <!-- <div class="room-call-wrapper"></div> -->
+        <div class="roomCallMainVideosRec">
+          <!-- 	<div class="roomCallMainVideo"> -->
+          <div class="room-call-main-videos clearfix" data-live-presenter="true" data-screensharemode="">
+            <!-- <div class="mixing-guide-layer"></div> -->
+
+
+            <div class="video-layer" data-userid="10083yvrglpn1" data-user-roleid="speaker" data-my-video="true" data-device-status-camera="on" data-device-status-mic="on" data-device-status-speaker="on" data-screenshare="false">
+              <video autoplay="autoplay" data-video-type="user"></video>
+              <div class="video-cover">
+                <div class="user-device-status">
+                  <span data-device-type="mic"></span>
+                  <span class="roleIdSpeaker"></span>
+                  <span data-device-type="speaker"></span>
+                  <span data-device-type="camera"></span>
+                </div>
+                <div class="user-info-wrapper">
+                  <div class="low-network">
+                    <div class="low-network-msg">
+                      network status is unstable
+                    </div>
+                  </div>
+                  <div class="userInfoRec">
+                    <div class="user-info user-volume">
+                      <span class="room-user-nickname" title="[Opener][Speaker]testsetwesetsetset">testsetwesetsetset</span>
+                      <span class="editIco"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="notNetwork">
+                  Only audio calls becuase the network is bad
+                </div>
+                <div class="user-camstudy">
+                  <div class="stopwatch">
+                    <div class="stopwatch-wrap">
+                      <span class="stopwatch-time"></span>
+                      <span class="pause" data-btn="stopwatch-pause"></span>
+                      <span class="reset" data-btn="stopwatch-reset"></span>
+                    </div>
+                  </div>
+                  <div class="stopwatchTx">
+                    When you're ready to study, press the space bar or button.
+                  </div>
+                  <div class="my-msg">
+                    <div>
+                      <span data-cs-type="mymsg">메세지 입력</span>
+                      <button></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-call-sub-videos" data-video-count="0">
+          <div class="room-call-sub-btns">
+            <div class="room-call-subBtnRec">
+              <div class="room-call-sub-btn" data-btn-type="toggleVideos">
+                <span class="left"></span>
+                <span class="right"></span>
+              </div>
+            </div>
+          </div>
+          <div class="videos"></div>
+        </div>
+
+        <div class="room-doc" data-curr-page-cnt="1" data-page-list="false">
+          <div class="room-doc-side">
+            <div class="room-doc-side-top">
+              <div class="room-doc-top-title">
+                Shared files
+              </div>
+            </div>
+            <div class="back-room-doc-list">
+              Back to List
+            </div>
+            <div class="room-doc-side-body ps-container ps-theme-default" data-ps-id="bde7cf7e-48d3-db46-6835-c976b5701dab">
+              <div class="room-doc-list">
+                <div class="room-doc-item active" data-file-ext="" draggable="true" data-docid="whiteboard" data-docseq="0" title="Whiteboard">
+
+                  <div class="room-doc-item-img">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+                  </div>
+                  <div class="room-doc-desc">Whiteboard</div>
+                </div>
+                <div class="room-doc-item room-doc-add" title="Add document or image file">
+                  <div class="room-doc-item-img">
+                    <div class="room-doc-add-text">
+                      add File
+                    </div>
+                  </div>
+                  <input type="file" style="display: none;" multiple="multiple" accept="image/*,.pdf,.xls,.xlsx,.ppt,.pptx,.doc,.docx,.hwp" size="3">
+                </div>
+              </div>
+              <div class="room-doc-page-list">
+                <ol></ol>
+              </div>
+              <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+              </div>
+              <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="room-doc-view-wrapper">
+            <!-- [data-room-mode="docshare"] paging -->
+            <div class="docPagingRec">
+              <div class="docPaging">
+                <ul>
+                  <li class="btnRec">
+                    <button class="btn" data-type="prev"></button>
+                  </li>
+                  <li class="pageRec">
+                    <input class="inputField currentPage" maxlength="3">
+                    <span class="divisionLine">/</span>
+                    <span class="totalPage"></span>
+                  </li>
+                  <li class="btnRec">
+                    <button class="btn" data-type="next"></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="room-doc-view" draggable="false">
+              <div style="position: relative; font-size: 10px; width: 100%; height: calc(100% - 0px); margin-left: 0px; margin-top: 0px;">
+                <div style="position: absolute; left: 0px; top: 0px;"><canvas id="_csc_1550267975031_0" draggable="false" width="0" height="0" style="user-select: none; font: 400 10px/10px Roboto, 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 돋움, dotum, 'Helvetica Neue', Helvetica, Arial, sans-serif; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; cursor: default;"></canvas><canvas id="_csc_1550267975032_1" draggable="false" width="0" height="0" style="user-select: none; font: 400 10px/10px Roboto, 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 돋움, dotum, 'Helvetica Neue', Helvetica, Arial, sans-serif; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></canvas><canvas id="_csc_1550267975033_4" draggable="false" width="0" height="0" style="user-select: none; font: 400 10px/10px Roboto, 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 돋움, dotum, 'Helvetica Neue', Helvetica, Arial, sans-serif; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></canvas><canvas id="_csc_1550267975033_5" draggable="false" width="0" height="0" style="user-select: none; font: 400 10px/10px Roboto, 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 돋움, dotum, 'Helvetica Neue', Helvetica, Arial, sans-serif; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; pointer-events: auto; cursor: url('images/room/doc/cursor_pencil_yellow.png'), default;"></canvas></div>
+              </div>
+            </div>
+            <div class="room-doc-view-v2">
+              <div data-gooroomee-canvas="share" style="width: calc(95% - 10px); height: 99%;">
+                <!-- 							<div class="wrap" style="width: 100%; height: 100%;"></div> -->
+              </div>
+              <div class="cvs-resize-handle" style="
+                  display: inline-block;
+                  width: 5px;
+                  height: 99%;
+                  cursor: col-resize;
+              "></div>
+              <div data-gooroomee-canvas="mine" style="width: calc(5% - 10px); height: 99%;">
+                <div class="syncBtnRec btn-send-mycanvas">
+                  <button class="syncBtn">
+                    <span></span>
+                  </button>
+                </div>
+                <!-- 							<div class="wrap" style="width: 100%; height: 100%;"></div> -->
+              </div>
+            </div>
+            <div class="room-doc-palette">
+              <div class="icon-draw-pointer" data-toolkit="LaserPointer"></div>
+              <div class="icon-draw-pen active" data-toolkit="Pencil"></div>
+              <div class="icon-draw-marker" data-toolkit="Highlighter"></div>
+              <div class="icon-draw-text" data-toolkit="Text" data-toolkit2="text">
+                <div class="toolkit-subtools text-palette">
+                  <span class="icon-draw-text active" data-toolkit2="textSize" data-tsize="10"></span>
+                  <span class="icon-draw-text" data-toolkit2="textSize" data-tsize="30"></span>
+                  <span class="icon-draw-text" data-toolkit2="textSize" data-tsize="60"></span>
+                </div>
+              </div>
+              <div class="icon-draw-eraser" data-toolkit="Eraser" data-toolkit2="eraser">
+                <div class="toolkit-subtools eraser-palette">
+                  <div class="icon-draw-eraser-all fs2" data-toolkit2="eraseAll">
+                    <span class="path1"></span><span class="path2"></span>
+                    <span class="path3"></span><span class="path4"></span>
+                    <span class="path5"></span><span class="path6"></span>
+                    <span class="path7"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-draw-size" data-toolkit2="zoom">
+                <div class="toolkit-subtools zoom-palette">
+                  <span class="icon-draw-size-plus" data-toolkit2="zoomIn"></span>
+                  <span class="icon-draw-size-minus" data-toolkit2="zoomOut"></span>
+                  <span class="icon-draw-size-fit fs3 active" data-toolkit2="zoomFit"></span>
+                  <span class="icon-draw-size-100 fs3" data-toolkit2="zoomOri"></span>
+                </div>
+              </div>
+              <div class="icon-draw-hand" data-toolkit="Move"></div>
+              <div class="room-doc-palette-line"></div>
+              <div class="icon-draw-color" data-toolkit2="color">
+                <div class="color-wrapper"><span class="color" style="background-color: rgb(0, 96, 255);"></span></div>
+                <div class="toolkit-subtools color-palette"><span data-color="#FF0000" style="background-color:#FF0000"></span><span data-color="#FF9C00" style="background-color:#FF9C00"></span><span data-color="#FFF200" style="background-color:#FFF200"></span><span data-color="#00A651" style="background-color:#00A651"></span><span data-color="#0060FF" style="background-color:#0060FF"></span><span data-color="#2E3192" style="background-color:#2E3192"></span><span data-color="#EC008C" style="background-color:#EC008C"></span><span data-color="#FFFFFF" style="background-color:#FFFFFF"></span><span data-color="#000000" style="background-color:#000000"></span></div>
+                <script>
+                  (function () {
+                    var src = [];
+                    '#FF0000,#FF9C00,#FFF200,#00A651,#0060FF,#2E3192,#EC008C,#FFFFFF,#000000'.split(',').forEach(function (color) {
+                      src.push('<span data-color="#color#" style="background-color:#color#"></span>'.replace(/#color#/g, color.trim()));
+                    });
+                    $('.toolkit-subtools.color-palette').html(src.join(''));
+                  }());
+                </script>
+              </div>
+              <div class="icon-draw-thickness" data-toolkit2="strokeWidth">
+                <div class="grm-input-range toolkit-subtools stroke-width-palette" data-toolkit2="strokeWidthRange clearfix">
+                  <span class="grm-input-range-desc icon-draw-size-minus" data-btn-range="minus"></span>
+                  <span class="range-drag-rec">
+                    <input type="range" min="1" max="70">
+                  </span>
+                  <span class="grm-input-range-desc icon-draw-size-plus" data-btn-range="plus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="room-doc-palette-v2">
+              <div class="icon-draw-select" data-toolkit="select"></div>
+              <div class="icon-draw-pointer" data-toolkit="laserpointer"></div>
+              <div class="icon-draw-pen active" data-toolkit="pencil"></div>
+              <div class="icon-draw-marker" data-toolkit="highlighter"></div>
+              <div class="icon-draw-text" data-toolkit="textbox"></div>
+              <div class="icon-draw" data-toolkit="link"></div>
+              <div class="icon-draw-eraser" data-toolkit="eraser" data-toolkit2="eraser">
+                <div class="toolkit-subtools eraser-palette">
+                  <div class="icon-draw-eraser-all fs2" data-toolkit2="eraseAll">
+                    <span class="path1"></span><span class="path2"></span>
+                    <span class="path3"></span><span class="path4"></span>
+                    <span class="path5"></span><span class="path6"></span>
+                    <span class="path7"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-draw-size" data-toolkit2="zoom">
+                <div class="toolkit-subtools zoom-palette">
+                  <span class="icon-draw-size-plus" data-toolkit2="zoomIn"></span>
+                  <span class="icon-draw-size-minus" data-toolkit2="zoomOut"></span>
+                  <span class="icon-draw-size-fit fs3 active" data-toolkit2="zoomFit"></span>
+                  <span class="icon-draw-size-100 fs3" data-toolkit2="zoomOri"></span>
+                </div>
+              </div>
+              <div class="icon-draw-hand" data-toolkit="move"></div>
+              <div class="room-doc-palette-line"></div>
+              <div class="icon-draw-color" data-toolkit2="color">
+                <div class="color-wrapper"><span class="color"></span></div>
+                <div class="toolkit-subtools color-palette"><span data-color="#FF0000" style="background-color:#FF0000"></span><span data-color="#FF9C00" style="background-color:#FF9C00"></span><span data-color="#FFF200" style="background-color:#FFF200"></span><span data-color="#00A651" style="background-color:#00A651"></span><span data-color="#0060FF" style="background-color:#0060FF"></span><span data-color="#2E3192" style="background-color:#2E3192"></span><span data-color="#EC008C" style="background-color:#EC008C"></span><span data-color="#FFFFFF" style="background-color:#FFFFFF"></span><span data-color="#000000" style="background-color:#000000"></span></div>
+                <script>
+                  (function () {
+                    var src = [];
+                    '#FF0000,#FF9C00,#FFF200,#00A651,#0060FF,#2E3192,#EC008C,#FFFFFF,#000000'.split(',').forEach(function (color) {
+                      src.push('<span data-color="#color#" style="background-color:#color#"></span>'.replace(/#color#/g, color.trim()));
+                    });
+                    $('.toolkit-subtools.color-palette').html(src.join(''));
+                  }());
+                </script>
+              </div>
+              <div class="icon-draw-thickness" data-toolkit2="strokeWidth">
+                <div class="grm-input-range toolkit-subtools stroke-width-palette" data-toolkit2="strokeWidthRange clearfix">
+                  <span class="grm-input-range-desc icon-draw-size-minus" data-btn-range="minus"></span>
+                  <span class="range-drag-rec">
+                    <input type="range" min="1" max="70">
+                  </span>
+                  <span class="grm-input-range-desc icon-draw-size-plus" data-btn-range="plus"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 참여자 권한 시 확대/축소 버튼 -->
+            <div class="roleDrawFalseZoomBtn">
+              <span class="icon-draw-size-plus" data-toolkit2="zoomIn"></span>
+              <span class="icon-draw-size-minus" data-toolkit2="zoomOut"></span>
+              <span class="icon-draw-size-fit fs3 active" data-toolkit2="zoomFit"></span>
+            </div>
+          </div>
+        </div> <!-- .room-doc -->
+
+        <!-- 문제출제 & 설문조사 -->
+        <div class="room-exam" data-type="examView" data-exam-ui="" data-survey="">
+          <link rel="stylesheet" href="ref/edu/service/exam/css/exam.css?_dm=0212-01">
+          <div class="room-exam-sample" style="display: none;">
+            <ol>
+              <!-- 문제 객관식 -->
+              <li class="quizItemList" data-grm-testbank-question="obj">
+                <ul class="clearfix">
+                  <li class="numRec" data-grm-tb-q-questionorder=""></li>
+                  <li class="quizItem">
+                    <p class="quizTitle" data-grm-tb-q-questiontitle=""></p>
+                    <ol class="quizTxRec" data-tb-answer-list=""></ol>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- 문제 주관식 -->
+              <li class="quizItemList" data-grm-testbank-question="sub">
+                <ul class="clearfix">
+                  <li class="numRec" data-grm-tb-q-questionorder=""></li>
+                  <li class="quizItem">
+                    <p class="quizTitle" data-grm-tb-q-questiontitle=""></p>
+                    <p class="subjectiveAnswer">
+                      <textarea data-grm-tb-a-subanswertext="" placeholder="답변을 입력하세요"></textarea>
+                    </p>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- 문제 보기 -->
+              <li data-grm-testbank-answer="obj">
+                <p class="quizTx" data-grm-tb-correct="">
+                  <span>(</span><span data-grm-tb-a-answerorder=""></span><span>)</span>
+                  <span data-grm-tb-a-answertitle=""></span>
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- 시험 화면 -->
+          <div class="examView">
+            <div class="examTimer"></div>
+            <div class="examContainer">
+              <div class="quizBodyTop">
+                <label class="testType">
+                  <span class="exam">문제출제</span>
+                  <span class="survey">설문조사</span>
+                </label>
+                <h3 class="quizBodyTitle" data-tb-testname=""></h3>
+                <div class="questionRec">
+                  <p class="tx">문항 수</p>
+                  <p class="questionNum" data-tb-question-count=""></p>
+                </div>
+              </div>
+              <div class="quizBodyMiddle">
+                <ol class="quizItemListRec" data-tb-question-list=""></ol>
+              </div>
+            </div>
+            <div class="examFinishBtnRec">
+              <button class="examFinishBtn">
+                <span class="owner exam">시험 종료</span>
+                <span class="owner survey">설문 종료</span>
+                <span class="tester">답안 제출</span>
+              </button>
+            </div>
+          </div>
+          <div class="test-users-state">
+            <div class="btn-view-answer-correct">
+              <label><input type="checkbox" checked="">정답 보기</label>
+            </div>
+            <div class="testUsersStateRec">
+              <div class="test-users-state-layer test-users-testing">
+                <label>진행중</label>
+                <div class="test-users"></div>
+              </div>
+              <div class="test-users-state-layer test-users-ended">
+                <label>제출 완료</label>
+                <div class="test-users"></div>
+              </div>
+            </div>
+          </div>
+          <div class="examResultLayer">
+            <div class="examResultRec">
+              <p class="titleTx">수고하셨습니다</p>
+              <!-- <p class="imgRec"></p> -->
+              <p class="subTx">시험 시간이 종료되면 시험 결과를 알려드리겠습니다</p>
+              <div class="backToCall">
+                <button class="btn-go-call">영상수업으로 돌아가기</button>
+              </div>
+              <!-- <div class="btnRec">
+                <button class="btn btn-exit">강의실 나가기</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 문제 출제 팝업-->
+        <div class="examSelectLayer" data-type="">
+          <div class="examLayerPopup" data-regexam="true">
+            <header class="examLayerPopupTitle">
+              <!-- <p class="imgRec"></p>
+              <p class="txRec"><span data-username></span>님이 등록한 문제/설문 입니다</p>
+              <div class="regPageBtnRec">
+                <a href="#" class="regBtnRec">문제/설문 등록</a>
+                <a class="btn-go-reg-page" href="service/exam/create" target="_grm_exam_create">문제 등록 페이지로 이동</a>
+              </div> -->
+              <h2 class="examLayerTitle">문제출제 &amp; 설문조사</h2>
+              <div class="examLayerPopupClsBtnRec">
+                <button class="clsBtn"></button>
+              </div>
+            </header>
+
+            <!-- 문제 목록, 선택/시작 -->
+            <div class="examSelectRec">
+              <div class="exam_sample" style="display: none">
+                <ul>
+                  <li class="examListItem">
+                    <h2 class="examTitle ellipsis"></h2>
+                    <p class="dateTx">2015-10-15</p>
+                    <div class="questionNumRec">
+                      <p class="labelTx">문항 수</p>
+                      <p class="questionNum">7</p>
+                    </div>
+                    <div class="previewBtnRec">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 문제출제 & 설문조사 들어갈 영역 -->
+              <section class="examListRec">
+                <ul class="examListItemRec hidden"></ul>
+              </section>
+
+              <!-- <div class="examListCover">
+                <div class="examListCoverTop"></div>
+                <div class="examListCoverBottom"></div>
+              </div> -->
+
+              <!-- 시험 준비가 완료되면 data-status="ready" -->
+              <footer class="examFinishRec clearfix" data-status="">
+                <div class="selectItemRec examTitle">
+                  <label class="title">문제/설문</label>
+                  <p class="tx" data-exam-title=""></p>
+                </div>
+                <div class="selectItemRec limitTime">
+                  <label class="title">제한시간을 입력해주세요</label>
+                  <input type="number" class="inputField" data-test-duration="" min="1" max="300" value="30" placeholder="제한시간"><span>분</span>
+                </div>
+                <div class="examStartBtnRec">
+                  <button class="examStartBtn">시작</button>
+                </div>
+              </footer>
+              <div class="none-list">
+                <p class="noneTx">아직 등록하신 문제/설문이 없으시네요.</p>
+                <p class="examRegBtn">
+                  <!-- <a class="btn-go-reg-page" href="service/exam/create" target="_grm_exam_create">문제 등록 페이지로 이동</a> -->
+                  <a class="regBtnRec" href="#">문제/설문 등록</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- 문제 출제 S -->
+            <div class="contents registQuiz" data-exammode="create" data-tbankid="" data-exam-modify="false">
+              <div class="sample" style="display: none">
+                <div data-tb-sample="create">
+                  <ol>
+                    <!-- 문제 객관식 -->
+                    <li class="quizItemList" data-grm-testbank-question="obj">
+                      <ul class="">
+                        <li class="numRec" data-grm-tb-q-questionorder=""></li>
+                        <li class="quizItem">
+                          <p class="quizTitle">
+                            <!-- 문제명 -->
+                            <textarea data-grm-tb-q-questiontitle="" tabindex="99" placeholder="문제를 입력하세요"></textarea>
+                          </p>
+                          <div class="answerNum">
+                            정답<span data-grm-tb-q-correctobjanswercnt="">0</span>개
+                          </div>
+                          <div class="quizExampleRec">
+                            <ol class="quizTxRec" data-tb-answer-list=""></ol>
+                            <button data-tb-btn="add-answer">보기 추가</button>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="quizItemBtnRec">
+                        <button data-tb-btn="move-question-up"></button>
+                        <button data-tb-btn="move-question-down"></button>
+                        <button data-tb-btn="remove-question"></button>
+                      </div>
+                    </li>
+
+                    <!-- 문제 주관식 -->
+                    <li class="quizItemList" data-grm-testbank-question="sub">
+                      <ul class="">
+                        <li class="numRec" data-grm-tb-q-questionorder=""></li>
+                        <li class="quizItem">
+                          <p class="quizTitle">
+                            <!-- 문제명 -->
+                            <textarea data-grm-tb-q-questiontitle="" tabindex="99" placeholder="문제를 입력하세요"></textarea>
+                          </p>
+                        </li>
+                      </ul>
+                      <div class="quizItemBtnRec">
+                        <button data-tb-btn="move-question-up"></button>
+                        <button data-tb-btn="move-question-down"></button>
+                        <button data-tb-btn="remove-question"></button>
+                      </div>
+                    </li>
+
+                    <!-- 문제 보기 -->
+                    <li data-grm-testbank-answer="obj">
+                      <div class="quizTx">
+                        <input type="checkbox" data-grm-tb-correct="">
+                        <p class="exampleNum">
+                          <span>(</span><span data-grm-tb-a-answerorder=""></span><span>)</span>
+                        </p>
+                        <!-- 문제보기명 -->
+                        <textarea data-grm-tb-a-answertitle="" tabindex="99" placeholder="보기를 입력하세요"></textarea>
+                      </div>
+                      <div class="exampleEditBtnRec">
+                        <div class="exampleDirectionBtnRec">
+                          <button data-tb-btn="move-answer-up"></button>
+                          <button data-tb-btn="move-answer-down"></button>
+                        </div>
+                        <button data-tb-btn="remove-answer">삭제</button>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <div data-tb-sample="view">
+                  <ol>
+                    <!-- 문제 객관식 -->
+                    <li class="quizItemList" data-grm-testbank-question="obj">
+                      <ul class="clearfix">
+                        <li class="numRec" data-grm-tb-q-questionorder=""></li>
+                        <li class="quizItem">
+                          <p class="quizTitle" data-grm-tb-q-questiontitle=""></p>
+                          <ol class="quizTxRec" data-tb-answer-list=""></ol>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- 문제 주관식 -->
+                    <li class="quizItemList" data-grm-testbank-question="sub">
+                      <ul class="clearfix">
+                        <li class="numRec" data-grm-tb-q-questionorder=""></li>
+                        <li class="quizItem">
+                          <p class="quizTitle" data-grm-tb-q-questiontitle=""></p>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- 문제 보기 -->
+                    <li data-grm-testbank-answer="obj">
+                      <p class="quizTx" data-grm-tb-correct="">
+                        <span>(</span><span data-grm-tb-a-answerorder=""></span><span>)</span>
+                        <span data-grm-tb-a-answertitle=""></span>
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <article class="contentsBody quizView">
+                <header class="contentsBodyHeader">
+                  <div class="backBtnRec">
+                    <a href="service/exam">
+                      <button class="backBtn">목록으로 돌아가기</button>
+                    </a>
+                  </div>
+                  <div class="registBtnRec">
+                    <div data-view-type="create">
+                      <button class="registBtn" data-tb-btn="reg-testbank">문제 등록</button>
+                    </div>
+                    <div data-view-type="modify">
+                      <button class="defBtn" data-tb-btn="cancel-modify-testbank">취소</button>
+                      <button class="registBtn" data-tb-btn="reg-testbank">문제 수정</button>
+                    </div>
+                    <div data-view-type="view">
+                      <div class="txBtnRec">
+                        <a href="#" class="" data-tb-btn="copy-testbank">문제 복사</a>
+                        <a href="#" class="" data-tb-btn="modify-testbank">문제 수정</a>
+                      </div>
+                      <button class="" data-tb-btn="delete-testbank"></button>
+                    </div>
+                  </div>
+                </header>
+                <div class="quizBodyTop">
+                  <div data-view-type="create">
+                    <h3 class="examTitleInputRec">
+                      <label>제목</label>
+                      <input class="inputField" data-tb-testname="" placeholder="제목을 입력하세요">
+                    </h3>
+                    <div class="questionRec">
+                      <p class="tx">문항 수</p>
+                      <p class="questionNum" data-tb-question-count="">0</p>
+                    </div>
+                    <div class="addQuestionBtnRec">
+                      <button class="addQuestionBtn" data-tb-btn="add-question" data-tb-q-type="obj">객관식 추가</button>
+                      <button class="addQuestionBtn" data-tb-btn="add-question" data-tb-q-type="sub">주관식 추가</button>
+                    </div>
+                  </div>
+                  <div data-view-type="view">
+                    <h3 class="examTitleInputRec">
+                      <label>제목</label>
+                      <span data-tb-testname=""></span>
+                    </h3>
+                    <div class="questionRec">
+                      <p class="tx">문항 수</p>
+                      <p class="questionNum" data-tb-question-count="">0</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="quizBodyMiddle">
+                  <ol class="quizItemListRec" data-tb-question-list=""></ol>
+                </div>
+
+              </article>
+            </div>
+            <!-- 문제 출제 E -->
+
+          </div>
+        </div>
+
+        <div class="room-mediashare" data-medialist-size="0" data-repeat="" data-play-type="once">
+          <div class="room-media-share-video">
+            <div class="room-media-share-video-controls">
+              <div class="controls-left">
+                <div class="room-media-share-video-controls-btn play-btn"></div>
+              </div>
+              <div class="controls-center">
+                <input type="range" class="media-timeRange" min="0" max="1000" value="0" step="1">
+                <div class="play-time"></div>
+                <div class="play-duration"></div>
+              </div>
+              <div class="controls-right">
+                <div class="room-media-share-video-controls-btn play-volume"></div>
+                <input type="range" class="media-volume" min="0" max="1" value="1" step="0.1">
+              </div>
+              <div class="mediaInfo">
+                <button class="mediaInfoBtn"></button>
+              </div>
+            </div>
+
+            <!-- <video src="http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_50mb.mp4" autoplay="autoplay"></video> -->
+            <video webkit-playsinline="" playsinline="" videoplay=""></video>
+            <audio webkit-playsinline=""></audio>
+            <div class="audioBgLayer">
+              <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                </defs>
+                <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"></use>
+                  <use xlink:href="#gentle-wave" x="50" y="3" fill="#3461c1"></use>
+                  <use xlink:href="#gentle-wave" x="50" y="6" fill="#2d55aa"></use>
+                </g>
+              </svg>
+            </div>
+
+
+            <div class="noUploadFileLayer">
+              <div class="noUploadFile">
+                <p class="img"></p>
+                <p class="title">아직 파일을 업로드하지 않으셨군요</p>
+                <p class="tx">미디어 파일을 업로드해주세요</p>
+                <button class="uploadBtn">파일 업로드</button>
+              </div>
+            </div>
+          </div>
+          <div class="room-mediashare-remote" data-listshow="true">
+            <div class="add-mediashare-source">
+              <p class="titleRec"></p>
+              <button class="btn-add-mediashare-source">
+                <span class="icon-global-menu"></span>
+              </button>
+            </div>
+            <div class="mediashare-source-list">
+              <header>
+                <h4>미디어 목록</h4>
+                <button class="repeatBtn"></button>
+                <button class="clsBtn"></button>
+              </header>
+              <div class="addbtnRec">
+                <p class="addBtn">파일 추가</p>
+              </div>
+              <ul data-sample="" style="display: none;">
+                <li class="ellipsis">
+                  <span class="title"></span>
+                  <span class="fileInfo">01:03:04</span>
+                  <span class="btn-del"></span>
+                </li>
+                <li class="ellipsis" data-upload="progress">
+                  <span class="title"></span>
+                  <p class="progressRec"><span class="progressBar" style="width: 0%;"></span></p>
+                  <span class="btn-del"></span>
+                </li>
+                <!-- 
+                <li class="ellipsis">Marvel's Captain America- Civil War - Trailer2.mp4</li>
+                <li class="ellipsis">FROZEN - Let It Go Sing-along - Official Disney HD.mp4</li>
+                <li class="ellipsis">Som Sabadell flashmob - BANCO SABADELL - YouTube (720p).mp4</li>
+                <li class="ellipsis play">하나면하나지둘이겠느냐.mp4</li>
+                -->
+              </ul>
+              <ul class="media-list">
+              </ul>
+            </div>
+          </div>
+        </div> <!-- .room-mediashare -->
+
+        <div class="room-webshare">
+          <div class="room-webshare-top">
+            <div class="webshare-nav">
+              <button data-nav-btn="prev">◀</button>
+              <button data-nav-btn="next">▶</button>
+            </div>
+            <div class="webshare-nav">
+              <input type="text" class="inp-url" placeholder="Please enter a URL." value="daum.net">
+              <button data-nav-btn="go">go</button>
+            </div>
+          </div>
+          <div class="room-webshare-body">
+            <iframe class="ifr-view" width="100%" height="90%"></iframe>
+          </div>
+        </div> <!-- .room-webshare -->
+
+        <div class="room-right-side">
+          <!-- <div class="room-right-side-close">
+            <span class="icon-global-close btn-room-right-side-close"></span>
+          </div> -->
+          <!-- <div class="room-right-side-left">
+            <div class="room-right-side-btn"></div>
+          </div> -->
+          <div class="room-right-side-right">
+            <div class="room-right-side-right-wrapper">
+              <div class="room-right-side-row1">
+                <div class="room-user-list-layer">
+
+                  <!-- roomuser more context menu -->
+                  <div class="room-user-more-layer">
+                    <ul class="userRoleRec">
+                      <li class="room-user-role active" data-roleid="speaker">
+                        Speaker
+                      </li>
+                      <li class="room-user-role" data-roleid="emcee">
+                        Emcee
+                      </li>
+                      <li class="room-user-role" data-roleid="participant">
+                        Participant
+                      </li>
+                      <li class="room-user-kick" data-roleid="kick">
+                        Kick
+                      </li>
+                      <!-- <div class="icon-global-close btn-close" data-roleid="close"></div> -->
+                    </ul>
+                    <div class="room-user-device-info" data-id="show"></div>
+                  </div>
+
+                  <div class="room-right-side-header room-user-list-header">
+                    <div class="room-right-side-title room-user-list-title">
+                      User list
+                      <span class="room-join-count">1</span>
+                      <span class="room-max-count">/16</span>
+                    </div>
+                    <div class="room-user-list-header-btns clearfix">
+                      <span class="btn btn-more"></span>
+                      <span class="icon-global-invite btn-invite" data-type="invite" title="Invite"></span>
+                      <div class="searchBtnRec">
+                        <span class="btn btn-filter-user icon-draw-size"></span>
+                      </div>
+                      <!-- <span class="btn btn-invite-user icon-global-invite"></span> -->
+                    </div>
+                  </div>
+
+                  <div class="room-device-control" style="display:none;">
+                    <ul>
+                      <li data-btn-dc="offCameraAll" class="bdb-dotted">Trun off all camera</li>
+                      <li data-btn-dc="revokeCameraRoleAll">Disable all camera role</li>
+                      <li data-btn-dc="offMicAll" class="bdb-dotted">Trun off all mic</li>
+                      <li data-btn-dc="revokeMicRoleAll">Disable all mic role</li>
+                      <li data-btn-dc="grantSpeakerRoleAll" class="bdb-dotted">Enable all speaker role</li>
+                      <li data-btn-dc="revokeSpeakerRoleAll">Disable all speaker role</li>
+                      <li data-btn-dc="revokeDrawRoleAll">Disable all draw role</li>
+                    </ul>
+                  </div>
+
+                  <div class="room-filter-user">
+                    <input type="text" placeholder="Search User">
+                    <span class="cancel"></span>
+                  </div>
+                  <div class="room-right-side-row1-body room-user-list-body ps-container ps-theme-default" data-ps-id="5fdab8b3-9dc0-08a6-a09e-4587ff9f2c96">
+                    <ul class="room-user-list">
+                      <li class="room-user me" draggable="true" data-userid="10083yvrglpn1" data-user-roleid="speaker" data-user-opener="true" data-role-camera="true" data-status-camera="on" data-role-mic="true" data-status-mic="on" data-role-speaker="true" data-status-speaker="on" data-role-draw="true">
+                        <div class="icon-global-user"></div>
+                        <div class="room-user-nickname-layer">
+                          <span class="room-user-nickname" title="[Opener][Speaker]testsetwesetsetset">testsetwesetsetset</span>
+                          <span class="editIco"></span>
+                        </div>
+                        <div class="room-user-btns">
+                          <span class="room-user-btn icon-global-camera" data-btn-type="camera"></span>
+                          <span class="room-user-btn icon-global-mic" data-btn-type="mic"></span>
+                          <span class="room-user-btn icon-volume-medium" data-btn-type="speaker"></span>
+                          <span class="room-user-btn icon-draw-pen" data-btn-type="draw"></span>
+                          <span class="room-user-btn icon-global-more" data-btn-type="more"></span>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                      <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                      <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="room-right-side-row2">
+                <div class="room-chat-layer">
+                  <div class="room-right-side-header room-chat-header">
+                    <div class="room-right-side-title room-chat-title">Chat
+                    </div>
+                    <div class="room-chat-header-btns">
+                      <!-- <div class="alertToggle">
+                        <label>ShowNoti</label>
+                        <div class="toggle-alert-status-msg"
+                          data-grm-checkbox="toggle"
+                          data-grm-on="true"
+                          data-grm-text-on="ON"
+                          data-grm-text-off="OFF"
+                          data-grm-name="toggle-alert-status-msg">
+                        </div>
+                      </div> -->
+                      <button class="chgName">
+                        ch-name
+                      </button>
+                      <div class="alertStateRec">
+                        <button class="toggle-alert-status-msg" data-grm-on="true">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="room-chat-body ps-container ps-theme-default" data-ps-id="db0cf700-3305-743e-daf5-af9e92a988a0">
+                    <div class="room-chat-msg-list">
+                      <div class="grm-contactus-chat-msg">
+                        <div class="gc-msg">
+                          <div class="gc-title">Contact Us</div>
+                          <div class="gc-body">Please send email to us.</div>
+                          <div class="gc-footer">hello@gooroomee.com</div>
+                        </div>
+                        <div class="gc-download">
+                          <a href="/_files/manual/gooroomee_manual_ver_1.4.pdf" target="_grm_manual">Download user manual</a>
+                        </div>
+                      </div>
+                      <div class="room-chat-msg my-msg" data-event="event-camstudy" data-event-use="true" data-st-datetime="10/15/2018 00:00:00" data-ed-datetime="11/14/2018 23:59:00" style="display: none;">
+                        <div class="room-chat-user">
+                          <div class="room-chat-user-img">
+                            <img src="images/icon/favicon_48x48.png">
+                          </div>
+                          <div class="room-chat-username">구루미</div>
+                          <div class="room-chat-msgReceiveName">
+                            <span class="icoArrow"></span>
+                            <span class="receiveName"></span>
+                          </div>
+                          <div class="room-chat-time"></div>
+                        </div>
+                        <pre class="room-chat-msg-text">수능 D-한달, 60만 수험생 응원 캠페인! 
+  
+  구루미캠스터디 여러분들의 응원으로
+  수험생분들이 시험을 잘 볼 수 있도록
+  함께 응원해주세요! 
+  
+  캠페인1.
+  출석 한 번만 해도 해피구루미 스티커를 드려요! 
+  
+  캠페인2.
+  출석률이 가장 높은 스터디방에게
+  해피구루미 담요를 드려요! 
+  
+  ▶자세히보기 : <a href="https://cafe.naver.com/goocams/186" target="_grm_cams_tmplink3">https://cafe.naver.com/goocams/186</a></pre>
+                      </div>
+                      <div class="room-chat-msg my-msg" data-event="event-camstudy" data-event-use="true" data-st-datetime="11/22/2018 00:00:00" data-ed-datetime="01/01/2019 00:00:00" style="display: none;">
+                        <div class="room-chat-user">
+                          <div class="room-chat-user-img">
+                            <img src="images/icon/favicon_48x48.png">
+                          </div>
+                          <div class="room-chat-username">구루미</div>
+                          <div class="room-chat-msgReceiveName">
+                            <span class="icoArrow"></span>
+                            <span class="receiveName"></span>
+                          </div>
+                          <div class="room-chat-time"></div>
+                        </div>
+                        <pre class="room-chat-msg-text">스터디 활성화 게릴라 이벤트!
+  
+  구루미캠스터디 공식카페를 통해
+  스터디모집 &amp; 스터디참여만 해도
+  매주 문화상품권을 드립니다!
+  
+  ▶ 자세히보기 : <a href="https://cafe.naver.com/goocams/1203" target="_grm_cams_tmplink0">https://cafe.naver.com/goocams/1203</a>
+  </pre>
+                      </div>
+
+
+                    </div>
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                      <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                      <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                    </div>
+                  </div>
+                  <div class="room-chat-body-cover"></div>
+                  <div class="room-chat-footer">
+                    <!-- <span class="icon-global-name-edit btn-change-nickname" title="Change nickkname"></span>
+                    <textarea maxlength="3000" class="room-chat-msg-inp" placeholder="Please enter chat" ></textarea> -->
+                    <div class="room-chat-inputRec clearfix">
+                      <div class="chat-partnerSelectRec" data-whisper="false">
+                        <select class="partnerSelect">
+                          <option value="">All</option>
+                        </select>
+                      </div>
+                      <div class="chat-inputRec">
+                        <input type="text" class="room-chat-msg-inp" maxlength="3000" placeholder="Please enter chat">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room-right-side-bottom clearfix">
+            <div class="icon-global-group btn-right-side-m-tab" data-type="userlist"></div>
+            <div class="icon-global-chat btn-right-side-m-tab" data-type="chat"></div>
+          </div>
+
+          <div class="room-right-navyVideoRec">
+            <div class="room-right-navyVideos">
+              <video></video>
+            </div>
+          </div>
+          <div class="roomRightSideCover"></div>
+        </div> <!-- .room-right-side -->
+
+        <div class="camstudy-info-layer" data-show="true" style="display: none;">
+          <div class="camStudyInfoHeader">
+            <h6 class="camStudyInfoTitle">캠스터디 정보</h6>
+            <button class="camStudyInfoBtn"></button>
+          </div>
+          <div class="camStudyInfoContent">
+            <div class="camstudy-info">
+              <label>현재 시간</label>
+              <p data-type="currentTime"></p>
+            </div>
+            <div class="camstudy-info">
+              <label>남은 기간</label>
+              <p data-type="remainDays"></p>
+            </div>
+            <!-- 
+            <div class="camstudy-info">
+              <label>목표 :</label>
+              <span data-type="targetDayTime"></span>
+            </div>
+            -->
+            <div class="camstudy-info">
+              <label>누적학습</label>
+              <p data-type="myTotalStudyTime"></p>
+            </div>
+            <div class="camstudy-info">
+              <label>오늘학습</label>
+              <p data-type="myTodayStudyTime"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- external addressbook  -->
+        <div class="roomAddressRec" data-show="">
+          <div class="roomAddressWrap">
+            <div class="roomAddress" data-type="inviteList">
+              <!-- menu tab -->
+              <header class="roomAddressHeader">
+                <button class="tab btn01" data-btn-tab="inviteList">초대목록</button>
+                <button class="tab btn02" data-btn-tab="addressBook">주소록</button>
+              </header>
+              <!-- invite list -->
+              <section class="address-tab inviteList">
+                <h3 class="title">이번 화상IR에 초대된 참여자의 참석여부를 알 수 있습니다</h3>
+                <ul>
+                  <li class="lastNameBtnRec">
+                    <button data-ad-nametab="all" class="selected">전체</button>
+                    <button data-ad-nametab="ㄱ">가</button>
+                    <button data-ad-nametab="ㄴ">나</button>
+                    <button data-ad-nametab="ㄷ">다</button>
+                    <button data-ad-nametab="ㄹ">라</button>
+                    <button data-ad-nametab="ㅁ">마</button>
+                    <button data-ad-nametab="ㅂ">바</button>
+                    <button data-ad-nametab="ㅅ">사</button>
+                    <button data-ad-nametab="ㅇ">아</button>
+                    <button data-ad-nametab="ㅈ">자</button>
+                    <button data-ad-nametab="ㅊ">차</button>
+                    <button data-ad-nametab="ㅋ">카</button>
+                    <button data-ad-nametab="ㅌ">타</button>
+                    <button data-ad-nametab="ㅍ">파</button>
+                    <button data-ad-nametab="ㅎ">하</button>
+                    <button data-ad-nametab="A" class="en">A-Z</button>
+                    <button data-ad-nametab="0" class="en">0-9</button>
+                  </li>
+                  <li class="searchRec">
+                    <button class="alignBtn">이름순</button>
+                    <!-- <button class="alignBtn">등록순</button> -->
+                    <div class="searchBoxRec">
+                      <select class="selectBox s-type">
+                        <option value="name">이름</option>
+                        <option value="company">회사</option>
+                        <option value="job">직군</option>
+                        <option value="email">이메일</option>
+                      </select>
+                      <input type="text" class="s-words" placeholder="검색어를 입력하세요" maxlength="200">
+                    </div>
+                  </li>
+                  <li class="tableRec">
+                    <table class="tableStyle01">
+                      <caption>정보입력</caption>
+                      <thead>
+                        <tr>
+                          <th class="col-xs-4 txC btn-address-select" data-sel-type="all"><input type="checkbox"></th>
+                          <th class="col-xs-16">이름</th>
+                          <th class="col-xs-20">회사</th>
+                          <th class="col-xs-20">직군</th>
+                          <th class="col-xs-30">이메일</th>
+                          <th class="col-xs-10 txC">참여</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="col-xs-4 txC btn-address-select"><input type="checkbox"></td>
+                          <td class="col-xs-16" data-v="name"></td>
+                          <td class="col-xs-20" data-v="company"></td>
+                          <td class="col-xs-20" data-v="job"></td>
+                          <td class="col-xs-30 email" data-v="email"></td>
+                          <td class="col-xs-10 txC" data-v-joined=""></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li class="etcBtnRec">
+                    <div class="pagingBtnRec" style="display:none;">
+                      <button class="leftBtn"></button>
+                      <button class="selected">1</button>
+                      <button>2</button>
+                      <button class="rightBtn"></button>
+                    </div>
+                    <button class="inviteBtn">초대하기</button>
+                  </li>
+                </ul>
+              </section>
+              <!-- address book -->
+              <section class="address-tab addressBook">
+                <ul>
+                  <li class="lastNameBtnRec">
+                    <button data-ad-nametab="all" class="selected">전체</button>
+                    <button data-ad-nametab="ㄱ">가</button>
+                    <button data-ad-nametab="ㄴ">나</button>
+                    <button data-ad-nametab="ㄷ">다</button>
+                    <button data-ad-nametab="ㄹ">라</button>
+                    <button data-ad-nametab="ㅁ">마</button>
+                    <button data-ad-nametab="ㅂ">바</button>
+                    <button data-ad-nametab="ㅅ">사</button>
+                    <button data-ad-nametab="ㅇ">아</button>
+                    <button data-ad-nametab="ㅈ">자</button>
+                    <button data-ad-nametab="ㅊ">차</button>
+                    <button data-ad-nametab="ㅋ">카</button>
+                    <button data-ad-nametab="ㅌ">타</button>
+                    <button data-ad-nametab="ㅍ">파</button>
+                    <button data-ad-nametab="ㅎ">하</button>
+                    <button data-ad-nametab="A" class="en">A-Z</button>
+                    <button data-ad-nametab="0" class="en">0-9</button>
+                  </li>
+                  <li class="searchRec">
+                    <button class="alignBtn">이름순</button>
+                    <!-- <button class="alignBtn">등록순</button> -->
+                    <div class="searchBoxRec">
+                      <select class="selectBox s-type">
+                        <option value="name">이름</option>
+                        <option value="company">회사</option>
+                        <option value="job">직군</option>
+                        <option value="email">이메일</option>
+                      </select>
+                      <input type="text" class="s-words" placeholder="검색어를 입력하세요" maxlength="200">
+                    </div>
+                  </li>
+                  <li class="tableRec">
+                    <table class="tableStyle01">
+                      <caption>정보입력</caption>
+                      <thead>
+                        <tr>
+                          <th class="col-xs-4 txC btn-address-select" data-sel-type="all"><input type="checkbox"></th>
+                          <th class="col-xs-16">이름</th>
+                          <th class="col-xs-20">회사</th>
+                          <th class="col-xs-20">직군</th>
+                          <th class="col-xs-30">이메일</th>
+                          <th class="col-xs-10 txC">참여</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="col-xs-4 txC btn-address-select"><input type="checkbox"></td>
+                          <td class="col-xs-16" data-v="name"></td>
+                          <td class="col-xs-20" data-v="company"></td>
+                          <td class="col-xs-20" data-v="job"></td>
+                          <td class="col-xs-30 email" data-v="email"></td>
+                          <td class="col-xs-10 txC" data-v-joined=""></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li class="etcBtnRec">
+                    <div class="pagingBtnRec" style="display:none;">
+                      <button class="leftBtn"></button>
+                      <button class="selected">1</button>
+                      <button>2</button>
+                      <button class="rightBtn"></button>
+                    </div>
+                    <button class="inviteBtn">초대하기</button>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <button class="clsBtn"></button>
+          </div>
+        </div>
+
+        <div class="room-main-footer">
+          <p class="grm-copyright-layer">
+            © 2015 Gooroomee Co., Ltd. All rights reserved.
+          </p>
+        </div>
+
+        <!-- TODO TEST -->
+        <div class="room-qna-layer" data-type="list">
+          <div class="room-qna-wrapper">
+            <div class="qna-form">
+              <div class="btn-close-layer">
+                <div class="icon-global-close btn-close"></div>
+              </div>
+              <div class="qna-form-wrapper">
+                <div class="qna-form-header">
+                  <div class="qna-form-title">Ask a Question</div>
+                  <div class="qna-form-len-layer">(<span class="qna-form-text-len">0</span> / 100)</div>
+                </div>
+                <div class="qna-form-body">
+                  <textarea placeholder="Please enter your question (Up to 100char)" maxlength="100"></textarea>
+                </div>
+                <div class="qna-form-footer">
+                  Register
+                </div>
+              </div>
+            </div>
+            <div class="qna-list">
+              <ol class="sample" style="display: none;">
+                <li class="qna-item">
+                  <div class="qna-item-wrapper">
+                    <div class="qna-q"></div>
+                    <div class="qna-content">
+                      <div class="qna-nickname"></div>
+                      <div class="qna-text"></div>
+                    </div>
+                  </div>
+                  <div class="icon-global-close btn-qna-item-remove">
+                  </div>
+                </li>
+              </ol>
+              <div class="qna-list-wrapper">
+                <div class="qna-list-empty">
+                  Question is not registered.
+                </div>
+                <ol class="qna-item-list">
+
+                </ol>
+              </div>
+              <div class="icon-global-close btn-qna-close">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- toastRec -->
+        <div class="toastRec" data-type="">
+          <div class="lowNetworkMsg toast">
+            <span class="icoLowNetwork"></span>
+            <span class="msg txLevel01">Adjusts the video quality because the network is bad</span>
+            <span class="msg txLevel02">Only audio calls becuase the network is bad</span>
+          </div>
+        </div>
+      </div>
+      <!-- .room-main -->
+    </div>
+    <!-- .room-wrapper -->
+
+    <!-- Guide S -->
+    <div class="room-guide-layer guide-device" style="display: none;">
+      <div class="room-guide-bg"></div>
+      <div class="room-guide-container">
+        <div class="room-guide-device-pc">
+          <div class="room-guide-device-pc-arrow"></div>
+          <div class="room-guide-device-pc-text">Please allowed to use device</div>
+        </div>
+        <div class="room-guide-device-mobile">
+          <div class="room-guide-device-mobile-arrow"></div>
+          <div class="room-guide-device-mobile-text">Please allowed to use device</div>
+        </div>
+      </div>
+    </div>
+    <div class="room-guide-layer guide-use">
+      <div class="room-guide-bg"></div>
+      <div class="room-guide-container">
+        <div class="room-guide room-guide-menu-info">
+          <span>Setup</span>
+        </div>
+        <div class="room-guide room-guide-menu-001">
+          <span>Video Meeting</span>
+        </div>
+        <div class="room-guide room-guide-menu-002">
+          <span>Screen Sharing</span>
+        </div>
+        <div class="room-guide room-guide-menu-003">
+          <span>Document Sharing</span>
+        </div>
+        <div class="room-guide room-guide-menu-exit">
+          <span>Exit</span>
+        </div>
+
+        <div class="room-guide-menu-tool-layer">
+          <div class="room-guide-menu-tool-arrow">
+          </div>
+          <div class="room-guide-menu-tool-text">DeviceSetup and functions</div>
+        </div>
+        <div class="room-guide room-guide-menu-004">
+          <div class="room-guide-menu-tool-line">
+          </div>
+          <div class="room-guide-menu-tool-text">Invite</div>
+        </div>
+        <div class="room-guide room-guide-menu-005">
+          <div class="room-guide-menu-tool-line2X">
+          </div>
+          <div class="room-guide-menu-tool-text">Chat,<br>User list</div>
+        </div>
+
+        <div class="room-guide-close">
+          <div class="room-guide-close-txt">
+            <input type="checkbox" id="_rgc_">
+            <label for="_rgc_">Don't see at next time</label>
+          </div>
+          <div class="room-guide-btn">
+            <span class="room-guide-close-btn-txt">Close</span>
+            <!-- <img src="images/room/btn/btn_close_white_30.png" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Guide E -->
+
+    <!-- Feedback S -->
+    <div class="grm-dialog-msg-layer feedback-layer">
+      <div class="grm-dialog-top">
+        <h4 class="grm-dialog-title">Feedback</h4>
+        <div class="desc">
+          Thanks for taking the time to provide<br>your&nbsp;feedback&nbsp;about Gooroomee service.
+        </div>
+      </div>
+      <div class="grm-dialog-body">
+        <div class="feedback-form">
+          <label>
+            Grade
+          </label>
+          <div>
+            <div class="room-feedback-grade" data-grade="true"></div>
+            <div class="room-feedback-grade" data-grade="true"></div>
+            <div class="room-feedback-grade" data-grade="true"></div>
+            <div class="room-feedback-grade" data-grade="true"></div>
+            <div class="room-feedback-grade" data-grade="true"></div>
+          </div>
+        </div>
+        <div class="feedback-form">
+          <label>
+            Email
+          </label>
+          <div>
+            <input type="email" data-inp="email" maxlength="100" autocomplete="email">
+          </div>
+        </div>
+        <div class="feedback-form">
+          <label>
+            Message
+          </label>
+          <div>
+            <textarea data-inp="msg" maxlength="1000"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="grm-dialog-footer">
+        <button class="grm-btn cancel">Cancel</button>
+        <button class="grm-btn ok">Send</button>
+      </div>
+    </div>
+    <!-- Feedback E -->
+
+  </div> <!-- .room -->
+
+  <div id="_sample" data-sample="" style="display: none;">
+
+    <div data-notice="grm_notice_20181223" data-st-datetime="12/22/2018 01:00:00" data-ed-datetime="12/23/2018 05:00:00">
+      <div class="grm-dialog-title">구루미 업데이트 안내</div>
+      <div class="grm-dialog-body">
+        <p class="noticeTx">안녕하세요 구루미팀입니다!<br>
+          서버 안정화를 위한 점검 작업을 진행할 예정입니다.<br>
+          점검 시간에는 간헐적으로 서비스 중단이나 제한이 있을 수 있으니 양해 부탁드립니다.</p>
+        <div class="updateDateRec">
+          <label>점검 일시</label>
+          <p class="noticeDate">12월 23일(일) AM 01:00 ~ 05:00</p>
+        </div>
+        <div class="dialogBottomBtnRec">
+          <button class="grm-btn ok">확인</button>
+        </div>
+      </div>
+      <div class="grm-dialog-footer">
+        <p class="todayNotView">
+          <label>
+            <input type="checkbox"> 오늘 다시보지 않기
+          </label>
+        </p>
+      </div>
+    </div>
+
+    <!-- 181228 설날 이벤트 -->
+
+
+    <!-- 190921 캠스터디 추석이벤트 -->
+
+
+    <div id="_sample-video-layer">
+      <div class="video-layer">
+        <video autoplay="autoplay" data-video-type="user"></video>
+        <div class="video-cover">
+          <div class="user-device-status">
+            <span data-device-type="mic"></span>
+            <span class="roleIdSpeaker"></span>
+            <span data-device-type="speaker"></span>
+            <span data-device-type="camera"></span>
+          </div>
+          <div class="user-info-wrapper">
+            <div class="low-network">
+              <div class="low-network-msg">
+                network status is unstable
+              </div>
+            </div>
+            <div class="userInfoRec">
+              <div class="user-info user-volume">
+                <span class="room-user-nickname"></span>
+                <span class="editIco"></span>
+              </div>
+            </div>
+          </div>
+          <div class="notNetwork">
+            Only audio calls becuase the network is bad
+          </div>
+          <div class="user-camstudy">
+            <div class="stopwatch">
+              <div class="stopwatch-wrap">
+                <span class="stopwatch-time"></span>
+                <span class="pause" data-btn="stopwatch-pause"></span>
+                <span class="reset" data-btn="stopwatch-reset"></span>
+              </div>
+            </div>
+            <div class="stopwatchTx">
+              When you're ready to study, press the space bar or button.
+            </div>
+            <div class="my-msg">
+              <div>
+                <span data-cs-type="mymsg">메세지 입력</span>
+                <button></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-screenshare-video-layer">
+        <div class="my-screenshare-video-layer-body">
+          <div class="screen">
+            <video autoplay="autoplay" muted="true" data-video-type="screen"></video>
+          </div>
+          <div class="desc">
+            <span class="screenIco"></span>
+            You are sharing your desktop.
+          </div>
+          <div class="btn">
+            <button class="grm-btn ok btn-stop-screenshare">Stop the desktop screen sharing</button>
+          </div>
+        </div>
+      </div>
+      <video class="screenshare-video" autoplay="autoplay" muted="true" data-video-type="screen"></video>
+    </div>
+    <div id="_sample-mixing-video-layer">
+      <!-- <div class="video-layer mixing-user" draggable="true" data-network-unstable=""> -->
+      <div class="video-layer mixing-user" draggable="true">
+        <div class="video-cover">
+          <div class="user-device-status">
+            <span data-device-type="mic"></span>
+            <span data-device-type="speaker"></span>
+            <span data-device-type="camera"></span>
+          </div>
+          <div class="user-info-wrapper">
+            <div class="low-network">
+              <div class="low-network-msg">
+                network status is unstable
+              </div>
+            </div>
+            <div class="userInfoRec">
+              <div class="user-info user-volume">
+                <span class="room-user-nickname"></span>
+                <span class="editIco"></span>
+              </div>
+            </div>
+            <div class="roleIdSpeaker"></div>
+          </div>
+          <div class="notNetwork">
+            Only audio calls becuase the network is bad
+          </div>
+          <div class="user-camstudy">
+            <!-- <div class="startGuide">
+              <p class="startGuideTx">
+                When you're ready to study, press the space bar or button.
+              </p>
+              <button class="startGuideBtn">
+                Start
+              </button>
+            </div> -->
+            <div class="stopwatch">
+              <div class="stopwatch-wrap">
+                <span class="pause" data-btn="stopwatch-pause"></span>
+                <span class="stopwatch-time"></span>
+                <span class="reset" data-btn="stopwatch-reset"></span>
+              </div>
+            </div>
+            <div class="stopwatchTx">
+              When you're ready to study, press the space bar or button.
+            </div>
+            <div class="my-msg">
+              <div>
+                <span data-cs-type="mymsg"></span>
+                <button></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btnExpandRec">
+          <button class="btnExpand"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="call-mode-switch-guide">
+      <div class="loading-grm-01"></div>
+      <div class="msg">
+        <div class="t1">Just a moment, please</div>
+        <div class="t2">
+          Depending on the number of participants, the picture mode is switched.
+          <br>
+          Video and Audio reception may be briefly interrupted.
+        </div>
+      </div>
+    </div>
+
+    <div id="_sample-room-user">
+      <ul>
+        <li class="room-user" draggable="true">
+          <div class="icon-global-user"></div>
+          <div class="room-user-nickname-layer" title="">
+            <span class="room-user-nickname"></span>
+            <span class="editIco"></span>
+          </div>
+          <div class="room-user-btns">
+            <span class="room-user-btn icon-global-camera" data-btn-type="camera"></span>
+            <span class="room-user-btn icon-global-mic" data-btn-type="mic"></span>
+            <span class="room-user-btn icon-volume-medium" data-btn-type="speaker" title=""></span>
+            <span class="room-user-btn icon-draw-pen" data-btn-type="draw"></span>
+            <span class="room-user-btn icon-global-more" data-btn-type="more" title="more"></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="_sample-room-doc">
+      <div class="room-doc-item" data-file-ext="" draggable="true">
+        <span class="room-doc-delete"></span>
+        <div class="room-doc-item-img">
+          <img>
+        </div>
+        <div class="room-doc-desc"></div>
+      </div>
+      <ul>
+        <li class="room-doc-page-item"><img src=""></li>
+      </ul>
+    </div>
+    <div id="_sample-room-chat">
+      <div class="room-status-msg">
+        <div class="room-status-msg-wrapper">
+          <div class="room-status-icon"></div>
+          <div class="room-status-body">
+            <div class="close"></div>
+            <div class="room-status-msg-text-wrapper">
+              <div class="room-status-msg-text"></div>
+              <div class="room-status-progress">
+                <div class="room-status-progress-text"></div>
+                <div class="room-status-progressBg"></div>
+                <div class="room-status-progress-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="room-chat-msg">
+        <div class="room-chat-user">
+          <div class="room-chat-user-img">
+            <img src="">
+          </div>
+          <div class="room-chat-username"></div>
+          <div class="room-chat-msgReceiveName">
+            <span class="icoArrow"></span>
+            <span class="receiveName"></span>
+          </div>
+          <div class="room-chat-iconWhisper icon-global-chat"><span>Whisper</span></div>
+          <div class="room-chat-time"></div>
+        </div>
+        <pre class="room-chat-msg-text"></pre>
+      </div>
+      <div class="room-chat-noti">
+        <div class="room-chat-noti-msg"></div>
+        <div class="room-chat-noti-time"></div>
+      </div>
+      <div class="grm-recordFile-download">
+        <p class="recordTx">Recording file created</p>
+        <p class="recordFileInfo">
+          <span class="playTime"></span>
+          <span class="bar"></span>
+          <span class="fileVolume"></span>
+        </p>
+        <p class="downloadBtn"></p>
+        <!-- 크롬 미사용시 다운로드 표시 -->
+        <div class="recordFileDownProgress">
+          <p class="ProgressPercent">
+            <span class="PercentNumber">0</span>
+            <span class="PercentTx">%</span>
+          </p>
+          <div class="progressBarRec">
+            <p class="progressBar"></p>
+          </div>
+          <p class="fileDownRemainTime">
+            <span class="fileDownRemainTimeTx">Remain time</span>
+            <span class="fileDownRemainTimeTime"></span>
+          </p>
+        </div>
+
+        <div class="recordFileOpen">
+          <span data-btn="open-file">Open</span>
+          <span data-btn="open-dir">OpenDir</span>
+        </div>
+      </div>
+      <div class="grm-recordFile-preview">
+        <div>
+          <video style="width: 100%" controls="controls" autoplay="autoplay"></video>
+        </div>
+        <div class="btnRec">
+          <div class="startRec">
+            <button data-btn="edit-startTime">시작</button>
+            <div data-preview="start"></div>
+          </div>
+          <div class="endRec">
+            <button data-btn="edit-endTime">종료</button>
+            <div data-preview="end"></div>
+          </div>
+          <div class="downloadRec">
+            <button data-btn="edit-download">편집 다운로드</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="_sample-camstudy">
+      <div class="grm-dialog-msg-layer newDialog camstudy-user-setting" tabindex="-1" style="display: flex;">
+        <div class="userSetting">
+          <div class="grm-dialog-top">
+            <h4 class="grm-dialog-title">메세지 변경</h4>
+            <p class="dialogTx">변경할 메세지를 입력해주세요</p>
+          </div>
+          <div class="grm-dialog-body">
+            <!-- <div class="article" data-cs-type="stopwatch">
+              <label>스톱워치</label>
+              <div class="setting">
+                <button class="grm-btn ok" data-btn="stopwatch-pause">일시정지</button>
+                <button class="grm-btn ok" data-btn="stopwatch-start">시작</button>
+                <button class="grm-btn ok" data-btn="stopwatch-reset">리셋</button>
+              </div>
+            </div> -->
+            <div class="article" data-cs-type="mymsg">
+              <div class="setting">
+                <input type="text" value="" maxlength="50">
+                <button class="grm-btn ok" data-btn="change-mymsg">변경</button>
+              </div>
+            </div>
+          </div>
+          <div class="grm-dialog-footer">
+            <button class="grm-btn cancel" data-btn="close">닫기</button>
+          </div>
+        </div>
+      </div>
+      <div class="grm-dialog-msg-layer camstudy-user-addPoint" tabindex="-1" style="display: flex;">
+        <div class="userSetting">
+          <div class="grm-dialog-top">
+            <h4 class="grm-dialog-title">상/벌점</h4>
+            <p class="dialogTx">변경할 메세지를 입력해주세요</p>
+          </div>
+          <div class="grm-dialog-body">
+            <!-- <div class="article" data-cs-type="stopwatch">
+              <label>스톱워치</label>
+              <div class="setting">
+                <button class="grm-btn ok" data-btn="stopwatch-pause">일시정지</button>
+                <button class="grm-btn ok" data-btn="stopwatch-start">시작</button>
+                <button class="grm-btn ok" data-btn="stopwatch-reset">리셋</button>
+              </div>
+            </div> -->
+            <div class="article" data-cs-type="mymsg">
+              <div class="setting">
+                <input type="text" value="" maxlength="50">
+                <button class="grm-btn ok" data-btn="change-mymsg">변경</button>
+              </div>
+            </div>
+          </div>
+          <div class="grm-dialog-footer">
+            <button class="grm-btn cancel" data-btn="close">닫기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grm-dialog-msg-layer newDialog camstudy-setting" tabindex="-1" style="display: flex;" data-tab-type="userlist">
+        <div class="settings">
+          <div class="grm-dialog-header">
+            <button class="camStudyTabBtn selected" data-tab-btn="userlist">참석자</button>
+            <button class="camStudyTabBtn" data-tab-btn="setting">설정</button>
+            <div class="clsBtnRec">
+              <button class="clsBtn" data-btn="close"></button>
+            </div>
+          </div>
+          <div class="grm-dialog-body">
+            <div data-tab="userlist">
+              <ul class="userlist-header">
+                <li class="user">
+                  <span data-user="chkAll">
+                    <input type="checkbox">
+                  </span>
+                  <!-- <span data-user="usernum">번호</span> -->
+                  <span data-user="username">이름</span>
+                  <span data-user="absent">출석</span>
+                  <span data-user="joinDateTime">출석시간</span>
+                  <span data-user="totalStudyDayTime">마지막학습</span>
+                  <span data-user="totalStudyTime">누적학습</span>
+                  <!-- <span data-user="join">입장</span> -->
+                  <span data-user="point">점수</span>
+                  <span data-user="email">Email</span>
+                </li>
+              </ul>
+              <ol class="userlist">
+                <li class="user">
+                  <span data-user="chk">
+                    <input type="checkbox">
+                  </span>
+                  <!-- <span data-user="usernum"></span> -->
+                  <span data-user="username"></span>
+                  <span data-user="absent"></span>
+                  <span data-user="joinDateTime"></span>
+                  <span data-user="totalStudyDayTime"></span>
+                  <span data-user="totalStudyTime"></span>
+                  <!-- <span data-user="join"></span> -->
+                  <p class="pointRec">
+                    <span data-user="point"></span>
+                    <span class="pointBtn" data-btn="point-plus"></span>
+                    <span class="pointBtn" data-btn="point-minus"></span>
+                  </p>
+                  <span data-user="email"></span>
+                </li>
+              </ol>
+              <div class="userListBtnRec">
+                <button class="userListBtn delBtn" data-btn="del-user">삭제</button>
+                <button class="userListBtn addBtn" data-btn="add-user">추가</button>
+              </div>
+            </div>
+            <div data-tab="setting">
+              <div class="article timeSet">
+                <label>기간</label>
+                <div class="setting">
+                  <input type="text" name="startDate" value="now" disabled="" data-date-pick="yyyyMMddHHmm" class="flatpickr-input" readonly="readonly">
+                  <span>~</span>
+                  <input type="text" name="endDate" value="now" data-date-pick="yyyyMMddHHmm" data-date-mindate="today" data-date-maxdate="now-add-month-12" class="flatpickr-input" readonly="readonly">
+                </div>
+              </div>
+              <div class="article timeSet">
+                <label>출석 시간</label>
+                <div class="setting">
+                  <!-- <div class="hourRec">
+                    <select class="targetTime-hours"></select>
+                    <span>시간</p>
+                  </div>
+                  <div class="minRec">
+                    <select class="targetTime-minutes"></select>
+                    <span>분</p>
+                  </div> -->
+                  <input type="text" name="attendanceTime-st" value="07:30" data-date-pick="HHmm" data-date-mindate="00:00" data-date-maxdate="23:59" class="flatpickr-input" readonly="readonly">
+                  <span>~</span>
+                  <input type="text" name="attendanceTime-ed" value="08:30" data-date-pick="HHmm" data-date-mindate="00:00" data-date-maxdate="23:59" class="flatpickr-input" readonly="readonly">
+                  <!-- <button class="grm-btn" data-btn="change-attendanceTime">변경</button> -->
+                </div>
+              </div>
+              <div class="article timeSet">
+                <label>하루 목표 시간</label>
+                <div class="setting">
+                  <!-- <div class="hourRec">
+                    <select class="targetTime-hours"></select>
+                    <span>시간</p>
+                  </div>
+                  <div class="minRec">
+                    <select class="targetTime-minutes"></select>
+                    <span>분</p>
+                  </div> -->
+                  <input type="text" name="camstudy-targetDayTime" data-date-pick="HHmm" data-date-mindate="01:00" data-date-maxdate="24:00" data-date-minuteincrement="10" class="flatpickr-input" readonly="readonly">
+                  <!-- <button class="grm-btn" data-btn="change-targetDayTime">변경</button> -->
+                </div>
+              </div>
+              <div class="article">
+                <label>공지사항</label>
+                <div class="setting">
+                  <textarea maxlength="1000" class="studyContent"></textarea>
+                  <div class="notiRegBtnRec">
+                    <button class="grm-btn ok" data-btn="change-content">저장</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="_sample-invite">
+      <ul>
+        <li class="room-invite-mail-list-item">
+          <span class="email"></span>
+          <span class="icon-global-trash btn-remove"></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="room-invite-pop-layer" data-tab="sns">
+      <div class="btn-close">
+        <span class="icon-global-close"></span>
+      </div>
+      <!-- <div class="room-invite-tabs">
+        <div class="room-invite-tab active" data-tab-type="sns">
+          <span class="icon-global-group room-invite-tab-icon"></span>
+          <span>SNS</span>
+        </div><div class="room-invite-tab" data-tab-type="mail">
+          <span class="icon-global-mail room-invite-tab-icon"></span>
+          <span>EMAIL</span>
+        </div>
+      </div> -->
+      <div class="room-invite-title">
+        <div class="room-invite-title-def">
+          <span class="icon-global-group room-invite-title-icon"></span>
+          <span class="title-text">Invite</span>
+        </div>
+        <div class="room-invite-title-mail">
+          <span class="icon-global-thin-arrow-left back-btn"></span>
+          <span class="title-text">EMAIL</span>
+        </div>
+        <div class="room-invite-title-kakao">
+          <span class="icon-global-thin-arrow-left back-btn"></span>
+          <span class="title-text">Kakao</span>
+        </div>
+        <div class="room-invite-title-call">
+          <span class="icon-global-thin-arrow-left back-btn"></span>
+          <span class="title-text">전화 초대</span>
+        </div>
+      </div>
+      <div class="room-invite-tab-content" data-tab-type="sns">
+        <div class="room-invite-btns">
+          <div class="room-invite-desc">
+            <p>You can invite your friends of Email or SNS.</p>
+            <p>
+              <!-- <p>Meeting room information and links will be posted on the timeline of Facebook and Band.<p> -->
+            </p>
+          </div>
+          <div class="room-invite-sns-list">
+            <span class="sns-btn" data-sns-type="mail"></span>
+            <span class="sns-btn" data-sns-type="facebook"></span>
+            <div class="sns-btn" data-sns-type="kakao" id="social-kakaolink" style="display: none;"></div>
+            <span class="sns-btn" data-sns-type="naver_band"></span>
+            <!-- <span class="sns-btn" data-sns-type="call"></span> -->
+          </div>
+        </div>
+        <div class="room-invite-callRec">
+          <p class="title">전화번호로 초대해서<br>음성으로 참여할 수 있습니다</p>
+          <button class="inputCallBtn">전화번호 입력</button>
+        </div>
+        <div class="room-invite-url-copy">
+          <span class="url-txt">Invite by sharing the url.</span>
+          <div class="url-btn">Copy URL</div>
+        </div>
+      </div>
+      <div class="room-invite-tab-content room-invite-mail" data-tab-type="mail">
+        <div class="form-title">To</div>
+        <div class="form-inp-email">
+          <input type="email" name="inp_email" maxlength="5000" placeholder="Email" autocomplete="email">
+          <span class="grm-btn ok btn-add-email">Add</span>
+        </div>
+        <div class="form-title">
+          List of invitation
+          <span class="email-count"></span>
+        </div>
+        <div class="room-invite-mail-list">
+          <ul></ul>
+        </div>
+        <div class="room-invite-footer">
+          <button class="grm-btn ok btn-send-mail">Send</button>
+        </div>
+      </div>
+      <div class="room-invite-tab-content room-invite-kakao-alimtalk" data-tab-type="kakao-alimtalk">
+        <div class="form-title">To</div>
+        <div class="form-inp-email">
+          <input type="text" name="inp_phone" maxlength="5000" placeholder="Cell phone" autocomplete="tel">
+          <span class="grm-btn ok btn-add-phone">Add</span>
+        </div>
+        <div class="form-title">
+          List of invitation
+          <span class="phone-count"></span>
+        </div>
+        <div class="room-invite-phone-list">
+          <ul></ul>
+        </div>
+        <div class="room-invite-footer">
+          <button class="grm-btn ok btn-send-kakao">Send</button>
+        </div>
+      </div>
+      <div class="room-invite-tab-content room-invite-call" data-tab-type="call">
+        <div class="inputNum">
+          <input type="text" value="" placeholder="전화번호 입력">
+          <button class="btnBackDel"></button>
+        </div>
+        <div class="numPadRec">
+          <div class="numPad">1</div>
+          <div class="numPad">2</div>
+          <div class="numPad">3</div>
+          <div class="numPad">4</div>
+          <div class="numPad">5</div>
+          <div class="numPad">6</div>
+          <div class="numPad">7</div>
+          <div class="numPad">8</div>
+          <div class="numPad">9</div>
+          <div class="numPad">*</div>
+          <div class="numPad">0</div>
+          <div class="numPad">#</div>
+        </div>
+        <div class="callBtnRec">
+          <button class="callBtn">초대</button>
+        </div>
+      </div>
+    </div>
+    <div class="now-alloed-device-guide">
+      <span class="grm-dialog-body-txt">Camera, microphone device can not be used.<br>You have blocked the device or are using it in another program.</span>
+      <div class="grm-dialog-expand-btn">Show solution for device Unblock .</div>
+      <div class="grm-dialog-expand" style="display:none">
+        <div class="grm-dialog-expand-group">
+          <div class="grm-dialog-expand-txt">1. If you look in the address bar at the top right of the screen, click the camera icon.</div>
+          <div class="grm-dialog-expand-img01"></div>
+        </div>
+        <div class="grm-dialog-expand-group">
+          <div class="grm-dialog-expand-txt">2. Choose "https://gooroomee.com Always allow to access your camera and microphone" and click "Finish" button.</div>
+          <div class="grm-dialog-expand-img02"></div>
+        </div>
+        <div class="grm-dialog-expand-group">
+          <div class="grm-dialog-expand-txt">3. Refresh the web page.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grm-dialog rec-start-alert">
+      <div class="grm-dialog-wrapper">
+        <div class="grm-dialog-msg-layer">
+          <div class="grm-dialog-top">
+            <h4 class="grm-dialog-title">Click the Gooroomee Button</h4>
+            <div class="grm-pop-close">
+              <span class="icon-global-close cls_btn"></span>
+            </div>
+          </div>
+          <div class="grm-dialog-body">
+            <ul class="txt-rec">
+              <li class="bold">Click the <span class="line">Gooroomee Button</span></li>
+              <li>on the top right side to use recording feture</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 171229_배너 -->
+    <div class="grm-dialog researchPopup">
+    </div>
+  </div>
+
+  <!-- 180910_윤선생영어교실 교재 -->
+  <div class="grm-dialog-msg-layer newDialog yoons-books-layer" tabindex="-1" style="display: none;/*display: flex;*/">
+
+    <div class="yoonsBookView" data-bookfile-selected="">
+      <div class="grm-dialog-header">
+        <h4 class="yoonsBookTitle">윤선생영어교실 교재</h4>
+        <div class="clsBtnRec">
+          <button class="clsBtn" data-btn="close"></button>
+        </div>
+      </div>
+      <div class="grm-dialog-body pd00">
+        <div class="yoonsNavRec">
+          <ul class="yoonsNav clearfix">
+            <li class="yoonsNavItem">홈</li>
+
+          </ul>
+        </div>
+        <div class="yoonsFileListRec">
+          <ul class="yoonsFileList">
+
+          </ul>
+        </div>
+      </div>
+      <div class="grm-dialog-bottomBtnsRec yoonsBookOpen">
+        <button class="yoonsBookOpenBtn">교재 열기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- WebRTC -->
+
+  <script src="common/lib/ycs/webrtc/adapter.js"></script>
+
+
+
+  <script src="ref/service/api/js/GooroomeeApi.js?_dm=0212-01"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function run(init) {
+        init({
+          roomId: '',
+          roomUrlId: '1231232187',
+          confType: '',
+          callType: '',
+          appType: '',
+          exitAndClose: "false",
+          screenshareAppId: 'cdnmddhnbgepkaeogphkppeobbjkcpke' // 'ciodnblocnmfddfifhhojjannphhical'
+        });
+
+        // event
+        (function () {
+          var timer, t_cnt = 0;
+          var $room = $('.room');
+          var r = window._rui;
+          function event() {
+            if ($room.attr('data-call-type') === undefined) {
+              t_cnt++;
+              if (t_cnt > 10) {
+                return;
+              }
+
+              clearTimeout(timer);
+              timer = setTimeout(event, 1000);
+              return;
+            }
+            if ($room.attr('data-room-type') !== 'cam_study') {
+              return;
+            }
+
+            var $event = $('[data-event="event-camstudy-20180515"]');
+            if ($event.length == 0 || $event.attr('data-event-use') != 'true') {
+              return;
+            }
+            //$event.find('a').attr('target', $event.attr('data-event'));
+            $event.show();
+
+            var $t = r.Message.toaster('chat',
+              '[구루미 캠스터디 이벤트]'
+              + '\r\n선착순 100명에게 유료 사용료 최대 70%할인'
+            );
+            var $link = $event.find('a').clone();
+            var $w = $t.find('.room-status-msg-text-wrapper');
+            $w.parent().append($link);
+            $link.html('').append($w);
+          }
+          try {
+            clearTimeout(timer);
+            timer = setTimeout(event, 1000);
+          } catch (e) {
+            console.error(e);
+          }
+        }());
+      }
+      if (window.roomUiInit) {
+        try {
+          run(roomUiInit);
+        } catch (e) {
+          console.error(e);
+          setTimeout(function () {
+            location.reload();
+          }, 2000);
+        }
+      } else {
+        //var cache = $.ajaxSetup().cache;
+        //$.ajaxSetup({cache: true});
+        $.getScript('ref/room/js/roomUI_renew-1.5.js?_dm=0212-01')
+          .done(function (script, textStatus) {
+            run(roomUiInit);
+          }).fail(function (jqxhr, settings, exception) {
+            console.error(jqxhr, settings, exception);
+            setTimeout(function () {
+              location.reload();
+            }, 2000);
+          });
+        //$.ajaxSetup({cache: cache});
+      }
+    });
+
+  </script>
+
+
+
+
+  <script>
+
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-69454136-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+  <div class="flatpickr-calendar hasTime animate showTimeInput" tabindex="-1">
+    <div class="flatpickr-month"><span class="flatpickr-prev-month" style="display: block;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17">
+          <g></g>
+          <path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path>
+        </svg></span>
+      <div class="flatpickr-current-month"><span class="cur-month">February </span>
+        <div class="numInputWrapper"><input class="numInput cur-year" type="text" pattern="\d*" tabindex="-1"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+      </div><span class="flatpickr-next-month" style="display: block;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17">
+          <g></g>
+          <path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path>
+        </svg></span>
+    </div>
+    <div class="flatpickr-innerContainer">
+      <div class="flatpickr-rContainer">
+        <div class="flatpickr-weekdays">
+          <span class="flatpickr-weekday">
+            Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
+          </span>
+        </div>
+        <div class="flatpickr-days" tabindex="-1">
+          <div class="dayContainer"><span class="flatpickr-day prevMonthDay" aria-label="January 27, 2019" tabindex="-1">27</span><span class="flatpickr-day prevMonthDay" aria-label="January 28, 2019" tabindex="-1">28</span><span class="flatpickr-day prevMonthDay" aria-label="January 29, 2019" tabindex="-1">29</span><span class="flatpickr-day prevMonthDay" aria-label="January 30, 2019" tabindex="-1">30</span><span class="flatpickr-day prevMonthDay" aria-label="January 31, 2019" tabindex="-1">31</span><span class="flatpickr-day " aria-label="February 1, 2019" tabindex="-1">1</span><span class="flatpickr-day " aria-label="February 2, 2019" tabindex="-1">2</span><span class="flatpickr-day " aria-label="February 3, 2019" tabindex="-1">3</span><span class="flatpickr-day " aria-label="February 4, 2019" tabindex="-1">4</span><span class="flatpickr-day " aria-label="February 5, 2019" tabindex="-1">5</span><span class="flatpickr-day " aria-label="February 6, 2019" tabindex="-1">6</span><span class="flatpickr-day " aria-label="February 7, 2019" tabindex="-1">7</span><span class="flatpickr-day " aria-label="February 8, 2019" tabindex="-1">8</span><span class="flatpickr-day " aria-label="February 9, 2019" tabindex="-1">9</span><span class="flatpickr-day " aria-label="February 10, 2019" tabindex="-1">10</span><span class="flatpickr-day " aria-label="February 11, 2019" tabindex="-1">11</span><span class="flatpickr-day " aria-label="February 12, 2019" tabindex="-1">12</span><span class="flatpickr-day " aria-label="February 13, 2019" tabindex="-1">13</span><span class="flatpickr-day " aria-label="February 14, 2019" tabindex="-1">14</span><span class="flatpickr-day " aria-label="February 15, 2019" tabindex="-1">15</span><span class="flatpickr-day today selected" aria-label="February 16, 2019" tabindex="-1">16</span><span class="flatpickr-day " aria-label="February 17, 2019" tabindex="-1">17</span><span class="flatpickr-day " aria-label="February 18, 2019" tabindex="-1">18</span><span class="flatpickr-day " aria-label="February 19, 2019" tabindex="-1">19</span><span class="flatpickr-day " aria-label="February 20, 2019" tabindex="-1">20</span><span class="flatpickr-day " aria-label="February 21, 2019" tabindex="-1">21</span><span class="flatpickr-day " aria-label="February 22, 2019" tabindex="-1">22</span><span class="flatpickr-day " aria-label="February 23, 2019" tabindex="-1">23</span><span class="flatpickr-day " aria-label="February 24, 2019" tabindex="-1">24</span><span class="flatpickr-day " aria-label="February 25, 2019" tabindex="-1">25</span><span class="flatpickr-day " aria-label="February 26, 2019" tabindex="-1">26</span><span class="flatpickr-day " aria-label="February 27, 2019" tabindex="-1">27</span><span class="flatpickr-day " aria-label="February 28, 2019" tabindex="-1">28</span><span class="flatpickr-day nextMonthDay" aria-label="March 1, 2019" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="March 2, 2019" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="March 3, 2019" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="March 4, 2019" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="March 5, 2019" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="March 6, 2019" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="March 7, 2019" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="March 8, 2019" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="March 9, 2019" tabindex="-1">9</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="flatpickr-time time24hr" tabindex="-1">
+      <div class="numInputWrapper"><input class="numInput flatpickr-hour" type="text" pattern="\d*" tabindex="-1" data-step="1" data-min="0" data-max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span>
+      <div class="numInputWrapper"><input class="numInput flatpickr-minute" type="text" pattern="\d*" tabindex="-1" data-step="5" data-min="0" data-max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+    </div>
+  </div>
+  <div class="flatpickr-calendar hasTime animate showTimeInput" tabindex="-1">
+    <div class="flatpickr-month"><span class="flatpickr-prev-month" style="display: none;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17">
+          <g></g>
+          <path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path>
+        </svg></span>
+      <div class="flatpickr-current-month"><span class="cur-month">February </span>
+        <div class="numInputWrapper"><input class="numInput cur-year" type="text" pattern="\d*" tabindex="-1" data-min="2019" data-max="2020"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+      </div><span class="flatpickr-next-month" style="display: block;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17">
+          <g></g>
+          <path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path>
+        </svg></span>
+    </div>
+    <div class="flatpickr-innerContainer">
+      <div class="flatpickr-rContainer">
+        <div class="flatpickr-weekdays">
+          <span class="flatpickr-weekday">
+            Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
+          </span>
+        </div>
+        <div class="flatpickr-days" tabindex="-1">
+          <div class="dayContainer"><span class="flatpickr-day prevMonthDay disabled" aria-label="January 27, 2019">27</span><span class="flatpickr-day prevMonthDay disabled" aria-label="January 28, 2019">28</span><span class="flatpickr-day prevMonthDay disabled" aria-label="January 29, 2019">29</span><span class="flatpickr-day prevMonthDay disabled" aria-label="January 30, 2019">30</span><span class="flatpickr-day prevMonthDay disabled" aria-label="January 31, 2019">31</span><span class="flatpickr-day disabled" aria-label="February 1, 2019">1</span><span class="flatpickr-day disabled" aria-label="February 2, 2019">2</span><span class="flatpickr-day disabled" aria-label="February 3, 2019">3</span><span class="flatpickr-day disabled" aria-label="February 4, 2019">4</span><span class="flatpickr-day disabled" aria-label="February 5, 2019">5</span><span class="flatpickr-day disabled" aria-label="February 6, 2019">6</span><span class="flatpickr-day disabled" aria-label="February 7, 2019">7</span><span class="flatpickr-day disabled" aria-label="February 8, 2019">8</span><span class="flatpickr-day disabled" aria-label="February 9, 2019">9</span><span class="flatpickr-day disabled" aria-label="February 10, 2019">10</span><span class="flatpickr-day disabled" aria-label="February 11, 2019">11</span><span class="flatpickr-day disabled" aria-label="February 12, 2019">12</span><span class="flatpickr-day disabled" aria-label="February 13, 2019">13</span><span class="flatpickr-day disabled" aria-label="February 14, 2019">14</span><span class="flatpickr-day disabled" aria-label="February 15, 2019">15</span><span class="flatpickr-day today selected" aria-label="February 16, 2019" tabindex="-1">16</span><span class="flatpickr-day " aria-label="February 17, 2019" tabindex="-1">17</span><span class="flatpickr-day " aria-label="February 18, 2019" tabindex="-1">18</span><span class="flatpickr-day " aria-label="February 19, 2019" tabindex="-1">19</span><span class="flatpickr-day " aria-label="February 20, 2019" tabindex="-1">20</span><span class="flatpickr-day " aria-label="February 21, 2019" tabindex="-1">21</span><span class="flatpickr-day " aria-label="February 22, 2019" tabindex="-1">22</span><span class="flatpickr-day " aria-label="February 23, 2019" tabindex="-1">23</span><span class="flatpickr-day " aria-label="February 24, 2019" tabindex="-1">24</span><span class="flatpickr-day " aria-label="February 25, 2019" tabindex="-1">25</span><span class="flatpickr-day " aria-label="February 26, 2019" tabindex="-1">26</span><span class="flatpickr-day " aria-label="February 27, 2019" tabindex="-1">27</span><span class="flatpickr-day " aria-label="February 28, 2019" tabindex="-1">28</span><span class="flatpickr-day nextMonthDay" aria-label="March 1, 2019" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="March 2, 2019" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="March 3, 2019" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="March 4, 2019" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="March 5, 2019" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="March 6, 2019" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="March 7, 2019" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="March 8, 2019" tabindex="-1">8</span><span class="flatpickr-day nextMonthDay" aria-label="March 9, 2019" tabindex="-1">9</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="flatpickr-time time24hr" tabindex="-1">
+      <div class="numInputWrapper"><input class="numInput flatpickr-hour" type="text" pattern="\d*" tabindex="-1" data-step="1" data-min="0" data-max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span>
+      <div class="numInputWrapper"><input class="numInput flatpickr-minute" type="text" pattern="\d*" tabindex="-1" data-step="5" data-min="0" data-max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+    </div>
+  </div>
+  <div class="flatpickr-calendar hasTime noCalendar animate showTimeInput" tabindex="-1">
+    <div class="flatpickr-time time24hr" tabindex="-1">
+      <div class="numInputWrapper"><input class="numInput flatpickr-hour" type="text" pattern="\d*" tabindex="-1" data-step="1" data-min="0" data-max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span>
+      <div class="numInputWrapper"><input class="numInput flatpickr-minute" type="text" pattern="\d*" tabindex="-1" data-step="5" data-min="0" data-max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+    </div>
+  </div>
+  <div class="flatpickr-calendar hasTime noCalendar animate showTimeInput" tabindex="-1">
+    <div class="flatpickr-time time24hr" tabindex="-1">
+      <div class="numInputWrapper"><input class="numInput flatpickr-hour" type="text" pattern="\d*" tabindex="-1" data-step="1" data-min="0" data-max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span>
+      <div class="numInputWrapper"><input class="numInput flatpickr-minute" type="text" pattern="\d*" tabindex="-1" data-step="5" data-min="0" data-max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+    </div>
+  </div>
+  <div class="flatpickr-calendar hasTime noCalendar animate showTimeInput" tabindex="-1">
+    <div class="flatpickr-time time24hr" tabindex="-1">
+      <div class="numInputWrapper"><input class="numInput flatpickr-hour" type="text" pattern="\d*" tabindex="-1" data-step="1" data-min="0" data-max="23"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span>
+      <div class="numInputWrapper"><input class="numInput flatpickr-minute" type="text" pattern="\d*" tabindex="-1" data-step="10" data-min="0" data-max="59"><span class="arrowUp"></span><span class="arrowDown"></span></div>
+    </div>
+  </div>
+  <div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+      <div></div>
+      <div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/vy-MhgbfL4v.js?version=44#channel=f230d9884389fe&amp;origin=https%3A%2F%2Fgooroomee.com" style="border: none;"></iframe></div>
+    </div>
+  </div>
+</body>
+
+</html>

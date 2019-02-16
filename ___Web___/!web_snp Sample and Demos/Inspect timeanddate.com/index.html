@@ -1,0 +1,1174 @@
+<div class="main-content-div">
+  <div class="row socrow">
+    <div id="bc" class="fixed">
+      <div id="bct"><a target="_top" href="/" class="fx">Home</a> &nbsp; <a target="_top" href="/extra/" class="fx">Apps</a> &nbsp; <a target="_top" href="/clocks/" class="fx">Clocks for your web site</a> &nbsp; Free Countdown Timer for Your Website</div>
+    </div>
+  </div>
+  <div class="fixed">
+    <h1>Free Countdown Timer for Your Website</h1>
+    <p>Our free countdown timer is an accurate timer that you can use for your website or blog. It can help you count down to any special event, such as a birthday or anniversary. There are many ways for you personalize your own countdown timer, simply by filling out the gray form below on this page.</p>
+    <p>We also have <a href="/clocks/free.html">Free Clocks</a> available for your website or blog.</p>
+    <h2 id="main">Main Features</h2>
+    <p>Our free countdown timer is also referred to as a countdown clock. Here are some reasons why people use our countdown timer:</p>
+    <ul>
+      <li><strong>The countdown is accurate</strong> — the clocks display current time, even if the user's computer clock is wrong. </li>
+      <li><strong>You have choices regarding DST</strong> — there are different options on how to deal with <a href="/time/aboutdst.html">daylight saving time</a> (DST) with regard to your countdown timer. Read more about <a href="/clocks/countdown-dst.html">the countdown timer and DST</a>. </li>
+      <li><strong>The countdown takes into account any time zone</strong> — all the major time zones are supported. </li>
+      <li><strong>It is highly configurable</strong> — choose different backgrounds, text options, colors and fonts.</li>
+      <li><strong>You can choose units to display </strong> — from days to milliseconds.</li>
+      <li><strong>No registration is needed</strong> — the HTML code is available immediately.</li>
+    </ul>
+    <p>Use the form below to customize your own countdown timer. A small preview window at the bottom right corner of your web page should also appear next to the form.</p>
+    <p>You may place up to six clocks and countdown timers on a single page. If more than two clocks/timers are used, a separate link to timeanddate.com should be provided on the page. To use the service you must be able to add HTML directly to your web page and IFRAME tags must be allowed.</p>
+    <p>You use the service on your own risk.</p>
+    <h2 id="copy">Copy or modify existing countdown</h2>
+    <form name="f2">
+      <div id="impbut"> If you want to modify a countdown you have created before, click this button: <input type="button" value="Copy/Modify Countdown" onclick="impbutclk()" class="blue"></div>
+      <div id="imparea" style="display:none"> Copy and paste the HTML code/Source code you used to make the countdownfrom before in the area below, and then click the "Import from HTML" button. You can copy your entire web page source code if you want to, this service will read the configuration for the first one found. <h3>Paste current HTML for clock or web page here</h3>
+        <div id="impmsg" class="err" style="display:none"></div><textarea name="srccode" cols="80" rows="8"></textarea><br><input type="button" value="Import From HTML" onclick="impbut(1)"><input type="button" value="Go Back Without Import" onclick="impbut(0)">
+      </div>
+    </form><br>
+    <div id="palette" class="tc" style="position: absolute; left: -3500px;"></div>
+    <div class="ff">
+      <form name="f" action="freecountdown.html" method="GET" onsubmit="return false"><input type="hidden" name="i" value="6mwrywh">
+        <h2>Select location clock should show time for</h2>
+        <p><label for="n">Location:</label>
+          <script type="text/javascript">
+            document.write(' <input type=button value="Search..." onclick="extlocs(\'n\')" title="Search or browse for a city not listed"> <input type=button value="Time Zones..." onclick="exttzs(\'n\')" title="Find a location by a time zone abbreviation or name">');
+
+          </script> <input type="button" value="Search..." onclick="extlocs('n')" title="Search or browse for a city not listed"> <input type="button" value="Time Zones..." onclick="exttzs('n')" title="Find a location by a time zone abbreviation or name"> or choose:<select id="n" name="n" onchange="fsu()" onkeyup="fsu()">
+            <option value="0">UTC / GMT</option>
+            <optgroup label="Nearby locations">
+              <option value="5099" selected="">South Korea - Suwon</option>
+              <option value="235">South Korea - Seoul</option>
+            </optgroup>
+            <optgroup label="Other locations">
+              <option value="113">Afghanistan - Kabul</option>
+              <option value="284">Albania - Tirana</option>
+              <option value="14">Algeria - Algiers</option>
+              <option value="686">Andorra - Andorra La Vella</option>
+              <option value="138">Angola - Luanda</option>
+              <option value="688">Antigua and Barbuda - Saint John's</option>
+              <option value="51">Argentina - Buenos Aires</option>
+              <option value="485">Argentina - Córdoba - Córdoba</option>
+              <option value="370">Armenia - Yerevan</option>
+              <option value="57">Australia - Australian Capital Territory - Canberra</option>
+              <option value="240">Australia - New South Wales - Sydney</option>
+              <option value="929">Australia - Northern Territory - Alice Springs</option>
+              <option value="72">Australia - Northern Territory - Darwin</option>
+              <option value="47">Australia - Queensland - Brisbane</option>
+              <option value="927">Australia - Queensland - Cairns</option>
+              <option value="5">Australia - South Australia - Adelaide</option>
+              <option value="396">Australia - Tasmania - Hobart</option>
+              <option value="152">Australia - Victoria - Melbourne</option>
+              <option value="1980">Australia - Western Australia - Eucla</option>
+              <option value="196">Australia - Western Australia - Perth</option>
+              <option value="259">Austria - Vienna - Vienna</option>
+              <option value="369">Azerbaijan - Baku</option>
+              <option value="173">Bahamas - Nassau</option>
+              <option value="15">Bahrain - Manama</option>
+              <option value="73">Bangladesh - Dhaka</option>
+              <option value="46">Barbados - Bridgetown</option>
+              <option value="285">Belarus - Minsk</option>
+              <option value="48">Belgium - Brussels - Brussels</option>
+              <option value="36">Belize - Belmopan</option>
+              <option value="203">Benin - Porto Novo</option>
+              <option value="38">Bermuda - Hamilton</option>
+              <option value="690">Bhutan - Thimphu</option>
+              <option value="124">Bolivia - La Paz</option>
+              <option value="1888">Bolivia - Sucre</option>
+              <option value="691">Bosnia-Herzegovina - Sarajevo</option>
+              <option value="86">Botswana - Gaborone</option>
+              <option value="752">Brazil - Acre - Rio Branco</option>
+              <option value="144">Brazil - Amazonas - Manaus</option>
+              <option value="222">Brazil - Bahia - Salvador</option>
+              <option value="491">Brazil - Ceará - Fortaleza</option>
+              <option value="45">Brazil - Distrito Federal - Brasilia</option>
+              <option value="446">Brazil - Pará - Belém</option>
+              <option value="209">Brazil - Pernambuco - Recife</option>
+              <option value="213">Brazil - Rio de Janeiro - Rio de Janeiro</option>
+              <option value="233">Brazil - São Paulo - São Paulo</option>
+              <option value="932">British Indian Ocean Territory - Diego Garcia</option>
+              <option value="693">Brunei - Bandar Seri Begawan</option>
+              <option value="238">Bulgaria - Sofia</option>
+              <option value="186">Burkina Faso - Ouagadougou</option>
+              <option value="52">Burundi - Bujumbura</option>
+              <option value="3446">Burundi - Gitega</option>
+              <option value="685">Cabo Verde - Praia</option>
+              <option value="199">Cambodia - Phnom Penh</option>
+              <option value="267">Cameroon - Yaoundé</option>
+              <option value="55">Canada - Alberta - Calgary</option>
+              <option value="80">Canada - Alberta - Edmonton</option>
+              <option value="256">Canada - British Columbia - Vancouver</option>
+              <option value="265">Canada - Manitoba - Winnipeg</option>
+              <option value="749">Canada - New Brunswick - Saint John</option>
+              <option value="1137">Canada - Newfoundland and Labrador - Happy Valley-Goose Bay</option>
+              <option value="4880">Canada - Newfoundland and Labrador - Mary's Harbour</option>
+              <option value="175">Canada - Newfoundland and Labrador - St. John's</option>
+              <option value="1145">Canada - Northwest Territories - Inuvik</option>
+              <option value="678">Canada - Northwest Territories - Yellowknife</option>
+              <option value="286">Canada - Nova Scotia - Halifax</option>
+              <option value="3368">Canada - Nunavut - Alert</option>
+              <option value="1157">Canada - Nunavut - Baker Lake</option>
+              <option value="1160">Canada - Nunavut - Coral Harbour</option>
+              <option value="3764">Canada - Nunavut - Eureka</option>
+              <option value="3801">Canada - Nunavut - Grise Fiord</option>
+              <option value="1164">Canada - Nunavut - Pond Inlet</option>
+              <option value="2380">Canada - Nunavut - Resolute Bay</option>
+              <option value="188">Canada - Ontario - Ottawa</option>
+              <option value="250">Canada - Ontario - Toronto</option>
+              <option value="1922">Canada - Quebec - Blanc-Sablon</option>
+              <option value="2438">Canada - Quebec - Chibougamau</option>
+              <option value="3768">Canada - Quebec - Kuujjuaq</option>
+              <option value="165">Canada - Quebec - Montréal</option>
+              <option value="189">Canada - Quebec - Québec</option>
+              <option value="210">Canada - Saskatchewan - Regina</option>
+              <option value="679">Canada - Yukon - Whitehorse</option>
+              <option value="377">Cayman Islands - George Town</option>
+              <option value="694">Central African Republic - Bangui</option>
+              <option value="174">Chad - N'Djamena</option>
+              <option value="914">Chile - Easter Island</option>
+              <option value="574">Chile - Punta Arenas</option>
+              <option value="232">Chile - Santiago</option>
+              <option value="33">China - Beijing Municipality - Beijing</option>
+              <option value="470">China - Chongqing Municipality - Chongqing</option>
+              <option value="1232">China - Guangdong - Shenzhen</option>
+              <option value="2148">China - Jiangsu - Suzhou</option>
+              <option value="237">China - Shanghai Municipality - Shanghai</option>
+              <option value="918">China - Tibet - Lhasa</option>
+              <option value="655">China - Xinjiang - Ürümqi</option>
+              <option value="41">Colombia - Bogota</option>
+              <option value="696">Comoros - Moroni</option>
+              <option value="926">Congo - Brazzaville</option>
+              <option value="121">Congo Dem. Rep. - Kinshasa</option>
+              <option value="139">Congo Dem. Rep. - Lubumbashi</option>
+              <option value="279">Cook Islands - Rarotonga</option>
+              <option value="225">Costa Rica - San Jose</option>
+              <option value="1">Cote d'Ivoire (Ivory Coast) - Abidjan</option>
+              <option value="935">Cote d'Ivoire (Ivory Coast) - Yamoussoukro</option>
+              <option value="281">Croatia - Zagreb</option>
+              <option value="99">Cuba - Havana</option>
+              <option value="680">Cyprus - Nicosia</option>
+              <option value="204">Czech Republic - Prague</option>
+              <option value="69">Denmark - Copenhagen</option>
+              <option value="697">Djibouti - Djibouti</option>
+              <option value="698">Dominica - Roseau</option>
+              <option value="230">Dominican Republic - Santo Domingo</option>
+              <option value="915">Ecuador - Galapagos Islands</option>
+              <option value="93">Ecuador - Guayaquil</option>
+              <option value="190">Ecuador - Quito</option>
+              <option value="53">Egypt - Cairo</option>
+              <option value="228">El Salvador - San Salvador</option>
+              <option value="699">Equatorial Guinea - Malabo</option>
+              <option value="700">Eritrea - Asmara</option>
+              <option value="242">Estonia - Tallinn</option>
+              <option value="149">eSwatini - Mbabane</option>
+              <option value="7">Ethiopia - Addis Ababa</option>
+              <option value="630">Falkland Islands - Stanley</option>
+              <option value="701">Faroe Islands - Tórshavn</option>
+              <option value="82">Fiji - Suva</option>
+              <option value="101">Finland - Helsinki</option>
+              <option value="3718">Finland - Kemi</option>
+              <option value="1401">Finland - Rovaniemi</option>
+              <option value="195">France - Île-de-France - Paris</option>
+              <option value="61">French Guiana - Cayenne</option>
+              <option value="278">French Polynesia - Tahiti - Papeete</option>
+              <option value="3658">French Southern Territories - Amsterdam Island</option>
+              <option value="397">French Southern Territories - Port-aux-Francais</option>
+              <option value="129">Gabon - Libreville</option>
+              <option value="30">Gambia - Banjul</option>
+              <option value="371">Georgia - Tbilisi</option>
+              <option value="37">Germany - Berlin - Berlin</option>
+              <option value="83">Germany - Hesse - Frankfurt</option>
+              <option value="4">Ghana - Accra</option>
+              <option value="89">Gibraltar - Gibraltar</option>
+              <option value="26">Greece - Athens</option>
+              <option value="2114">Greenland - Danmarkshavn</option>
+              <option value="705">Greenland - Ittoqqortoormiit</option>
+              <option value="4217">Greenland - Kangerlussuaq</option>
+              <option value="703">Greenland - Nuuk</option>
+              <option value="3724">Greenland - Qaanaaq</option>
+              <option value="704">Greenland - Thule Air Base</option>
+              <option value="706">Grenada - Saint George's</option>
+              <option value="707">Guadeloupe - Basse-Terre</option>
+              <option value="91">Guam - Hagåtña</option>
+              <option value="94">Guatemala - Guatemala City</option>
+              <option value="67">Guinea - Conakry</option>
+              <option value="40">Guinea-Bissau - Bissau</option>
+              <option value="88">Guyana - Georgetown</option>
+              <option value="709">Haiti - Port-au-Prince</option>
+              <option value="245">Honduras - Tegucigalpa</option>
+              <option value="102">Hong Kong - Hong Kong</option>
+              <option value="50">Hungary - Budapest</option>
+              <option value="211">Iceland - Reykjavik</option>
+              <option value="1040">India - Bihar - Patna</option>
+              <option value="771">India - Delhi - Delhi</option>
+              <option value="176">India - Delhi - New Delhi</option>
+              <option value="1039">India - Gujarat - Surat</option>
+              <option value="438">India - Karnataka - Bangalore</option>
+              <option value="1892">India - Kerala - Thiruvananthapuram</option>
+              <option value="1041">India - Madhya Pradesh - Indore</option>
+              <option value="44">India - Maharashtra - Mumbai</option>
+              <option value="1038">India - Maharashtra - Pune</option>
+              <option value="1042">India - Odisha - Bhubaneshwar</option>
+              <option value="4498">India - Punjab - Ahmedgarh</option>
+              <option value="1043">India - Punjab - Ludhiana</option>
+              <option value="553">India - Tamil Nadu - Chennai</option>
+              <option value="1047">India - Tamil Nadu - Madurai</option>
+              <option value="1046">India - Uttar Pradesh - Agra</option>
+              <option value="1045">India - Uttar Pradesh - Varanasi</option>
+              <option value="54">India - West Bengal - Kolkata</option>
+              <option value="761">Indonesia - Bali - Denpasar</option>
+              <option value="631">Indonesia - East Java - Surabaya</option>
+              <option value="434">Indonesia - East Kalimantan - Balikpapan</option>
+              <option value="108">Indonesia - Jakarta Special Capital Region - Jakarta</option>
+              <option value="555">Indonesia - North Sulawesi - Manado</option>
+              <option value="759">Indonesia - Papua - Jayapura</option>
+              <option value="653">Indonesia - South Sulawesi - Makassar</option>
+              <option value="437">Indonesia - West Java - Bandung</option>
+              <option value="2120">Indonesia - West Kalimantan - Pontianak</option>
+              <option value="2436">Indonesia - West Papua - Manokwari</option>
+              <option value="246">Iran - Tehran</option>
+              <option value="27">Iraq - Baghdad</option>
+              <option value="78">Ireland - Dublin</option>
+              <option value="716">Isle of Man - Douglas</option>
+              <option value="110">Israel - Jerusalem</option>
+              <option value="676">Israel - Tel Aviv</option>
+              <option value="157">Italy - Milan</option>
+              <option value="215">Italy - Rome</option>
+              <option value="120">Jamaica - Kingston</option>
+              <option value="540">Japan - Kobe</option>
+              <option value="538">Japan - Kyoto</option>
+              <option value="565">Japan - Nagoya</option>
+              <option value="671">Japan - Osaka</option>
+              <option value="622">Japan - Sapporo</option>
+              <option value="248">Japan - Tokyo</option>
+              <option value="667">Japan - Yokohama</option>
+              <option value="11">Jordan - Amman</option>
+              <option value="382">Kazakhstan - Almaty</option>
+              <option value="916">Kazakhstan - Aqtobe</option>
+              <option value="921">Kazakhstan - Astana</option>
+              <option value="2352">Kazakhstan - Oral</option>
+              <option value="170">Kenya - Nairobi</option>
+              <option value="274">Kiribati - Christmas Island - Kiritimati</option>
+              <option value="675">Kiribati - Tarawa</option>
+              <option value="743">Kosovo - Pristina</option>
+              <option value="123">Kuwait - Kuwait City</option>
+              <option value="384">Kyrgyzstan - Bishkek</option>
+              <option value="260">Laos - Vientiane</option>
+              <option value="602">Latvia - Riga</option>
+              <option value="34">Lebanon - Beirut</option>
+              <option value="147">Lesotho - Maseru</option>
+              <option value="161">Liberia - Monrovia</option>
+              <option value="252">Libya - Tripoli</option>
+              <option value="714">Liechtenstein - Vaduz</option>
+              <option value="660">Lithuania - Vilnius</option>
+              <option value="534">Luxembourg - Luxembourg</option>
+              <option value="20">Madagascar - Antananarivo</option>
+              <option value="130">Malawi - Lilongwe</option>
+              <option value="122">Malaysia - Kuala Lumpur - Kuala Lumpur</option>
+              <option value="715">Maldives - Male</option>
+              <option value="29">Mali - Bamako</option>
+              <option value="2328">Mali - Timbuktu</option>
+              <option value="255">Malta - Valletta</option>
+              <option value="717">Marshall Islands - Majuro</option>
+              <option value="718">Martinique - Fort-de-France</option>
+              <option value="183">Mauritania - Nouakchott</option>
+              <option value="201">Mauritius - Port Louis</option>
+              <option value="9">Mexico - Aguascalientes - Aguascalientes</option>
+              <option value="154">Mexico - Baja California - Mexicali</option>
+              <option value="247">Mexico - Baja California - Tijuana</option>
+              <option value="155">Mexico - Ciudad de México - Mexico City</option>
+              <option value="3">Mexico - Guerrero - Acapulco</option>
+              <option value="92">Mexico - Jalisco - Guadalajara</option>
+              <option value="923">Mexico - Quintana Roo - Cancún</option>
+              <option value="148">Mexico - Sinaloa - Mazatlan</option>
+              <option value="503">Mexico - Sonora - Hermosillo</option>
+              <option value="258">Mexico - Veracruz - Veracruz</option>
+              <option value="1072">Micronesia - Pohnpei - Palikir</option>
+              <option value="177">Moldova - Chișinău</option>
+              <option value="674">Monaco - Monaco</option>
+              <option value="950">Mongolia - Hovd</option>
+              <option value="720">Mongolia - Ulaanbaatar</option>
+              <option value="744">Montenegro - Podgorica</option>
+              <option value="60">Morocco - Casablanca</option>
+              <option value="206">Morocco - Rabat</option>
+              <option value="146">Mozambique - Maputo</option>
+              <option value="1981">Myanmar - Naypyidaw</option>
+              <option value="208">Myanmar - Yangon</option>
+              <option value="266">Namibia - Windhoek</option>
+              <option value="276">Nauru - Yaren</option>
+              <option value="117">Nepal - Kathmandu</option>
+              <option value="16">Netherlands - Amsterdam</option>
+              <option value="22">New Zealand - Auckland - Auckland</option>
+              <option value="63">New Zealand - Chatham Islands - Chatham Islands</option>
+              <option value="264">New Zealand - Wellington - Wellington</option>
+              <option value="143">Nicaragua - Managua</option>
+              <option value="180">Niger - Niamey</option>
+              <option value="742">Nigeria - Abuja</option>
+              <option value="125">Nigeria - Lagos</option>
+              <option value="724">Niue - Alofi</option>
+              <option value="205">North Korea - Pyongyang</option>
+              <option value="673">North Macedonia - Skopje</option>
+              <option value="737">Norway - Svalbard - Longyearbyen</option>
+              <option value="187">Norway - Oslo</option>
+              <option value="290">Norway - Tromsø</option>
+              <option value="169">Oman - Muscat</option>
+              <option value="106">Pakistan - Islamabad</option>
+              <option value="757">Pakistan - Sindh - Karachi</option>
+              <option value="756">Pakistan - Lahore</option>
+              <option value="5606">Palau - Ngerulmud</option>
+              <option value="192">Panama - Panama</option>
+              <option value="193">Papua New Guinea - Port Moresby</option>
+              <option value="21">Paraguay - Asuncion</option>
+              <option value="131">Peru - Lima - Lima</option>
+              <option value="145">Philippines - Manila</option>
+              <option value="755">Pitcairn Islands - Adamstown</option>
+              <option value="262">Poland - Warsaw</option>
+              <option value="133">Portugal - Lisbon</option>
+              <option value="271">Portugal - Azores - Ponta Delgada</option>
+              <option value="226">Puerto Rico - San Juan</option>
+              <option value="8">Qatar - Doha</option>
+              <option value="216">Réunion (French) - Saint-Denis</option>
+              <option value="49">Romania - Bucharest</option>
+              <option value="2437">Russia - Arkhangelsk - Belushya Guba</option>
+              <option value="356">Russia - Bashkortostan - Ufa</option>
+              <option value="373">Russia - Chelyabinsk - Chelyabinsk</option>
+              <option value="17">Russia - Chukotka - Anadyr</option>
+              <option value="3795">Russia - Chukotka - Pevek</option>
+              <option value="378">Russia - Irkutsk - Irkutsk</option>
+              <option value="528">Russia - Kaliningrad - Kaliningrad</option>
+              <option value="114">Russia - Kamchatka - Petropavlovsk-Kamchatsky</option>
+              <option value="2439">Russia - Khabarovsk - Komsomolsk-on-Amur</option>
+              <option value="3735">Russia - Krasnoyarsk - Khatanga</option>
+              <option value="372">Russia - Krasnoyarsk - Krasnoyarsk</option>
+              <option value="381">Russia - Krasnoyarsk - Norilsk</option>
+              <option value="380">Russia - Magadan - Magadan</option>
+              <option value="166">Russia - Moscow - Moscow</option>
+              <option value="167">Russia - Murmansk - Murmansk</option>
+              <option value="353">Russia - Novgorod - Novgorod</option>
+              <option value="375">Russia - Novosibirsk - Novosibirsk</option>
+              <option value="374">Russia - Omsk - Omsk</option>
+              <option value="357">Russia - Perm - Perm</option>
+              <option value="261">Russia - Primorsky - Vladivostok</option>
+              <option value="352">Russia - Saint Petersburg - Saint-Petersburg</option>
+              <option value="4211">Russia - Sakha (Yakutia) - Srednekolymsk</option>
+              <option value="3769">Russia - Sakha (Yakutia) - Tiksi</option>
+              <option value="3767">Russia - Sakha (Yakutia) - Verkhoyansk</option>
+              <option value="1907">Russia - Sakha (Yakutia) - Yakutsk</option>
+              <option value="1245">Russia - Sakhalin - Yuzhno-Sakhalinsk</option>
+              <option value="355">Russia - Samara - Samara</option>
+              <option value="358">Russia - Sverdlovsk - Yekaterinburg</option>
+              <option value="354">Russia - Tatarstan - Kazan</option>
+              <option value="364">Russia - Udmurtia - Izhevsk</option>
+              <option value="4096">Russia - Zabaykalsky - Chita</option>
+              <option value="119">Rwanda - Kigali</option>
+              <option value="727">Saint Helena - Jamestown</option>
+              <option value="728">Saint Kitts and Nevis - Basseterre</option>
+              <option value="729">Saint Lucia - Castries</option>
+              <option value="731">Saint Vincent and Grenadines - Kingstown</option>
+              <option value="282">Samoa - Apia</option>
+              <option value="732">San Marino - San Marino</option>
+              <option value="733">Sao Tome and Principe - São Tomé</option>
+              <option value="151">Saudi Arabia - Makkah</option>
+              <option value="1942">Saudi Arabia - Medina</option>
+              <option value="214">Saudi Arabia - Riyadh</option>
+              <option value="74">Senegal - Dakar</option>
+              <option value="35">Serbia - Belgrade</option>
+              <option value="734">Seychelles - Victoria</option>
+              <option value="85">Sierra Leone - Freetown</option>
+              <option value="236">Singapore - Singapore</option>
+              <option value="735">Slovakia - Bratislava</option>
+              <option value="736">Slovenia - Ljubljana</option>
+              <option value="273">Solomon Islands - Honiara</option>
+              <option value="160">Somalia - Mogadishu</option>
+              <option value="56">South Africa - Cape Town</option>
+              <option value="111">South Africa - Johannesburg</option>
+              <option value="3401">South Africa - Marion Island (Prince Edward Islands)</option>
+              <option value="269">South Africa - Pretoria</option>
+              <option value="1985">South Georgia/Sandwich Is. - King Edward Point</option>
+              <option value="235">South Korea - Seoul</option>
+              <option value="2171">South Sudan - Juba</option>
+              <option value="31">Spain - Barcelona - Barcelona</option>
+              <option value="141">Spain - Madrid</option>
+              <option value="191">Spain - Majorca - Palma</option>
+              <option value="389">Sri Lanka - Colombo</option>
+              <option value="1925">Sri Lanka - Sri Jayawardenepura Kotte</option>
+              <option value="118">Sudan - Khartoum</option>
+              <option value="194">Suriname - Paramaribo</option>
+              <option value="239">Sweden - Stockholm</option>
+              <option value="270">Switzerland - Bern - Bern</option>
+              <option value="87">Switzerland - Geneva - Geneva</option>
+              <option value="268">Switzerland - Zurich - Zürich</option>
+              <option value="487">Syria - Damascus</option>
+              <option value="241">Taiwan - Taipei</option>
+              <option value="385">Tajikistan - Dushanbe</option>
+              <option value="71">Tanzania - Dar es Salaam</option>
+              <option value="1030">Tanzania - Dodoma</option>
+              <option value="28">Thailand - Bangkok</option>
+              <option value="768">Timor-Leste - Dili</option>
+              <option value="135">Togo - Lomé</option>
+              <option value="738">Tokelau - Fakaofo</option>
+              <option value="277">Tonga - Nukualofa</option>
+              <option value="588">Trinidad and Tobago - Port of Spain</option>
+              <option value="253">Tunisia - Tunis</option>
+              <option value="19">Turkey - Ankara</option>
+              <option value="107">Turkey - Istanbul</option>
+              <option value="387">Turkmenistan - Ashgabat</option>
+              <option value="272">Tuvalu - Funafuti</option>
+              <option value="115">Uganda - Kampala</option>
+              <option value="4060">Ukraine - Dnipropetrovsk - Dnipro</option>
+              <option value="367">Ukraine - Kyiv - Kyiv</option>
+              <option value="366">Ukraine - Odessa - Odesa</option>
+              <option value="2">United Arab Emirates - Abu Dhabi - Abu Dhabi</option>
+              <option value="776">United Arab Emirates - Dubai - Dubai</option>
+              <option value="136">United Kingdom - England - London</option>
+              <option value="919">United Kingdom - Northern Ireland - Belfast</option>
+              <option value="304">United Kingdom - Scotland - Edinburgh</option>
+              <option value="90">United Kingdom - Scotland - Glasgow</option>
+              <option value="298">United Kingdom - Wales - Cardiff</option>
+              <option value="163">Uruguay - Montevideo</option>
+              <option value="3399">US Minor Outlying Islands - Baker Island</option>
+              <option value="1890">US Minor Outlying Islands - Midway</option>
+              <option value="2131">US Minor Outlying Islands - Wake Island</option>
+              <option value="407">USA - Alabama - Montgomery</option>
+              <option value="13">USA - Alaska - Adak</option>
+              <option value="18">USA - Alaska - Anchorage</option>
+              <option value="81">USA - Alaska - Fairbanks</option>
+              <option value="112">USA - Alaska - Juneau</option>
+              <option value="931">USA - Alaska - Unalaska</option>
+              <option value="197">USA - Arizona - Phoenix</option>
+              <option value="134">USA - Arkansas - Little Rock</option>
+              <option value="137">USA - California - Los Angeles</option>
+              <option value="217">USA - California - Sacramento</option>
+              <option value="770">USA - California - San Diego</option>
+              <option value="224">USA - California - San Francisco</option>
+              <option value="283">USA - California - San Jose</option>
+              <option value="75">USA - Colorado - Denver</option>
+              <option value="98">USA - Connecticut - Hartford</option>
+              <option value="1029">USA - Delaware - Dover</option>
+              <option value="263">USA - District of Columbia - Washington DC</option>
+              <option value="156">USA - Florida - Miami</option>
+              <option value="867">USA - Florida - Orlando</option>
+              <option value="944">USA - Florida - Pensacola</option>
+              <option value="25">USA - Georgia - Atlanta</option>
+              <option value="103">USA - Hawaii - Honolulu</option>
+              <option value="42">USA - Idaho - Boise</option>
+              <option value="64">USA - Illinois - Chicago</option>
+              <option value="105">USA - Indiana - Indianapolis</option>
+              <option value="76">USA - Iowa - Des Moines</option>
+              <option value="249">USA - Kansas - Topeka</option>
+              <option value="413">USA - Kentucky - Louisville</option>
+              <option value="178">USA - Louisiana - New Orleans</option>
+              <option value="23">USA - Maine - Augusta</option>
+              <option value="419">USA - Maryland - Baltimore</option>
+              <option value="43">USA - Massachusetts - Boston</option>
+              <option value="77">USA - Michigan - Detroit</option>
+              <option value="159">USA - Minnesota - Minneapolis</option>
+              <option value="219">USA - Minnesota - St. Paul</option>
+              <option value="515">USA - Mississippi - Jackson</option>
+              <option value="405">USA - Missouri - Kansas City</option>
+              <option value="605">USA - Missouri - St. Louis</option>
+              <option value="448">USA - Montana - Billings</option>
+              <option value="132">USA - Nebraska - Lincoln</option>
+              <option value="127">USA - Nevada - Las Vegas</option>
+              <option value="68">USA - New Hampshire - Concord</option>
+              <option value="861">USA - New Jersey - Newark</option>
+              <option value="394">USA - New Mexico - Albuquerque</option>
+              <option value="179">USA - New York - New York</option>
+              <option value="207">USA - North Carolina - Raleigh</option>
+              <option value="39">USA - North Dakota - Bismarck</option>
+              <option value="805">USA - Ohio - Columbus</option>
+              <option value="184">USA - Oklahoma - Oklahoma City</option>
+              <option value="202">USA - Oregon - Portland</option>
+              <option value="221">USA - Oregon - Salem</option>
+              <option value="198">USA - Pennsylvania - Philadelphia</option>
+              <option value="878">USA - Rhode Island - Providence</option>
+              <option value="66">USA - South Carolina - Columbia</option>
+              <option value="1920">USA - South Dakota - Rapid City</option>
+              <option value="627">USA - South Dakota - Sioux Falls</option>
+              <option value="843">USA - Tennessee - Knoxville</option>
+              <option value="171">USA - Tennessee - Nashville</option>
+              <option value="24">USA - Texas - Austin</option>
+              <option value="70">USA - Texas - Dallas</option>
+              <option value="104">USA - Texas - Houston</option>
+              <option value="1921">USA - Texas - Midland</option>
+              <option value="220">USA - Utah - Salt Lake City</option>
+              <option value="164">USA - Vermont - Montpelier</option>
+              <option value="212">USA - Virginia - Richmond</option>
+              <option value="234">USA - Washington - Seattle</option>
+              <option value="62">USA - West Virginia - Charleston</option>
+              <option value="142">USA - Wisconsin - Madison</option>
+              <option value="158">USA - Wisconsin - Milwaukee</option>
+              <option value="778">USA - Wyoming - Cheyenne</option>
+              <option value="244">Uzbekistan - Tashkent</option>
+              <option value="280">Vanuatu - Port Vila</option>
+              <option value="710">Vatican City State - Vatican City</option>
+              <option value="58">Venezuela - Caracas</option>
+              <option value="95">Vietnam - Hanoi</option>
+              <option value="218">Vietnam - Ho Chi Minh</option>
+              <option value="741">Western Sahara - El Aaiún</option>
+              <option value="6">Yemen - Aden</option>
+              <option value="672">Yemen - Sana</option>
+              <option value="140">Zambia - Lusaka</option>
+              <option value="96">Zimbabwe - Harare</option>
+            </optgroup>
+          </select></p>
+        <h2>Select date and time to count down to</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td class="ml"><label for="month">Month:</label></td>
+              <td><input tad-va="date" placeholder="mm" type="text" onfocus="ifc(this,'m')" maxlength="12" size="3" id="month" name="month" title="Please enter the month of the year as a one or two-digit number, or as a name. The valid numeric range is from 1 to 12, and valid names, for example, are 'Oct' or 'October'." value="2" onblur="cht()"></td>
+              <td class="ml"><label for="day">Day:</label></td>
+              <td><input tad-va="date" placeholder="dd" type="text" onfocus="ifc(this,'d')" pattern="[0-9]*" maxlength="2" size="3" id="day" name="day" title="Please enter the day of the month as a one or two-digit number. The valid range is from 1 to 31." value="17" onblur="cht()"></td>
+              <td class="ml"><label for="year">Year:</label></td>
+              <td><input placeholder="yyyy" type="text" tad-va="date" onfocus="ifc(this,'y')" pattern="[0-9]*" maxlength="4" size="5" id="year" name="year" title="Enter year as a 4-digit number." value="2019" onblur="cht()"></td>
+            </tr>
+            <tr>
+              <td class="ml"><label for="hour">Hour: </label></td>
+              <td><input tad-va="time" placeholder="hh" type="text" onfocus="ifc(this,'h')" pattern="[0-9]*\s*([aApP][mM])?" maxlength="5" size="3" id="hour" name="hour" title="Please enter the hour of the day as a one or two-digit number, with an optional 'am' or 'pm' suffix. The valid ranges are from 00 to 23 if you choose to use the 24-hour clock format, and from 12 am to 11 pm if you choose to use the 12-hour clock format." value="0" onblur="cht()"></td>
+              <td class="ml"><label for="min">Minute: </label></td>
+              <td><input tad-va="time" placeholder="mm" type="text" onfocus="ifc(this,'i')" pattern="[0-9]*" maxlength="2" size="3" id="min" name="min" title="Please enter the minute of the hour as a one or two-digit number. The valid range is from 0 to 59." value="0" onblur="cht()"></td>
+              <td class="ml"><label for="sec">Second:</label></td>
+              <td><input tad-va="time" placeholder="ss" type="text" onfocus="ifc(this,'s')" pattern="[0-9]*" maxlength="2" size="3" id="sec" name="sec" title="Please enter the second of the minute as a one or two-digit number. The valid range is from 0 to 59." value="0" onblur="cht()"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="mgt0">Configure countdown timer design</h2><input type="hidden" name="cf" value="12"><label for="bt">HTML/Javascript only</label><br>
+        <table>
+          <tbody>
+            <tr>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/html11.png" width="140" height="59" alt="One-liner" id="cf11" onclick="ccf('11')">
+                <div class="imgtxt">One-liner</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/html12.png" width="140" height="59" alt="Two-liner" id="cf12" onclick="ccf('12')">
+                <div class="imgtxt">Two-liner</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/html13.png" width="140" height="59" alt="Multi-liner" id="cf13" onclick="ccf('13')">
+                <div class="imgtxt">Multi-liner</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table><label for="bt">Background Themes</label>
+        <table>
+          <tbody>
+            <tr>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_0.png" width="140" height="59" alt="Blank" id="cf100" onclick="ccf('100')">
+                <div class="imgtxt">Blank</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_11.png" width="140" height="59" alt="Gradient" id="cf111" onclick="ccf('111')">
+                <div class="imgtxt">Gradient</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_1.png" width="140" height="59" alt="Red" id="cf101" onclick="ccf('101')">
+                <div class="imgtxt">Red</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_2.png" width="140" height="59" alt="Expecting Boy" id="cf102" onclick="ccf('102')">
+                <div class="imgtxt">Expecting Boy</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_3.png" width="140" height="59" alt="Expecting Girl" id="cf103" onclick="ccf('103')">
+                <div class="imgtxt">Expecting Girl</div>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_4.png" width="140" height="59" alt="Hearts" id="cf104" onclick="ccf('104')">
+                <div class="imgtxt">Hearts</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_5.png" width="140" height="59" alt="Wedding 1" id="cf105" onclick="ccf('105')">
+                <div class="imgtxt">Wedding 1</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_6.png" width="140" height="59" alt="Wedding 2" id="cf106" onclick="ccf('106')">
+                <div class="imgtxt">Wedding 2</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_7.png" width="140" height="59" alt="Beach 1" id="cf107" onclick="ccf('107')">
+                <div class="imgtxt">Beach 1</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_8.png" width="140" height="59" alt="Beach 2" id="cf108" onclick="ccf('108')">
+                <div class="imgtxt">Beach 2</div>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_9.png" width="140" height="59" alt="Birthday" id="cf109" onclick="ccf('109')">
+                <div class="imgtxt">Birthday</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_10.png" width="140" height="59" alt="Party" id="cf110" onclick="ccf('110')">
+                <div class="imgtxt">Party</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_12.png" width="140" height="59" alt="Basketball" id="cf112" onclick="ccf('112')">
+                <div class="imgtxt">Basketball</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_13.png" width="140" height="59" alt="Soccer" id="cf113" onclick="ccf('113')">
+                <div class="imgtxt">Soccer</div>
+              </td>
+              <td><img class="filepic" src="//c.tadst.com/gfx/flash/fccd_14.png" width="140" height="59" alt="American Football" id="cf114" onclick="ccf('114')">
+                <div class="imgtxt">American Football</div>
+              </td>
+            </tr>
+          </tbody>
+        </table><br>
+        <table id="lt1">
+          <tbody>
+            <tr id="pcr">
+              <td style="width: 206px;"><label for="pc">Background color:</label></td>
+              <td>#<input size="7" name="pc" id="pc" value="FFFFFF" onblur="updcol('pc','FFFFFF')">
+                <div class="colf" id="pcdisp" onclick="opencol('pc',0)" style="background-color:#FFFFFF;display:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <div class="colt" onclick="fst(1)" style="background-color:transparent;display:inline">transparent</div>
+              </td>
+            </tr>
+            <tr id="tcr" style="display:none">
+              <td><label for="tc">Secondary color:</label></td>
+              <td>#<input size="7" name="tc" id="tc" value="FFFFFF" onblur="updcol('tc','FFFFFF')">
+                <div class="colf" id="tcdisp" onclick="opencol('tc',0)" style="background-color:#FFFFFF;display:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="vt"><label for="sz">Counter size:</label></td>
+              <td class="vt"><select class="cw" id="sz" name="sz" onkeyup="chsz(0)" onchange="chsz(0)">
+                  <option value="0">Very small</option>
+                  <option value="1">Small</option>
+                  <option value="2" selected="">Medium</option>
+                  <option value="3">Large</option>
+                  <option value="4">Very large</option>
+                  <option value="5">Custom</option>
+                </select></td>
+            </tr>
+            <tr id="szdiv" style="display: none;">
+              <td></td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><label for="szw">Width</label></td>
+                      <td><input type="text" name="szw" id="szw" size="4" maxlength="4" onchange="chsz(1)" title="Width in pixels"></td>
+                      <td rowspan="2"><input type="checkbox" name="szr" id="szr" value="1" onclick="chsz(1)" checked=""><label for="szr">Keep width-height ratio</label></td>
+                    </tr>
+                    <tr>
+                      <td><label for="szh">Height</label></td>
+                      <td><input type="text" name="szh" id="szh" size="4" maxlength="4" onchange="chsz(2)" title="Height in pixels"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="co">Text rows:</label></td>
+              <td><select class="cw" id="co" name="co" onkeyup="cco()" onchange="cco()">
+                  <option value="0">Just counter</option>
+                  <option value="1">Header line + counter</option>
+                  <option value="2" selected="">2 header lines + counter</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><label for="fn">Font:</label></td>
+              <td><select class="cw" id="fn" name="fn" onchange="fsu()">
+                  <option value="1" selected="">Sans Serif Font</option>
+                  <option value="2">Serif Font</option>
+                  <option value="3">Typewriter Font</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><label for="fs">Font Size:</label></td>
+              <td><select id="fs" name="fs" class="cw" onchange="fsu()">
+                  <option value="40">40 %</option>
+                  <option value="50">50 %</option>
+                  <option value="60">60 %</option>
+                  <option value="70">70 %</option>
+                  <option value="80">80 %</option>
+                  <option value="90">90 %</option>
+                  <option value="100" selected="">100 %</option>
+                  <option value="110">110 %</option>
+                  <option value="120">120 %</option>
+                  <option value="130">130 %</option>
+                  <option value="140">140 %</option>
+                  <option value="150">150 %</option>
+                  <option value="175">175 %</option>
+                  <option value="200">200 %</option>
+                  <option value="225">225 %</option>
+                  <option value="250">250 %</option>
+                  <option value="275">275 %</option>
+                  <option value="300">300 %</option>
+                  <option value="325">325 %</option>
+                  <option value="350">350 %</option>
+                  <option value="375">375 %</option>
+                  <option value="400">400 %</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Countdown timer number customization</h2>
+        <table id="lt2">
+          <tbody>
+            <tr>
+              <td style="width: 206px;"><label for="cm">Counter mode:</label></td>
+              <td><select class="cw" id="cm" name="cm" onkeyup="fsu()" onchange="fsu()">
+                  <option value="0" selected="">Break Down</option>
+                  <option value="1">Total</option>
+                </select><img id="tticm" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'cm',1)" onclick="ott(this,'cm',2)"></td>
+            </tr>
+            <tr>
+              <td><label for="cu">Smallest unit:</label></td>
+              <td><select class="cw" id="cu" name="cu" onkeyup="fsu()" onchange="fsu()">
+                  <option value="1">Days</option>
+                  <option value="2">Hours</option>
+                  <option value="3">Minutes</option>
+                  <option value="4" selected="">Seconds</option>
+                  <option value="5">Milliseconds</option>
+                </select><img id="tticu" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'cu',1)" onclick="ott(this,'cu',2)"></td>
+            </tr>
+            <tr>
+              <td><label for="ct">Unit texts:</label></td>
+              <td><select class="cw" id="ct" name="ct" onkeyup="fsu()" onchange="fsu()">
+                  <option value="0" selected="">Automatic</option>
+                  <option value="1">No unit texts</option>
+                  <option value="2">One-letter (D,H,M,S)</option>
+                  <option value="3">Short (Day,Hr,Min,Sec)</option>
+                  <option value="4">Medium (Days,Hrs,Mins,Secs)</option>
+                  <option value="5">Full names (Days, Hours, Minutes...)</option>
+                </select><img id="ttict" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'ct',1)" onclick="ott(this,'ct',2)"></td>
+            </tr>
+            <tr>
+              <td><label for="cr">Number rounding:</label></td>
+              <td><select class="cw" id="cr" name="cr" onkeyup="fsu()" onchange="fsu()">
+                  <option value="0" selected="">Automatic</option>
+                  <option value="1">Round down</option>
+                  <option value="2">Round up</option>
+                </select><img id="tticr" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'cr',1)" onclick="ott(this,'cr',2)"></td>
+            </tr>
+            <tr>
+              <td><label for="cs">When time has passed:</label></td>
+              <td><select class="cw" id="cs" name="cs" onkeyup="fsu()" onchange="fsu()">
+                  <option value="0" selected="">Continue counting upwards</option>
+                  <option value="1">Stop at 0</option>
+                </select><img id="ttics" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'cs',1)" onclick="ott(this,'cs',2)"></td>
+            </tr>
+            <tr>
+              <td><label for="ca">Daylight Saving Time:</label></td>
+              <td><select class="cw" id="ca" name="ca" onkeyup="fsu()" onchange="fsu()">
+                  <option value="0" selected="">Automatic</option>
+                  <option value="1">Take DST into account, but show warning</option>
+                  <option value="2">Pretend DST does not exist</option>
+                </select><img id="ttica" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'ca',1)" onclick="ott(this,'ca',2)"></td>
+            </tr>
+            <tr>
+              <td><label for="ss">Synchronization message:</label></td>
+              <td><select class="cw" id="ss" name="ss" onkeyup="fsu()" onchange="fsu()">
+                  <option value="0" selected="">Do not show message</option>
+                  <option value="1">Show message after sync.</option>
+                </select><img id="ttiss" src="//c.tadst.com/gfx/tooltip.png" width="19" height="19" alt="Help" style="margin-left:5px;vertical-align:bottom;" onmouseover="ott(this,'ss',1)" onclick="ott(this,'ss',2)"></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Customization for when time has not yet passed</h2>
+        <table id="lt3">
+          <tbody>
+            <tr id="tatr">
+              <td style="width: 206px;"><label for="tat">Top header text:</label></td>
+              <td><input type="text" name="tat" id="tat" size="30" maxlength="40" onchange="fsu()" title="Text to be displayed at the top when the countdown is still counting down" value="Time left to Event in"></td>
+              <td>#<input size="7" name="tac" id="tac" value="000000" onblur="updcol('tac','000000')"></td>
+              <td>
+                <div class="colf" id="tacdisp" onclick="opencol('tac',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr id="matr">
+              <td><label for="mat">Middle header text:</label></td>
+              <td><input type="text" name="mat" id="mat" size="30" maxlength="40" onchange="fsu()" title="Text to be displayed in the middle if the countdown is still counting down. Blank to display city name. Spaces to display nothing." value=""></td>
+              <td>#<input size="7" name="mac" id="mac" value="000000" onblur="updcol('mac','000000')"></td>
+              <td>
+                <div class="colf" id="macdisp" onclick="opencol('mac',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cac">Countdown clock color:</label></td>
+              <td></td>
+              <td>#<input size="7" name="cac" id="cac" value="000000" onblur="updcol('cac','000000')"></td>
+              <td>
+                <div class="colf" id="cacdisp" onclick="opencol('cac',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Customization for when time has passed</h2>
+        <table id="lt4">
+          <tbody>
+            <tr id="tptr">
+              <td style="width: 206px;"><label for="tpt">Top header text:</label></td>
+              <td><input type="text" name="tpt" id="tpt" size="30" maxlength="40" onchange="fsu()" title="Text to be displayed at the top when the counter has passed the time and is now counting up." value="Time since Event started in"></td>
+              <td>#<input size="7" name="tpc" id="tpc" value="000000" onblur="updcol('tpc','000000')"></td>
+              <td>
+                <div class="colf" id="tpcdisp" onclick="opencol('tpc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr id="mptr">
+              <td><label for="mpt">Middle header text:</label></td>
+              <td><input type="text" name="mpt" id="mpt" size="30" maxlength="40" onchange="fsu()" title="Text to be displayed in the middle if the countdown has passed the time and is now counting up. Blank to display city name. Spaces to display nothing." value=""></td>
+              <td>#<input size="7" name="mpc" id="mpc" value="000000" onblur="updcol('mpc','000000')"></td>
+              <td>
+                <div class="colf" id="mpcdisp" onclick="opencol('mpc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cpc">Countdown clock color:</label></td>
+              <td></td>
+              <td>#<input size="7" name="cpc" id="cpc" value="000000" onblur="updcol('cpc','000000')"></td>
+              <td>
+                <div class="colf" id="cpcdisp" onclick="opencol('cpc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Borders</h3>
+        <table id="lt5">
+          <tbody>
+            <tr>
+              <td style="width: 206px;"><label for="bo">Display borders:</label></td>
+              <td><select class="cw" id="bo" name="bo" onchange="chbo()" onkeyup="chbo()">
+                  <option value="1" selected="">No borders</option>
+                  <option value="2">Common border</option>
+                  <option value="3">Separate top/left/bottom/right border</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="bo2" style="display:none">
+          <tbody>
+            <tr>
+              <td><label for="ba">Common Border</label></td>
+              <td><label for="bas">Size:</label></td>
+              <td><select name="bas" id="bas" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select></td>
+              <td><label for="bat">Style:</label><select name="bat" id="bat" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">none</option>
+                  <option value="1">dotted</option>
+                  <option value="2">dashed</option>
+                  <option value="3" selected="">solid</option>
+                  <option value="4">double</option>
+                  <option value="5">groove</option>
+                  <option value="6">ridge</option>
+                  <option value="7">inset</option>
+                  <option value="8">outset</option>
+                </select></td>
+              <td><label for="bac">Color:</label></td>
+              <td>#<input size="7" name="bac" id="bac" value="000000" onblur="updcol('bac','000000')"></td>
+              <td>
+                <div class="colf" id="bacdisp" onclick="opencol('bac',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="bo3" style="display:none">
+          <tbody>
+            <tr>
+              <td><label for="bl">Left:</label></td>
+              <td><label for="bls">Size:</label></td>
+              <td><select name="bls" id="bls" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select></td>
+              <td><label for="blt">Style:</label><select name="blt" id="blt" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">none</option>
+                  <option value="1">dotted</option>
+                  <option value="2">dashed</option>
+                  <option value="3" selected="">solid</option>
+                  <option value="4">double</option>
+                  <option value="5">groove</option>
+                  <option value="6">ridge</option>
+                  <option value="7">inset</option>
+                  <option value="8">outset</option>
+                </select></td>
+              <td><label for="blc">Color:</label></td>
+              <td>#<input size="7" name="blc" id="blc" value="000000" onblur="updcol('blc','000000')"></td>
+              <td>
+                <div class="colf" id="blcdisp" onclick="opencol('blc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="br">Right:</label></td>
+              <td><label for="brs">Size:</label></td>
+              <td><select name="brs" id="brs" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select></td>
+              <td><label for="brt">Style:</label><select name="brt" id="brt" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">none</option>
+                  <option value="1">dotted</option>
+                  <option value="2">dashed</option>
+                  <option value="3" selected="">solid</option>
+                  <option value="4">double</option>
+                  <option value="5">groove</option>
+                  <option value="6">ridge</option>
+                  <option value="7">inset</option>
+                  <option value="8">outset</option>
+                </select></td>
+              <td><label for="brc">Color:</label></td>
+              <td>#<input size="7" name="brc" id="brc" value="000000" onblur="updcol('brc','000000')"></td>
+              <td>
+                <div class="colf" id="brcdisp" onclick="opencol('brc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="bt">Top:</label></td>
+              <td><label for="bts">Size:</label></td>
+              <td><select name="bts" id="bts" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select></td>
+              <td><label for="btt">Style:</label><select name="btt" id="btt" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">none</option>
+                  <option value="1">dotted</option>
+                  <option value="2">dashed</option>
+                  <option value="3" selected="">solid</option>
+                  <option value="4">double</option>
+                  <option value="5">groove</option>
+                  <option value="6">ridge</option>
+                  <option value="7">inset</option>
+                  <option value="8">outset</option>
+                </select></td>
+              <td><label for="btc">Color:</label></td>
+              <td>#<input size="7" name="btc" id="btc" value="000000" onblur="updcol('btc','000000')"></td>
+              <td>
+                <div class="colf" id="btcdisp" onclick="opencol('btc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="bb">Bottom:</label></td>
+              <td><label for="bbs">Size:</label></td>
+              <td><select name="bbs" id="bbs" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select></td>
+              <td><label for="bbt">Style:</label><select name="bbt" id="bbt" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">none</option>
+                  <option value="1">dotted</option>
+                  <option value="2">dashed</option>
+                  <option value="3" selected="">solid</option>
+                  <option value="4">double</option>
+                  <option value="5">groove</option>
+                  <option value="6">ridge</option>
+                  <option value="7">inset</option>
+                  <option value="8">outset</option>
+                </select></td>
+              <td><label for="bbc">Color:</label></td>
+              <td>#<input size="7" name="bbc" id="bbc" value="000000" onblur="updcol('bbc','000000')"></td>
+              <td>
+                <div class="colf" id="bbcdisp" onclick="opencol('bbc',0)" style="background-color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Padding</h3>
+        <table id="lt6">
+          <tbody>
+            <tr>
+              <td style="width: 206px;"><label for="pd">Add padding:</label></td>
+              <td><select class="cw" id="pd" name="pd" onchange="chpd()" onkeyup="chpd()">
+                  <option value="1" selected="">No padding</option>
+                  <option value="2">Common padding on each side</option>
+                  <option value="3">Seperate top/left/bottom/right padding</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="pd2" style="display:none">
+          <tbody>
+            <tr>
+              <td><label for="pa">Padding size Common Padding</label></td>
+              <td><select name="pa" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        <table id="pd3" style="display:none">
+          <tbody>
+            <tr>
+              <td><label for="pl">Padding size left side</label></td>
+              <td><select name="pl" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><label for="pr">Padding size right side</label></td>
+              <td><select name="pr" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><label for="pt">Padding size above</label></td>
+              <td><select name="pt" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td><label for="pb">Padding size below</label></td>
+              <td><select name="pb" onchange="fsu()" onkeyup="fsu()">
+                  <option value="0">0</option>
+                  <option value="1" selected="">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Select type of web page/server and create HTML</h2><select id="dpt" name="dpt" onchange="chdpt()" onkeyup="chdpt()">
+          <option value="0" selected="">Normal web page (http server)</option>
+          <option value="1">Secure web page (https/SSL server)</option>
+        </select>
+        <div class="err warn" id="dptnote" style="display: none; position: absolute; width: 30em; margin: 0px; padding: 0.2em; left: 634px; top: 2576px;"></div><br><br><input onclick="gh(1)" type="button" value="Show HTML for Countdown Timer">
+        <div style="display:none" id="htmldiv">
+          <h3>HTML code</h3>Insert the following HTML code on your web page:<br><textarea name="html" rows="7" cols="60" onfocus="htmlfo()"></textarea>
+          <script type="text/javascript">
+            var df = document.f;
+            if (df) { u = df.html; if (u && u.createTextRange) { document.write('<br><input type=\"button\" value=\"Copy to clipboard\" onclick=\"ctc()\">'); } }
+          </script>
+        </div>
+      </form>
+    </div>
+    <form name="ffloat" id="ffloat">
+      <div id="fldiv" class="stck">
+        <h3 class="mgt0">Current Countdown Preview</h3>
+        <p>This is how the countdown clock will be shown:</p><input type="button" name="pf_0" id="pf_0" onclick="cshe(0)" value="Current time"><input type="button" name="pf_1" id="pf_1" onclick="cshe(1)" value="Last 10 seconds"><input type="button" name="pf_2" id="pf_2" onclick="cshe(2)" value="One hour later">
+        <div id="exmp"><iframe id="exmpfr" name="exmpfr" src="onlyforusebyconfiguration.php/Zcountdown=1/i6mwrywh/n5099/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs100/szw320/szh135/tatTime%20left%20to%20Event%20in/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2019-02-17T00:00:00" allowtransparency="true" frameborder="0" width="500" height="100" style="width: 181px; height: 69px;"></iframe>
+        </div>
+        <p><input id="fflcb" name="fflcb" value="1" checked="" type="checkbox" onclick="ffl()"><label for="fflcb" style="display:inline">Keep this window in view</label></p>
+      </div>
+    </form>
+    <script type="text/javascript">
+      themes = { "11": { b: "FFFFFF", s: "" }, "12": { b: "FFFFFF", s: "" }, "13": { b: "FFFFFF", s: "" }, "100": { b: "FFFFFF", s: "" }, "111": { b: "6666CC", s: "6666CC" }, "101": { b: "D8873C", s: "" }, "102": { b: "FFFFFF", s: "BFD2F0" }, "103": { b: "FFFFFF", s: "FBD9E8" }, "104": { b: "6D0000", s: "EAC8D5" }, "105": { b: "FFFFFF", s: "F1D8E7" }, "106": { b: "FFFFFF", s: "833891" }, "107": { b: "FFFFFF", s: "" }, "108": { b: "FFFFFF", s: "" }, "109": { b: "FFFFFF", s: "" }, "110": { b: "A0BFD5", s: "" }, "112": { b: "FF0000", s: "FFCC00" }, "113": { b: "00E60B", s: "000000" }, "114": { b: "", s: "" } };
+
+    </script>
+    <div class="fixed">
+      <p class="help-link"><a href="/clocks/freecountdown-help.html"> Need some help?</a></p>
+    </div>
+    <section id="include-extras">
+      <div class="botlnk">
+        <h2>More Information</h2>
+        <ul>
+          <li><a href="/clocks/privacy.html">Privacy policy for Free Clocks and Free Countdowns</a></li>
+        </ul>
+        <h2>Related Link</h2>
+        <ul>
+          <li><a href="/clocks/googlesites.html">How to add our Free Clocks/Countdowns to Google Sites</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script src="/common/wcommon_112.js"></script>
+  <script src="/common/clocksfreeconfigcommon_0.js"></script>
+  <script src="/common/clocksfreeconfigcount_1.js"></script>
+</div>
