@@ -33,18 +33,23 @@ Add> README.md> Introduction
 ex) !devops-img Peek
 ex) !html-img Top 25 elements
 
-!<Language>-nf : A New Feature of a Language
-ex) !py-nf F Strings.py
+!<Language>_nf : A New Feature of a <Language>
+ex) !py_nf F Strings.py
 
-!<Language>-re : Remind & Review of a Language
-ex) !py-re Logic Gate (IS-A, HAS-A Relationship).py
+!<Language>_re : Remind & Review of a <Language>
+ex) !py_re Logic Gate (IS-A, HAS-A Relationship).py
 
-!<Language>-snp : Code Snippet of Python
-ex) !py-snp Get Real Path.py
+!<Language>_snp : Code Snippet of a <Language>
+ex) !py_snp Get Real Path.py
 
-!<Language>-qrf : Quick Reference of a Language
-ex) !regex-qrf RegEx Quick Reference.txt
-ex) !py-qrf Peek Syntax and Naming Convention following PEP8
+!<Language>_qrf : Quick Reference of a <Language>
+ex) !regex_qrf RegEx Quick Reference.txt
+ex) !py_qrf Peek Syntax and Naming Convention following PEP8
+
+
+!<category/concept>_<spl/img> : A <sample/img> file related with <category/concept>
+ex) !web_spl countdown_timer
+ex) !cs_img CS Curriculum of a University
 
 
 ~ : Ignored from git because the file is on edit.

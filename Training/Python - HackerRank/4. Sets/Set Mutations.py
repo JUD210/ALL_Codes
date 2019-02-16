@@ -10,8 +10,9 @@ methods1 = {
     "update": s.update,
     "difference_update": s.difference_update,
     "intersection_update": s.intersection_update,
-    "symmetric_difference_update": s.symmetric_difference_update
+    "symmetric_difference_update": s.symmetric_difference_update,
 }
+
 
 def methods2(m, s, sub_s):
     if m == "update":
@@ -22,9 +23,10 @@ def methods2(m, s, sub_s):
         s &= sub_s
     elif m == "symmetric_difference_update":
         s ^= sub_s
-    
+
+
 for _ in range(int(input())):
-# 4
+    # 4
     m, sub_s = input().split()[0], set(map(int, input().split()))
     # intersection_update 10
     # 2 3 5 6 8 9 1 4 7 11
@@ -35,7 +37,7 @@ for _ in range(int(input())):
     # difference_update 7
     # 11 22 35 55 58 62 66
 
-    methods1[m](sub_s)
+    methods1[m](sub_s)  # type: ignore
     # methods2(m, s, sub_s)
 
 print(sum(s))
