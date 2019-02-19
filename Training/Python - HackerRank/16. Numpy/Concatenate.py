@@ -1,6 +1,9 @@
 # https://www.hackerrank.com/challenges/np-concatenate/problem
 
 
+import numpy
+
+
 # Inputs for Solution
 standard_input = """4 3 2
 1 2
@@ -20,9 +23,9 @@ standard_input += """4 3 2
 3 4
 3 4
 3 4"""
-
-
-import numpy
+n = 0
+m = 0
+p = 0
 
 
 """ Solution """

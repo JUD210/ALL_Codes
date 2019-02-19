@@ -1,15 +1,15 @@
 # https://www.hackerrank.com/challenges/np-dot-and-cross/problem
 
 
+import numpy
+
+
 # Inputs
 standard_input = """2
 1 2
 3 4
 1 2
 3 4"""
-
-
-import numpy
 
 
 num = int(input())
@@ -26,7 +26,7 @@ print(numpy.dot(a, b))
 #  [15 22]]
 
 
-""" Reference 
+""" Reference
 
 a = numpy.array([1, 2])
 b = numpy.array([3, 4])

@@ -1,13 +1,13 @@
 # https://www.hackerrank.com/challenges/np-linear-algebra/problem
 
 
+import numpy
+
+
 # Inputs
 standard_input = """2
 1.1 1.1
 1.1 1.1"""
-
-
-import numpy
 
 
 n = int(input())
@@ -22,7 +22,7 @@ print(numpy.linalg.det(a))
 # 0.0
 
 
-""" Reference 
+""" Reference
 
 [linalg.det]
 

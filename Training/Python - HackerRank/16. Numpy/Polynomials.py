@@ -1,12 +1,13 @@
 # https://www.hackerrank.com/challenges/np-polynomials/problem
 
 
+import numpy
+
+
 # Inputs
 standard_input = """1.1 2 3
 0"""
 
-
-import numpy
 
 p = [float(s) for s in input().split()]
 # 1.1 2 3
@@ -17,7 +18,7 @@ print(numpy.polyval(p, x))
 # 3.0
 
 
-""" Reference 
+""" Reference
 
 [poly]
 
