@@ -1,19 +1,18 @@
+
 # Study-Note
+
 > Daily Commit from 2018.12.02
 
 * YouTube Live Streaming\
-☞ https://goo.gl/XWksga
+☞ <https://goo.gl/XWksga>
 
 * Life RPG : My Personal Scheduler on Google Sheet (Excel)\
-☞ https://goo.gl/qnehEQ
-
-
+☞ <https://goo.gl/qnehEQ>
 
 ## Daily Commit Rules: I'll
 
 * Push Commits at least 1 time per day.
 * Save all of my codes in public as much as possible.
-
 
 ## Commit Message Example
 
@@ -28,7 +27,8 @@ Add> README.md> Introduction
 ```
 
 ## Meaning of Folders & Files' Prefix
-```
+
+```text
 !<Language or Subject>-img : An Image
 ex) !devops-img Peek
 ex) !html-img Top 25 elements
