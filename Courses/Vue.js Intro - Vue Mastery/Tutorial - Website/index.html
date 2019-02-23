@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- for Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Product App</title>
+  </head>
+
+  <body>
+    <div class="nav-bar"></div>
+
+    <div id="app">
+      <div class="product">
+        <div class="product-image">
+          <img :src="image" /><br />
+          <a :href="image">click to enlarge</a>
+        </div>
+
+        <div class="product-info">
+          <h1>{{ product }}</h1>
+
+          <hr />
+
+          <p v-if="inventory > 0">On Sale</p>
+
+          <span v-if="inventory > 10">In Stock</span>
+          <span v-else-if="inventory > 0">Almost sold out!</span>
+          <span v-else>Out of Stock</span>
+          <span v-show="inventory > 0">({{ inventory }} left.)</span>
+
+          <hr />
+
+          <h2>Variants</h2>
+          <p>color</p>
+          <ol>
+            <li v-for="variant in variants" :key="variant.id">
+              {{ variant.color }}
+              {{ variant.size }}
+            </li>
+          </ol>
+          <ol>
+            <li v-for="variant in variants" :key="variant.size">
+              {{ variant.size }}
+            </li>
+          </ol>
+
+          <hr />
+
+          <p>Fabric</p>
+          <ul>
+            <li v-for="detail in details">{{ detail }}</li>
+          </ul>
+
+          <p>{{ description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
