@@ -15,6 +15,7 @@ var f = new URL("/en-US/docs", d);
 
 var g = new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // Creates a URL pointing to 'https://developer.mozilla.org/en-US/docs'
+
 var h = new URL("/en-US/docs", a);
 // Creates a URL pointing to 'https://developer.mozilla.org/en-US/docs'
 

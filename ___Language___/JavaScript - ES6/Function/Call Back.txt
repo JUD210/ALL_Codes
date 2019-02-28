@@ -1,0 +1,3 @@
+https://blog.hanumoka.net/2018/10/24/javascript-20181024-javascript-callback/
+
+http://callbackhell.com/

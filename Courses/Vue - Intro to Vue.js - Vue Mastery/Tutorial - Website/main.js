@@ -11,7 +11,7 @@ Vue.component("product", {
     }
   },
 
-  template: `
+  template: /* html */ `
   <div class="product">
     <div class="product-image">
       <img :src="image" /><br />
@@ -186,7 +186,7 @@ Vue.component("product-details", {
       required: true
     }
   },
-  template: `
+  template: /* html */ `
       <ul class="product-details">
         <li v-for="detail in details">
           {{ detail }}
@@ -204,7 +204,7 @@ Vue.component("product-tabs", {
       required: true
     }
   },
-  template: `
+  template: /* html */ `
   <div>
     <span class="tab"
           :class="{ activeTab: selectedTab === tab}"
@@ -243,7 +243,7 @@ Vue.component("product-tabs", {
 /*--------------------------------------------------------*/
 
 Vue.component("product-review", {
-  template: `
+  template: /* html */ `
   <form class="review-form" @submit.prevent="onSubmit">
 
     <p class="error" v-if="errors.length">
