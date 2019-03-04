@@ -26,6 +26,7 @@ standard_input = """0
 
 class LogicGate:
     def __init__(self, label):
+
         self.label = label.upper()
         self.__output = None
 
