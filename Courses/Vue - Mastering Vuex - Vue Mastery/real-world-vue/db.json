@@ -71,6 +71,24 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 2054175,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "test",
+      "description": "231234",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
