@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import EventService from "@/services/EventService.js";
+import { mapState, mapActions } from "vuex";
 
 export default {
   props: {
@@ -43,20 +43,20 @@ export default {
     }
   },
 
-  data() {
-    return {
-      event: {}
-    };
+  computed: {
+    ...mapState({ event: state => state.event.event })
   },
 
   created() {
-    EventService.getEvent(this.id)
-      .then(response => {
-        this.event = response.data;
-      })
-      .catch(error => {
-        console.log("There was an error:", error.response);
-      });
+    // When not using mapActions
+    // this.$store.dispatch("event/fetchEvent", this.id);
+    // (Maybe) dispatch("event/fetchEvent", this.id, {root: true})
+    this.fetchEvent(this.id);
+  },
+
+  methods: {
+    // ...mapActions("event/fetchEvent"])
+    ...mapActions("event", ["fetchEvent"])
   }
 };
 </script>
