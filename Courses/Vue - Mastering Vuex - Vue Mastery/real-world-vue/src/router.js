@@ -30,19 +30,6 @@ export default new Router({
 });
 
 /* 
-route level code-splitting
-this generates a separate chunk (about.[hash].js) for this route
-which is lazy-loaded when the route is visited.
-
-{
-  path: "/",
-  name: "event-list",
-  component: EventList
-},
-
-*/
-
-/* 
 If we care about SEO, we might not want to have two pages with the same content. but, it's good to know how to do this.
 
 alias: "/evt-lst"

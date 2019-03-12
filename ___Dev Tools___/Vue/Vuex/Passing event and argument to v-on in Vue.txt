@@ -1,0 +1,47 @@
+https://stackoverflow.com/questions/40956671/passing-event-and-argument-to-v-on-in-vue-js
+
+https://vuejs.org/v2/guide/events.html
+
+
+--- Q.
+
+
+This is without passing the parameter. I can access the event object
+
+HTML
+
+<input type="number" v-on:input="addToCart" min="0" placeholder="0">
+Javascript
+
+  methods: {
+    addToCart: function (event) {
+
+      // I need to access the element by using event.target
+      console.log('In addToCart')
+      console.log(event.target)
+    }
+  }
+
+
+This is when passing the parameter. I can't access the event object
+
+
+
+HTML
+
+<input type="number" v-on:input="addToCart(ticket.id)" min="0" placeholder="0">
+Javascript
+
+  methods: {
+    addToCart: function (id) {
+
+      // How can I access the element by using event
+      console.log('In addToCart')
+      console.log(id)
+    }
+  }
+
+
+--- A.
+
+Read in the above link.

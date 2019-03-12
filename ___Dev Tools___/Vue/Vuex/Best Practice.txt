@@ -1,0 +1,13 @@
+--- Best value change practice when using namespaced modules
+
+When using namespaced modules
+
+(DON'T DO THIS !!)
+this.$store.commit("event/FETCH_EVENT", this.id)  // in fetchEvent()
+
+(BEST when used in methods:{fetchEvent(...)} )
+this.$store.dispatch("event/fetchEvent", this.id)  // in fetchEvent()
+
+(BEST when used in created(...) )
+...mapActions("event", ["fetchEvent"])  // in methods
+this.fetchEvent(this.id);  // in created()

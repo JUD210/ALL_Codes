@@ -48,9 +48,18 @@ export default {
   },
 
   created() {
-    // When not using mapActions
-    // this.$store.dispatch("event/fetchEvent", this.id);
-    // (Maybe) dispatch("event/fetchEvent", this.id, {root: true})
+    // When using namespaced modules
+    //
+    // (DON'T DO THIS !!)
+    // this.$store.commit("event/FETCH_EVENT", this.id)  // in fetchEvent()
+    //
+    // (BEST when used in methods:{fetchEvent(...)} )
+    // this.$store.dispatch("event/fetchEvent", this.id)  // in fetchEvent()
+    //
+    // (BEST when used in created(...) )
+    // ...mapActions("event", ["fetchEvent"])  // in methods
+    // this.fetchEvent(this.id);  // in created()
+
     this.fetchEvent(this.id);
   },
 
