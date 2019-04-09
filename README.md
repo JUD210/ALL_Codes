@@ -1,18 +1,17 @@
-
 # Study-Note
 
 > Daily Commit from 2018.12.02
 
-* YouTube Live Streaming\
-☞ <https://goo.gl/XWksga>
+- YouTube Live Streaming\
+  ☞ <https://goo.gl/XWksga>
 
-* Life RPG : My Personal Scheduler on Google Sheet (Excel)\
-☞ <https://goo.gl/qnehEQ>
+- Life RPG : My Personal Scheduler on Google Sheet (Excel)\
+  ☞ <https://goo.gl/qnehEQ>
 
 ## Daily Commit Rules: I'll
 
-* Push Commits at least 1 time per day.
-* Save all of my codes in public as much as possible.
+- Push Commits at least 1 time per day.
+- Save all of my codes in public as much as possible.
 
 ## Commit Message Example
 
