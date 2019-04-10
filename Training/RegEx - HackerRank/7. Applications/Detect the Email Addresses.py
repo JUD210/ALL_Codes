@@ -32,13 +32,6 @@ for _ in range(int(input())):
         emails.append(found)
 
 
-emails = sorted(set(emails), key=str)
-
-
-result = ""
-for email in emails:
-    result += f"{email};"
-
-print(result[:-1])
+print(*sorted(set(emails), key=str), sep=";")
 
 # digital@thehindu.co.in;inetads@thehindu.co.in;international@thehindu.co.in;letters@thehindu.co.in;readerseditor@thehindu.co.in;subs@thehindu.co.in;web.thehindu@thehindu.co.in
