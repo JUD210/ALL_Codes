@@ -2,6 +2,7 @@
 
 
 import time
+
 # I can simplify many codes using timeit module.
 # But I wouldn't do that because it's time wasting.
 
