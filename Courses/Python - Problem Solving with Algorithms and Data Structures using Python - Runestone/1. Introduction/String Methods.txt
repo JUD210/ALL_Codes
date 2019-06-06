@@ -1,9 +1,0 @@
-| Method Name |                       Explanation                       |
-| ----------- | ------------------------------------------------------- |
-| center      | Returns a string centered in a field of size w          |
-| count       | Returns the number of occurrences of item in the string |
-| ljust       | Returns a string left-justified in a field of size w    |
-| lower       | Returns a string in all lowercase                       |
-| rjust       | Returns a string right-justified in a field of size w   |
-| find        | Returns the index of the first occurrence of item       |
-| split       | Splits a string into substrings at schar                |

@@ -1,0 +1,22 @@
+https://regexone.com/problem/extracting_url_data
+
+Task	    Text
+Capture	    ftp://file_server.com:21/top_secret/life_changing_plans.pdf
+Capture	    https://regexone.com/lesson/introduction#section
+Capture	    file://localhost:4040/zip_file
+Capture	    https://s3cur3-server.com:9999/
+Capture	    market://search/angry%20birds
+
+
+Capture Groups
+
+ftp file_server.com 21
+https regexone.com
+file localhost 4040
+https s3cur3-server.com 9999
+market search
+
+
+^(\w+)://([^:/]+):?(\d+)?
+
+(\w+)://([\w\-\.]+)(:(\d+))?

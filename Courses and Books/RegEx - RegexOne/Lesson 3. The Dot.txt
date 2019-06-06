@@ -1,0 +1,15 @@
+https://regexone.com/lesson/wildcards_dot
+
+. : any character
+\. : .
+
+
+Task	Text
+
+Match	cat.
+Match	896.
+Match	?=+.
+Skip	abc1
+
+
+\.

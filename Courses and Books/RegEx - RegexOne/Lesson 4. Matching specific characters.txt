@@ -1,0 +1,18 @@
+https://regexone.com/lesson/matching_characters
+
+[abc] : include a, b or c
+
+
+Task	Text 
+
+Match	can
+Match	man
+Match	fan
+Skip	dan
+Skip	ran
+Skip	pan
+
+
+[cmf]an
+
+[^drp]an

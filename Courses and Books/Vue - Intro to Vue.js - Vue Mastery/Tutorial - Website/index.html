@@ -1,0 +1,45 @@
+<!-- v-bind == : -->
+<!-- v-on == @ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- for HTML Source File Importer (Ref. Code Snippet) -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- for Vue.js -->
+    <script src="https://unpkg.com/vue@2.6.7/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Product App</title>
+  </head>
+
+  <body>
+    <div class="nav-bar"></div>
+    <div id="app">
+      <div class="cart">
+        <img src="assets/cart.png" />
+
+        <div v-for="item in cart">{{ item }}</div>
+        ({{ cart.length }})
+      </div>
+
+      <product
+        :premium="premium"
+        @add-to-cart="addToCart"
+        @remove-cart="removeCart"
+      ></product>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
