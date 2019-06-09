@@ -15,7 +15,7 @@
 
 #define KEY '&'
 
-int main(void)
+int main()
 {
   int orig_char, new_char;
 

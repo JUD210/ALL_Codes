@@ -16,7 +16,7 @@
 void handler(int sig);
 void raise_sig(void);
 
-int main(void)
+int main()
 {
   void (*orig_handler)(int);
 

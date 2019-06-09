@@ -13,7 +13,7 @@
 #include <complex.h>
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   double a = 5, b = 2, c = 1;
   double complex discriminant_sqrt = csqrt(b * b - 4 * a * c);

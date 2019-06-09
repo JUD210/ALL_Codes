@@ -16,7 +16,7 @@
 void tabulate(double (*f)(double), double first,
               double last, double incr);
 
-int main(void)
+int main()
 {
   double final, increment, initial;
 

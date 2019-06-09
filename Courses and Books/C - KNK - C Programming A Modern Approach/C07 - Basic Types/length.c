@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   char ch;
   int len = 0;

@@ -25,7 +25,7 @@ struct part {
 
 int num_parts;
 
-int main(void)
+int main()
 {
   FILE *fp;
   int i;

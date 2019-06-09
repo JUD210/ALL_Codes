@@ -16,7 +16,7 @@
 
 void max_min(int a[], int n, int *max, int *min);
 
-int main(void)
+int main()
 {
   int b[N], i, big, small;
 

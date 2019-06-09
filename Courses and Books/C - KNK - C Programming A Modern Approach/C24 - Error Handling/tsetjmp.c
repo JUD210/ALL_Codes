@@ -18,7 +18,7 @@ jmp_buf env;
 void f1(void);
 void f2(void);
 
-int main(void)
+int main()
 {
   if (setjmp(env) == 0)
     printf("setjmp returned 0\n");

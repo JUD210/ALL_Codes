@@ -37,7 +37,7 @@ void print(void);
  *       command 'q'. Prints an error message if the user *
  *       enters an illegal code.                          *
  **********************************************************/
-int main(void)
+int main()
 {
   char code;
 

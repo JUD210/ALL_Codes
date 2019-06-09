@@ -24,7 +24,7 @@ void initialize_number_generator(void);
 void choose_new_secret_number(void);
 void read_guesses(void);
 
-int main(void)
+int main()
 {
   char command;
 

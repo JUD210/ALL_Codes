@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   int cmd;
   float balance = 0.0f, credit, debit;

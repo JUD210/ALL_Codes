@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   int height, length, width, volume, weight;
 

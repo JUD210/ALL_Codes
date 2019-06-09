@@ -17,7 +17,7 @@
 void quicksort(int a[], int low, int high);
 int split(int a[], int low, int high);
 
-int main(void)
+int main()
 {
   int a[N], i;
 

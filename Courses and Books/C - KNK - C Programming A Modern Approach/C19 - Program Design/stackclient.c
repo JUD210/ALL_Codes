@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "stackADT.h"
 
-int main(void)
+int main()
 {
   Stack s1, s2;
   int n;

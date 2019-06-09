@@ -13,7 +13,7 @@
 #include <stdbool.h>   /* C99 only */
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   bool digit_seen[10] = {false};
   int digit;

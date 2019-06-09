@@ -17,7 +17,7 @@ double average(double a, double b)
   return (a + b) / 2;
 }
 
-int main(void)
+int main()
 {
   double x, y, z;
 

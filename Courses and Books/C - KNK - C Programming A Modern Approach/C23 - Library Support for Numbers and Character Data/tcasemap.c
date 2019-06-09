@@ -13,7 +13,7 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   char *p;
 

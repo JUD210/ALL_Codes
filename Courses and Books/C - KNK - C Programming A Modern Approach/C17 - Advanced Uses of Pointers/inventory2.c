@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "readline.h"
+#include <readline.h>
 
 #define NAME_LEN 25
 

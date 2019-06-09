@@ -15,7 +15,7 @@
 
 #define TEST(f) printf("  %c  ", f(*p) ? 'x' : ' ')
 
-int main(void)
+int main()
 {
   char *p;
 

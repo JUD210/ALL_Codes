@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void)
+int main()
 {
   time_t current = time(NULL);
   struct tm *ptr;

@@ -16,7 +16,7 @@
 
 #define MAX_WORD_LEN 20
 
-int main(void)
+int main()
 {
   char word[MAX_WORD_LEN+2];
   int word_len;

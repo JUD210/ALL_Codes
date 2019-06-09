@@ -33,7 +33,7 @@ void print_result(void);
  * main: Calls read_cards, analyze_hand, and print_result *
  *       repeatedly.                                      *
  **********************************************************/
-int main(void)
+int main()
 {
   for (;;) {
     read_cards();

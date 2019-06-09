@@ -25,7 +25,7 @@ bool is_prime(int n)
   return true;
 }
 
-int main(void)
+int main()
 {
   int n;
 

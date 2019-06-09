@@ -22,7 +22,7 @@ struct city_info {
 int compare_cities(const void *key_ptr,
                    const void *element_ptr);
 
-int main(void)
+int main()
 {
   char city_name[81];
   struct city_info *ptr;

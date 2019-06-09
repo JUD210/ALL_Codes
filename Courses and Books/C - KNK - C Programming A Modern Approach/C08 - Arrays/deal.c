@@ -18,7 +18,7 @@
 #define NUM_SUITS 4
 #define NUM_RANKS 13
 
-int main(void)
+int main()
 {
   bool in_hand[NUM_SUITS][NUM_RANKS] = {false};
   int num_cards, rank, suit;
