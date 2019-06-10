@@ -7,21 +7,18 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tprintf.c (Chapter 3, page 40) */
-/* Prints int and float values in various formats */
+/* pun.c (Chapter 2, page 10) */
 
 #include <stdio.h>
 
 int main()
 {
-  int i;
-  float x;
-
-  i = 40;
-  x = 839.21f;
-
-  printf("|%d|%5d|%-5d|%5.3d|\n", i, i, i, i);
-  printf("|%10.3f|%10.3e|%-10g|\n", x, x, x);
-
+  printf("To C, or not to C: that is the question.\n");
   return 0;
 }
+
+/* 
+
+To C, or not to C: that is the question.
+
+ */

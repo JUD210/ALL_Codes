@@ -1,6 +1,5 @@
 /* Condense the dweight.c program by (1) replacing the assignments to height, length, and width with initializers and (2) removing the weight variable, instead calculating (volume + 165) / 166 within the last printf. */
 
-
 #include <stdio.h>
 
 int main()
@@ -16,4 +15,10 @@ int main()
   return 0;
 }
 
-// !I guess any position with number can be replaced with an expression.
+/* 
+
+Dimensions: 12x10x8
+Volume (cubic inches): 960
+Dimensional weight (pounds): 6
+
+ */

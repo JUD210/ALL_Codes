@@ -1,0 +1,9 @@
+https://www.quora.com/What-is-meaning-of-in-c-language
+
+There are five possible meanings of & (ampersand) in the C programming language, depending on context.
+
+1. If the & appears in a comment, it is meaningless to the language and is ignored.
+2. If the & appears inside of a string constant (double quotes) or character constant (single quotes), it is simply the & character.
+3. If a single & appears between two expressions of integral types, it is the bitwise AND operator, which performs an and operation between each corresponding bit in the values of the two operands.
+4. If the sequence && appears between two expressions, it is the logical AND operator, which results in a zero value if either operand is zero (or false), and a non-zero value if both operands are non-zero (or true). This is one of the C operators that does short-circuit evaluation. In this case, if the left operand is found to be zero (false), the right operand is not evaluated at all.
+5. If a single & appears to the left of an identifier, it is the unary address-of operator, which evaluates to the memory address of the operand.

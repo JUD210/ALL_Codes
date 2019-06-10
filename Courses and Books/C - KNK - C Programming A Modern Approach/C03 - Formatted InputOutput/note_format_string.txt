@@ -1,0 +1,7 @@
+The printf function is designed to display the contents of a string, known as the format string.
+
+ex) 
+printf(string, expr1, expr2, ...);
+
+
+The format string may contain both ordinary characters and conversion specifications.

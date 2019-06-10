@@ -28,3 +28,10 @@ int main()
 
   return 0;
 }
+
+/* 
+
+Enter Fahrenheit temperature: 100
+Celsius equivalent: 37.8
+
+ */

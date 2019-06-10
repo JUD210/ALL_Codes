@@ -1,0 +1,4 @@
+int a = 8;
+int a = 14-2*3;
+
+In general, the right side of an assignment can be a formula (or expression, in C terminology) involving constants, variables, and operators.

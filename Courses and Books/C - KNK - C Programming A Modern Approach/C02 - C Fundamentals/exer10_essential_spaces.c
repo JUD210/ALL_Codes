@@ -19,6 +19,14 @@ int main()
   return 0;
 }
 
+/* 
+
+Dimensions: 12x10x8
+Volume (cubic inches): 960
+Dimensional weight (pounds): 6
+
+ */
+
 /* Spaces 
 inside a string literal, 
 between type specifier and identifier.

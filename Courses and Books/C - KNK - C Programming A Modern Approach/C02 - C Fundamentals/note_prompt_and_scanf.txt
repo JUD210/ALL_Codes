@@ -1,0 +1,9 @@
+int radius;
+printf("Enter radius of sphere: ");
+scanf("%d", &radius);
+
+A message that asks the user to enter input (a prompt) normally shouldn't end with a new-line character, because we want the user to enter input on the same line as the prompt itself. 
+
+When the user presses the Enter key, the cursor automatically moves to the next line.
+
+If a single & appears to the left of an identifier, it is the unary address-of operator, which evaluates to the memory address of the operand.
