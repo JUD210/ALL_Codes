@@ -31,3 +31,13 @@ int main()
 
   return 0;
 }
+
+/* 
+
+Enter height of box: 12
+Enter length of box: 10
+Enter width of box: 8
+Volume (cubic inches): 960
+Dimensional weight (pounds): 6
+
+ */
