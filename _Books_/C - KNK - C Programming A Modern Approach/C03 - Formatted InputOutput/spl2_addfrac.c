@@ -18,13 +18,16 @@ int main()
 
   printf("Enter first fraction: ");
   scanf("%d/%d", &num1, &denom1);
+  // Enter first fraction: 5/6
 
   printf("Enter second fraction: ");
   scanf("%d/%d", &num2, &denom2);
+  // Enter second fraction: 3/4
 
   result_num = num1 * denom2 + num2 * denom1;
   result_denom = denom1 * denom2;
   printf("The sum is %d/%d\n", result_num, result_denom);
+  // The sum is 38/24
 
   return 0;
 }

@@ -1,0 +1,11 @@
+Q. 
+I've seen the %i conversion used to read and write integers. What's the difference between %i and %d?
+
+A. 
+In a printf format string, there's no difference between the two.
+In a scanf format string, however, %d can only match an integer written in decimal form, while %i can match an integer expressed in octal, decimal, hexadecimal.
+
+If an input number has a 0 prefix (as in 056), %i treats it as an octal number;
+if it has a 0x or 0X prefix (as in 0x56), %i treats it as a hex number.
+
+Using %i instead of %d to read a number can have surprising results if the user should accidently put 0 at the beginning of the number. Because of this trap, I recommend sticking with %d.
