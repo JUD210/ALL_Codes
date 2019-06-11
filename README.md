@@ -11,7 +11,7 @@
 ## Daily Commit Rules: I'll
 
 - Push Commits at least 1 time per day.
-- Save all of my codes in public as much as possible.
+- Upload all of my learning progress in public as much as possible.
 
 ## Commit Message Example
 
@@ -25,9 +25,14 @@ Add> README.md> Introduction
 [HackerRank - 30 Days of Code] D: 11/30
 ```
 
-## Meaning of Folders & Files' Prefix
+## Meaning of the prefix of Folders & Files
 
 ```text
+___blah___ folder: Side Note
+ __blah__  folder: Completed Study
+  _blah_   folder: Ongoing Study
+
+
 !<Language or Subject>-img : An Image
 ex) !devops-img Peek
 ex) !html-img Top 25 elements
