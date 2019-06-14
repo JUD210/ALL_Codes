@@ -16,9 +16,9 @@
 
 
 4. 차수(Degree) 
-: 속성(Attribute)의 개수
+- 속성(Attribute)의 개수
 
 
 5. 기수(대응수, Cardinality) 
-: 튜플(Tuple)의 개수
+- 튜플(Tuple)의 개수
 

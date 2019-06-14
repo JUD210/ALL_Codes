@@ -1,0 +1,53 @@
+Q1. 다음 중 Web Page 개발과 무관한 것은?
+1. Web Site 전략
+2. Web Site Concept
+3. Web Design
+4. City
+
+
+City는 도시를 의미하는 영어 단어이다.
+4
+
+
+Q2. 다음 중 HTML5의 역사와 무관한 것은?
+1. Web App
+2. XML
+3. HTML
+4. DB
+
+
+DB는 Data Base의 약어이다.
+4
+
+
+Q3. 다음 중 HTML5의 기능과 무관한 것은?
+1. Web Socket
+2. 비행기
+3. Video & Audio
+4. Geo-Location
+
+
+비행기는 항공 교통 수단의 기계이다.
+2
+
+
+Q4. 다음 중 HTML5 Web Programming과 관계 없는 것은?
+1. Visual Studio
+2. Script
+3. CSS3
+4. Telephone
+
+
+Telephone은 전화기를 의미하는 영어 단어이다.
+4
+
+
+Q5. 다음 중 HTML5 문서의 디버깅과 무관한 것은?
+1. DOM 탐색
+2. Script 디버깅
+3. Network Monitoring
+4. C 언어
+
+
+C 언어는 컴퓨터 프로그래밍 언어의 일종이다.
+4

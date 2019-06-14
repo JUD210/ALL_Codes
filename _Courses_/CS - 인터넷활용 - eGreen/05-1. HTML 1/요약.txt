@@ -1,0 +1,16 @@
+1. HTML, CSS, JavaScript
+- HTML은 Hyper Text Markup Language
+- CSS는 마크업 언어가 실제 표시되는 방법을 기술하는 언어
+- JavaScript는 객체 기반의 스크립트 프로그래밍 언어
+
+
+2. 웹의 기본 목적과 구성
+- Web Page는 W3C가 표준화한 Web Space의 문서 공간
+
+
+3. 웹 브라우저
+- Web Browser는 Web Space를 만들어주는 소프트웨어 
+
+
+4. 웹 페이지 구성 3요소
+- Web Page 구성요소는 Header, Main Area, Contents, Side Bar, Footer

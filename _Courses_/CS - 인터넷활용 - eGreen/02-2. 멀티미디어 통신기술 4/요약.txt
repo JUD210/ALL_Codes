@@ -1,0 +1,18 @@
+1. 무선 IP
+- 무선 IP는 무선 통신기기용 IP(Internet Protocol)
+
+
+2. 라우팅 알고리즘
+- 라우팅 알고리즘은 방송통신망에서 경로를 배정하는 방법
+
+
+3. TCP
+- TCP는 정보의 전송을 제어하는 통신규약
+
+
+4. UDP
+- UDP는 사용자의 Datagram(경로지정 정보를 갖는 패킷) 통신규약
+
+
+5. TCP/IP
+- 응용 프로토콜 TCP/IP 응용 프로토콜은 Telnet, HTTP, SNMP 
