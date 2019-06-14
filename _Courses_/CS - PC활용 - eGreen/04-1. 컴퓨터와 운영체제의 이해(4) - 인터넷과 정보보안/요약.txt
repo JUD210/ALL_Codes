@@ -1,0 +1,31 @@
+1. 인터넷의 개념
+- 전 세계의 컴퓨터를 연결하는 거대한 컴퓨터 통신망
+
+
+2. 인터넷 주소체계
+ㅇ IP(Internet Protocol : 인터넷 프로토콜)란?
+- 인터넷 상의 모든 시스템들이 갖는 고유한 숫자로 표시된 식별자
+
+ㅇ 도메인 이름(Domain Name)이란?
+- 숫자로 표시되는 IP 주소를, 사용자가 알아보기 쉽도록 단어로 표현한 것
+
+
+3. 인터넷 서비스 월드 와이드 웹(World Wide Web : WWW)
+- HTML 문서와 하이퍼링크
+- 전자우편(E-mail)
+- FTP(File Transfer Protocol)
+- 텔넷(Telnet)
+- 웹브라우저
+- 유즈넷(Usenet)
+
+
+4. 정보보안
+
+ㅇ 보안 유지 방식
+- 외부 보안(External Security)
+- 사용자 인터페이스 보안(User Interface Security)
+- 내부 보안(Internal Security)
+
+ㅇ 암호 방식
+ㅇ 비밀 키 암호 방식
+ㅇ 공개 키 암호 방식
