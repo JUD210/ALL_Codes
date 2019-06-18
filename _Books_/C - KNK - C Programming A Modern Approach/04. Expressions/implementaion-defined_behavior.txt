@@ -1,0 +1,9 @@
+Implementation-Def‌ined Behavior
+
+The term implementation-defined will arise often enough that it's worth taking a moment to discuss it. The C standard deliberately leaves parts of the language unspecified, with the understanding that an “implementation” - the software needed to compile, link, and execute programs on a particular platform - will fill in the details. As a result, the behavior of the program may vary somewhat from one implementation to another. 
+
+The behavior of the / and % operators for negative operands in C89 is an example of implementation-defined behavior.
+
+Leaving parts of the language unspecified may seem odd or even dangerous, but it reflects C’s philosophy. One of the language’s goals is efficiency, which often means matching the way that hardware behaves. Some CPUs yield —1 when —9 is divided by 7, while others produce —2; the C89 standard simply reflects this fact of life.
+
+It's best to avoid writing programs that depend on implementation-defined behavior. If that’s not possible, at least check the manual carefully—the C standard requires that implementation-defined behavior be documented.

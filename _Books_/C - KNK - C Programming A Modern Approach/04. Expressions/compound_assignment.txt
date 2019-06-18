@@ -1,0 +1,15 @@
+Assignments that use the old value of a variable to compute its new value are common in C programs. The following statement. for example, adds 2 to the value stored in i:
+
+v += e: adds v to e, storing the result in v
+v -= e: subtracts e from v, storing the result in v
+v *= e: multiplies v by e, storing the result in v
+v /= e: divides v by e, storing the result in v
+v %= e: computes the remainder when v is divided by e, storing the result in v
+
+Note that I’ve been careful not to say that v += e is “equivalent" to v = v + 6. One problem is Operator precedence: i *= j + k isn’t the same as i = i * j + k. There are also rare cases in which v += e differs from v = v + e because v itself has a side effect. Similar remarks apply to the other compound assignment Operators.
+
+The compound assignment operators have the same properties as the = operator. In particular, they’re right associative, so the statement
+
+i += j += k;
+means
+i += (j += k) ;
