@@ -1,0 +1,15 @@
+if ( expression ) statement else statement
+
+
+The inner statements are usually indented.
+
+if (i > j)
+  max = i;
+else
+  max = j;
+
+
+But if they're short they can be put on the same line as the if and else:
+
+if (i > j) max = i;
+else max = j;

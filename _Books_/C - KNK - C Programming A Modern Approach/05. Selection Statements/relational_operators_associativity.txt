@@ -1,0 +1,13 @@
+<  >  <=  >= are left associative.
+
+---
+
+The expression
+
+i < j < k
+
+is legal in C. but doesn’t have the meaning that you might expect. Since the < operator is left associative, this expression is equivalent to
+
+(i < j) < k
+
+In other words, the expression f‌irst tests whether i is less than j; the 1 or 0 produced by this comparison is then compared to k. The expression does not test whether j lies between i and k. (We’ll see later in this section that the correct expression would be i < j && j < k.)

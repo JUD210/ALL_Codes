@@ -1,0 +1,26 @@
+==  != are left associative.
+
+---
+
+
+Like the relational operators, the equality operators are left associative and
+produce either 0 (false) or 1 (true) as their result. 
+
+However, the equality operators have lower precedence than the relational operators. 
+
+For example, the expression
+
+i < j == j < k
+
+is equivalent to
+
+(i < j) == (j < k)
+
+which is true if i < j and j < k are both true or both false.
+
+Clever programmers sometimes exploit the fact that the relational and equality
+operators return integer values. 
+
+For example, the value of the expression (i >= j) + (i == j) is either 0, 1, or 2, depending on whether i is less than, greater than, or equal to j,respectively. 
+
+Tricky coding like this generally isn't a good idea. however; it makes programs hard to understand.

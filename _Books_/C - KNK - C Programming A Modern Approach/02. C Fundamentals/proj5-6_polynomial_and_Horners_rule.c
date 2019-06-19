@@ -1,12 +1,16 @@
-/* proj5: Write a program that asks the user to enter a value for x and then displays the value of the following polynomial:
+/* proj5
+
+Write a program that asks the user to enter a value for x and then displays the value of the following polynomial:
 
 3x^5 + 2x^4 - 5x^3 - x^2 + 7x - 6
 
 Hint: C doesn't have an exponentiation operator, so you'll need to multiply x by itself repeatedly in order to compute the powers of x. (For example, x * x * x is x cubed.)
 
- */
+////////////////////////////////////////////////////////////
 
-/* proj6: Modify the program of Programming Project 5 so that the polynomial is evaluated using the following formula:
+   proj6
+   
+Modify the program of Programming Project 5 so that the polynomial is evaluated using the following formula:
 
 ((((3x + 2)x - 5)x - 1)x + 7)x - 6
 

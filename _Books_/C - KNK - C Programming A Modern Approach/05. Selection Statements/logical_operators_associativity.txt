@@ -1,0 +1,9 @@
+! is right associative.
+&&  || are left associative.
+
+The ! operator has the same precedence as the unary plus and minus operators.
+
+The precedence of && and || is lower than that of the relational and equality operators; for example, i < j && k == m means (i < j) && (k == m).
+
+
+The logical operators treat any nonzero operand as a true value and any zero operand as a false value.

@@ -1,0 +1,32 @@
+if (i > j)
+  if (i > k)
+    max = i;
+  else
+    max = k;
+else
+  if (j > k)
+    max = j;
+  else
+    max = k;
+
+is equal to
+
+if (i > j) {
+  if (i > k) {
+    max = i;
+  } else {
+    max = k;
+  }
+} else {
+  if (j > k) {
+    max = j;
+  } else {
+    max = k;
+  }
+}
+
+Using braces even when they’re not required has two advantages.
+
+First, the program becomes easier to modify, because more statements can easily be added to any if or else clause.
+
+Second, it helps avoid errors that can result from forgetting to use braces when adding statements to an if or else clause.
