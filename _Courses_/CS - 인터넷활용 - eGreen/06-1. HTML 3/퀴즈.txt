@@ -1,0 +1,53 @@
+Q1. 다음 중 HTML5 페이지 기본 작성법과 관계 없는 것은?
+1. DOC
+2. !DOCTYPE
+3. h2
+4. h1
+
+
+DOC는 마이크로소프트의 워드 프로세서 파일의 확장자이다. 
+1
+
+
+Q2. 다음 중 HTML5 테이블 태그와 무관한 것은?
+1. tr
+2. td
+3. Video
+4. th
+
+
+Video는 비디오 태그에 관계한다.
+3
+
+
+Q3. 다음 중 HTML5 이미지 태그와 관계 없는 것은?
+1. 스트리밍
+2. 내용
+3. 동작
+4. 디자인
+
+
+스트리밍(Streaming)은 동영상 직렬이다.
+1
+
+
+Q4. 다음 중 HTML5 Audio Tag와 무관한 것은?
+1. src
+2. preload
+3. Audio
+4. Video
+
+
+Video는 비디오 태그에 관계된다.
+4
+
+
+Q5. 다음 중 HTML5 비디오 태그와 관계 없는 것은?
+1. DOS
+2. IE
+3. Chrome
+4. Safari
+
+
+DOS는 Disk Operating System의 약어이다.
+1
