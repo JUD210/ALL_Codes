@@ -1,0 +1,3 @@
+Both && and || perform “short-circuit” evaluation of their operands. That is, these operators f‌irst evaluate the left operand, then the right operand. 
+
+If the value of the expression can be deduced from the value of the left operand alone, then the right operand isn’t evaluated.

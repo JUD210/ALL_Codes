@@ -1,0 +1,5 @@
+Q: If i is an int variable and f is a float variable, what is the type of the conditional expression (i) > 0 ? i : f) ?
+
+A: When int and float values are mixed in a conditional expression, as they are here, the expression has type float. 
+
+If i > O is true, the value of the expression will be the value of i after conversion to float type.

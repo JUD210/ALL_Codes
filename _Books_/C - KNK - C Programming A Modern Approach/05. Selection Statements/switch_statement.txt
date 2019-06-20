@@ -1,0 +1,51 @@
+A switch statement is often easier to react than a cascaded it statement. Moreover, switch statements are often faster than if statements, especially when there are more than a handful of cases.
+
+In its most common form, the switch statement has the form
+
+switch ( expression ) {
+  case constant-expression : statements
+  ...
+  case constant-expression : statements
+  default : statements
+}
+
+
+- Controlling expression. 
+The word switch must be followed by an integer expression in parentheses. Characters are treated as integers in C and thus can be tested in switch statements. Floating-point numbers and strings don’t qualify, however.
+
+
+- Case labels.
+Each case begins with a label of the form
+
+case consnnn-expression :
+
+A constant expression is much like an ordinary expression except that it can’t contain variables or function calls. Thus, 5 is a constant expression, and 5 + 10 is a constant expression, but n + 10 isn‘t a constant expression (unless n is a macro that represents a constant). The constant expression in a case label must evaluate to an integer (characters are also acceptable).
+
+
+- Statements.
+After each case label comes any number of statements. No braces
+are required around the statements. (Enjoy it—this is one of the few places in
+C where braces aren’t required.) The last statement in each group is normally
+break.
+
+---
+
+Duplicate ease labels aren‘t allowed. The order of the cases doesn‘t matter; in particular. the default case doesn’t need to come last. 
+
+Only one constant expression may follow the word case: however, several
+case labels may precede the same group of statements:
+
+To save space, programmers sometimes put several case labels on the same line:
+switch (grade) {
+  case 4: case 3: case 2: case 1:
+           printf("Passing");
+           break;
+  case 0:  printf("Failing");
+           break;
+  default: printf(“Illega1 grade");
+           break;
+}
+
+Unfortunately, there’s no way to write a case label that specif‌ies a range of values. as there is in some programming languages.
+
+A switch statement isn’t required to have a default case. If default is missing and the value of the controlling expression doesn’t match any of the case labels, control simply passes to the next statement after the switch.

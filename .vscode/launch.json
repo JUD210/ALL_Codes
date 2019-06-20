@@ -11,10 +11,10 @@
       "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/test.exe" ,
+      "program": "${workspaceFolder}/test.exe",
       // "program": "${fileDirname}/${fileBasenameNoExtension}.exe" ,
       // "program": "${fileBasenameNoExtension}" ,
-        
+
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -23,11 +23,11 @@
       "MIMode": "gdb",
       "miDebuggerPath": "C:/Mingw-w64/mingw32/bin/gdb.exe",
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
       ]
     },
     {

@@ -1,0 +1,28 @@
+When if statements are nested, we’ve got to watch out for the notorious "dangling else" problem. Consider the following example:
+
+if (y != 0)
+  if (x != 0)
+    result = x / y;
+else
+  printf("Error: y is equal to O\n");
+
+To which if statement does the else clause belong? The indentation suggests that it belongs to the outer if statement. However, C follows the rule that an else clause belongs to the nearest if statement that hasn’t already been paired with an else.
+
+In this example, the else clause actually belongs to the inner if statement, so a correctly indented version would look like this:
+
+if (y != 0)
+  if (x != 0)
+    result = x / y;
+  else
+    printf("Error: y is equal to O\n");
+
+To make the else clause part of the outer if statement, we can enclose the inner
+if statement in braces:
+
+if (y != 0) {
+  if (x t: 0)
+    result = x / y;
+} else
+    printf("Error: y is equal to D\n");
+
+This example illustrates the value of braces; if we’d used them in the original if statement, we wouldn’t have gotten into this situation in the f‌irst place.

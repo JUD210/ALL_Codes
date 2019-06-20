@@ -1,0 +1,17 @@
+The conditional operator consists of two symbols (? and :), which must be
+used together in the following way: 
+
+expr1 ? expr2 : expr3
+
+expr1, expr2, and expr3 can be expressions of any type. The resulting expression is said to be a conditional expression. The conditional operator is unique among C operators in that it requires three operands instead of one or two. 
+
+For this reason, it is often referred to as a ternary operator.
+
+The following example illustrates the conditional operator:
+
+int i, j, k;
+
+i = 1;
+j = 2:
+k = i > j ? i : j;         /* k is now 2 */
+k = (i >= 0 ? i : O) + j;  /* k is now 3 */

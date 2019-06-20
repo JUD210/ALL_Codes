@@ -9,7 +9,9 @@
         "path": ["${workspaceFolder}"],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
-      }
+      },
+      "cStandard": "c99",
+      "cppStandard": "${default}"
     }
   ],
   "version": 4
