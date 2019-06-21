@@ -24,17 +24,17 @@ static void terminate(const char *message)
   exit(EXIT_FAILURE);
 }
 
-void make_empty(void)
+void make_empty()
 {
   top = 0;
 }
 
-bool is_empty(void)
+bool is_empty()
 {
   return top == 0;
 }
 
-bool is_full(void)
+bool is_full()
 {
   return top == STACK_SIZE;
 }
@@ -46,7 +46,7 @@ void push(int i)
   contents[top++] = i;
 }
 
-int pop(void)
+int pop()
 {
   if (is_empty())
     terminate("Error in pop: stack is empty.");

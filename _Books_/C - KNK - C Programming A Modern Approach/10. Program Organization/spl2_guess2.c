@@ -17,8 +17,8 @@
 #define MAX_NUMBER 100
 
 /* prototypes */
-void initialize_number_generator(void);
-int new_secret_number(void);
+void initialize_number_generator();
+int new_secret_number();
 void read_guesses(int secret_number);
 
 int main()
@@ -46,7 +46,7 @@ int main()
  *                              number generator using    *
  *                              the time of day.          *
  **********************************************************/
-void initialize_number_generator(void)
+void initialize_number_generator()
 {
   srand((unsigned) time(NULL));
 }
@@ -55,7 +55,7 @@ void initialize_number_generator(void)
  * new_secret_number: Returns a randomly chosen number    *
  *                    between 1 and MAX_NUMBER.           *
  **********************************************************/
-int new_secret_number(void)
+int new_secret_number()
 {
   return rand() % MAX_NUMBER + 1;
 }

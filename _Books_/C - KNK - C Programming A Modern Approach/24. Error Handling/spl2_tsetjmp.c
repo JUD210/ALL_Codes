@@ -15,8 +15,8 @@
 
 jmp_buf env;
 
-void f1(void);
-void f2(void);
+void f1();
+void f2();
 
 int main()
 {
@@ -32,14 +32,14 @@ int main()
   return 0;
 }
 
-void f1(void)
+void f1()
 {
   printf("f1 begins\n");
   f2();
   printf("f1 returns\n");
 }
 
-void f2(void)
+void f2()
 {
   printf("f2 begins\n");
   longjmp(env, 1);

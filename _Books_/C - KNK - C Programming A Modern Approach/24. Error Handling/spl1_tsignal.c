@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 void handler(int sig);
-void raise_sig(void);
+void raise_sig();
 
 int main()
 {
@@ -41,7 +41,7 @@ void handler(int sig)
   printf("Handler called for signal %d\n", sig);
 }
 
-void raise_sig(void)
+void raise_sig()
 {
   raise(SIGINT);
 }

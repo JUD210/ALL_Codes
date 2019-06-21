@@ -1,0 +1,1 @@
+In C, every loop has a controlling expression. Each time the loop body is executed (an iteration of the loop), the controlling expression is evaluated; if the expression is true - has a value that’s not zero - the loop continues to execute.

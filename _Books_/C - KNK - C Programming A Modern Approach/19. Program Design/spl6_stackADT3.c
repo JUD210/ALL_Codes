@@ -28,7 +28,7 @@ static void terminate(const char *message)
   exit(EXIT_FAILURE);
 }
 
-Stack create(void)
+Stack create()
 {
   Stack s = malloc(sizeof(struct stack_type));
   if (s == NULL)

@@ -33,11 +33,14 @@ int main()
 }
 
 /* 
-  It is illegal. 
+  It is a legal statement. 
+  (Although it's not gonna work as we expect.) 
   
-  As comparison operations are left associative, n is compared with 1, and then the result is compared with 10.
+  Here's what happens when n equals 0:
+  
+  First, in the if's expression, (n >= 1) is evaluated to 0.
+  Then, (0 <= 10) is evaluated as 1, meaning the final value is 1.
+  Since the value isn't 0, it runs the printf statement.
 
-  n >= 1 yields 0 or 1, and then the 0 <= 10 or 1 <= 10 always yields 1 (true).
-
-  In short, whatever n's value is, as the if's conditional expression always yields 1 (true), printf function would always be called.
+  Note: Comparison operations are left associative.
  */

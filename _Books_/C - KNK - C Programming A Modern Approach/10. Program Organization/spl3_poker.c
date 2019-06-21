@@ -25,9 +25,9 @@ bool straight, flush, four, three;
 int pairs;   /* can be 0, 1, or 2 */
 
 /* prototypes */
-void read_cards(void);
-void analyze_hand(void);
-void print_result(void);
+void read_cards();
+void analyze_hand();
+void print_result();
 
 /**********************************************************
  * main: Calls read_cards, analyze_hand, and print_result *
@@ -47,7 +47,7 @@ int main()
  *             variables num_in_rank and num_in_suit;     *
  *             checks for bad cards and duplicate cards.  *
  **********************************************************/
-void read_cards(void)
+void read_cards()
 {
   bool card_exists[NUM_RANKS][NUM_SUITS];
   char ch, rank_ch, suit_ch;
@@ -121,7 +121,7 @@ void read_cards(void)
  *               the external variables straight, flush,  *
  *               four, three, and pairs.                  *
  **********************************************************/
-void analyze_hand(void)
+void analyze_hand()
 {
   int num_consec = 0;
   int rank, suit;
@@ -161,7 +161,7 @@ void analyze_hand(void)
  *               variables straight, flush, four, three,  *
  *               and pairs.                               *
  **********************************************************/
-void print_result(void)
+void print_result()
 {
   if (straight && flush) printf("Straight flush");
   else if (four)         printf("Four of a kind");

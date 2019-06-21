@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <readline.h>
+#include "readline.h"
 
 #define NAME_LEN 25
 
@@ -26,10 +26,10 @@ struct part {
 struct part *inventory = NULL;   /* points to first part */
 
 struct part *find_part(int number);
-void insert(void);
-void search(void);
-void update(void);
-void print(void);
+void insert();
+void search();
+void update();
+void print();
 
 /**********************************************************
  * main: Prompts the user to enter an operation code,     *
@@ -38,7 +38,7 @@ void print(void);
  *       command 'q'. Prints an error message if the user *
  *       enters an illegal code.                          *
  **********************************************************/
-int main(void)
+int main()
 {
   char code;
 
@@ -90,7 +90,7 @@ struct part *find_part(int number)
  *         returns prematurely if the part already exists *
  *         or space could not be allocated for the part.  *
  **********************************************************/
-void insert(void)
+void insert()
 {
   struct part *cur, *prev, *new_node;
 
@@ -131,7 +131,7 @@ void insert(void)
  *         exists, prints the name and quantity on hand;  *
  *         if not, prints an error message.               *
  **********************************************************/
-void search(void)
+void search()
 {
   int number;
   struct part *p;
@@ -153,7 +153,7 @@ void search(void)
  *         change in quantity on hand and updates the     *
  *         database.                                      *
  **********************************************************/
-void update(void)
+void update()
 {
   int number, change;
   struct part *p;
@@ -175,7 +175,7 @@ void update(void)
  *        quantity on hand. Part numbers will appear in   *
  *        ascending order.                                *
  **********************************************************/
-void print(void)
+void print()
 {
   struct part *p;
 

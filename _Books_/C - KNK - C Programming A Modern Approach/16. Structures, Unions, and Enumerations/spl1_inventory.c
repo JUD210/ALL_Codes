@@ -25,10 +25,10 @@ struct part {
 int num_parts = 0;   /* number of parts currently stored */
 
 int find_part(int number);
-void insert(void);
-void search(void);
-void update(void);
-void print(void);
+void insert();
+void search();
+void update();
+void print();
 
 /**********************************************************
  * main: Prompts the user to enter an operation code,     *
@@ -84,7 +84,7 @@ int find_part(int number)
  *         prematurely if the part already exists or the  *
  *         database is full.                              *
  **********************************************************/
-void insert(void)
+void insert()
 {
   int part_number;
 
@@ -114,7 +114,7 @@ void insert(void)
  *         exists, prints the name and quantity on hand;  *
  *         if not, prints an error message.               *
  **********************************************************/
-void search(void)
+void search()
 {
   int i, number;
 
@@ -135,7 +135,7 @@ void search(void)
  *         change in quantity on hand and updates the     *
  *         database.                                      *
  **********************************************************/
-void update(void)
+void update()
 {
   int i, number, change;
 
@@ -157,7 +157,7 @@ void update(void)
  *        order in which they were entered into the       *
  *        database.                                       *
  **********************************************************/
-void print(void)
+void print()
 {
   int i;
 

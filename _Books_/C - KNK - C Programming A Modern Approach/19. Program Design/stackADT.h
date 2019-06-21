@@ -18,7 +18,7 @@ typedef int Item;
 
 typedef struct stack_type *Stack;
 
-Stack create(void);
+Stack create();
 void destroy(Stack s);
 void make_empty(Stack s);
 bool is_empty(Stack s);

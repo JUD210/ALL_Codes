@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "word.h"
 
-int read_char(void)
+int read_char()
 {
   int ch = getchar();
 

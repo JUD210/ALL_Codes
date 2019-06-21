@@ -14,10 +14,10 @@
 
 #include <stdbool.h>   /* C99 only */
 
-void make_empty(void);
-bool is_empty(void);
-bool is_full(void);
+void make_empty();
+bool is_empty();
+bool is_full();
 void push(int i);
-int pop(void);
+int pop();
 
 #endif

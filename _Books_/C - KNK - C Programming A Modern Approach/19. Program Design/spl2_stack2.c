@@ -26,18 +26,18 @@ static void terminate(const char *message)
   exit(EXIT_FAILURE);
 }
 
-void make_empty(void)
+void make_empty()
 {
   while (!is_empty())
     pop();
 }
 
-bool is_empty(void)
+bool is_empty()
 {
   return top == NULL;
 }
 
-bool is_full(void)
+bool is_full()
 {
   return false;
 }
@@ -53,7 +53,7 @@ void push(int i)
   top = new_node;
 }
 
-int pop(void)
+int pop()
 {
   struct node *old_top;
   int i;

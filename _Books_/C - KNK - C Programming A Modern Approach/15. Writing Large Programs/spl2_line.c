@@ -19,7 +19,7 @@ char line[MAX_LINE_LEN+1];
 int line_len = 0;
 int num_words = 0;
 
-void clear_line(void)
+void clear_line()
 {
   line[0] = '\0';
   line_len = 0;
@@ -38,12 +38,12 @@ void add_word(const char *word)
   num_words++;
 }
 
-int space_remaining(void)
+int space_remaining()
 {
   return MAX_LINE_LEN - line_len;
 }
 
-void write_line(void)
+void write_line()
 {
   int extra_spaces, spaces_to_insert, i, j;
 
@@ -62,7 +62,7 @@ void write_line(void)
   putchar('\n');
 }
 
-void flush_line(void)
+void flush_line()
 {
   if (line_len > 0)
     puts(line);

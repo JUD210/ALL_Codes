@@ -21,7 +21,7 @@ Note: the number of digits in each group may vary; you can't assume that groups 
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   int prefix, group, publisher, item, check_digit;
 

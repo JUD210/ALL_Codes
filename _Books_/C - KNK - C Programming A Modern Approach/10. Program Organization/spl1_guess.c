@@ -20,9 +20,9 @@
 int secret_number;
 
 /* prototypes */
-void initialize_number_generator(void);
-void choose_new_secret_number(void);
-void read_guesses(void);
+void initialize_number_generator();
+void choose_new_secret_number();
+void read_guesses();
 
 int main()
 {
@@ -48,7 +48,7 @@ int main()
  *                              number generator using    *
  *                              the time of day.          *
  **********************************************************/
-void initialize_number_generator(void)
+void initialize_number_generator()
 {
   srand((unsigned) time(NULL));
 }
@@ -58,7 +58,7 @@ void initialize_number_generator(void)
  *                           between 1 and MAX_NUMBER and *
  *                           stores it in secret_number.  *
  **********************************************************/
-void choose_new_secret_number(void)
+void choose_new_secret_number()
 {
   secret_number = rand() % MAX_NUMBER + 1;
 }
@@ -70,7 +70,7 @@ void choose_new_secret_number(void)
  *               correct, prints the total number of      *
  *               guesses and returns.                     *
  **********************************************************/
-void read_guesses(void)
+void read_guesses()
 {
   int guess, num_guesses = 0;
 
