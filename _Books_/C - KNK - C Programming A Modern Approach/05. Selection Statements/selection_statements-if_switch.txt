@@ -1,0 +1,1 @@
+The if and switch statements allow a program to select a particular execution path from a set of alternatives.

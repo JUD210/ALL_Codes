@@ -1,0 +1,21 @@
+for (expr1 ; expr2 ; expr3 ) statement
+
+is the same as
+
+expr1;
+while (expr2) {
+  statement
+  expr3;
+}
+
+---------
+
+i=10;
+for (; i > 0;)
+  printf("T minus %d and counting\n", i--);
+
+is the same as
+
+i=10;
+while (i > O)
+  printf("T minus %d and counting\n", i--);

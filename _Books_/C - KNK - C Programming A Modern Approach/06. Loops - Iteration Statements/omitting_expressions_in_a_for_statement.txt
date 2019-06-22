@@ -1,0 +1,7 @@
+The for statement is even more flexible than we’ve seen so far. Some for loops
+may not need all three of the expressions that normally control the loop. so C
+allows us to omit any or all of the expressions.
+
+for (i = 0; i < 10; i++) ...  // initialize, test, update
+for (     ; i < 10; i++) ...  // no initialization
+for (     ;       ;    ) ...  // infinite loop. (== while (1) ...)

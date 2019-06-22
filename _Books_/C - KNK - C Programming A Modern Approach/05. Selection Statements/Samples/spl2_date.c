@@ -18,6 +18,7 @@ int main()
 
   printf("Enter date (mm/dd/yy): ");
   scanf("%d /%d /%d", &month, &day, &year);
+  // Enter date (mm/dd/yy): 02/25/93
 
   printf("Dated this %d", day);
   switch (day) {
@@ -27,7 +28,8 @@ int main()
       printf("nd"); break;
     case 3: case 23:
       printf("rd"); break;
-    default: printf("th"); break;
+    default:
+      printf("th"); break;
   }
   printf(" day of ");
 
@@ -47,5 +49,7 @@ int main()
   }
 
   printf(", 20%.2d.\n", year);
+  // Dated this 25th day of February, 2093.
+  
   return 0;
 }

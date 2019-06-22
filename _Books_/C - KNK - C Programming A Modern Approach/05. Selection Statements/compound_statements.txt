@@ -2,7 +2,7 @@ In our if statement template, notice that statement is singular, not plural:
 
 if ( expression ) statement
 
-What if we want an if statement to control nm or more statements? That’s where the compound statement comes in. A compound statement has the form
+What if we want an if statement to control two or more statements? That’s where the compound statement comes in. A compound statement has the form
 
 { statements }
 

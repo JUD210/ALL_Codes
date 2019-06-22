@@ -1,0 +1,5 @@
+while (expression) statement
+: check -> do
+
+do statement while (expression);
+: do -> check

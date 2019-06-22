@@ -1,0 +1,3 @@
+Q: Which form of inf‌inite loop is preferable, while(1) or for (;;)? [p. 108]
+
+A: C programmers have traditionally preferred for ( ; ; ) for reasons of eff‌iciency; older compilers would often force programs to test the 1 condition each time through the while loop. With modern compilers, however, there should be no difference in performance.

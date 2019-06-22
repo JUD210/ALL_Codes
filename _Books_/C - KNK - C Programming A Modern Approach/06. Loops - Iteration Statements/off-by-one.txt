@@ -1,0 +1,2 @@
+“Off-by-one” errors such as writing the controlling expression as i <= n
+instead of i < n.

@@ -1,0 +1,35 @@
+A statement can be null - devoid of symbols except for the semicolon at the end.
+
+Here’s an example:
+
+i = 0; ; j = 1;
+
+This line contains three statements: an assignment to i, a null statementand, an
+assignment to j.
+
+The null statement is primarily good for one thing: writing loops whose bodies
+are empty. As an example, recall the prime-f‌inding loop of Section 6.4:
+
+for (d = 2; d < n; d++)
+  if (n % d == 0)
+    break;
+
+If we move the n % d == 0 condition into the loop’s controlling expression, the body of the loop becomes empty:
+
+for (d = 2; d < n && n % d != 0; d++)
+  ;
+
+
+Note how we’ve put the null statement on a line by itself, instead of writing
+
+for (d = 2; d < n && n % d != 0; d++) ;
+
+C programmers customarily put the null statement on a line by itself. Otherwise, someone reading the program might get confused about whether the statement after the for was actually its body:
+
+for (d = 2; d < n && n % d != 0; d++) ;
+if (d < n)
+  printf("%d is divisible by %d\n", n, d);
+
+Converting an ordinary loop into one with an empty body doesn’t buy much: the new loop is often more concise but usually no more efficient. In a few cases, though, a loop with an empty body is clearly superior to the alternatives. 
+
+For example, we'll f‌ind these loops to be handy for reading character data.

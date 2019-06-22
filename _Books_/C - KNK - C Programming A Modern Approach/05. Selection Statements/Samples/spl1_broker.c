@@ -18,6 +18,7 @@ int main()
 
   printf("Enter value of trade: ");
   scanf("%f", &value);
+  // Enter value of trade: 3500
 
   if (value < 2500.00f)
     commission = 30.00f + .017f * value;
@@ -36,6 +37,7 @@ int main()
     commission = 39.00f;
 
   printf("Commission: $%.2f\n", commission);
-
+  // Commission: $79.10
+  
   return 0;
 }

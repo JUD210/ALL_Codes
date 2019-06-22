@@ -18,13 +18,16 @@ int main()
 
   printf("Enter a nonnegative integer: ");
   scanf("%d", &n);
+  // Enter a nonnegative integer: 12627
 
-  do {
+  do
+  {
     n /= 10;
     digits++;
   } while (n > 0);
 
   printf("The number has %d digit(s).\n", digits);
+  // The number has 5 digit(s).
 
   return 0;
 }
