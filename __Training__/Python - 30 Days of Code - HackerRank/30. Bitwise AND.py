@@ -43,7 +43,7 @@ In binary form:
     k-1 = 10101
     pos = 10111
     k-1 == (k-1) & pos
-You can get k-1 if pos <= n is TRUE. And you can get pos by ((k-1) | (k-1+1)) , that is , ((k-1) | k). 
+You can get k-1 if pos <= n is TRUE. And you can get pos by ((k-1) | (k-1+1)) , that is , ((k-1) | k).
 
 Otherwise , you just need to follow the process above when k is ODD (because k-1 is ODD) , then you get the answer k-2.
 

@@ -1,7 +1,7 @@
 """ READ ME!
 
-I don't recommend to use region. 
-It's actually an anti-pattern. 
+I don't recommend to use region.
+It's actually an anti-pattern.
 
 Instead of using #region, refactor your class or method.
 

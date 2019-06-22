@@ -2,11 +2,11 @@
 - 제품의 기능 분석, 하드웨어 블록 설계, 상세 회로 설계, 하드웨어 부분별 검증
 
 
-2. 통합 개발 환경(IDE: Integrated Development Environment) 
+2. 통합 개발 환경(IDE: Integrated Development Environment)
 - 코딩, 디버그, 컴파일, 배포 등 프로그램 개발에 관련된 모든 작업을 하나의 프로그램 안에서 처리하는 환경을 제공해주는 소프트웨어
 
 
-3. 디버깅 
+3. 디버깅
 - 시험(Testing), 오류 발견시 수정, 재시험 등의 작업을 반복하는 것
 
 

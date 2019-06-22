@@ -20,7 +20,7 @@ Closest departure time is 12:47 p.m., arriving at 3:00 p.m.
 
 Hint: Convert the input into a time expressed in minutes since
 midnight, and compare it to the departure times, also expressed in
-minutes since midnight. 
+minutes since midnight.
 
 For example, 13:15 is 13 x 60 + 15 = 795 minutes since midnight, which is closer to 12:47 p.m. (767 minutes since midnight) than to any of the other departure times.
  */
@@ -66,8 +66,8 @@ int main()
   /* Route 1. Beginner: Hard-coding with comparison
 
   // if it == 512
-  // 
-  //  dt | td 
+  //
+  //  dt | td
   // ----|----
   // 100 | 412
   // 200 | 312
@@ -79,8 +79,8 @@ int main()
   // 800 | 288
 
   // if it == 190
-  // 
-  //  dt | td 
+  //
+  //  dt | td
   // ----|----
   // 100 | 90
   // 200 | 10   <- C (10 < 110)
@@ -111,7 +111,7 @@ int main()
     printf("Closest departure time is  9:45 p.m., arriving at 11:58 p.m.\n");
 
   // Closest departure time is 12:47 p.m., arriving at 3:00 p.m.
-  
+
   printf("%d\n", time_diff1);
   printf("%d\n", time_diff2);
   printf("%d\n", time_diff3);

@@ -11,9 +11,9 @@ for _ in range(int(input())):
     sub_set = set(map(int, input().split()))
     # 1 2 3 4 5
     # 100 11 12
-    
+
     if sub_set & super_set != sub_set:
         result = False
-            
+
 print(result)
 # False

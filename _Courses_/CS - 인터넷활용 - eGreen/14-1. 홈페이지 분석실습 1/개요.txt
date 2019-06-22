@@ -2,7 +2,7 @@
 ① 청와대 홈페이지 분석
 ② 국회 홈페이지 분석
 ③ 법원 홈페이지 분석
-④ MRO : www.speedmall.co.kr 기업소모성자재사이트 분석 
+④ MRO : www.speedmall.co.kr 기업소모성자재사이트 분석
 ⑤ Logistics : www.dalogis.com 동아물류사이트 분석
 
 2) 강의세부내용:

@@ -3,10 +3,10 @@ ABCDEF
 ABCDEF
 """
 print(txt)
-# 
+#
 # ABCDEF
 # ABCDEF
-# 
+#
 
 print(txt.count("\n"))
 # 3

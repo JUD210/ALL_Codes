@@ -28,7 +28,7 @@ You will use a new variable prize to store a prize name if one was won, and then
 
 - If prize contains a prize name, result should be set to "Congratulations! You won a {}!".format(prize). This will avoid having the multiple result assignments for different prizes.
 
-At the beginning of your code, set prize to None, as the default value. 
+At the beginning of your code, set prize to None, as the default value.
 """
 
 

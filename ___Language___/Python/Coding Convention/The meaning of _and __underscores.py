@@ -24,7 +24,7 @@ __var__
 : Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes.
 
 _
-: Sometimes used as a name for temporary or insignificant variables (“don’t care”). 
+: Sometimes used as a name for temporary or insignificant variables (“don’t care”).
 : Also, The result of the last expression in a Python REPL.
 
 """

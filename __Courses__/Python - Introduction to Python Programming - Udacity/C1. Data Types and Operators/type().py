@@ -1,5 +1,5 @@
 """
-ㅇIf a single argument (object) is passed to type() built-in, it returns type of the given object. 
+ㅇIf a single argument (object) is passed to type() built-in, it returns type of the given object.
 
 ㅇIf three arguments (name, bases and dict) are passed, it returns a new type object.
 """

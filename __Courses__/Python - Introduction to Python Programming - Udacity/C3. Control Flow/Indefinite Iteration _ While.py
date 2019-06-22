@@ -1,4 +1,4 @@
-""" 
+"""
 loop repeats an unknown number of times and ends when some condition is met.
 """
 

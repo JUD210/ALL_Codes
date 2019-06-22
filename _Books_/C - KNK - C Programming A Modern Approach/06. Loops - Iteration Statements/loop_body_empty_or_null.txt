@@ -1,6 +1,6 @@
 Q: Are there any other ways to make an empty loop body stand out besides putting the null statement on a line by itself? [p. 117]
 
-A: 
+A:
 Besides putting the null statement on a line by itself:
 for (d = 2; d < n && n % d != O; d++)
   ;

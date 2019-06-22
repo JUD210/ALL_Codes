@@ -10,7 +10,7 @@ switch ( expression ) {
 }
 
 
-- Controlling expression. 
+- Controlling expression.
 The word switch must be followed by an integer expression in parentheses. Characters are treated as integers in C and thus can be tested in switch statements. Floating-point numbers and strings don’t qualify, however.
 
 
@@ -30,7 +30,7 @@ break.
 
 ---
 
-Duplicate ease labels aren‘t allowed. The order of the cases doesn‘t matter; in particular. the default case doesn’t need to come last. 
+Duplicate ease labels aren‘t allowed. The order of the cases doesn‘t matter; in particular. the default case doesn’t need to come last.
 
 Only one constant expression may follow the word case: however, several
 case labels may precede the same group of statements:

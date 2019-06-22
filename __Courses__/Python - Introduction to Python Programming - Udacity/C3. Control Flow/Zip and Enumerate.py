@@ -4,7 +4,7 @@ zip and enumerate are useful built-in functions that can come in handy when deal
 
     Zip
 
-zip returns an iterator that combines multiple iterables into one sequence of tuples. Each tuple contains the elements in that position from all the iterables. 
+zip returns an iterator that combines multiple iterables into one sequence of tuples. Each tuple contains the elements in that position from all the iterables.
 
 For example, printing
 
@@ -44,7 +44,7 @@ This code would output:
 1 b
 2 c
 3 d
-4 e 
+4 e
 """
 
 manifest = [

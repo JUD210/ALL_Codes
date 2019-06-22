@@ -60,7 +60,7 @@ Run the following script in Python to see what happens when you open too many fi
 
 """ With
 
-This with keyword allows you to open a file, do operations on it, and automatically close it after the indented code is executed, in this case, reading from the file. 
+This with keyword allows you to open a file, do operations on it, and automatically close it after the indented code is executed, in this case, reading from the file.
 
 Now, we don’t have to call f.close()! You can only access the file object, f, within this indented block.
 """

@@ -1,8 +1,8 @@
 """ Documentation
 
-Documentation is used to make your code easier to understand and use. Functions are especially readable because they often use documentation strings, or docstrings. Docstrings are a type of comment used to explain the purpose of a function, and how it should be used. 
+Documentation is used to make your code easier to understand and use. Functions are especially readable because they often use documentation strings, or docstrings. Docstrings are a type of comment used to explain the purpose of a function, and how it should be used.
 
-Here's a function for population density with a docstring. 
+Here's a function for population density with a docstring.
 """
 
 # Short Docstrings
@@ -19,7 +19,7 @@ def population_density2(population, land_area):
         population: int. The population of that area
         land_area: int or float. This function is unit-agnostic, if you pass in values in terms of square km or square miles the function will return a density in those units.
 
-    OUTPUT: 
+    OUTPUT:
         population_density: population / land_area. The population density of a particular area.
     """
     return population / land_area
@@ -29,7 +29,7 @@ def population_density2(population, land_area):
 def population_density3(population, land_area):
     """Calculate the population density of an area.
     (This docstring format was created by autoDocstring)
-    
+
     Arguments:
         population {int} -- The population of that area
         land_area {int or float} -- This function is unit-agnostic, if you pass in values in terms of square km or square miles the function will return a density in those units.

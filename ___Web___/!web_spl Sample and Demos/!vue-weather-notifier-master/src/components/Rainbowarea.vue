@@ -76,12 +76,12 @@
 			tl.fromTo("#beams", 2.5, {
 				scale: 0,
 				opacity: 0,
-				x: 36, 
+				x: 36,
 				y: 34,
 				rotation: 0
 			}, {
 				scale: 1,
-				x: 36, 
+				x: 36,
 				y: 34,
 				opacity: 0.2,
 				rotation: "-720",
@@ -112,13 +112,13 @@
 
 			tl.fromTo("#blue", 2, {
 				opacity: 0,
-				x: 36, 
+				x: 36,
 				y: 21,
 				scale: 0.5
 			}, {
 				opacity: 1,
 				scale: 1,
-				x: 36, 
+				x: 36,
 				y: 21,
 				transformOrigin: "50% 50%",
 				ease: Sine.easeOut

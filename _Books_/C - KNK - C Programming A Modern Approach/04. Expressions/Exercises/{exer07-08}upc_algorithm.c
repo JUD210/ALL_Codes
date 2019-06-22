@@ -14,11 +14,11 @@ Subtract the remainder from l0.
 Why doesn't this technique work?
  */
 
-/* Then, Let's take a look at a counterexample. 
+/* Then, Let's take a look at a counterexample.
 When the value of 'total' is a multiple of 10 (10, 20, 30, ...)
 
 In the former algorithm, ((total-1) % 10) results 9 always.
-9 - ((total - 1) % 10) 
+9 - ((total - 1) % 10)
 = 9 - 9
 = 0
 

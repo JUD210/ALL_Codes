@@ -14,7 +14,7 @@ The number of white-space characters in the format string is irrelevant; one whi
 
 -Other characters.
 
-When it encounters a non-white-space character in a format string, scanf compares it with the next input character. 
+When it encounters a non-white-space character in a format string, scanf compares it with the next input character.
 
 If the two characters match, scanf discards the input character and continues processing the format string.
 

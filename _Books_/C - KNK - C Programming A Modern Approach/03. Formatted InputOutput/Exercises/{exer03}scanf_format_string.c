@@ -1,4 +1,4 @@
-/* For each of the following pairs of scanf format strings, indicate whether or not the two strings are equivalent. If they're not, show how they can be distinguished. 
+/* For each of the following pairs of scanf format strings, indicate whether or not the two strings are equivalent. If they're not, show how they can be distinguished.
 
 (a) "%d"        versus " %d"
 (b) "%d-%d-%d"  versus "%d -%d -%d"
@@ -64,7 +64,7 @@ int main()
   vs
   1-2-3
   |1|2|3|
- 
+
    */
 
   ////////////////////////////
@@ -118,9 +118,9 @@ int main()
   |1.230000|4.560000|
   vs
   1.23,4.56
-  |1.230000|4.560000| 
+  |1.230000|4.560000|
 
   */
- 
+
   return 0;
 }

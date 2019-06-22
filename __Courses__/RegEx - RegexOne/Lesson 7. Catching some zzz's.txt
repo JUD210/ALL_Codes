@@ -8,11 +8,11 @@ a{1,3} : match the a character 1~3 times.
 .{2,6} : between two and six of any character
 
 
-Task	Text
+Task	 Text
 
-Match	wazzzzzup
-Match	wazzzup
-Skip	wazup
+Match	 wazzzzzup
+Match	 wazzzup
+Skip	 wazup
 
 
 waz{3}

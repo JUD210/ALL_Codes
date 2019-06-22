@@ -6,11 +6,11 @@ https://regexone.com/lesson/whitespaces?
 \s : match any of the specific whitespaces above and is extremely useful when dealing with raw input text.
 
 
-Task	Text 
+Task	  Text
 
 Match   1.   abc
 Match   2.	abc
-Match	3.           abc
+Match	  3.           abc
 Skip    4.abc
 
 

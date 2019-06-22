@@ -21,7 +21,7 @@ print(numpy.outer(a, b))
 #  [2 3]]
 
 
-""" Reference 
+""" Reference
 
 a = numpy.array([0, 1])
 b = numpy.array([3, 4])

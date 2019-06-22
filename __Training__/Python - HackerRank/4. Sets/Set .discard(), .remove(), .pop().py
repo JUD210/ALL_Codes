@@ -20,7 +20,7 @@ for _ in range(int(input())):
         """ I used below code, and it's not good.
 
         [methods[method](*map(int, arg)) for arg in args]
-        
+
         for a sequence of actions: Loop
         for a sequence of values: List or generator comprehension
         """

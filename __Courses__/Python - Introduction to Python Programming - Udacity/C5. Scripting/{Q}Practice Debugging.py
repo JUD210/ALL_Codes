@@ -10,13 +10,13 @@ But there is a bug in the code! When I input a number, I get the following TypeE
 user_list = []
 list_sum = 0
 
-# seek user input for ten numbers 
+# seek user input for ten numbers
 for i in range(10):
 
     userInput = int(input("Enter any 2-digit number: "))
     # FOUND!
     # userInput = input("Enter any 2-digit number: ")
- 
+
 # check to see if number is even and if yes, add to list_sum
 # print incorrect value warning  when ValueError exception occurs
     try:

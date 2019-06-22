@@ -17,7 +17,7 @@ Example output:
 
 7 is a prime number
 26 is not a prime number
-2 is a factor of 26 
+2 is a factor of 26
 """
 
 

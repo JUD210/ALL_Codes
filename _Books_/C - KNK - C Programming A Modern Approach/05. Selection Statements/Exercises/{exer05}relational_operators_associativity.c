@@ -32,12 +32,12 @@ int main()
   return 0;
 }
 
-/* 
-  It is a legal statement. 
-  (Although it's not gonna work as we expect.) 
-  
+/*
+  It is a legal statement.
+  (Although it's not gonna work as we expect.)
+
   Here's what happens when n equals 0:
-  
+
   First, in the if's expression, (n >= 1) is evaluated to 0.
   Then, (0 <= 10) is evaluated as 1, meaning the final value is 1.
   Since the value isn't 0, it runs the printf statement.

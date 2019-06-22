@@ -1,14 +1,14 @@
 https://regexone.com/problem/extracting_url_data
 
 
-Task	    Text	                                                 
+Task	   Text
 
-Skip	    W/dalvikvm( 1553): threadid=1: uncaught exception
-Skip	    E/( 1553): FATAL EXCEPTION: main
-Skip	    E/( 1553): java.lang.StringIndexOutOfBoundsException
-Capture	    E/( 1553):   at widget.List.makeView(ListView.java:1727)
-Capture	    E/( 1553):   at widget.List.fillDown(ListView.java:652)
-Capture	    E/( 1553):   at widget.List.fillFrom(ListView.java:709)
+Skip	   W/dalvikvm( 1553): threadid=1: uncaught exception
+Skip	   E/( 1553): FATAL EXCEPTION: main
+Skip	   E/( 1553): java.lang.StringIndexOutOfBoundsException
+Capture  /( 1553):   at widget.List.makeView(ListView.java:1727)
+Capture  /( 1553):   at widget.List.fillDown(ListView.java:652)
+Capture  /( 1553):   at widget.List.fillFrom(ListView.java:709)
 
 Capture Groups
 

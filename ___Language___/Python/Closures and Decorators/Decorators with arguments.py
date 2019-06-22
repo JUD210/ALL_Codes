@@ -1,7 +1,7 @@
 # https://www.codementor.io/moyosore/a-dive-into-python-closures-and-decorators-part-2-ab2enoyjg
 
 
-""" 
+"""
 Remember a decorator is a callable function, this make it possible for us to pass in arguments to our decorators. Arguments are passed into decorators same way it can be passed into normal functions.
 
 
@@ -42,7 +42,7 @@ def my_function(name):
     return name
 
 
-print(my_function("Emma"))  
+print(my_function("Emma"))
 # 'Hi Emma, hello dear'
 
 

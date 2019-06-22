@@ -7,7 +7,7 @@ The following questions are based on data on Oscar Award Nominations for Best Di
 
 Helpful hint:
 
-You may find it helpful to use a paper and pen to think through the logic of the for loop instead of directly trying to type out your code. for loops are tricky, but if you take the time to slowly work out the question's logic, and write out what is happening with each iteration in the for loop, it's easier to think through the code. 
+You may find it helpful to use a paper and pen to think through the logic of the for loop instead of directly trying to type out your code. for loops are tricky, but if you take the time to slowly work out the question's logic, and write out what is happening with each iteration in the for loop, it's easier to think through the code.
 """
 
 

@@ -4,7 +4,7 @@ Suppose you want to count from some number start_num by another number count_by 
 
 Before the loop, what do you want to set break_num equal to? How do you want to change break_num each time through the loop? What condition will you use to see when it's time to stop looping?
 
-After the loop is done, print out break_num, showing the value that indicated it was time to stop looping. It is the case that break_num should be a number that is the first number larger than end_num. 
+After the loop is done, print out break_num, showing the value that indicated it was time to stop looping. It is the case that break_num should be a number that is the first number larger than end_num.
 
     +Quiz: Count By Check
 
@@ -13,10 +13,10 @@ Now in addition, address what would happen if someone gives a start_num that is 
 
 start_num = #provide some start number
 end_num = #provide some end number that you stop when you hit
-count_by = #provide some number to count by 
+count_by = #provide some number to count by
 
 # write a condition to check that end_num is larger than start_num before looping
-# write a while loop that uses break_num as the ongoing number to 
+# write a while loop that uses break_num as the ongoing number to
 #   check against end_num
 
 

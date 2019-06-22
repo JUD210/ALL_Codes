@@ -1,5 +1,5 @@
 def sqrt(n):
-    """ 
+    """
     Using Newton's Method
     """
 

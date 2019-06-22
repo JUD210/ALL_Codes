@@ -1,7 +1,7 @@
-Q. 
+Q.
 I've seen the %i conversion used to read and write integers. What's the difference between %i and %d?
 
-A. 
+A.
 In a printf format string, there's no difference between the two.
 In a scanf format string, however, %d can only match an integer written in decimal form, while %i can match an integer expressed in octal, decimal, hexadecimal.
 

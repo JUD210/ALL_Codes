@@ -1,4 +1,4 @@
-""" 
+"""
 Use zip to transpose data from a 4-by-3 matrix to a 3-by-4 matrix. There's actually a cool trick for this! Feel free to look at the solutions if you can't figure it out.
 """
 

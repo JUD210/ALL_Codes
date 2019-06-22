@@ -1,4 +1,4 @@
-<!-- 
+<!--
 https://www.hackerrank.com/challenges/branch-reset-groups/problem
 
 

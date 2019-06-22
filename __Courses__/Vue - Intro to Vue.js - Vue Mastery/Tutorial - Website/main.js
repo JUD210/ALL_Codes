@@ -208,7 +208,7 @@ Vue.component("product-tabs", {
   <div>
     <span class="tab"
           :class="{ activeTab: selectedTab === tab}"
-          v-for="(tab, index) in tabs" 
+          v-for="(tab, index) in tabs"
           :key="index"
           @click="selectedTab = tab"
     >{{ tab }}</span>

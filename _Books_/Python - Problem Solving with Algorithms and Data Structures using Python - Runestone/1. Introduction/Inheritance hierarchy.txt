@@ -3,11 +3,11 @@ Python Collections - Sequential Collections - list
                                             └ tuple
                    └ Non-Sequential Collections - dictionary
                                                 └ set
-                        
+
                             ...
 
-ㅉe call the list the child and the sequence the parent (or subclass list and superclass sequence). 
+ㅉe call the list the child and the sequence the parent (or subclass list and superclass sequence).
 
-This is often referred to as an IS-A Relationship (the list IS-A sequential collection). 
+This is often referred to as an IS-A Relationship (the list IS-A sequential collection).
 
 This implies that lists inherit important characteristics from sequences, namely the ordering of the underlying data and operations such as concatenation, repetition, and indexing.

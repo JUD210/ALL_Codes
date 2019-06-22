@@ -36,6 +36,6 @@ int main()
   return 0;
 }
 
-/* 
+/*
   It is equivalent as you can see above.
  */

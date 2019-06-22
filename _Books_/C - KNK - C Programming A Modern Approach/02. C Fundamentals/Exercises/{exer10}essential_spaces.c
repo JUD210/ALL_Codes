@@ -21,7 +21,7 @@ int main()
   return 0;
 }
 
-/* Spaces 
-inside a string literal, 
+/* Spaces
+inside a string literal,
 between type specifier and identifier.
  */

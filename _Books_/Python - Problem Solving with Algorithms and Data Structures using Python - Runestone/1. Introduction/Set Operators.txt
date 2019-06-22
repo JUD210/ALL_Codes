@@ -1,16 +1,16 @@
-aset | otherset	
+aset | otherset
 aset.union(otherset)
 
 : Returns a new set with all elements from both sets
 
 
-aset & otherset	
+aset & otherset
 aset.intersection(otherset)
 
 : Returns a new set with only those elements common to both sets
 
 
-aset - otherset	
+aset - otherset
 aset.difference(otherset)
 
 : Returns a new set with all items from the first set not in second

@@ -48,7 +48,7 @@ def some_function():
 some_function()
 
 """
-Notice that we can still access the value of the global variable word within this function. 
+Notice that we can still access the value of the global variable word within this function.
 
 However, the value of a global variable can not be modified inside the function.
 
@@ -87,7 +87,7 @@ some_function()
 # def print_fn():
 #     str1 = 'Variable scope is an important concept.'
 #     print(str1)
-# 
+#
 # print_fn(str1)
 
 # NameError: name 'str1' is not defined

@@ -9,6 +9,6 @@
 - 인라인(inline) 형식으로 분할
 
 
-2. iframe 
-ㅇ <iframe>태그 
+2. iframe
+ㅇ <iframe>태그
 - 하나의 웹 문서 안에 또 다른 웹 문서를 표시할 때 사용

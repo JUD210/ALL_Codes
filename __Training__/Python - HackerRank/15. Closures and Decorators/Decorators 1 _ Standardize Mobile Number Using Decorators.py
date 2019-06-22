@@ -20,7 +20,7 @@ def wrapper(f):
 def wrapper2(f):
     def formattor(l):
         """
-        The given mobile numbers may have +91, 91 or 0 written before the actual 10 digit number. Alternatively, there may not be any prefix at all. 
+        The given mobile numbers may have +91, 91 or 0 written before the actual 10 digit number. Alternatively, there may not be any prefix at all.
 
         """
         new_l = []

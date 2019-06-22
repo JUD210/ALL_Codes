@@ -1,6 +1,6 @@
 1. 전자상거래(Electronic Commerce: EC): “개인, 기업, 정부 등의 경제 주체 간에 컴퓨터를 이용하여 상품과 서비스를 교환하는 방식”
 
-2. 전자 상거래 유형: 
+2. 전자 상거래 유형:
 - 기업과 기업 간 거래(Business to Business : B2B)
 - 기업과 개인 간 거래(Business to Consumer : B2C)
 - 기업과 정부 간 거래(Business to Government : B2G)

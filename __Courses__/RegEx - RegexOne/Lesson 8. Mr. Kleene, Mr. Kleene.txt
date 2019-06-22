@@ -6,12 +6,12 @@ a+ : one or more 'a's
 .* : zero or more of any character
 
 
-Task	Text
+Task	 Text
 
-Match	aaaabcc
-Match	aabbbbc
-Match	aacc
-Skip	a
+Match	 aaaabcc
+Match	 aabbbbc
+Match	 aacc
+Skip	 a
 
 
 aa+

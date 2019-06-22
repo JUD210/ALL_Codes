@@ -1,4 +1,4 @@
-Which of the following are not legal C identifiers? 
+Which of the following are not legal C identifiers?
 
 (a) 100_bottles
 (b) _100_bottles

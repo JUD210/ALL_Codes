@@ -50,6 +50,6 @@ int main()
 
   printf(", 20%.2d.\n", year);
   // Dated this 25th day of February, 2093.
-  
+
   return 0;
 }

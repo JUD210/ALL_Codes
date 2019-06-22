@@ -1,4 +1,4 @@
-Don’t confuse == (equality) with = (assignment). 
+Don’t confuse == (equality) with = (assignment).
 
 The statement
 
@@ -8,6 +8,6 @@ tests whether i is equal to 0. However, the statement
 
 if (i = O)
 
-assigns 0 to i, then tests whether the result is nonzero. 
+assigns 0 to i, then tests whether the result is nonzero.
 
 In this case, the test always fails.

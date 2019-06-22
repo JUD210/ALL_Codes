@@ -7,7 +7,7 @@ print("Hello there, {}!".format(name.title()))
 # Enter your name: hyuk
 # Hello there, Hyuk!
 
-""" 
+"""
 This prompts the user to enter a name and then uses the input in a greeting. The input function takes in whatever the user types and stores it as a string. If you want to interpret their input as something other than a string, like an integer, as in the example below, you need to wrap the result with the new type to convert it from a string.
 """
 
@@ -16,7 +16,7 @@ print("hello " * num)
 # Enter an integer: 5
 # hello hello hello hello hello
 
-""" 
+"""
 We can also interpret user input as a Python expression using the built-in function eval. This function evaluates a string as a line of Python.
 """
 

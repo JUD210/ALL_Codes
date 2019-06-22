@@ -13,8 +13,8 @@ from typing import Any, List, Tuple, Set, Dict, NamedTuple  # noqa
 """ This is for mypy linter's advanced static type checking
 
 The static type definition is able from Python 3.6
- 
-    
+
+
     Should I use static type checking in my own code?
 
 Well, it's not an all-or-nothing question. Luckily, Python supports the concept of gradual typing. This means that I can gradually introduce types into my code.
@@ -81,7 +81,7 @@ Bottom 22
 
 class TopHierarchy:
     """ I prefer this order for inner part of a class.
-    
+
     Class Var
 
     ############################################################
@@ -95,7 +95,7 @@ class TopHierarchy:
     ############################################################
 
     public, private, abstract, class, static method
-    
+
     """
 
     class_var = "some_value"
@@ -167,14 +167,14 @@ class TopHierarchy:
 
 
         See below example.
-    
+
     instance_name.private_var = 255
     print(instance_name.private_var)
     # 255
-    
-    
+
+
     ############################################################
-    
+
         Is it pythonic to use properties to limit the mutability of class attributes (variables and methods)?
 
     For attributes/properties/variables at either the class or instance level: yes, absolutely! The decorator @property is built in specifically to give control over read, write, and delete. Common use cases include:
@@ -185,12 +185,12 @@ class TopHierarchy:
     - presenting limited internal state in multiple ways
     - triggering other system logic
     - persistence
-    
+
 
         But really the most authoritative I can get is to quote PEP-8, the Python style guide.
 
     For simple public data attributes, it is best to expose just the attribute name, without complicated accessor/mutator methods. Keep in mind that Python provides an easy path to future enhancement, should you find that a simple data attribute needs to grow functional behavior.
-    
+
     In that case, use properties to hide functional implementation behind simple data attribute access syntax.
 
     """
@@ -275,18 +275,18 @@ class TopHierarchy:
     @staticmethod
     def static_method(*args, **kwargs):
         """ About static method.
-        
+
         Static methods, much like class methods, are methods that are bound to a class rather than its object.
 
         They do not require a class instance creation. So, are not dependent on the state of the object.
 
         The difference between a static method and a class method is:
 
-       
+
         Static method knows nothing about the class and just deals with the parameters.
-        
+
         Class method works with the class since its parameter is always the class itself.
-        
+
         They can be called both by the class and its object.
 
         Class.staticmethodFunc()

@@ -14,7 +14,7 @@
           <path d="M418.1,240.2c2.3.6,3.1,2.2,1.9,3.6l-54.5,58.5c-1.3,1.4-4.2,2-6.5,1.4L167,252.7c-2.3-.6-3.1-2.2-1.9-3.6l54.5-58.5c1.3-1.4,4.2-2,6.5-1.4Z" transform="translate(0 58)" fill="url(#linear-gradient-4)"/>
           <path d="M189.1,207.6c.8.2,1.1.7.7,1.1l-15.8,17a2.3,2.3,0,0,1-2,.4h0c-.8-.2-1.1-.7-.7-1.1l15.8-17a2.3,2.3,0,0,1,2-.4Z" transform="translate(0 58)" fill="#313131"/>
           <g id="phonebutton" @click="updateTemplate" v-if="!showWeather">
-            <transition 
+            <transition
               @before-enter="beforeEnterStroke"
               @enter="enterStroke"
               :css="false"
@@ -25,12 +25,12 @@
             <path d="M401.4,273.5l1-.9a8.5,8.5,0,0,0-3.2,2c-2.5,2.7-.5,6,4.7,7.4a17.5,17.5,0,0,0,3.1.5C400.8,280.9,398.3,276.9,401.4,273.5Z" transform="translate(1 58)" fill="#414141" style="opacity:0.8"/>
           </g>
           </transition>
-          <transition 
+          <transition
               @leave="leaveDialog"
               :css="false">
           <app-dialog v-if="showWeather"></app-dialog>
           </transition>
-          <transition 
+          <transition
               @leave="leaveDroparea"
               :css="false">
             <g v-if="showWeather">
@@ -41,7 +41,7 @@
             </g>
           </transition>
           <g v-if="!showWeather">
-            <transition 
+            <transition
               @before-enter="beforeEnter"
               @enter="enter"
               :css="false"
@@ -83,7 +83,7 @@
       },
       beforeEnter(el) {
         el.style.opacity = 0;
-      }, 
+      },
       enter(el, done) {
         const tl = new TimelineMax({
           onComplete: done
@@ -95,7 +95,7 @@
           visibility: 'visible',
           transformOrigin: '50% 50%'
         });
-        
+
         tl.to(el, 0.75, {
           opacity: 1,
           scale: 1,
@@ -120,12 +120,12 @@
       beforeEnterStroke(el) {
         el.style.strokeWidth = 0;
         el.style.stroke = 'orange';
-      }, 
+      },
       enterStroke(el, done) {
         const tl = new TimelineMax({
           onComplete: done
         });
-        
+
         tl.to(el, 0.75, {
           strokeWidth: 1,
           ease: Circ.easeOut

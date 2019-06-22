@@ -2,9 +2,9 @@
 
 int main()
 {
-  /* 
-  In many programming languages, assignment is a statement; in C, however, assignment is an operator, just like +. 
-  
+  /*
+  In many programming languages, assignment is a statement; in C, however, assignment is an operator, just like +.
+
   In other words, the act of assignment produces a result, just as adding two numbers produces a result. The value of an assignment v = e is the value of v after the assignment. Thus, the value of i = 72.99f is 72 (not 72.99).
    */
 
@@ -26,8 +26,8 @@ int main()
   // 3
   // 3
 
-  /* 
-  Watch out for unexpected results in chained assignments as a result of type conversion: 
+  /*
+  Watch out for unexpected results in chained assignments as a result of type conversion:
   */
 
   int x;

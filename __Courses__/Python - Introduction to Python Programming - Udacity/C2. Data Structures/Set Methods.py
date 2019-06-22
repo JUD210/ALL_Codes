@@ -8,9 +8,9 @@ difference()
 
 fruit = {"apple", "banana", "orange"}
 fruit.add("watermelon")
-print(fruit.pop())  
+print(fruit.pop())
 # Remove a random element and print it.
-fruit.pop() 
+fruit.pop()
 # Remove a random element
 
 basket1 = {"apple", "banana", "orange"}

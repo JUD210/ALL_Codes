@@ -14,7 +14,7 @@ def anagram_solution1(s1, s2):
     = n + n-1 + n-2 + ... 2 + 1
     = {n(n+1)}/2
     = 1/2 n^2 + 1/2 n
-    
+
     """
     start = time.time()
 
@@ -37,7 +37,7 @@ def anagram_solution1(s1, s2):
 
 def anagram_solution2(s1, s2):
     """ Solution 2. Sort and Compare : (maybe) O(n logn)
-        
+
     Sorting is typically either O(n2) or O(n logn), so the sorting operations 'dominate' the iteration.
     In the time.time(), this algorithm will have the same order of magnitude as that of the sorting process.
 

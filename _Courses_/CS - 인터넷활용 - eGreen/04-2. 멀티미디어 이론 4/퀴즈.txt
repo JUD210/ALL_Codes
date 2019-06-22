@@ -12,7 +12,7 @@ CNR은 Carrier to Noise Ratio이다.
 Q2. 다음 중 Flash Animation과 무관한 것은?
 1. 홀로그램
 2. CC
-3. Animate 
+3. Animate
 4. 만화
 
 
@@ -49,5 +49,5 @@ Q5. 다음 중 동영상 제작 도구와 관계 없는 것은?
 4. TV
 
 
-TV는 방송수신 기계이다. 
+TV는 방송수신 기계이다.
 4

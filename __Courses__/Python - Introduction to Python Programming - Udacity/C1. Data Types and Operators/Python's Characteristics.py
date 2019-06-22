@@ -1,5 +1,5 @@
 """
-ㅇCase Sensitive 
+ㅇCase Sensitive
 
 ㅇWhitespace is used to denote blocks (like {})
 

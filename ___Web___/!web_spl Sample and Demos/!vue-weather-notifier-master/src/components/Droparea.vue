@@ -162,7 +162,7 @@
 		mounted () {
       let audio = new Audio('static/rain.mp3'),
           tl = new TimelineMax();
-      
+
       audio.play();
 			tl.add("drops");
 

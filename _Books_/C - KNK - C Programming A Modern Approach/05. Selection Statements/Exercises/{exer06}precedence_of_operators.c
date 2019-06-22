@@ -30,9 +30,9 @@ int main()
   return 0;
 }
 
-/* 
-  It is a legal statement. 
-  (Although it's not gonna work as we expect.) 
+/*
+  It is a legal statement.
+  (Although it's not gonna work as we expect.)
 
   First, in the if's expression, 1 - 10 is evaluated to -9.
   Then, (n == -9) is evaluated as 0, meaning the final value is 0.

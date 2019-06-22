@@ -17,7 +17,7 @@ TypeError: object doesn't support item assignment
 
 
     Tuple: Immutable
-    
+
 >>> myTuple = (2,True,4.96)
 >>> myTuple
 (2, True, 4.96)

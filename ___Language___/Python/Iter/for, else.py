@@ -9,7 +9,7 @@ for n in range(2, 10):
     else:
         # loop fell through without finding a factor
         print(n, "is a prime number")
-        
+
 # 2 is a prime number
 # 3 is a prime number
 # 4 equals 2 * 2

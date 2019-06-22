@@ -5,7 +5,7 @@ import re
 
 """ re.search()
 
-The re.search() expression scans through a string looking for the first location where the regex pattern produces a match. 
+The re.search() expression scans through a string looking for the first location where the regex pattern produces a match.
 
 It either returns a MatchObject instance or returns None if no position in the string matches the pattern.
 
@@ -26,9 +26,9 @@ print(bool(re.search(r"z", "similarly")))
 
 """ re.match()
 
-The re.match() expression only matches at the beginning of the string. 
+The re.match() expression only matches at the beginning of the string.
 
-It either returns a MatchObject instance or returns None if the string does not match the pattern. 
+It either returns a MatchObject instance or returns None if the string does not match the pattern.
 
 """
 

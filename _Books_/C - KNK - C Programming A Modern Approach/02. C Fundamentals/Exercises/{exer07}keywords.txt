@@ -1,4 +1,4 @@
-Which of the following are keywords in C? 
+Which of the following are keywords in C?
 
 (a) for
 (b) If

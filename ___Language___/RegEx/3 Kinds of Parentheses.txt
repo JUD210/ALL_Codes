@@ -32,8 +32,8 @@ can
 can('t)?()()
 ↓
 $0 : can
-$1 : 
-$2 : 
+$1 :
+$2 :
 $3 :
 $4 : $4
 
@@ -45,14 +45,14 @@ can('t)?()()
 ↓
 $0 : can't
 $1 : 't
-$2 : 
-$3 : 
+$2 :
+$3 :
 $4 : $4
 
 ---------------------
 
-We need the parentheses here because 
-can't? 
+We need the parentheses here because
+can't?
 would match only the strings can’, and can’t, not quite what we had in mind.
 
 
@@ -60,14 +60,14 @@ would match only the strings can’, and can’t, not quite what we had in mind.
 # Non-Capturing Parentheses -> (?:
 
 
-To avoid capturing the ‘t, we write 
+To avoid capturing the ‘t, we write
 can(?:'t)?
 
 Here, all we get is the full match, with no sub-matches.
 
 ---------------------
 
-The (?: is a special sequence that starts a parenthesized group, just like ( , but the regular expression engine is told, don’t bother to capture the match in the group, just use it for operator precedence. 
+The (?: is a special sequence that starts a parenthesized group, just like ( , but the regular expression engine is told, don’t bother to capture the match in the group, just use it for operator precedence.
 
 ---------------------
 

@@ -16,7 +16,7 @@ class MyHTMLParser(HTMLParser):
         print("Found an empty tag :" + tag)
 
 
-# The attrs argument is a list of (name, value) pairs containing the attributes found inside the tag’s <> brackets. 
+# The attrs argument is a list of (name, value) pairs containing the attributes found inside the tag’s <> brackets.
 
 
 # Instantiate the parser and feed it some HTML

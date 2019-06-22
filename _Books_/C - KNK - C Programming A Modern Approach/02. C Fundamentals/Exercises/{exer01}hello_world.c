@@ -8,7 +8,7 @@ int main(/* void */)
   // hello, world
 }
 
-/* Do you get a warning message from the compiler? If so, what's needed to make it go away? 
+/* Do you get a warning message from the compiler? If so, what's needed to make it go away?
 
 
 Add below statement.

@@ -11,8 +11,8 @@ int main()
   printf("\n====== PRINT ======\n");
   printf("%d\n%d\n%f\n%f\n", i, j, x, y);
   /* 1.
-  As it searches for the beginning of a number, scanf ignores white-space characters (the space, horizontal and vertical tab, form-feed, and new-line characters). 
-  
+  As it searches for the beginning of a number, scanf ignores white-space characters (the space, horizontal and vertical tab, form-feed, and new-line characters).
+
   As a result, numbers can be put on a single line or spread out over several lines.
  */
 
@@ -48,7 +48,7 @@ int main()
  */
 
   /* 3.
-  If the format string is " %d\n", scanf will skip white space, read an integer, then skip to the next non-white-space character. A format string like this can cause an interactive program to "hang" until the user enters a nonblank character. 
+  If the format string is " %d\n", scanf will skip white space, read an integer, then skip to the next non-white-space character. A format string like this can cause an interactive program to "hang" until the user enters a nonblank character.
   (" " is equally treated as a "\n" in the format string of scanf as they are all white-space characters.)
  */
 

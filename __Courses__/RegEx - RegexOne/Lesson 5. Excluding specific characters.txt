@@ -3,11 +3,11 @@ https://regexone.com/lesson/excluding_characters
 [^abc] : exclude a, b or c
 
 
-Task	Text
+Task	 Text
 
-Match	hog
-Match	dog
-Skip	bog
+Match	 hog
+Match	 dog
+Skip	 bog
 
 
 [^b]og

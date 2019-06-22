@@ -46,7 +46,7 @@ print(a ** b)
 #  [    1    64  2187 16384]]
 
 
-""" Reference 
+""" Reference
 
 a = numpy.array([1, 2, 3, 4], float)
 b = numpy.array([5, 6, 7, 8], float)

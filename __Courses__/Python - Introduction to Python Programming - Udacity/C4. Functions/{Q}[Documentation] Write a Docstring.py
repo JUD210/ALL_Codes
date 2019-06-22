@@ -5,12 +5,12 @@ Write a docstring for the readable_timedelta function you defined earlier! Remem
 
 
 def readable_timedelta(days):
-    """ 
+    """
     Return a string of the number of weeks and days included in days.
-    
+
     Arguments:
         days {int} -- number of days to convert
-    
+
     Returns:
         {str} -- "{} week(s) and {} day(s)"
     """

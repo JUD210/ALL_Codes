@@ -38,6 +38,6 @@ int main()
 
   printf("Commission: $%.2f\n", commission);
   // Commission: $79.10
-  
+
   return 0;
 }

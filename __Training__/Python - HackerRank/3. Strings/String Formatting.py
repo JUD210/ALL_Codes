@@ -8,7 +8,7 @@ def print_formatted(number):
 
     for i in range(1,number+1):
         print("{num:{align}{w1}d}{num:{align}{w2}o}{num:{align}{w2}X}{num:{align}{w2}b}".format(num=i, w1=width-1, w2=width, align = ">"))
-    
+
     #     1     1     1     1
     #     2     2     2    10
     #     3     3     3    11
@@ -25,7 +25,7 @@ def print_formatted(number):
     #    14    16     E  1110
     #    15    17     F  1111
     #    16    20    10 10000
-    #    17    21    11 10001     
+    #    17    21    11 10001
 
 
 if __name__ == '__main__':

@@ -40,5 +40,5 @@ if is_cold == True:
 # Good example
 if is_cold:
     print("The weather is cold!")
-    
+
 """

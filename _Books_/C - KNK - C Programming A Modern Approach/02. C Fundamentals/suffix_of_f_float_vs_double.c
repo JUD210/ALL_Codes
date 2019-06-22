@@ -5,7 +5,7 @@ int main()
   float f;
   double d;
 
-  /* Because by unsuffixed floating-point literals are doubles, and rounding means that even small literals can take on different values when rounded to float and double. 
+  /* Because by unsuffixed floating-point literals are doubles, and rounding means that even small literals can take on different values when rounded to float and double.
 
   This can be observed in the following example:
    */
@@ -17,7 +17,7 @@ int main()
     printf("no\n");
   // no
 
-  /* This will output no, because 0.67 has a different value when rounded to float than it does when rounded to double. 
+  /* This will output no, because 0.67 has a different value when rounded to float than it does when rounded to double.
 
   On the other hand:
    */
@@ -32,7 +32,7 @@ int main()
   /*  this outputs yes.
 
   The suffix can be specified using either upper or lowercase letters.
-  
+
   Try this also:
    */
 

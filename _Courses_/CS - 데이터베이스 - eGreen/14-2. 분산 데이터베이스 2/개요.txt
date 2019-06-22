@@ -1,11 +1,11 @@
 1) 강의제목: 분산 데이터베이스
 
-2) 강의주제: 
-① 위치 투명성(Location transparency) 
+2) 강의주제:
+① 위치 투명성(Location transparency)
  ② 중복 투명성(Replication transparency)
  ③ 병행 투명성(Concurrency transparency)
 
 3) 강의내용(학습목표):
-① 위치 투명성(Location transparency)에 대해 설명할 수 있다. 
-② 중복 투명성(Replication transparency)에 대해 설명할 수 있다. 
+① 위치 투명성(Location transparency)에 대해 설명할 수 있다.
+② 중복 투명성(Replication transparency)에 대해 설명할 수 있다.
 ③ 병행 투명성(Concurrency transparency)에 대해 설명할 수 있다.

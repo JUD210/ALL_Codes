@@ -41,7 +41,7 @@ def value_score(Player, string):
             # i:2 j:2~5 -> score += 4 (N, NA, NAN, NANA)
 
     """ Terminated due to timeout :(
- 
+
     # ex) String: "BANANA"
     for i in range(1, len(string) + 1):
     # i:1~6 -> 1, 2, 3, 4, 5, 6 chars

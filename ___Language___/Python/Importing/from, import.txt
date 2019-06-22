@@ -25,7 +25,7 @@ mine = urllib.request()
 You can also alias things yourself when you import for simplicity or to avoid masking built ins:
 
 from os import open as open_
-# lets you use os.open without destroying the 
+# lets you use os.open without destroying the
 # built in open() which returns file handles.
 """
 

@@ -37,7 +37,7 @@ print_argument_values(name="Moyosore", country="Nigeria")
 # country: Nigeria
 
 
-""" 
+"""
 Args and kwargs can be used together in a function, with args always coming before kwargs. If there are any other required arguments, they come before args and kwargs
 
 """

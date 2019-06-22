@@ -16,7 +16,7 @@ d["something-else"]
 # []
 
 
-print(d, sep="\n")    
+print(d, sep="\n")
 # defaultdict(<class 'list'>, {'python': ['awesome', 'language'], 'something-else': []})
 
 print(dict(d), sep="\n")

@@ -1,4 +1,4 @@
-""" List comprehensions 
+""" List comprehensions
 
 This allow us to create a list using a for loop in one step.
 

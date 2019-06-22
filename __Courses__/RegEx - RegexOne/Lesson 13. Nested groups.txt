@@ -9,11 +9,11 @@ NOTE : There are 3 types of parentheses: Literal, Capturing, Non-Capturing
 https://unbounded.systems/blog/3-kinds-of-parentheses-are-you-a-regex-master/
 
 
-Task	    Text	    Capture Groups	 
+Task	   Text	    Capture Groups
 
-Capture	    Jan 1987	Jan 1987   1987
-Capture	    May 1969	May 1969   1969
-Capture	    Aug 2011    Aug 2011   2011
+Capture  Jan 1987	Jan 1987   1987
+Capture  May 1969	May 1969   1969
+Capture  Aug 2011  Aug 2011   2011
 
 
 (\w+ (\d+))

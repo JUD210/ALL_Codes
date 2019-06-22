@@ -3,11 +3,11 @@
 
 def merge_the_tools(string, k):
     # ex) string: AABCAAADA
-    
+
     segments = [string[s : s + k] for s in range(0, len(string), k)]
     # ['AAB', 'CAA', 'ADA']
 
-    
+
     for i in range(len(segments)):
         subsegment = ""
 
@@ -18,9 +18,9 @@ def merge_the_tools(string, k):
         print(subsegment)
     # AB
     # CA
-    # AD        
+    # AD
 
-        
+
 
 if __name__ == "__main__":
     string, k = input(), int(input())

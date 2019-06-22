@@ -9,7 +9,7 @@
 
 
 3. 웹 브라우저
-- Web Browser는 Web Space를 만들어주는 소프트웨어 
+- Web Browser는 Web Space를 만들어주는 소프트웨어
 
 
 4. 웹 페이지 구성 3요소

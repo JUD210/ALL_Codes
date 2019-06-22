@@ -5,4 +5,4 @@ Here's a sample:
 \a: Alert (bell)
 \b: Backspace
 \n: New line
-\t: Horizontal tab 
+\t: Horizontal tab

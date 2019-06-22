@@ -9,11 +9,11 @@ https://regexone.com/lesson/misc_meta_characters?
 back referencing : It varies depending on the implementation. However, many systems allow you to reference your captured groups by using \0 (usually the full matched text), \1 (group 1), \2 (group 2), etc.
 
 
-Task	Text
+Task	 Text
 
-Match	The quick brown fox jumps over the lazy dog.
-Match	There were 614 instances of students getting 90.0% or above.
-Match	The FCC had to censor the network for saying &$#*@!.
+Match	 The quick brown fox jumps over the lazy dog.
+Match	 There were 614 instances of students getting 90.0% or above.
+Match	 The FCC had to censor the network for saying &$#*@!.
 
 
 \w*\s\S*\W*\d?\w+ (\w|\s|\.|\%|\&|\$|#|\*|@|!)*
@@ -24,11 +24,11 @@ Match	The FCC had to censor the network for saying &$#*@!.
 
 ### My back reference problem ###
 
-Task         Text
+Task        Text
 
-Match        ABC ABC ABC ABC
-Match        1234 1234 1234
-Not Match    ABC DEF GHI 425
+Match       ABC ABC ABC ABC
+Match       1234 1234 1234
+Not Match   ABC DEF GHI 425
 
 ABC ABC ABC ABC
 1234 1234 1234

@@ -4,7 +4,7 @@ Enter four integers: 21 43 10 35 (input)
 Largest: 43
 Smallest: 10
 
-Use as few if statements as possible. 
+Use as few if statements as possible.
 
 Hint: Four if statements are suff‌icient. */
 

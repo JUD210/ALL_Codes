@@ -13,7 +13,7 @@ for _ in range(n):
 # France
 # New Zealand
 # UK
-# France 
+# France
 
 print(len(s))
 # 5

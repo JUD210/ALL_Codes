@@ -5,12 +5,12 @@ https://regexone.com/lesson/conditionals?
 Note : Writing patterns with many conditions can be hard to read, so you should consider making them separate patterns if they get too complex.
 
 
-Task	Text	 
+Task	 Text
 
-Match	I love cats
-Match	I love dogs
-Skip	I love logs
-Skip	I love cogs
+Match	 I love cats
+Match	 I love dogs
+Skip	 I love logs
+Skip	 I love cogs
 
 
 I love (cats|dogs)

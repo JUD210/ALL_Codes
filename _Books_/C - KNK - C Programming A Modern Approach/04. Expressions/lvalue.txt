@@ -1,4 +1,4 @@
-An lvalue (pronounced “L-value") represents an object stored in computer memory, not a constant or the result of a computation. Variables are lvalues: expressions such as 10 or 2 * i are not. 
+An lvalue (pronounced “L-value") represents an object stored in computer memory, not a constant or the result of a computation. Variables are lvalues: expressions such as 10 or 2 * i are not.
 
 At this point, variables are the only lvalues that we know about; other kinds of lvalues will appear in later chapters.
 

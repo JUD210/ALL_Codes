@@ -1,6 +1,6 @@
 The printf function is designed to display the contents of a string, known as the format string.
 
-ex) 
+ex)
 printf(string, expr1, expr2, ...);
 
 

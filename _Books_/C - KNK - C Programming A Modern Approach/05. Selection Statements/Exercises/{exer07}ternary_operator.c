@@ -1,4 +1,4 @@
-/* What does the following statement print if i has the value 17? 
+/* What does the following statement print if i has the value 17?
 What does it print if i has the value —17? */
 
 #include <stdio.h>

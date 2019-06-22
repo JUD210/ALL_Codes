@@ -6,7 +6,7 @@ def split_and_join(line):
 
 
 line = input()
-# this is a string   
+# this is a string
 
 result = split_and_join(line)
 print(result)

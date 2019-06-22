@@ -30,6 +30,6 @@ for (d = 2; d < n && n % d != 0; d++) ;
 if (d < n)
   printf("%d is divisible by %d\n", n, d);
 
-Converting an ordinary loop into one with an empty body doesn’t buy much: the new loop is often more concise but usually no more efficient. In a few cases, though, a loop with an empty body is clearly superior to the alternatives. 
+Converting an ordinary loop into one with an empty body doesn’t buy much: the new loop is often more concise but usually no more efficient. In a few cases, though, a loop with an empty body is clearly superior to the alternatives.
 
 For example, we'll f‌ind these loops to be handy for reading character data.

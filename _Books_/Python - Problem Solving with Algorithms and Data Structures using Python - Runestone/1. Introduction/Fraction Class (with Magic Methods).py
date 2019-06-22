@@ -27,7 +27,7 @@ class Fraction:
     def __str__(self):
         """
         The print function requires that the object convert itself into a string so that the string can be written to the output.
-        
+
         # print(super().__str__())
         # <__main__.Fraction object at 0x000002B122FDF908>
         """

@@ -5,10 +5,10 @@ else if ( expression )
 ...
 else if ( expression )
   statement
-else 
+else
   statement
 
-The last two lines (else statement) aren't always present, of course. This way of indenting the cascaded if statement avoids the problem of excessive indentation when the number of tests is large. 
+The last two lines (else statement) aren't always present, of course. This way of indenting the cascaded if statement avoids the problem of excessive indentation when the number of tests is large.
 
 Moreover, it assures the reader that the statement is nothing more than a series of tests.
 

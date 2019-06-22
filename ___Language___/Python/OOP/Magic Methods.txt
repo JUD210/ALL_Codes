@@ -12,11 +12,11 @@ The initializer for the class. It gets passed whatever the primary constructor w
 
 
 __del__(self)
-If __new__ and __init__ formed the constructor of the object, __del__ is the destructor. It doesn't implement behavior for the statement del x (so that code would not translate to x.__del__()). Rather, it 
-defines behavior for when an object is garbage collected. It can be quite 
+If __new__ and __init__ formed the constructor of the object, __del__ is the destructor. It doesn't implement behavior for the statement del x (so that code would not translate to x.__del__()). Rather, it
+defines behavior for when an object is garbage collected. It can be quite
 useful for objects that might require extra cleanup upon deletion, like sockets or file objects. Be careful, however, as there is no guarantee that __del__ will be executed if the object is still alive when the interpreter exits, so __del__ can't serve as a replacement for good coding practices (like always closing a connection when you're done with it. In fact, __del__ should almost never be used because of the precarious circumstances under which it is called; use it with caution!
-    
-    
+
+
     Representing your Classes
 
 
@@ -141,7 +141,7 @@ Implements type conversion to hexadecimal.
 
 
 
-    
+
     + Type Checking related
 
 __annotations__

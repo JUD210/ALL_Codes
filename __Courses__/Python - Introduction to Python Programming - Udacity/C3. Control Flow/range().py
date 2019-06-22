@@ -1,4 +1,4 @@
-""" 
+"""
 
 range() is a built-in function used to create an iterable sequence of numbers. You will frequently use range() with a for loop to repeat an action a certain number of times, as in this example:
 
