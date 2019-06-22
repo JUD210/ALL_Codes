@@ -16,29 +16,25 @@ Hint: Divide the amount by 20 to determine the number of $20 bills needed, and t
 int main()
 {
   int dollar;
+
   printf("Enter a dollar amount: ");
   scanf("%d", &dollar);
-  printf("\n");
+  // Enter a dollar amount: 93
 
   printf("$20 bills: %d\n", dollar / 20);
+  // $20 bills: 4
+
   dollar -= 20 * (dollar / 20);
   printf("$10 bills: %d\n", dollar / 10);
+  // $10 bills: 1
+
   dollar -= 10 * (dollar / 10);
   printf(" $5 bills: %d\n", dollar / 5);
+  //  $5 bills: 0
+
   dollar -= 5 * (dollar / 5);
   printf(" $1 bills: %d", dollar / 1);
+  //  $1 bills: 3
 
   return 0;
 }
-
-/* 
-
-Enter a dollar amount: 93
-
-$20 bills: 4
-$10 bills: 1
- $5 bills: 0
- $1 bills: 3
-
-
- */

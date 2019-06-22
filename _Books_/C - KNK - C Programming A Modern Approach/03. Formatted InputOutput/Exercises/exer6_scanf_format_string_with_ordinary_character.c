@@ -33,7 +33,7 @@ int main()
   return 0;
 }
 
-/* ex1
+/* example 1
 
 === Original ===
 Enter first fraction: 5 /6
@@ -44,7 +44,7 @@ Enter first fraction: Enter second fraction: The sum is 830/1850283808
 
  */
 
-/* 
+/* example 2
 
 === Original ===
 Enter first fraction: 5/6

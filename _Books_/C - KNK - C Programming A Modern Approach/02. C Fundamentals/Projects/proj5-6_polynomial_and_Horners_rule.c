@@ -25,6 +25,7 @@ int main()
   int x;
   printf("Enter the value of x: ");
   scanf("%d", &x);
+  // Enter the value of x: 10
 
   int result_1, result_2;
 
@@ -33,8 +34,6 @@ int main()
 
   printf("Result 1. normal: %d\n", result_1);
   printf("Result 2. Horner's Rule: %d", result_2);
-
-  // Enter the value of x: 10
   // Result 1. normal: 314964
   // Result 2. Horner's Rule: 314964
 

@@ -26,6 +26,7 @@ int main()
     printf("-5 is true");
   else
     printf("-5 is false");
+  // -5 is true
 
   return 0;
 }

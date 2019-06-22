@@ -19,25 +19,23 @@ int main()
 
   printf("Enter height of box: ");
   scanf("%d", &height);
+  // Enter height of box: 12
+
   printf("Enter length of box: ");
   scanf("%d", &length);
+  // Enter length of box: 10
+
   printf("Enter width of box: ");
   scanf("%d", &width);
+  // Enter width of box: 8
+
   volume = height * length * width;
   weight = (volume + 165) / 166;
 
   printf("Volume (cubic inches): %d\n", volume);
   printf("Dimensional weight (pounds): %d\n", weight);
+  // Volume (cubic inches): 960
+  // Dimensional weight (pounds): 6
 
   return 0;
 }
-
-/* 
-
-Enter height of box: 12
-Enter length of box: 10
-Enter width of box: 8
-Volume (cubic inches): 960
-Dimensional weight (pounds): 6
-
- */

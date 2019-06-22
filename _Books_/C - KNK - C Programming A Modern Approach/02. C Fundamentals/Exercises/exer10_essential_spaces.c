@@ -15,20 +15,13 @@ int main()
   printf("Dimensions: %dx%dx%d\n", length, width, height);
   printf("Volume (cubic inches): %d\n", volume);
   printf("Dimensional weight (pounds): %d\n", weight);
-
+  // Dimensions: 12x10x8
+  // Volume (cubic inches): 960
+  // Dimensional weight (pounds): 6
   return 0;
 }
-
-/* 
-
-Dimensions: 12x10x8
-Volume (cubic inches): 960
-Dimensional weight (pounds): 6
-
- */
 
 /* Spaces 
 inside a string literal, 
 between type specifier and identifier.
-
  */

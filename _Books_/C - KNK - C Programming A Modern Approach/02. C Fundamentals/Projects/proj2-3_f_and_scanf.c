@@ -27,37 +27,29 @@ int main()
   int radius;
   printf("Enter radius of sphere: ");
   scanf("%d", &radius);
+  // Enter radius of sphere: 10
 
   float volume;
 
   volume = 4.0f / 3.0f * M_PI * radius * radius * radius;
   printf("The volume of a sphere with a %d-meter radius:\n %f (4.0f / 3.0f)\n\n", radius, volume);
-
+  // The volume of a sphere with a 10-meter radius:
+  //  4188.790527 (4.0f / 3.0f)
+  
   volume = 4.0 / 3.0f * M_PI * radius * radius * radius;
   printf("The volume of a sphere with a %d-meter radius:\n %f (4.0 / 3.0f)\n\n", radius, volume);
-
+  // The volume of a sphere with a 10-meter radius:
+  //  4188.790039 (4.0 / 3.0f)
+  
   volume = 4.0f / 3.0 * M_PI * radius * radius * radius;
   printf("The volume of a sphere with a %d-meter radius:\n %f (4.0f / 3.0)\n\n", radius, volume);
-
+  // The volume of a sphere with a 10-meter radius:
+  //  4188.790039 (4.0f / 3.0)
+  
   volume = 4.0 / 3.0 * M_PI * radius * radius * radius;
   printf("The volume of a sphere with a %d-meter radius:\n %f (4.0 / 3.0)\n\n", radius, volume);
+  // The volume of a sphere with a 10-meter radius:
+  //  4188.790039 (4.0 / 3.0)
 
   return 0;
 }
-
-/* 
-
-Enter radius of sphere: 10
-The volume of a sphere with a 10-meter radius:
- 4188.790527 (4.0f / 3.0f)
-
-The volume of a sphere with a 10-meter radius:
- 4188.790039 (4.0 / 3.0f)
-
-The volume of a sphere with a 10-meter radius:
- 4188.790039 (4.0f / 3.0)
-
-The volume of a sphere with a 10-meter radius:
- 4188.790039 (4.0 / 3.0)
-
- */

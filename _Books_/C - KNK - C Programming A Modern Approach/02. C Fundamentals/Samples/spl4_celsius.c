@@ -7,32 +7,26 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* dweight.c (Chapter 2, page 20) */
-/* Computes the dimensional weight of a 12" x 10" x 8" box */
+/* celsius.c (Chapter 2, page 24) */
+/* Converts a Fahrenheit temperature to Celsius */
 
 #include <stdio.h>
 
+#define FREEZING_PT 32.0f
+#define SCALE_FACTOR (5.0f / 9.0f)
+
 int main()
 {
-  int height, length, width, volume, weight;
+  float fahrenheit, celsius;
 
-  height = 8;
-  length = 12;
-  width = 10;
-  volume = height * length * width;
-  weight = (volume + 165) / 166;
+  printf("Enter Fahrenheit temperature: ");
+  scanf("%f", &fahrenheit);
+  // Enter Fahrenheit temperature: 100
 
-  printf("Dimensions: %dx%dx%d\n", length, width, height);
-  printf("Volume (cubic inches): %d\n", volume);
-  printf("Dimensional weight (pounds): %d\n", weight);
+  celsius = (fahrenheit - FREEZING_PT) * SCALE_FACTOR;
+
+  printf("Celsius equivalent: %.1f\n", celsius);
+  // Celsius equivalent: 37.8
 
   return 0;
 }
-
-/* 
-
-Dimensions: 12x10x8
-Volume (cubic inches): 960
-Dimensional weight (pounds): 6
-
- */

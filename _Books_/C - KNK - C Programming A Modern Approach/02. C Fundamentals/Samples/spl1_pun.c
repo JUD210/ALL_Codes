@@ -14,11 +14,7 @@
 int main()
 {
   printf("To C, or not to C: that is the question.\n");
+  // To C, or not to C: that is the question.
+  
   return 0;
 }
-
-/* 
-
-To C, or not to C: that is the question.
-
- */

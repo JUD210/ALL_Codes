@@ -13,8 +13,11 @@ int main()
 
   printf("Enter an amount: ");
   scanf("%f", &original_amount);
+  // Enter an amount: 100.00
+
   amount_with_tax = original_amount * 1.05f;
   printf("With tax added: $%.2f\n", amount_with_tax);
+  // With tax added: $105.00
 
   return 0;
 }
