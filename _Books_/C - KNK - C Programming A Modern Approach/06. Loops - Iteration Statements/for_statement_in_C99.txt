@@ -2,7 +2,7 @@ In C99, the first expression in a for statement can be replaced by a declaration
 
 This feature allows the programmer to declare a variable for use by the loop:
 
-for (int i = O; i < n; i++)
+for (int i = O; i < n; i++)  // initialize, test, update
   ...
 
 

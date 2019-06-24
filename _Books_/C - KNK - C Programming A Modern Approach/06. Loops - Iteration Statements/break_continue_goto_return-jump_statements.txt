@@ -16,4 +16,4 @@ goto;
 identifier: statement
 goto identifier;
 - goto L transfers control to the statement that follows the label L, which must be in the same function as the goto statement itself.
-- in C99, can't be used to bypass the delcaration of a variable-length array.
+- in C99, can't be used to bypass the declaration of a variable-length array.

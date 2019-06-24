@@ -13,7 +13,7 @@ Hint: Break the grade into two digits, then use a switch statement to test the t
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
   int grade;
 
