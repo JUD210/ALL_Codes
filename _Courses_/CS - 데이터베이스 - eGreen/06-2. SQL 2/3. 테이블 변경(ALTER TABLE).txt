@@ -1,0 +1,24 @@
+=== 테이블 변경(ALTER TABLE)
+
+ㅇ ALTER TABLE 명령 형식
+
+ALTER TABLE 테이블명
+( [ADD 칼럼명 데이터_타입] [DEFAULT 값] |
+  [DROP 칼럼명] [CASCADE] |
+  [ALTER 칼럼명 (DROP DEFAULT | SET DEFAULT 값)]
+);
+
+- 컬럼 추가 및 삭제 가능
+- 데이터 타입 변경 가능
+- 제약조건 추가 및 삭제 가능
+
+
+ㅇ ALTER TABLE 명령
+
+ALTER TABLE STUDENT
+  ADD SEX VARCHAR DEFAULT 'M';
+
+- 학생(STUDENT) 테이블에 성별을 구분하기 위한 칼럼을 추가
+- ALTER TABLE 명령문을 사용
+
+- 테이블에 데이터가 저장되어 있는 상태에서 새로운 칼럼을 추가하면 기본적으로 NULL값이 저장됨

@@ -3,8 +3,11 @@ __pycache__
 .mypy_cache
 ipch
 
+.md
+
 /*Books*/C - KNK - C Programming A Modern Approach/*/*.exe
 /*Books*/C - KNK - C Programming A Modern Approach/*/*/*.exe
 
-# Save all videos to the google drive.
+# Save all videos to the OneDrive.
 /*Courses*/*eGreen/*/*.mp4
+/*Courses*/*eGreen/*/*.mkv
