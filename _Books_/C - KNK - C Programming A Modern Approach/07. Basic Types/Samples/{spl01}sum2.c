@@ -17,14 +17,21 @@ int main()
   long n, sum = 0;
 
   printf("This program sums a series of integers.\n");
-  printf("Enter integers (0 to terminate): ");
+  // This program sums a series of integers.
 
+  printf("Enter integers (0 to terminate): ");
   scanf("%ld", &n);
-  while (n != 0) {
+  // Enter integers (0 to terminate): 10000 20000
+
+  while (n != 0)
+  {
     sum += n;
     scanf("%ld", &n);
   }
+  // 30000 0
+  
   printf("The sum is: %ld\n", sum);
+  // The sum is: 60000
 
   return 0;
 }

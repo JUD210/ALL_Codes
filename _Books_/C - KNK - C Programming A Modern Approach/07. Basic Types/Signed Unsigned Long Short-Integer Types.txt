@@ -1,0 +1,36 @@
+(signed) short (int) = short
+unsigned short (int) = unsigned short
+
+(signed) int = int
+unsigned int = unsigned int
+
+(signed) long (int) = long
+unsigned long (int) = unsigned long
+
+The order of the specifiers doesn't matter; unsigned short int is the same as short unsigned int.
+
+
+// refer: Integer_types_on_a_16_32_64_bit_machine.png
+// long long: in C99
+
+
+--- Standard Signed Integer Types
+short int
+int
+long int
+long long int: -2^63 ~ 2^63-1
+(Along with the signed char type)
+
+--- Standard Unsigned Integer Types
+unsigned short int
+unsigned int
+unsigned long int
+unsigned long long int: 0 ~ 2^64-1
+(Along with the unsigned char type and the _Bool type)
+
+
+
+--- extended integer types
+In addition to the standard integer types, the C99 standard allows implementation-def‌ined extended integer types, both signed and unsigned. 
+
+For example, compiler might provide signed and unsigned 128-bit integer types.

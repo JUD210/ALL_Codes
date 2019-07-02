@@ -1,0 +1,39 @@
+IEEE Standard 754 (Institute of Electrical and Electronics Engineers)
+
+ㅇ Float: Single Precision (32bit, 단일 정밀도)
+- Sign (부호): 1 bit
+- Exponent (지수): 8 bit
+-- Bias (바이어스): 127 (0111 1111)
+- Fraction (Mantissa, 가수): 23 bit
+
+- Smallest Positive Value: 1.17549 * 10^-38
+- Largest Value: 3.40282 * 10^38
+- Pricision: 6 digits
+
+
+ㅇ Double: Double Precision (64bit, 복수 정밀도)
+- Sign (부호): 1 bit
+- Exponent (지수): 11 bit
+-- Bias (바이어스): 1023 (011 1111 1111)
+- Fraction (Mantissa, 가수): 52 bit
+
+- Smallest Positive Value: 2.22507 * 10^-308
+- Largest Value: 1.79769 * 10^308
+- Pricision: 15 digits
+
+
+ㅇ Float: Single Precision Example
+-(13.62510)10 = -(1101.101)2 = -(1.101101 * 2^3)sci
+
+Sign: 1(-)
+Exponent: 0000 0011(3) + 0111 1111(127) = 1000 0010
+Fraction: 1011 0100 0000 0000 0000 000 (Exclude left part of the decimal point)
+
+= 1 10000010 10110100000000000000000
+
+
+---------
+
+The IEEE standard also describes two other formats
+- Single Extended Precision: >=43 bits
+- Double Extended Precision: >=79 bits

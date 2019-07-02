@@ -1,0 +1,15 @@
+Implicit conversions are performed in the following situations:
+
+- When the operands in an arithmetic or logical expression don’t have the same
+type. (C performs what are known as the usual arithmetic conversions.)
+
+- When the type of the expression on the right side of an assignment doesn't
+match the type of the variable on the left side.
+
+- When the type of an argument in a function call doesn’t match the type of the
+corresponding parameter.
+
+- When the type of the expression in a return statement doesn’t match the
+function’s return type.
+
+We’ll discuss the first two cases now and save the others for Chapter 9.

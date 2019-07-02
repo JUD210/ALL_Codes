@@ -19,7 +19,13 @@ int main()
   printf("Enter a message: ");
   while (getchar() != '\n')
     len++;
+  // Enter a message: 123 56?8!01  456@#$0
+
   printf("Your message was %d character(s) long.\n", len);
+  // Your message was 20 character(s) long.
+
+  /* The length includes spaces and punctuation, but not the new-line character at the end of the message.
+   */
 
   return 0;
 }
