@@ -1,0 +1,27 @@
+%d %e %f %g
+
+%m.pX or %-m.pX
+
+-: left justification
+m: minimum field width
+.p: precision (this depends on the choice of X!)
+X: conversion specifier
+
+
+The most common conversion specifiers:
+
+d - integer in decimal form.
+: p indicates the minimum number of digits to display
+: If p is omitted, it is assumed to have the value 1. (%d == %.1d)
+
+e - floating-point number in exponential format (scientific notation).
+: p indicates how many digits should appear after the decimal point
+: If p is 0, the decimal point is not displayed. (default = 6)
+
+f - floating-point number in fixed decimal format, without an exponent.
+: p has the same meaning as for the e specifier.
+
+g - floating-point number in either exponential format or fixed decimal format, depending on the number's size.
+: p indicates the maximum number of significant digits (not digits after the decimal point) to be displayed.
+: Unlike the f conversion, the g conversion won't show trailing zeros.
+: If the value to be printed has no digits after the decimal point, g doesn't display the decimal point.

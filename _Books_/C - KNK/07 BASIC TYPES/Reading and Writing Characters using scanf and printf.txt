@@ -1,0 +1,18 @@
+scanf doesn't skip white-space characters before reading a character. If the next unread character is a space, then the variable ch in the previous example will contain a space after scanf returns.
+
+To force scanf to skip white space before reading a character, put a space in its format string just before %c:
+
+scanf(" %C", &ch); /* skips white space, then reads ch */
+
+
+Recall from Section 3.2 that a blank in a scanf format string means "skip zero or more white-space characters."
+
+Since scanf doesn't normally skip white space, it's easy to detect the end of an input line: check to see if the character just read is the new-line character. 
+
+For example, the following loop will read and ignore all remaining characters in the current input line:
+
+do {
+  scanf("%c", &ch);
+} while (ch != '\n');
+
+When scanf is called the next time, it will read the f‌irst character on the next input line.

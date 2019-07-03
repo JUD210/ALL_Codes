@@ -1,0 +1,62 @@
+C provides other ways to read and write single characters. In particular, we can use the getchar and putchar functions instead of calling scanf and printf. 
+
+putchar writes a single character:
+
+putchar(ch);
+
+Each time getchar is called, it reads one character, which it returns. In order to save this character, we must use assignment to store it in a variable:
+
+ch = getchar(); /* reads a character and stores it in ch */
+
+getchar actually returns an int value rather than a char value (the reason will be discussed in later chapters). As a result, it's not unusual for a variable to have type int rather than char if it will be used to store a character read by getchar.
+
+Like scanf, getchar doesn't skip white-space characters as it reads.
+
+Using getchar and putchar (rather than scanf and printf) saves time when the program is executed. getchar and putchar are fast for two reasons.
+
+First, they're much simpler than scanf and printf, which are designed to read and write many kinds of data in a variety of formats. 
+
+Second, getchar and putchar are usually implemented as macros for additional speed.
+
+getchar has another advantage over scanf: because it returns the character that it reads, getchar lends itself to various C idioms, including loops that search for a character or, skip over all occurrences of a character. 
+
+
+Consider the scanf loop that we used to skip the rest of an input line:
+do {
+  scanf("%c", &Ch);
+} while (ch != '\n');
+
+Rewriting this loop using getchar gives us the following:
+do {
+  ch = getchar();
+} while (ch != '\n');
+
+Moving the call of getchar into the controlling expression allows us to condense
+the loop:
+
+while ((ch = getchar()) != '\n')
+  ;
+
+This loop reads a character, stores it into the variable ch. then tests if ch is not equal to the new-line character. If the test succeeds, the loop body (which is empty) is executed, then the loop test is performed once more, causing a new character to be read. Actually, we don't even need the ch variable; we can just compare the return value of getchar with the new-line character:
+
+while (getchar() != '\n')   // skips rest of line
+  ;
+
+The resulting loop is a well-known C idiom that's cryptic but worth learning.
+
+getchar is useful in loops that skip characters as well as loops that search for characters. Consider the following statement, which uses getchar to skip an indef‌inite number of blank characters:
+
+while ((ch = getchar()) == ' ')  // skips blanks
+  ;
+
+When the loop terminates, ch will contain the f‌irst nonblank character that getchar encountered.
+
+
+Be careful if you mix getchar and scanf in the same program. scanf has a tendency to leave behind characters that it has "peeked" at but not read, including the new-line character. Consider what happens if we try to read a number f‌irst, then a character:
+
+printf("Enter an integer: ");
+scanf("%d", &i);
+printf("Enter a command: ");
+command = getchar();
+
+The call of scanf will leave behind any characters that weren't consumed during the reading of i, including (but not limited to) the new-line character. getchar will fetch the f‌irst leftover character, which wasn't what we had in mind.

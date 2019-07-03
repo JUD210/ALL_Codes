@@ -1,5 +1,5 @@
 """
-You’re allowed to annotate a variable without giving it a value. This adds the annotation to the __annotations__ dictionary, while the variable remains undefined:
+You're allowed to annotate a variable without giving it a value. This adds the annotation to the __annotations__ dictionary, while the variable remains undefined:
 
 >>> nothing: str
 >>> nothing

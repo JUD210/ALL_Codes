@@ -1,0 +1,15 @@
+if ( expression )
+  statement
+else if ( expression )
+  statement
+...
+else if ( expression )
+  statement
+else
+  statement
+
+The last two lines (else statement) aren't always present, of course. This way of indenting the cascaded if statement avoids the problem of excessive indentation when the number of tests is large.
+
+Moreover, it assures the reader that the statement is nothing more than a series of tests.
+
+Keep in mind that a cascaded if statement isn't some new kind of statement; it's just an ordinary if statement that happens to have another if statement as its else clause (and that if statement has another if statement as its else clause, ad infinitum).

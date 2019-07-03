@@ -24,7 +24,7 @@ __var__
 : Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes.
 
 _
-: Sometimes used as a name for temporary or insignificant variables (“don’t care”).
+: Sometimes used as a name for temporary or insignificant variables ("don't care").
 : Also, The result of the last expression in a Python REPL.
 
 """
@@ -78,9 +78,9 @@ AttributeError: "'MangledMethod' object has no attribute '__method'"
 
 Names that have both leading and trailing double underscores are reserved for special use in the language. This rule covers things like __init__ for object constructors, or __call__ to make an object callable.
 
-These dunder methods are often referred to as magic methods—but many people in the Python community, including myself, don’t like that.
+These dunder methods are often referred to as magic methods-but many people in the Python community, including myself, don't like that.
 
-It’s best to stay away from using names that start and end with double underscores (“dunders”) in your own programs to avoid collisions with future changes to the Python language.
+It's best to stay away from using names that start and end with double underscores ("dunders") in your own programs to avoid collisions with future changes to the Python language.
 
 
 
@@ -99,9 +99,9 @@ Per convention, a single standalone underscore is sometimes used as a name to in
 12
 
 
-Besides its use as a temporary variable, “_” is a special variable in most Python REPLs that represents the result of the last expression evaluated by the interpreter.
+Besides its use as a temporary variable, "_" is a special variable in most Python REPLs that represents the result of the last expression evaluated by the interpreter.
 
-This is handy if you’re working in an interpreter session and you’d like to access the result of a previous calculation. Or if you’re constructing objects on the fly and want to interact with them without assigning them a name first:
+This is handy if you're working in an interpreter session and you'd like to access the result of a previous calculation. Or if you're constructing objects on the fly and want to interact with them without assigning them a name first:
 
 >>> 20 + 3
 23

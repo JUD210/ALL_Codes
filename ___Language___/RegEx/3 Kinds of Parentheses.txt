@@ -53,7 +53,7 @@ $4 : $4
 
 We need the parentheses here because
 can't?
-would match only the strings can’, and can’t, not quite what we had in mind.
+would match only the strings can', and can't, not quite what we had in mind.
 
 
 ===========================
@@ -67,7 +67,7 @@ Here, all we get is the full match, with no sub-matches.
 
 ---------------------
 
-The (?: is a special sequence that starts a parenthesized group, just like ( , but the regular expression engine is told, don’t bother to capture the match in the group, just use it for operator precedence.
+The (?: is a special sequence that starts a parenthesized group, just like ( , but the regular expression engine is told, don't bother to capture the match in the group, just use it for operator precedence.
 
 ---------------------
 

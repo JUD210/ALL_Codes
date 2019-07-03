@@ -1,0 +1,33 @@
+ㅇ Decimal constants contain digits between 0 and 9, but must not begin with a zero:
+15 255 32767
+
+ㅇ Octal constants contain only digits between 0 and 7, and must begin with a zero:
+017 0377 077777
+
+ㅇ Hexadecimal constants contain digits between 0 and 9 and letters between a and f, and always begin with 0x:
+Oxf Oxff 0x7fff
+
+The letters in a hexadecimal constant may be either upper or lower case:
+Oxff 0xfF 0xFf OxFF OXff OXfF OXFf OXFF
+
+
+Keep in mind that octal and hexadecimal are nothing more than an alternative way of writing numbers; they have no effect on how the numbers are actually stored. (Integers are always stored in binary, regardless of what notation we've
+used to express them.)
+
+We can switch from one notation to another at any time, and even mix them
+: 10 + 015 + 0x20 has the value 55 (decimal).
+
+-----------------
+
+To force the compiler to treat a constant as a long integer, just follow it with the letter L (or l):
+15L 0377L Ox7fffL
+
+To indicate that a constant is unsigned, put the letter U (or u) after it:
+15U 0377U 0x7ffU
+
+L and U may be used in combination to show that a constant is both long and unsigned: 
+OxffffffffUL 
+
+The order of the L and U doesn't matter, nor does their case.
+
+in C99: LL, ULL is possible.

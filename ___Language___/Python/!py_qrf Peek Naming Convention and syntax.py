@@ -37,7 +37,7 @@ standard_input: str
 # NameError: name 'standard_input' is not defined
 
 
-standard_input = """4
+standard_input: str = """4
 This is for
 AREPL for Python
 Extension's

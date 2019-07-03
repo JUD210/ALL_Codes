@@ -1,0 +1,13 @@
+Q: Does the null statement have any uses besides indicating that the body of a
+loop is empty? [p. 116]
+
+A: Very few. Since the null statement can appear wherever a Statement is allowed, there are many potential uses for the null statement. In practice, however, there's only one other use of the null statement, and it's rare.
+
+Suppose that we need to put a label at the end of a compound statement. A label can't stand alone: it must always be followed by a statement. Putting a null statement after the label solves the problem:
+
+{
+  ...
+  goto end_of_stmt;
+  ...
+  end_of_stmt: ;
+}

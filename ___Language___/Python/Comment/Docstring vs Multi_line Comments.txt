@@ -3,11 +3,11 @@
 
 Multi-line Comments in Python – Key Takeaways
 
-- Unlike other programming languages Python doesn’t support multi-line comment blocks out of the box.
+- Unlike other programming languages Python doesn't support multi-line comment blocks out of the box.
 
-- The recommended way to comment out multiple lines of code in Python is to use consecutive # single-line comments. This is the only way to get “true” source code comments that are removed by the Python parser.
+- The recommended way to comment out multiple lines of code in Python is to use consecutive # single-line comments. This is the only way to get "true" source code comments that are removed by the Python parser.
 
-- You may consider using triple-quote """ strings to create something akin to multi-line comments in Python, but this isn’t a perfect technique and your “comments” may turn into accidental docstrings.
+- You may consider using triple-quote """ strings to create something akin to multi-line comments in Python, but this isn't a perfect technique and your "comments" may turn into accidental docstrings.
 
 
 --------------------
@@ -20,9 +20,9 @@ It spans multiple lines.
 Nice, eh?
 */
 int answer = 42;
-How do you write the same style of multiline comment in Python? The short answer is: you can’t—at least not in exactly the same way.
+How do you write the same style of multiline comment in Python? The short answer is: you can't-at least not in exactly the same way.
 
-Python uses different conventions and syntax for block comments that span multiple lines. In this article you’ll see some options for creating multiline comments in Python that actually work.
+Python uses different conventions and syntax for block comments that span multiple lines. In this article you'll see some options for creating multiline comments in Python that actually work.
 
 Option 1: Consecutive Single-line Comments
 Your first option for commenting out multiple lines of code in Python is to simply use a # single-line comment on every line:
@@ -31,18 +31,18 @@ Your first option for commenting out multiple lines of code in Python is to simp
 # out of several single-line comments.
 # Pretty great, eh?
 answer = 42
-In my experience, most Python projects follow this style and Python’s PEP 8 style guide also favors repeated single-line comments. So this is what I’d recommend that you use most of the time. This is also the only way to write “real” comment blocks in Python that are ignored by the parser.
+In my experience, most Python projects follow this style and Python's PEP 8 style guide also favors repeated single-line comments. So this is what I'd recommend that you use most of the time. This is also the only way to write "real" comment blocks in Python that are ignored by the parser.
 
-If it bothers you that Python doesn’t support proper multiline comments because you think it takes more effort to comment out multiple lines of code, here’s a handy tip for you:
+If it bothers you that Python doesn't support proper multiline comments because you think it takes more effort to comment out multiple lines of code, here's a handy tip for you:
 
 Most code editors have a shortcut for block commenting. In my Sublime Text development setup I simply select a couple of lines using shift and the cursor keys (or the mouse) and then I hit cmd + / to comment them out all at once.
 
 This even works in reverse, that is, I can select a block of single-line comments and when I hit the cmd + / keyboard shortcut the whole block gets uncommented again.
 
-Other editors can do this too—Atom, VS Code, and even Notepad++ all have built-in shortcuts for block commenting in Python. Managing your Python comments manually is a chore, and this editor feature can save you hours of your time.
+Other editors can do this too-Atom, VS Code, and even Notepad++ all have built-in shortcuts for block commenting in Python. Managing your Python comments manually is a chore, and this editor feature can save you hours of your time.
 
 Option 2: Using Multi-line Strings as Comments
-Another option for writing “proper” multi-line comments in Python is to use multi-line strings with the """ syntax in creative ways. Here’s an example:
+Another option for writing "proper" multi-line comments in Python is to use multi-line strings with the """ syntax in creative ways. Here's an example:
 
 """
 This is a "block comment" in Python, made
@@ -50,7 +50,7 @@ out of a mult-line string constant.
 This actually works quite well!
 """
 answer = 42
-As you can see, you can use triple-quoted strings to create something that resembles a multiline comment in Python. You just need to make sure you indent the first """ correctly, otherwise you’ll get a SyntaxError. For example, if you’d like to define a block comment inside a function with this technique you have to do it like this:
+As you can see, you can use triple-quoted strings to create something that resembles a multiline comment in Python. You just need to make sure you indent the first """ correctly, otherwise you'll get a SyntaxError. For example, if you'd like to define a block comment inside a function with this technique you have to do it like this:
 
 def add_stuff(a, b):
     result = a + b
@@ -60,9 +60,9 @@ def add_stuff(a, b):
     my joy to just one or two lines!
     """
     return result
-Just keep in mind that this technique doesn’t create “true” comments. This simply inserts a text constant that doesn’t do anything. It’s the same as inserting a regular single-line string somewhere in your code and never accessing it.
+Just keep in mind that this technique doesn't create "true" comments. This simply inserts a text constant that doesn't do anything. It's the same as inserting a regular single-line string somewhere in your code and never accessing it.
 
-However, such an orphaned string constant won’t show up in the bytecode, effectively turning it into a multi-line comment. Here’s proof that the unused string won’t appear in the CPython bytecode disassembly:
+However, such an orphaned string constant won't show up in the bytecode, effectively turning it into a multi-line comment. Here's proof that the unused string won't appear in the CPython bytecode disassembly:
 
 >>> import dis
 >>> dis.dis(add_stuff)
@@ -72,7 +72,7 @@ However, such an orphaned string constant won’t show up in the bytecode, effec
        6 STORE_FAST     2 (result)
   8    8 LOAD_FAST      2 (result)
       10 RETURN_VALUE
-However, be careful where you place these “comments” in the code. If the string follows right after a function signature, a class definition, or at the start of a module, it turns into a docstring which has a different meaning altogether in Python:
+However, be careful where you place these "comments" in the code. If the string follows right after a function signature, a class definition, or at the start of a module, it turns into a docstring which has a different meaning altogether in Python:
 
 def add_stuff(a, b):
     """
@@ -82,14 +82,14 @@ def add_stuff(a, b):
     """
     result = a + b
     return result
-Docstrings (“documentation strings”) let you associate human-readable documentation with Python modules, functions, classes, and methods. They’re different from source code comments:
+Docstrings ("documentation strings") let you associate human-readable documentation with Python modules, functions, classes, and methods. They're different from source code comments:
 
 A comment is removed by the parser, whereas a docstring ends up in the bytecode and is associated with the documented object. It can even be accessed programmatically at runtime.
 
-Like I said earlier, the only way to get “true” multi-line comments in Python that get ignored by the parser is to use multiple # single-line comments.
+Like I said earlier, the only way to get "true" multi-line comments in Python that get ignored by the parser is to use multiple # single-line comments.
 
-I’ll admit I was slightly surprised to find this “fake” block commenting style was endorsed by Guido van Rossum, the creator of Python:
+I'll admit I was slightly surprised to find this "fake" block commenting style was endorsed by Guido van Rossum, the creator of Python:
 
-“Python tip: You can use multi-line strings as multi-line comments. Unless used as docstrings, they generate no code! :-)” (Source)
+"Python tip: You can use multi-line strings as multi-line comments. Unless used as docstrings, they generate no code! :-)" (Source)
 
-But there you have it—in some cases using triple-quoted strings to make a comment block might be the right choice. Personally I’ll try to avoid them in production-ready code, but I occasionally use them when I’m working on a source file to jot down notes or to make little ad-hoc to-do lists.
+But there you have it-in some cases using triple-quoted strings to make a comment block might be the right choice. Personally I'll try to avoid them in production-ready code, but I occasionally use them when I'm working on a source file to jot down notes or to make little ad-hoc to-do lists.

@@ -1,7 +1,0 @@
-In light of the close relationship between characters and integers, C89 uses the term integral types to refer to both the integer types and the character types. Enu—
-merated types are also integral types.
-
-C99 doesn't use the term "integral types." Instead. it expands the meaning of
-"integer types" to include the character types and the enumerated types. 
-
-C99’s _Bool type is considered to be an unsigned integer type.

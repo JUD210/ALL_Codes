@@ -1,8 +1,0 @@
-(signed) short (int) = short
-unsigned short (int) = unsigned short
-
-(signed) int = int
-unsigned int = unsigned int
-
-(signed) long (int) = long
-unsigned long (int) = unsigned long

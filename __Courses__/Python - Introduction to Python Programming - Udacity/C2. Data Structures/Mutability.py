@@ -68,9 +68,9 @@ Not all of the immutable objects are actually immutable. Confused? Let me explai
 
 As discussed earlier, Python containers liked tuples are immutable. That means value of a tuple can't be changed after it is created. But the "value" of a tuple is infact a sequence of names with unchangeable bindings to objects. The key thing to note is that the bindings are unchangeable, not the objects they are bound to.
 
-Let us consider a tuple t = (‘holberton’, [1, 2, 3])
+Let us consider a tuple t = (‘holberton', [1, 2, 3])
 
-The above tuple t contains elements of different data types, the first one is an immutable string and the second one is a mutable list.The tuple itself isn’t mutable. i.e. it doesn’t have any methods for changing its contents. Likewise, the string is immutable because strings don’t have any mutating methods. But the list object does have mutating methods, so it can be changed. This is a subtle point, but nonetheless important: the “value” of an immutable object can’t change, but it’s constituent objects can."""
+The above tuple t contains elements of different data types, the first one is an immutable string and the second one is a mutable list.The tuple itself isn't mutable. i.e. it doesn't have any methods for changing its contents. Likewise, the string is immutable because strings don't have any mutating methods. But the list object does have mutating methods, so it can be changed. This is a subtle point, but nonetheless important: the "value" of an immutable object can't change, but it's constituent objects can."""
 
 
 """How objects are passed to Functions
@@ -107,5 +107,5 @@ updateNumber(b)  # 10055680
 print(b)         # 5
 
 """
-In the above example the same object is passed to the function, but the variables value doesn’t change even though the object is identical. This is called pass by value. So what is exactly happening here? When the value is called by the function, only the value of the variable is passed, not the object itself. So the variable referencing the object is not changed, but the object itself is being changed but within the function scope only. Hence the change is not reflected.
+In the above example the same object is passed to the function, but the variables value doesn't change even though the object is identical. This is called pass by value. So what is exactly happening here? When the value is called by the function, only the value of the variable is passed, not the object itself. So the variable referencing the object is not changed, but the object itself is being changed but within the function scope only. Hence the change is not reflected.
 """
