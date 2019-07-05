@@ -1,1 +1,11 @@
- 
+=== Boolean Values in C89
+ㅇ Declare an int variable and then assign it either 0 or 1:
+
+#define true 1
+#define false 0
+
+int flag;
+
+flag = true;
+...
+flag = false;

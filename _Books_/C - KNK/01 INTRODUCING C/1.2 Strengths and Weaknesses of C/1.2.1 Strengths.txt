@@ -1,1 +1,13 @@
- 
+=== Strengths
+ㅇ Efficiency
+
+ㅇ Portability
+
+ㅇ Power
+C's large collection of data types and operators help make it a powerful language.
+
+ㅇ Flexibility
+
+ㅇ Standard library
+
+ㅇ Integration with UNIX

@@ -1,1 +1,2 @@
- 
+=== Pros and Cons of External Variables
+

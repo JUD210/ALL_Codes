@@ -1,1 +1,17 @@
- 
+=== Origins
+ㅇ Summary
+- C is a by-product of the UNIX operating system, which was developed at Bell Laboratories by Ken Thompson, Dennis Ritchie, and others.
+
+ㅇ Assembly (UNIX)
+- Thompson single-handedly wrote the original version of UNIX. which ran on the DEC PDP-7 computer, an early minicomputer with only 8K words of main memory (this was 1969. after all!).
+- Like other operating systems of the time, UNIX was written in assembly language. Programs written in assembly language are usually painful to debug and hard to enhance: UNIX was no exception.
+
+ㅇ B
+- Thompson decided that a higher-level language was needed for the further development of UNIX, so he designed a small language named B.
+- Thompson based B on BCPL, a systems programming language developed in the mid-1960s. BCPL, in turn, traces its ancestry to Algol 60, one of the earliest (and most inf‌luential) programming languages.
+- Ritchie soon joined the UNIX project and began programming in B. In 1970, Bell Labs acquired a PDP-11 for the UNIX project. Once B was up and running on
+the PDP-11, Thompson rewrote a portion of UNIX in B.
+
+ㅇ C
+- By 1971, it became apparent that B was not well-suited to the PDP-11. so Ritchie began to develop an extended version of B. He called his language NB ("New B") at f‌irst, and then, as it began to diverge more from B, he changed the name to C.
+- The language was stable enough by 1973 that UNIX could be rewritten in C. The switch to C provided an important benef‌it: portability. By writing C compilers for other computers at Bell Labs, the team could get UNIX running on those machines as well.

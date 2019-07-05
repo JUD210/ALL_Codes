@@ -1,1 +1,10 @@
- 
+=== How scanf Works
+ㅇ scanf can actually do much more than I've indicated so far. It is essentially a "pattern-matching" function that tries to match up groups of input characters with conversion specifications.
+
+ㅇ Like the printf function, scanf is controlled by the format string.
+
+ㅇ As it searches for the beginning of a number, scanf ignores white-space characters (the space, horizontal and vertical tab, form-feed, and new-line characters).
+
+ㅇ As a result, numbers can be put on a single line or spread out over several lines. Consider the following call of scanf:
+
+scanf("%d%d%f%f", &i, &j, &x, &y);

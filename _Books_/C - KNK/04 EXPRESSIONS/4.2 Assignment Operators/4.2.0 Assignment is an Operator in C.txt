@@ -1,0 +1,6 @@
+=== Assignment is an Operator in C
+ㅇ In many programming languages, assignment is a statement; in C, however, assignment is an operator, just like +.
+
+ㅇ In other words, the act of assignment produces a result, just as adding two numbers produces a result. The value of an assignment v = e is the value of v after the assignment. Thus, the value of i = 72.99f is 72 (not 72.99).
+
+ㅇ assignment_is_an_operator_in_C.c

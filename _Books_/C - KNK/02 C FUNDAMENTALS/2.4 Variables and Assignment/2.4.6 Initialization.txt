@@ -1,1 +1,5 @@
- 
+=== Initialization
+ㅇ Some variables are automatically set to zero when a program begins to execute, but most are not.
+
+ㅇ Putting the initial value of the variable in its declaration.
+int height = 8;

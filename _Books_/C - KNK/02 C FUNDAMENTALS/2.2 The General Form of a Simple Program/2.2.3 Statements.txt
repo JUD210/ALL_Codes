@@ -1,1 +1,3 @@
- 
+=== Statements
+ㅇ Statements
+A statement is a command to be executed when the program runs.

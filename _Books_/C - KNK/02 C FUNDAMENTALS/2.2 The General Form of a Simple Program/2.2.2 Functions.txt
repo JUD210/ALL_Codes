@@ -1,1 +1,6 @@
- 
+=== Functions
+ㅇ Functions
+- A series of statements that have been grouped together and given a name.
+- Similar with procedures or subroutines in other programming languages.
+- Uses the return statement to specify what value it "returns".
+- main function is critical.

@@ -1,7 +1,0 @@
-a = 5;
-
-c = (b = a + 2) - (a = 1);
-
-The effect of executing the second statement is undef‌ined; the C standard doesn't say what will happen. With most compilers, the value of c will be either 6 or 2.
-
-Avoid writing expressions that access the value of a variable and also modify the variable elsewhere in the expression.

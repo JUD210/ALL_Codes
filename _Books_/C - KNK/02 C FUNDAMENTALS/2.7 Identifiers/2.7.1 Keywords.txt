@@ -1,1 +1,12 @@
- 
+=== Keywords
+ㅇ Keywords have special significance to C compilers and therefore can't be used as identifiers.
+
+ㅇ Keywords in C99
+| auto     | break    | case     | char   |
+| const    | continue | default  | do     |
+| double   | else     | enum     | extern |
+| float    | for      | goto     | if     |
+| int      | long     | register | return |
+| short    | signed   | sizeof   | static |
+| struct   | switch   | typedef  | union  |
+| unsigned | void     | volatile | while  |

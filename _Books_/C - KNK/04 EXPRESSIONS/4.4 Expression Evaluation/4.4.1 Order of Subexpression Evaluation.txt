@@ -1,1 +1,8 @@
- 
+=== Order of Subexpression Evaluation
+ㅇ The rules of operator precedence and associativity allow us to break any C expression into subexpressions --to determine uniquely where the parentheses would go if the expression were fully parenthesized.
+
+ㅇ Paradoxically, these rules don't always allow us to determine the value of the expression, which may depend on the order in which its subexpressions are evaluated.
+
+ㅇ C doesn't def ine the order in which subexpressions are evaluated (with the exception of suhcxpressions involving the logical and, logical or, conditional, and comma operators).
+
+ㅇ Thus, in the expression (a + b) * (c - d) we don't know whether (a + b) will be evaluated before (c - d).

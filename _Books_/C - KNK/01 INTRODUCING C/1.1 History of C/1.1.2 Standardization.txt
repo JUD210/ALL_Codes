@@ -1,1 +1,16 @@
- 
+=== Standardization
+ㅇ K&R
+- The C Programming Language, by Brian Kernighan and Dennis Ritchie, 1978.
+- K&R or White Book to aficionados -served as a de facto standard.
+- Fuzzy about some language features, so compilers often treated these features differently.
+- The need for a thorough, precise, and up-to-date description of the language standard became apparent.
+
+ㅇ C89 (C90)
+- The development of a U.S. standard for C began in 1983 under the auspices of the American National Standards Institute(ANSI).
+- After many revisions, the standard was completed in 1988 and formally approved in December 1989 as ANSI standard X3.159-1989.
+- In 1990, it was approved by the International Organization for Standardization (ISO) as international standard ISO/IEC 9899:1990.
+- This version of the language is usually referred to as C89 or C90, to distinguish it from the original version of C, often called K&R C.
+
+ㅇ C99
+- The language underwent a few changes in 1995, more significant changes occurred with the publication of a new standard, ISO/IEC 9899:1999.
+- The language described in this standard is commonly known as C99. The terms "ANSI C," "ANSI/ISO C," and "ISO C"--once used to describe C89--are now ambiguous, thanks to the existence of two standards.

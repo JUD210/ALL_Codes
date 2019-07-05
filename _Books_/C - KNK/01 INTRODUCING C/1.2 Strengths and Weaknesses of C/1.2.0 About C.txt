@@ -1,0 +1,11 @@
+=== About C
+ㅇ C is a low-level language
+- To serve as a suitable language tor systems programming, C provides access to machine-level concepts (bytes and addresses, for example) that other programming languages try to hide.
+- C also provides operations that correspond closely to a computer's built-in instructions, so that programs can be fast. Since application programs rely on it for input/output, storage management, and numerous other services, an operating system can't afford to be slow.
+
+ㅇ C is a small language
+- C provides a more limited set or features than many languages. (The reference manual in the second edition of K&R covers the entire language in 49 pages.)
+- To keep the number of features small, C relies heavily on a "library" of standard functions. (A "function" is similar to what other programming languages might call a "procedure", "subroutine", or "method".)
+
+ㅇ C is a permissive language
+C assumes that you know what you're doing, so it allows you a wider degree of latitude than many languages. Moreover, C doesn't mandate the detailed error-checking found in other languages.

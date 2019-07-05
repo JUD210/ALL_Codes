@@ -1,0 +1,8 @@
+=== Side Effects
+ㅇ We don't normally expect operators to modify their operands, since operators in mathematics don't. Writing i + j doesn't modify either i or j; it simply computes the result of adding i and j.
+
+ㅇ Most C operators don't modify their operands, but some do. We say that these operators have side effects, since they do more than just compute a value.
+
+ㅇ The simple assignment operator is the first operator we've seen that has side effects; it modifies its left operand.
+
+ㅇ Evaluating the expression i = 0 produces the result 0 and --as a side effect-- assigns O to i.

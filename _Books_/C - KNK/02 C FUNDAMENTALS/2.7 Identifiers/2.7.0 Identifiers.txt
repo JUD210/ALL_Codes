@@ -1,0 +1,24 @@
+=== Identifiers
+ㅇ In computer languages, identifiers are tokens (also called symbols) which name language entities. Some of the kinds of entities an identifier might denote include variables, types, labels, subroutines, and packages.
+
+ㅇ As we're writing a program, we'll have to choose names for variables, functions, macros, and other entities. These names are called identifiers.
+
+ㅇ An identifier may contain letters, digits, and underscores, but must begin with a letter or underscore.
+
+ㅇ In C99, identifiers may contain certain "universal character names" as well.
+
+ㅇ Case sensitive.
+job != joB != jOb != jOB != JOB != ...
+
+ㅇ legal identifiers example
+- times10
+- get_next_char
+- _done
+
+ㅇ Not legal identifiers example
+- 10times
+- get-next-char
+
+ㅇ Good conventions
+- symbol_table, current_page, name_and_address (C)
+- symbolTable, currentPage, nameAndAddress (Java, C#, C++)

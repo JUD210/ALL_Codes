@@ -1,1 +1,7 @@
- 
+=== Directives
+ㅇ Directives
+- Commands intended for the preprocessor.
+- Always begin with a # character.
+- One line long.
+- No semicolon or other special marker at the end.
+- ex) #include <...>

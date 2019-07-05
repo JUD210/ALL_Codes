@@ -1,0 +1,21 @@
+=== Statements in C
+ㅇ Although C has many operators, it has relatively few statements
+
+ㅇ Selection statements
+The if and switch statements allow a program to select a particular execution path from a set of altematives.
+
+ㅇ Iteration statements
+The while, do, and for statements support iteration (looping).
+
+ㅇ Jump statements
+The break, continue, and goto statements cause an unconditional jump to some other place in the program. (The return statement belongs in this category, as well.)
+
+ㅇ Return statement
+
+ㅇ Expression statement
+
+ㅇ Compound statement
+Groups several statements into a single statement.
+
+ㅇ Null statement
+Performs no action.

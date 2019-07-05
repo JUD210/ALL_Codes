@@ -1,0 +1,27 @@
+=== Logical Expressions
+ㅇ Several of C's statements, including the if statement, must test the value of an expression to see if it is "true" or "false".
+
+ㅇ For example, an if statement might need to test the expression i < j; a true value would indicate that i is less than j.
+
+ㅇ In many programming languages, an expression such as i < j would have a special "Boolean" or "logical" type, Such a type would have only two values, false and true.
+
+ㅇ In C, however, a comparison such as i < j yields an integer: either 0 (false)
+or 1 (true).
+
+ㅇ With this in mind, let's look at the operators that are used to build logical expressions.
+
+
+ㅇ Relational Operators
+expr1 < expr2
+expr1 > expr2
+expr1 <= expr2
+expr1 >= expr2
+
+ㅇ Equality Operators
+expr1 == expr2
+expr1 != expr2
+
+ㅇ Logical Operators
+!expr
+expr1 && expr2
+expr1 || expr2

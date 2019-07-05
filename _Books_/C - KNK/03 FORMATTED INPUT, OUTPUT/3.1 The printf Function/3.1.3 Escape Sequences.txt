@@ -1,1 +1,7 @@
- 
+=== Escape Sequences
+ㅇ Escape sequences enable strings to contain characters that would otherwise cause problems for the compiler, including nonprinting (control) characters and characters that have a special meaning to the compiler (such as ").
+
+\a: Alert (bell)
+\b: Backspace
+\n: New line
+\t: Horizontal tab

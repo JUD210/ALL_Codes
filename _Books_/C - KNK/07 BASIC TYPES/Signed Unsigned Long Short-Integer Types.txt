@@ -31,6 +31,6 @@ unsigned long long int: 0 ~ 2^64-1
 
 
 --- extended integer types
-In addition to the standard integer types, the C99 standard allows implementation-def‌ined extended integer types, both signed and unsigned. 
+In addition to the standard integer types, the C99 standard allows implementation-def‌ined extended integer types, both signed and unsigned.
 
 For example, compiler might provide signed and unsigned 128-bit integer types.

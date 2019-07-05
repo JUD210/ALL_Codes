@@ -1,1 +1,23 @@
- 
+=== Confusing printf with scanf
+ㅇ Although calls of scanf and printf may appear similar, there are significant differences between the two functions; ignoring these differences can be hazardous to the health of your program.
+
+ㅇ One common mistake is to put & in front of variables in a call of printf;
+
+ㅇ Since scanf normally skips white-space characters when looking for data
+items, there's often no need for a format string to include characters other than conversion specifications.
+- Incorrectly assuming that scanf format strings should resemble printf format strings --another common error-- may cause scanf to behave in unexpected ways.
+
+
+ㅇ Let's see what happens when the following call of scanf is executed:
+
+scanf ("%d, %d", &i, &j);
+
+scanf will f irst look for an integer in the input, which it stores in the  variable i, scanf will then try to match a comma with the next input character.
+
+If the next input character is a space, not a comma, scanf will terminate without reading a value for j.
+
+
+ㅇ Although printf format strings often end with \n, putting a new-line character at the end of a scanf format string is usually a bad idea.
+- To scanf, a new-line character in a format string is equivalent to a space; both cause scanf to advance to the next non--white-space character.
+- For example, if the format string is "%d\n", scanf will skip white space, read an integer, then skip to the next non-white-space character.
+- A format string like this can cause an interactive program to "hang" until the user enters a nonblank character.

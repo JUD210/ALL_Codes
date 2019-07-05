@@ -1,5 +1,0 @@
-int a = 1;
-// 1 is an integer literal.
-
-string s = "cat";
-//The three letter string in "cat" is a string literal.

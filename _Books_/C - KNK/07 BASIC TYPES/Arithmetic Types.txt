@@ -1,4 +1,4 @@
-The integer types and f‌loating types are collectively known as arithmetic types. 
+The integer types and f‌loating types are collectively known as arithmetic types.
 
 --- C89 ---
 Here's a summary of the arithmetic types in C89, divided into categories and subcategories:

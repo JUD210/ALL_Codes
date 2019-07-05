@@ -1,0 +1,12 @@
+=== Layout of a C Program
+ㅇ We can think of a C program as a series of tokens: groups of characters that can't be split up without changing their meaning.
+
+ㅇ Identifiers and keywords are tokens.
+
+ㅇ So are operators like + and --, punctuation marks such as the comma and semicolon, and string literals.
+
+ㅇ For example, the statement printf("Height: %d\n", height);
+consists of seven tokens:
+
+printf ( "Height: %d\n" , height ) ;
+  1    2        3       4   5    6 7

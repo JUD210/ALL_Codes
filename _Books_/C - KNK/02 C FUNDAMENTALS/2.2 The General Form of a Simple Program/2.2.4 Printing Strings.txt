@@ -1,1 +1,6 @@
- 
+=== Printing Strings
+ㅇ String literal
+A series of characters enclosed in double quotation marks.
+
+ㅇ New-line character
+\n

@@ -1,1 +1,4 @@
- 
+=== Integrated Development Environments (IDE)
+ㅇ IDE
+- Alternative to command-line
+- A software package that allows us to edit, compile, link, execute, and even debug a program without leaving the environment.

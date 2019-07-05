@@ -1,1 +1,4 @@
- 
+=== Types
+ㅇ Every variable must have a type
+
+ㅇ ex) int, float, char, ...

@@ -1,1 +1,2 @@
- 
+=== Defining a Structure Type
+

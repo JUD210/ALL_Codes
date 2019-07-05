@@ -7,7 +7,7 @@ scanf(" %C", &ch); /* skips white space, then reads ch */
 
 Recall from Section 3.2 that a blank in a scanf format string means "skip zero or more white-space characters."
 
-Since scanf doesn't normally skip white space, it's easy to detect the end of an input line: check to see if the character just read is the new-line character. 
+Since scanf doesn't normally skip white space, it's easy to detect the end of an input line: check to see if the character just read is the new-line character.
 
 For example, the following loop will read and ignore all remaining characters in the current input line:
 

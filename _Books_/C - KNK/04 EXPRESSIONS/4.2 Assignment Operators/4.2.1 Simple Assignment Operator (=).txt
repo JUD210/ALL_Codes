@@ -1,0 +1,6 @@
+=== Simple Assignment
+int i;
+float f;
+
+i = 72.99f; /* i is now 72 */
+f = 136;    /* f is now 136.0 */

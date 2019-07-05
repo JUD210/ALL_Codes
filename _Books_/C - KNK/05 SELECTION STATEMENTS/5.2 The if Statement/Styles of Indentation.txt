@@ -1,0 +1,33 @@
+ㅇ K&R Style
+
+if (line_num == MAX_LINES) {
+  line_num = 0;
+  page_num++;
+}
+
+
+ㅇ Allman Style
+
+if (line_num == MAX_LINES)
+{
+  line_num = 0;
+  page_num++;
+}
+
+
+ㅇ Whitesmiths style
+
+if (line_num == MAX_LINES)
+  {
+  line_num = 0;
+  page_num++;
+  }
+
+
+ㅇ GNU Style
+
+if (line_num == MAX_LINES)
+  {
+    line_num = 0;
+    page_num++;
+  }

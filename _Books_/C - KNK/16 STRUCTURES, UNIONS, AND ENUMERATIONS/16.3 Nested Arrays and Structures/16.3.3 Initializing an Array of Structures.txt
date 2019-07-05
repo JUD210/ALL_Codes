@@ -1,1 +1,2 @@
- 
+=== Initializing an Array of Structures
+

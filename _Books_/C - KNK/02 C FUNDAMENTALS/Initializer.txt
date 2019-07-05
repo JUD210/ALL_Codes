@@ -1,3 +1,0 @@
-int a = 8;
-
-8 is said to be an initializer.

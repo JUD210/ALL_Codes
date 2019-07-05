@@ -1,2 +1,0 @@
-/* This is a winged comment. */
-// This is a comment provided from C99.

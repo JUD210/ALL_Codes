@@ -68,7 +68,7 @@ Not all of the immutable objects are actually immutable. Confused? Let me explai
 
 As discussed earlier, Python containers liked tuples are immutable. That means value of a tuple can't be changed after it is created. But the "value" of a tuple is infact a sequence of names with unchangeable bindings to objects. The key thing to note is that the bindings are unchangeable, not the objects they are bound to.
 
-Let us consider a tuple t = (‘holberton', [1, 2, 3])
+Let us consider a tuple t = ('holberton', [1, 2, 3])
 
 The above tuple t contains elements of different data types, the first one is an immutable string and the second one is a mutable list.The tuple itself isn't mutable. i.e. it doesn't have any methods for changing its contents. Likewise, the string is immutable because strings don't have any mutating methods. But the list object does have mutating methods, so it can be changed. This is a subtle point, but nonetheless important: the "value" of an immutable object can't change, but it's constituent objects can."""
 

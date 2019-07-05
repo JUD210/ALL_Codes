@@ -1,1 +1,10 @@
- 
+=== Weaknesses
+ㅇ C programs can be error-prone.
+- C is a lot like assembly language, where most errors aren't detected until the program is run.
+- C contains a number of pitfalls for the unwary.
+
+ㅇ C programs can be difficult to understand.
+Although C is a small language by most measures, it has a number of features that aren't found in all programming languages (and that consequently are often misunderstood.)
+
+ㅇ C programs can be difficult to modify.
+C lacks features such as classes and packages that support the division of a large program into more manageable pieces.

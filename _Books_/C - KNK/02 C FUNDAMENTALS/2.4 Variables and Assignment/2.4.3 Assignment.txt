@@ -1,1 +1,10 @@
- 
+=== Assignment
+ㅇ A variable can be given a value by means of assignment.
+
+int height;
+height = 8;
+
+
+ㅇ It's best to append the letter f to a constant that contains a decimal point if the number is assigned to a float variable.
+
+profit = 150.48f;

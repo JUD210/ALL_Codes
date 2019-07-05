@@ -14,4 +14,3 @@
 
 ㅇ E-R 다이어그램(ERD: Entity-Relationship Diagram)
 - 엔티티와 이들 간의 관계를 알기 쉽게 미리 약속된 도형을 사용하여 일목요연하게 표현
- 

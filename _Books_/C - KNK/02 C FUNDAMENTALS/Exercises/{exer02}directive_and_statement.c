@@ -22,6 +22,7 @@ The program contains one directive (#include) and four statements (three calls o
 /* (b) What output does the program produce?
 
 Parkinson's Law:
+
 Work expands so as to fill the time
 available for its completion.
 

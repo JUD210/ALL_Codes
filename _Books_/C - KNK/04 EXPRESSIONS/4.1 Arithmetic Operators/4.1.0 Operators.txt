@@ -1,0 +1,19 @@
+=== Operators
+ㅇ Arithmetic operators
+- Binary
+-- addition (+)
+-- subtraction (-)
+-- multiplication (*)
+-- division (/)
+-- remainder (%)
+
+- Unary
+-- Unary plus (+)
+-- Unary minus (-)
+
+
+ㅇ Relational operators
+Perform comparisons such as "i > 0"
+
+ㅇ Logical operators
+Build conditions such as "i > 0 && i < 10"

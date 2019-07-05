@@ -1,1 +1,2 @@
- 
+=== Advantages of Type Definitions
+

@@ -44,7 +44,7 @@ Q4. 테이블 생성을 확인하는 명령어를 무엇이라고 하는가??
 
 Q5. 아래 괄호안에 들어갈 명령어로 적절한 것은?
 ( ) INTO member
-VALUES(‘moon', ‘Y', '이그린', 'egreen@egreen.co.kr', '01012345678')
+VALUES('moon', 'Y', '이그린', 'egreen@egreen.co.kr', '01012345678')
 
 1. INSERT
 2. DELETE
@@ -53,5 +53,5 @@ VALUES(‘moon', ‘Y', '이그린', 'egreen@egreen.co.kr', '01012345678')
 
 
 (INSERT) INTO member
-VALUES(‘moon', ‘Y', '이그린', 'egreen@egreen.co.kr', '01012345678')
+VALUES('moon', 'Y', '이그린', 'egreen@egreen.co.kr', '01012345678')
 1

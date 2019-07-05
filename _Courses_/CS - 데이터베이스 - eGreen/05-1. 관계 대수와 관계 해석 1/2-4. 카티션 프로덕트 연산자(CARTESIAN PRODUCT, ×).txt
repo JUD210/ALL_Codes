@@ -1,7 +1,7 @@
 === 카티션 프로덕트 연산자(CARTESIAN PRODUCT, ×)
 
 ㅇ 카티션 프로덕트 연산자(CARTESIAN PRODUCT, ×)
-- R × S 
+- R × S
 - 차수: R + S
 - 카디널리티: R * S
 - 어트리뷰트: (A1, A2, ..., An, B1, B2, ..., Bm)

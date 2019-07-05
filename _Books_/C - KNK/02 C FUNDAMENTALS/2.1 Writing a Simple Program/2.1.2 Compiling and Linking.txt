@@ -1,1 +1,13 @@
- 
+=== Compiling and Linking
+ㅇ Preprocessing
+- The program is first given to a preprocessor, which obeys commands that begin with # (known as directives).
+- A preprocessor is a bit like an editor; it can add things to the program and make modifications.
+
+ㅇ Compiling
+- The modified program now goes to a compiler, which translates it
+into machine instructions (object code).
+- The program isn't quite ready to run yet, however.
+
+ㅇ Linking
+- In the final step, a linker combines the object code produced by the compiler with any additional code needed to yield a complete executable program.
+- This additional code inciudes library functions (like printf) that are used in the program.

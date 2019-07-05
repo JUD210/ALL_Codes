@@ -1,1 +1,7 @@
- 
+=== Expression Statements
+ㅇ C has the unusual rule that any expression can be used as a statement. That is, any expression --regardless of its type or what it computes-- can be turned into a statement by appending a semicolon.
+
+ㅇ For example, we could turn these expressions into a statement:
+++i;
+i--;
+i * j - 1;  // Since i and j aren't changed, this statement serves no purpose.

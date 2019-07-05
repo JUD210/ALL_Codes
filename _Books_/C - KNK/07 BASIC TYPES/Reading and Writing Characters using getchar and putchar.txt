@@ -1,4 +1,4 @@
-C provides other ways to read and write single characters. In particular, we can use the getchar and putchar functions instead of calling scanf and printf. 
+C provides other ways to read and write single characters. In particular, we can use the getchar and putchar functions instead of calling scanf and printf.
 
 putchar writes a single character:
 
@@ -14,11 +14,11 @@ Like scanf, getchar doesn't skip white-space characters as it reads.
 
 Using getchar and putchar (rather than scanf and printf) saves time when the program is executed. getchar and putchar are fast for two reasons.
 
-First, they're much simpler than scanf and printf, which are designed to read and write many kinds of data in a variety of formats. 
+First, they're much simpler than scanf and printf, which are designed to read and write many kinds of data in a variety of formats.
 
 Second, getchar and putchar are usually implemented as macros for additional speed.
 
-getchar has another advantage over scanf: because it returns the character that it reads, getchar lends itself to various C idioms, including loops that search for a character or, skip over all occurrences of a character. 
+getchar has another advantage over scanf: because it returns the character that it reads, getchar lends itself to various C idioms, including loops that search for a character or, skip over all occurrences of a character.
 
 
 Consider the scanf loop that we used to skip the rest of an input line:

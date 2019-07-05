@@ -1,0 +1,18 @@
+=== Boolean Values in C99 (Stdbool.h)
+ㅇ _Bool
+- Just an integer type (more precisely, an unsigned integer type) in disguise.
+- Unlike an ordinary integer variable, however, a _Bool variable can only be assigned 0 or 1.
+- In general, attempting to store a non-zero value into a _Bool variable will cause the variable to be assigned 1
+
+
+ㅇ <stdbool.h>: Provides a macro, bool
+
+#include <stdbool.h>
+
+bool flag;  // same as _Bool flag;
+
+flag = true;  // same as flag = 1
+...
+flag = false;  // same as flag = 0
+
+true and false are macros definitions.

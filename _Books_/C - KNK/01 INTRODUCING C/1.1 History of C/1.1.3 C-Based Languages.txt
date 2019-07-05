@@ -1,1 +1,14 @@
- 
+=== C-Based Languages
+ㅇ C-Based Languages
+- C++ includes all the features of C, but adds classes and other features to  support object-oriented programming.
+- Java is based on C++ and therefore inherits many C features.
+- C# is a more recent language derived from C++ and Java.
+- Perl was originally a fairly simple scripting language; over time it has grown and adopted many of the features of C.
+- etc.
+
+ㅇ Why you should learn C
+- learning C can give you greater insight into the features of C++, Java, C#, Perl. and the other C-based languages. Programmers who learn one of these languages first often fail to master basic features that were inherited from C.
+- C++ includes all the features of C. so you'll be able to use everything you learn from this book if you later tackle C++. Many of the features of C can be found in the other C-based languages as well.
+- There are a lot of older C programs around; you may f‌ind yourself needing to read and maintain this code.
+- C is still widely used for developing new software, especially in situations where memory or processing power is limited or where the simplicity of C is desired.
+- If you haven't already used one of the newer C-based languages, you'll f‌ind that this book is excellent preparation for learning these languages. It emphasizes data abstraction, information hiding, and other principles that play a large role in object-oriented programming.

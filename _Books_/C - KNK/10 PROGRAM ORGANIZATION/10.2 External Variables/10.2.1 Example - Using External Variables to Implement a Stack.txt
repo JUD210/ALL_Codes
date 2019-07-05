@@ -1,1 +1,2 @@
- 
+=== Example - Using External Variables to Implement a Stack
+

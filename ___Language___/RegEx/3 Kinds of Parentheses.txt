@@ -60,7 +60,7 @@ would match only the strings can', and can't, not quite what we had in mind.
 # Non-Capturing Parentheses -> (?:
 
 
-To avoid capturing the ‘t, we write
+To avoid capturing the 't, we write
 can(?:'t)?
 
 Here, all we get is the full match, with no sub-matches.

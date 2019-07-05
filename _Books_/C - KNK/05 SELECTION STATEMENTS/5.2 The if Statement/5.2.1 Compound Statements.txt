@@ -1,1 +1,39 @@
- 
+=== Compound Statements
+
+ㅇ In our if statement template, notice that statement is singular, not plural:
+
+if ( expression ) statement
+
+
+ㅇ What if we want an if statement to control two or more statements? That's where the compound statement comes in. A compound statement has the form:
+
+{ statements }
+
+
+ㅇ By putting braces around a group of statements, we can force the compiler to treat it as a single statement.
+
+Here's an example of a compound statement:
+
+{ line_num = O; page_num++; }
+
+
+ㅇ For clarity, I'll usually put a compound statement on several lines, with one statement per line:
+
+{
+  line_num = 0;
+  page_num++;
+}
+
+
+ㅇ Notice that each inner statement still ends with a semicolon, but the compound statement itself does not.
+
+ㅇ Here's what a compound statement would look like when used inside an if
+statement:
+
+if (line_num == MAX_LINES) {
+  line_num = O;
+  page_num++;
+}
+
+
+ㅇ Compound statements are also common in loops and other places where the syntax of C requires a single statement, but we want more than one.

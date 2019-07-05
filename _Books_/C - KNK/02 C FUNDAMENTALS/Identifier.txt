@@ -1,1 +1,0 @@
-In computer languages, identifiers are tokens (also called symbols) which name language entities. Some of the kinds of entities an identifier might denote include variables, types, labels, subroutines, and packages.

@@ -1,8 +1,8 @@
-Working with characters in C is simple, because of one fact: C treats characters as small integers. 
+Working with characters in C is simple, because of one fact: C treats characters as small integers.
 
-After all, characters are encoded in binary, and it doesn't take much imagination to view these binary codes as integers. 
+After all, characters are encoded in binary, and it doesn't take much imagination to view these binary codes as integers.
 
-In ASCII, for example, character codes range from 0000000 to 1111111, which we can think of as the integers from 0 to 127. 
+In ASCII, for example, character codes range from 0000000 to 1111111, which we can think of as the integers from 0 to 127.
 
 The character 'a' has the value 97, 'A' has the value 65, '0' has the value 48, and ' ' has the value 32.
 

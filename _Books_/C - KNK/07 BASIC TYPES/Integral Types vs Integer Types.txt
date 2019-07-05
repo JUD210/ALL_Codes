@@ -2,6 +2,6 @@ In light of the close relationship between characters and integers, C89 uses the
 merated types are also integral types.
 
 C99 doesn't use the term "integral types." Instead. it expands the meaning of
-"integer types" to include the character types and the enumerated types. 
+"integer types" to include the character types and the enumerated types.
 
 C99's _Bool type is considered to be an unsigned integer type.

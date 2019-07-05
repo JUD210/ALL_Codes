@@ -29,7 +29,7 @@ int main()
     scanf("%ld", &n);
   }
   // 30000 0
-  
+
   printf("The sum is: %ld\n", sum);
   // The sum is: 60000
 

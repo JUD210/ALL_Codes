@@ -1,0 +1,10 @@
+Evaluating v += e causes v to be evaluated only once: evaluating v = v + e causes v to be evaluated twice. Any side effect caused by evaluating v will occur twice in the latter case. In the following example, i is incremented once:
+
+a[i++] += 2;
+
+
+If we use = instead of +=. here's what the statement will look like:
+
+a[i++] = a[i++] + 2;
+
+The value of i is modified as well as used elsewhere in the statement, so the effect of executing the statement is undefined. It's likely that i will be incremented twice, but we can't say with certainty what will happen.

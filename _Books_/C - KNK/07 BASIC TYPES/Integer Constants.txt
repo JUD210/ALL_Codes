@@ -25,8 +25,8 @@ To force the compiler to treat a constant as a long integer, just follow it with
 To indicate that a constant is unsigned, put the letter U (or u) after it:
 15U 0377U 0x7ffU
 
-L and U may be used in combination to show that a constant is both long and unsigned: 
-OxffffffffUL 
+L and U may be used in combination to show that a constant is both long and unsigned:
+OxffffffffUL
 
 The order of the L and U doesn't matter, nor does their case.
 

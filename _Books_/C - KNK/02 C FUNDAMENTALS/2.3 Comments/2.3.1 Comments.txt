@@ -1,1 +1,10 @@
- 
+=== Comments
+ㅇ Single-line comment
+/* This is a single-line comment (C89) */
+// This is a single-line comment (C99)
+
+ㅇ Multi-line comment
+/* This is a
+   multi-line
+   comment.
+ */

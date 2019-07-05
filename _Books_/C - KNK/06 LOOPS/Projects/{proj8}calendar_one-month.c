@@ -9,7 +9,7 @@ Enter starting day of the week (1=Sun, 7=Sat): 3 (input)
 20 21 22 23 24 25 26
 27 28 29 3O 31
 
-Hint: This program isn't as hard as it looks. The most important part is a for statement that uses a variable i to count from 1 to n, where n is the number of days in the month, printing each value of i. 
+Hint: This program isn't as hard as it looks. The most important part is a for statement that uses a variable i to count from 1 to n, where n is the number of days in the month, printing each value of i.
 
 Inside the loop, an if statement tests whether i is the last day in a week; if
 so, it prints at new-line character. */

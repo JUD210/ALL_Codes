@@ -1,1 +1,26 @@
- 
+=== Effective Use of C
+ㅇ Learn how to avoid C pitfalls.
+- Modern compilers will detect common pitfalls and issue warnings, but no compiler spots them all.
+
+ㅇ Use software tools to make programs more reliable.
+- lint
+- debugger
+
+ㅇ Take advantage of existing code libraries.
+- common tasks
+- user-interface development
+- graphics
+- communications
+- database management
+- networking
+- public domain, open source, ...
+
+ㅇ Adopt a sensible set of coding conventions.
+- Which set you use is less important than adopting some conventions and sticking to them.
+
+ㅇ Avoid "tricks" and overly complex code.
+- Programmers are often tempted to choose the method that's most concise. Don't get carried away; the shortest solution is often the hardest to comprehend.
+
+ㅇ Stick to the standard.
+- C89, C99
+- For portability, it's best to avoid using nonstandard features and libraries unless they're absolutely necessary.
