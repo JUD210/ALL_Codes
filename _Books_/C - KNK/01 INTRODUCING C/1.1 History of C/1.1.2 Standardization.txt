@@ -13,4 +13,4 @@
 
 ㅇ C99
 - The language underwent a few changes in 1995, more significant changes occurred with the publication of a new standard, ISO/IEC 9899:1999.
-- The language described in this standard is commonly known as C99. The terms "ANSI C," "ANSI/ISO C," and "ISO C"--once used to describe C89--are now ambiguous, thanks to the existence of two standards.
+- The language described in this standard is commonly known as C99. The terms "ANSI C," "ANSI/ISO C," and "ISO C" ㅡonce used to describe C89ㅡ are now ambiguous, thanks to the existence of two standards.

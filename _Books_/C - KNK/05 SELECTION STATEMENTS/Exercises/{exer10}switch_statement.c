@@ -1,4 +1,5 @@
-/* What output does the following program fragment produce? (Assume that i is an integer variable.) */
+/* What output does the following program fragment produce? (Assume that i is an
+ * integer variable.) */
 
 #include <stdio.h>
 

@@ -1,2 +1,19 @@
 === Advantages of Type Definitions
+ㅇ Type definitions can make a program more understandable (assuming that the  programmer has been careful to choose meaningful type names). For example, suppose that the variables cash_in and cash_out will be used to store dollar amounts. Declaring Dollars as
 
+typedef float Dollars;
+
+and then writing
+
+Dollars cash_in, cash_out;
+
+is more informative than just writing
+
+float cash_in, cash_out;
+
+
+ㅇ Type definitions can also make a program easier to modify. If we later decide that Dollars should really be defined as double, all we need do is change the type definition:
+
+typedef double Dollars;
+
+The declarations of Dollars variables need not be changed. Without the type definition, we would need to locate all float variables that store dollar amounts (not necessarily an easy task) and change their declarations.

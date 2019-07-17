@@ -1,5 +1,5 @@
 === Signed and Unsigned Characters
-ㅇ Since C allows characters to be used as integers, it shouldn't be surprising that the char type --like the integer types-- exists in both signed and unsigned versions.
+ㅇ Since C allows characters to be used as integers, it shouldn't be surprising that the char type ㅡlike the integer typesㅡ exists in both signed and unsigned versions.
 
 ㅇ Signed characters normally have values between -128 and 127, while unsigned characters have values between 0 and 255.
 

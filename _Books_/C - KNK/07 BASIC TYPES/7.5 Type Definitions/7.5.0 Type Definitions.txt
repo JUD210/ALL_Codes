@@ -1,0 +1,17 @@
+=== Type Definitions
+ㅇ In Section 5.2, we used the #define directive to create a macro that could be used as a Boolean type:
+
+#define BOOL int
+
+There's a better way to set up a Boolean type, though, using a feature known as a type definition:
+
+typedef int Bool;
+
+Notice that the name of the type being defined comes last. Note also that I've capitalized the word Bool. Capitalizing the first letter of a type name isn't required; it's just a convention that some C programmers employ.
+
+
+ㅇ Using typedef to define Bool causes the compiler to add Bool to the list of type names that it recognizes. Bool can now be used in the same way as the built-in type names ㅡin variable declarations, cast expressions, and elsewhere. For example, we might use Bool to declare variables:
+
+Bool flag;  /* same as int flag; */
+
+The compiler treats Bool as a synonym for int; thus, flag is really nothing more than an ordinary int variable.

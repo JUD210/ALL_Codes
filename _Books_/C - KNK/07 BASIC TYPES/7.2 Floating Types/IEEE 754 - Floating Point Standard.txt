@@ -3,7 +3,7 @@ IEEE Standard 754 (Institute of Electrical and Electronics Engineers)
 ㅇ Float: Single Precision (32bit, 단일 정밀도)
 - Sign (부호): 1 bit
 - Exponent (지수): 8 bit
--- Bias (바이어스): 127 (0111 1111)
+ㄴ Bias (바이어스): 127 (0111 1111)
 - Fraction (Mantissa, 가수): 23 bit
 
 - Smallest Positive Value: 1.17549 * 10^-38
@@ -14,7 +14,7 @@ IEEE Standard 754 (Institute of Electrical and Electronics Engineers)
 ㅇ Double: Double Precision (64bit, 복수 정밀도)
 - Sign (부호): 1 bit
 - Exponent (지수): 11 bit
--- Bias (바이어스): 1023 (011 1111 1111)
+ㄴ Bias (바이어스): 1023 (011 1111 1111)
 - Fraction (Mantissa, 가수): 52 bit
 
 - Smallest Positive Value: 2.22507 * 10^-308

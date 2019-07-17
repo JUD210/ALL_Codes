@@ -1,5 +1,5 @@
 === Escape Sequences
-ㅇ A character constant is usually one character enclosed in single quotes, as we've seen in previous examples. However, certain special characters --including the new-line character-- can't be written in this way, because they're invisible (non-printing) or because they can't be entered from the keyboard. So that programs can deal with every character in the underlying character set, C provides a special notation, the escape sequence.
+ㅇ A character constant is usually one character enclosed in single quotes, as we've seen in previous examples. However, certain special characters ㅡincluding the new-line characterㅡ can't be written in this way, because they're invisible (non-printing) or because they can't be entered from the keyboard. So that programs can deal with every character in the underlying character set, C provides a special notation, the escape sequence.
 
 
 ㅇ There are two kinds of escape sequences
@@ -37,7 +37,7 @@ For example, the ASCII escape character (decimal value: 27) has the value 33 in 
 
 - An octal escape sequence consists of the \ character followed by an octal number with at most three digits. (This number must be representable as an unsigned character, so its maximum value is normally 377 octal.)
 
-For example, the escape character could be written \33 or \033. Octal numbers in escape sequences --unlike octal constants-- don't have to begin with O.
+For example, the escape character could be written \33 or \033. Octal numbers in escape sequences ㅡunlike octal constantsㅡ don't have to begin with O.
 
 
 - A hexadecimal escape sequence consists of \x followed by a hexadecimal number. Although C places no limit on the number of digits in the hexadecimal number, it must be representable as an unsigned character (hence it can't exceed FF if characters are eight bits long).

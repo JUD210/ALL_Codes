@@ -1,0 +1,12 @@
+When a signed operand is combined with an unsigned operand, the signed operand is converted to an unsigned value. The conversion involves adding or subtracting a multiple of n + 1, where n is the largest representable value of the unsigned type.
+
+This rule can cause obscure programming errors.
+
+Suppose that the int variable i has the value -1O and the unsigned int variable u has the value 10. If we compare i and u using the < operator, we might expect to get the result 1 (true). Before the comparison, however, i is converted to
+unsigned int.
+
+Since a negative number can't be represented as an unsigned integer, the converted value won't be -10. Instead, the value 4,294,967,296 is added (assuming that 4,294,967,295 is the largest unsigned int value), giving a converted value of 4,294,967,286.
+
+The comparison i < u will therefore produce 0. Some compilers produce a warning message such as "conparison between signed and unsigned" when a program attempts to compare a signed number with an unsigned number.
+
+Because of traps like this one, it's best to use unsigned integers as little as possible and, especially, never mix them with signed integers.

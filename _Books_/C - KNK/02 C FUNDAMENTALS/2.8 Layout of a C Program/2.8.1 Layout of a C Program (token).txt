@@ -3,7 +3,7 @@
 
 ㅇ Identifiers and keywords are tokens.
 
-ㅇ So are operators like + and --, punctuation marks such as the comma and semicolon, and string literals.
+ㅇ So are operators like + and -, punctuation marks such as the comma and semicolon, and string literals.
 
 ㅇ For example, the statement printf("Height: %d\n", height);
 consists of seven tokens:

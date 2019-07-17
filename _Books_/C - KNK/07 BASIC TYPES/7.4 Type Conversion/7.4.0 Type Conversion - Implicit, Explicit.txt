@@ -1,0 +1,32 @@
+=== Type Conversion
+ㅇ For a computer to perform an arithmetic operation, the operatnds must usually be of the same size (the same number of bits) and be stored in the same way.
+
+A computer may be able to add two 16-bit integers directely, but not a 16-bit integer and a 32-bit integer or a 32-bit integer and a 32-bit floating-point number.
+
+
+ㅇ C, on the other hand, allows the basic types to be mixed in expressions.
+We can combine integers, floating-point numbers, and even characters in a single expression.
+
+If we add a 16-bit short and a 32-bit int, for example, the compiler will arrange for the short value to be converted to 32 bits.
+
+If we add an int and a float, the compiler will arrange for the int to be converted to float format.
+
+
+ㅇ Because the compiler handles these conversions automatically, without the programmer's involvement, they're known as implicit conversions. C also allows the programmer to perform explicit conversions, using the cast operator.
+
+
+ㅇ I'll discuss implicit conversions first, postponing explicit conversions until later in the section.
+
+
+ㅇ Unfortunately, the rules for performing implicit conversions are somewhat
+complex, primarily because C has so many different arithmetic types.
+
+Implicit conversions are performed in the following situations:
+
+- When the operands in an arithmetic or logical expression don't have the same type. (C performs what are known as the usual arithmetic conversions.)
+- When the type of the expression on the right side of an assignment doesn't match the type of the variable on the left side.
+
+- When the type of an argument in a function call doesn't match the type of the corresponding parameter.
+- When the type of the expression in a return statement doesn't match the function's return type.
+
+We'll discuss the first two cases now and save the others for Chapter 9.

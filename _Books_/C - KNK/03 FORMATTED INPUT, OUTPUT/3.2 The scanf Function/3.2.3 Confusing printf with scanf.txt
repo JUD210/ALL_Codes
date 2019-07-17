@@ -5,7 +5,7 @@
 
 ㅇ Since scanf normally skips white-space characters when looking for data
 items, there's often no need for a format string to include characters other than conversion specifications.
-- Incorrectly assuming that scanf format strings should resemble printf format strings --another common error-- may cause scanf to behave in unexpected ways.
+- Incorrectly assuming that scanf format strings should resemble printf format strings ㅡanother common errorㅡ may cause scanf to behave in unexpected ways.
 
 
 ㅇ Let's see what happens when the following call of scanf is executed:

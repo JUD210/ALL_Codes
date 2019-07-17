@@ -1,2 +1,39 @@
 === Type Definitions and Portability
+ㅇ Type definitions are an important tool for writing portable programs. One of the problems with moving a program from one computer to another is that types may have different ranges on different machines. If i is an int variable, an assignment like
 
+i = 100000;
+
+is fine on a machine with 32-bit integers, but will fail on a machine with 16-bit integers.
+
+For greater portability, consider using typedef to define new names for
+integer types.
+
+
+ㅇ Suppose that we're writing a program that needs variables capable of storing product quantities in the range 0-50,000. We could use long variables for this purpose (since they're guaranteed to be able to hold numbers up to at least 2,147,483,647), but we'd rather use int variables, since arithmetic on int values may be faster than operations on long values; also, int variables may take up less space.
+
+Instead of using the int type to declare quantity variables, we can define our own "quantity" type:
+
+typedef int Quantity;
+
+and use this type to declare variables:
+
+Quantity q;
+
+When we transport the program to a machine with shorter integers, we'll change the definition of Quantity:
+
+typedef long Quantity;
+
+
+ㅇ This technique doesn't solve all our problems, unfortunately, since changing the definition of Quantity may affect the way Quantity variables are used. At the very least, calls of printf and scanf that use Quantity variables will need to be changed, with %d conversion specifications replaced by %ld.
+
+
+ㅇ The C library itself uses typedef to create names for types that can vary from one C implementation to another; these types often have names that end with _t, such as ptrdiff_t, size_t, and wchar_t.
+
+The exact definitions of these types will vary, but here are some typical examples:
+
+typedef long int ptrdiff_t;
+typedef unsigned long int size_t;
+typedef int wchar_t;
+
+
+ㅇ In C99, the <stdint.h> header uses typedef to define names for integer types with a particular number of bits. For example, int32_t is a signed integer type with exactly 32 bits. Using these types is an effective way to make programs more portable.

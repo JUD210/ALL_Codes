@@ -1,15 +1,15 @@
 === for Statement Idioms
-ㅇ Counting up from 0 to n--l:
+ㅇ Counting up from 0 to n-1:
   for (i = O; i < n; i++) m
 
 ㅇ Counting up from 1 to n:
-  for (i = l; i <= n; i++) m
+  for (i = 1; i <= n; i++) m
 
-ㅇ Counting down from n--l to 0:
-  for (i = n - l; i >2 0; i--) m
+ㅇ Counting down from n-1 to 0:
+  for (i = n - 1; i >= 0; i--) m
 
 ㅇ Counting down from n to 1:
-  for (i = n; i > O; i~-) m
+  for (i = n; i > O; i--) m
 
 
 ㅇ Imitating these patterns will help you avoid some of the following errors,

@@ -1,2 +1,35 @@
 === Implicit Conversions in C99
+ㅇ The rules for implicit conversions in C99 are somewhat different from the rules in C89, primarily because C99 has additional types (_Bool, long long types, extended integer types, and complex types).
 
+
+ㅇ For the purpose of defining conversion rules, C99 gives each integer type an "integer conversion rank." Here are the ranks from highest to lowest:
+
+1. long long int, unsigned long long int
+2. long int, unsigned long int
+3. int, unsigned int
+4. short int, unsigned short int
+5. char, signed char, unsigned char
+6. _Bool
+
+For simplicity, I'm ignoring extended integer types and enumerated types.
+
+
+ㅇ In place of C89's integral promotions, C99 has "integer promotions", which involve converting any type whose rank is less than int and unsigned int to int (provided that all values of the type can be represented using int) or else to unsigned int.
+
+As in C89, the C99 rules for performing the usual arithmetic conversions can
+be divided into two cases:
+
+- The type of either operand is a floating type.
+As long as neither operand has a complex type, the rules are the same as before. (The conversion rules for complex types will be discussed in Section 27.3.)
+
+- Neither operand type is a floating type.
+First perform integer promotion on both operands. If the types of the two operands are now the same, the process ends. Otherwise, use the following rules, stopping at the first one that applies:
+
+ㄴ If both operands have signed types or both have unsigned types, convert the operand whose type has lesser integer conversion rank to the type of the operand with greater rank.
+ㄴ If the unsigned operand has rank greater or equal to the rank of the type of the signed operand, convert the signed operand to the type of the unsigned operand.
+ㄴ If the type of the signed operand can represent all of the values of the type of the unsigned operand, convert the unsigned operand to the type of the
+signed operand.
+ㄴ Otherwise, convert both operands to the unsigned type corresponding to the type of the signed operand.
+
+
+ㅇ Incidentally, all arithmetic types can be converted to _Bool type. The result of the conversion is 0 if the original value is 0; otherwise, the result is 1.

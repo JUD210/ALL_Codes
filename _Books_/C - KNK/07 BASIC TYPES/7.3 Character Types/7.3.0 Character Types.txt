@@ -2,7 +2,7 @@
 ㅇ A variable of type char can be assigned any single character:
 
 char ch;
-ch = 'a'; /* lower--case a */
+ch = 'a'; /* lower-case a */
 ch = 'A'; /* upper-case A */
 ch = '0'; /* zero */
 ch = ' '; /* space */

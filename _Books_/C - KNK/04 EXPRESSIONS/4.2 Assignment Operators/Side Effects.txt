@@ -5,4 +5,4 @@
 
 ㅇ The simple assignment operator is the first operator we've seen that has side effects; it modifies its left operand.
 
-ㅇ Evaluating the expression i = 0 produces the result 0 and --as a side effect-- assigns O to i.
+ㅇ Evaluating the expression i = 0 produces the result 0 and ㅡas a side effectㅡ assigns O to i.

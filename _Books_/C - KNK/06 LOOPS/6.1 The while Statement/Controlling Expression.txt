@@ -1,3 +1,3 @@
 ㅇ A loop is a statement whose job is to repeatedly execute some other statement (the loop body).
 
-ㅇ In C, every loop has a controlling expression. Each time the loop body is executed (an iteration of the loop), the controlling expression is evaluated; if the expression is true --has a value that's not zero-- the loop continues to execute.
+ㅇ In C, every loop has a controlling expression. Each time the loop body is executed (an iteration of the loop), the controlling expression is evaluated; if the expression is true ㅡhas a value that's not zeroㅡ the loop continues to execute.

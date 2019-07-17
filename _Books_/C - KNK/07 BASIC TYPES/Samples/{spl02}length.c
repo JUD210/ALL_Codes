@@ -27,8 +27,10 @@ int main() {
     printf("Your message was %d character(s) long.\n", len);
     // Your message was 20 character(s) long.
 
-    /* The length includes spaces and punctuation, but not the new-line character at the end of the message.
-   */
+    /*
+     * The length includes spaces and punctuation, but not the new-line
+     * character at the end of the message.
+     */
 
     return 0;
 }

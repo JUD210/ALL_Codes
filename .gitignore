@@ -12,6 +12,8 @@ ipch
 ##########################################################################
 
 # Save large files to the OneDrive ONLY.
+# If you commit a file over 100MB, that commit will be tracing the file (in sort of history) all the time before you take action, and that would be disable to use git push normally.
+
 **/*.mp4
 **/*.mkv
 **/*.mov

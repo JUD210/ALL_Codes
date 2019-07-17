@@ -1,0 +1,70 @@
+=== The Usual Arithmetic Conversions (+Promotion)
+ㅇ The following example shows the usual arithmetic conversions in action:
+char c;
+short int s;
+int i;
+unsigned int u;
+long int l;
+unsigned long int ul;
+float f;
+double d;
+long double ld;
+i = i + c;    /* c is converted to int */
+i = i + s;    /* s is converted to int */
+u = u + i;    /* i is converted to unsigned int */
+l = l + u;    /* u is converted to long int */
+ul = ul + l;  /* l is converted to unsigned long int */
+f = f + ul;   /* ul is converted to float */
+d = d + f;    /* f is converted to double */
+ld = ld + d;  /* d is converted to long double */
+
+
+ㅇ The usual arithmetic conversions are applied to the operands of most binary operators, including the arithmetic, relational, and equality operators.
+
+For example, let's say that f has type float and i has type int. The usual arithmetic conversions will be applied to the operands in the expression f + i, because their types aren't the same.
+
+Clearly it's safer to convert i to type float (matching f's type) rather than convert f to type int (matching i's type). An integer can always be converted to float; the worst that can happen is a minor loss of precision.
+
+Converting a floating-point number to int, on the other hand, would cost us the fractional part of the number. Worse still, we'd get a completely meaningless result if the original number were larger than the largest possible integer or smaller than the smallest integer.
+
+
+ㅇ The strategy behind the usual arithmetic conversions is to convert operands to the "narrowest" type that will safely accommodate both values. (Roughly speaking, one type is narrower than another if it requires fewer bytes to store.)
+
+The types of the operands can often be made to match by converting the operand of the narrower type to the type of the other operand (this act is known as promotion).
+
+Among the most common promotions are the integral promotions, which convert
+a character or short integer to type int (or to unsigned int in some cases).
+
+
+ㅇ We can divide the rules for performing the usual arithmetic conversions into
+two cases:
+
+- The type of either operand is a floating type.
+Use the following diagram to promote the operand whose type is narrower:
+
+long double
+↑
+double
+↑
+float
+
+That is, if one operand has type long double, then convert the other operand to type long double.
+Otherwise, if one operand has type double, convert the other operand to type double.
+Otherwise, if one operand has type float, convert the other operand to type float.
+
+Note that these rules cover mixtures of integer and floating types:
+if one operand has type long int, for example, and the other has type double, the long int operand is converted to double.
+
+
+- Neither operand type is a floating type.
+First perform integral promotion on both operands (guaranteeing that neither operand will be a character or short integer). Then use the following diagram to promote the operand whose type is narrower:
+
+unsigned long int
+↑
+long int
+↑
+unsigned int
+↑
+int
+
+There's one special case, but it occurs only when long int and unsigned int have the same length (32 bits, say). Under these circumstances, if one operand has type long int: and the other has type unsigned int, both are converted to unsigned long int.

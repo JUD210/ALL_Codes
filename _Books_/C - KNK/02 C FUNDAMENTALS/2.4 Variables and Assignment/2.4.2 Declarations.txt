@@ -1,5 +1,5 @@
 === Declarations
-ㅇ Variables must be declared --described for the benefit of the compiler-- before they can be used.
+ㅇ Variables must be declared ㅡdescribed for the benefit of the compilerㅡ before they can be used.
 
 
 ㅇ To declare a variable, we first specify the type of the variable, then its name.

@@ -1,15 +1,15 @@
 === Operators
 ㅇ Arithmetic operators
 - Binary
--- addition (+)
--- subtraction (-)
--- multiplication (*)
--- division (/)
--- remainder (%)
+ㄴ addition (+)
+ㄴ subtraction (-)
+ㄴ multiplication (*)
+ㄴ division (/)
+ㄴ remainder (%)
 
 - Unary
--- Unary plus (+)
--- Unary minus (-)
+ㄴ Unary plus (+)
+ㄴ Unary minus (-)
 
 
 ㅇ Relational operators
