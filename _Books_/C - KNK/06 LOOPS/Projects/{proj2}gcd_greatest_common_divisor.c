@@ -14,22 +14,21 @@ Hint: The classic algorithm for computing the GCD, known as Euclid's algorithm, 
 
 #include <stdio.h>
 
-int main()
-{
-  int m, n, remainder;
+int main() {
+    int m, n, remainder;
 
-  printf("Enter two integers: ");
-  scanf("%d%d", &m, &n);
-  // Enter two integers: 12 28
+    printf("Enter two integers: ");
+    scanf("%d%d", &m, &n);
+    // Enter two integers: 12 28
 
-  while (n != 0) {
-    remainder = m % n;
-    m = n;
-    n = remainder;
-  }
+    while (n != 0) {
+        remainder = m % n;
+        m = n;
+        n = remainder;
+    }
 
-  printf("Greatest common divisor: %d\n", m);
-  // Greatest common divisor: 4
+    printf("Greatest common divisor: %d\n", m);
+    // Greatest common divisor: 4
 
-  return 0;
+    return 0;
 }

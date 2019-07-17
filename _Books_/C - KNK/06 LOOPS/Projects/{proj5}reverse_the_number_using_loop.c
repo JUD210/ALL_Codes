@@ -2,21 +2,19 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int num;
+int main() {
+    int num;
 
-  printf("Enter a number: ");
-  scanf("%d", &num);
-  // Enter a number: 281234
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    // Enter a number: 281234
 
-  printf("The reversal is: ");
-  do
-  {
-    printf("%d", num % 10);
-    num /= 10;
-  } while (num != 0);
-  // The reversal is: 432182
+    printf("The reversal is: ");
+    do {
+        printf("%d", num % 10);
+        num /= 10;
+    } while (num != 0);
+    // The reversal is: 432182
 
-  return 0;
+    return 0;
 }

@@ -18,6 +18,6 @@ If the next input character is a space, not a comma, scanf will terminate withou
 
 
 ㅇ Although printf format strings often end with \n, putting a new-line character at the end of a scanf format string is usually a bad idea.
-- To scanf, a new-line character in a format string is equivalent to a space; both cause scanf to advance to the next non--white-space character.
+- To scanf, a new-line character in a format string is equivalent to a space; both cause scanf to advance to the next non-white-space character.
 - For example, if the format string is "%d\n", scanf will skip white space, read an integer, then skip to the next non-white-space character.
 - A format string like this can cause an interactive program to "hang" until the user enters a nonblank character.

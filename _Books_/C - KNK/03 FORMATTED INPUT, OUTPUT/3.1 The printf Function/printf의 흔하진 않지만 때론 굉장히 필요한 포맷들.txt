@@ -1,0 +1,126 @@
+https://m.blog.naver.com/PostView.nhn?blogId=taskin_rits&logNo=100148192382&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+
+%04x - 빈자리에 0이 딸려오는 4자리 hex값
+
+다 알겠지만,
+%x는 int형 변수를 16진수로 표시해주는 것이다.
+%4x는 16진수를 표시하되 4자리를 맞춰서(오른쪽정렬) 표시해준다.
+아마 여기까진 다들 알지도 모른다.
+
+하지만 %04x는 알까 'ㄱ')?
+
+0이 붙으면 빈자리를 공백 대신에 0으로 채워준다.
+예를 들면 0x23은 0023이 되는 것이다.
+이것은 %d나 %u에도 똑같이 적용된다.
+
+
+%hc, %hs - wprintf에서 멀티바이트 문자(열) 출력
+%lc, %ls - printf에서 유니코드 문자(열) 출력
+
+wprintf에서 일반 멀티바이트 문자나 스트링을 출력하려면 앞에다가 h만 붙여주면 된다.
+반대로 printf에서 유니코드 문자나 스트링을 출력하려면 앞에다가 l만 붙여주면 된다.
+
+
+예)
+setlocale(LC_ALL, "");
+wprintf (L"%hs%hc\n", "엿", '!');
+printf ("%ls%lc\n", L"엿", L'!');
+출력결과)
+엿!
+엿!
+
+%p - pointer
+
+포인터 출력하는데 %x붙이지마라.
+진짜 출력하는 방법은 %p다.
+win64든 뭐든 어디서든 잘 출력된다.
+니네들 이거 알아야되는데, 다들 모른다.
+
+
+%I64d, %I64u, %I64x - 64-bit 정수 출력시
+
+64비트 정수(__int64) 출력은 I64를 붙여쓰면 된다.
+%I64d, %I64u, %I64x처럼...
+물론 I64에서 I는 I(아이)다!
+l(엘)이 아니고...
+
+
+%Iu, %Id, %Ix - ULONG_PTR
+
+ULONG_PTR, LONG_PTR, and DWORD_PTR are numeric types that are as wide as a pointer. In other words, they map to ULONG, LONG, and DWORD respectively on Win32, and ULONGLONG, LONGLONG, andULONGLONG on Win64.
+The I size prefix (capital-i, not lowercase-L) is what you need to print *LONG_PTR on Win32 and Win64.
+
+
+해석하기 귀찮아
+이거 필요하신 분 정도면 이정도 해석은 가능하겠지
+
+
+
+%*d - 숫자가 출력될 너비를 런타임에서 조절
+
+%2d나 %5d와 같은 너비 크기 조절을 런타임에서 하고자 할때, *를 넣으면 된다.
+%*d를 쓰면 인자를 두개를 사용한다. 처음 인자가 너비이고 두번째 인자는 원래 수이다.
+
+다음은 적절한 트리 출력 예제이다.
+
+void Tree::Print(Node* pNode, int level) { if (NULL != pNode) { Print(pNode->Left, level+1); printf("%*d%s\n", 2 * level, pNode->Key); Print(pNode->Right, level+1); } }
+%.*s - substring!
+
+str함수를 이용해야 하는 문자열 잘라내기를 printf내에서 할 수 있다!
+그리고, 길이만 안다면 NULL로 끝나지 않는 문자열에 대해서도 잘라낼 수 있다.
+
+printf("%.*s\n", sublen, str)
+
+이렇게 하면, str의 왼쪽에서 sublen만큼만 출력할 수 있다.
+
+s앞에 .을 붙이면, .뒤에 숫자를 붙임으로써 문자열이 출력되는 갯수를 정할 수 있다.
+(예: %.5s는 문자열이 몇개가 오든 5개만 출력한다는 소리)
+
+그런데 s앞에 *도 붙이면, .의 뒤에 와야할 숫자를 printf의 인자로 줄 수 있다.
+
+그래서 마치 printf를 substring함수와 같이 쓸 수 있는 것이다.
+
+예)
+int i;
+char* str = "1234567890";
+for (i = 0; i <= 10; i++)
+{
+printf ("%.*sㅗ", 10-i,str+i);
+printf ("%.*s\n", i,str);
+}
+출력결과)
+        1234567890ㅗ
+        234567890ㅗ1
+        34567890ㅗ12
+        4567890ㅗ123
+        567890ㅗ1234
+        67890ㅗ12345
+        7890ㅗ123456
+        890ㅗ1234567
+        90ㅗ12345678
+        0ㅗ123456789
+        ㅗ1234567890
+
+
+추가로, printf의 인자로 직접 정한 숫자보다 더 작은 문자열이 들어오면, 인자로 준 숫자는 그냥 무시된다.
+
+
+%.0d - 0일때 출력 안하기
+
+값이 0일때는 출력을 안하고싶은 때가 있을거다.
+그럴때 if문으로 분기해서 일일이 처리했다면, 이것이 반가울것이다.
+바로 %와 d사이에 .을 붙임으로 해결된다.
+
+예)
+printf ("%.d", 0);
+결과)
+[아무것도 출력되지 않는다]
+
+
+%#x - 0x를 붙여주는 hex표현
+
+0x를 앞에다 출력하고 싶으면, %x 대신에 %#x를 쓰면 된다.
+
+
+일하다가 말고 블로깅 'ㅡ')

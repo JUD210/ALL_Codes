@@ -9,6 +9,7 @@
 
 12 = i:    /*** WRONG ***/
 i + j = 0; /*** WRONG ***/
--i = j;    /*** WRONG aan/
+-i = j;    /*** WRONG ***/
+
 
 ㅇ The compiler will detect errors of this nature, and you'll get an error message such as "invalid lvalue in assignment."

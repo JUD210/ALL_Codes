@@ -1,2 +1,32 @@
 === Omitting Expressions in a for Statement
+ㅇ The for statement is even more flexible than we've seen so far. Some for loops may not need all three of the expressions that normally control the loop, so C allows us to omit any or all of the expressions.
 
+ㅇ If the first expression is omitted, no initialization is performed before the loop is executed:
+
+i = 10;
+for (; i > 0; --i)
+  printf("T minus %d and counting\n", i);
+
+
+ㅇ If we omit the third expression in a for statement, the loop body is responsible for ensuring that the value of the second expression eventually becomes false. Our for statement example could be written like this:
+
+for (i = 10; i > 0;)
+  printf("T minus %d and counting\n", i--);
+
+
+ㅇ When the first and third expressions are both omitted, the resulting loop is nothing more than a while statement in disguise. For example, the loop
+
+for (; i > 0;)
+  printf("T minus %d and counting\n", i-.};
+
+is the same as
+
+while (i > O)
+  printf("T minus %d and counting\n", i---);
+
+The while version is clearer and therefore preferable.
+
+
+ㅇ If the second expression is missing, it defaults to a true value, so the for statement doesn't terminate (unless stopped in some other fashion). For example, some programmers use the following for statement to establish an infinite loop:
+
+for (; ;) ...

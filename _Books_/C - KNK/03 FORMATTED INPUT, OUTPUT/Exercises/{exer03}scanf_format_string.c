@@ -9,28 +9,27 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int a, b, c;
-  float x, y;
+int main() {
+    int a, b, c;
+    float x, y;
 
-  ////////////////////////////
-  printf("\n=== a ===\n");
+    ////////////////////////////
+    printf("\n=== a ===\n");
 
-  scanf("%d", &a);
-  printf("|%d|\n", a);
-  while (getchar() != '\n')
-    ;
-  // Used to clear buffers even if I type an improper character.
+    scanf("%d", &a);
+    printf("|%d|\n", a);
+    while (getchar() != '\n')
+        ;
+    // Used to clear buffers even if I type an improper character.
 
-  printf("vs\n");
+    printf("vs\n");
 
-  scanf(" %d", &a);
-  printf("|%d|\n", a);
-  while (getchar() != '\n')
-    ;
+    scanf(" %d", &a);
+    printf("|%d|\n", a);
+    while (getchar() != '\n')
+        ;
 
-  /*
+    /*
 
   === a ===
      12 34
@@ -41,22 +40,22 @@ int main()
 
    */
 
-  ////////////////////////////
-  printf("\n=== b ===\n");
+    ////////////////////////////
+    printf("\n=== b ===\n");
 
-  scanf("%d-%d-%d", &a, &b, &c);
-  printf("|%d|%d|%d|\n", a, b, c);
-  while (getchar() != '\n')
-    ;
+    scanf("%d-%d-%d", &a, &b, &c);
+    printf("|%d|%d|%d|\n", a, b, c);
+    while (getchar() != '\n')
+        ;
 
-  printf("vs\n");
+    printf("vs\n");
 
-  scanf("%d -%d -%d", &a, &b, &c);
-  printf("|%d|%d|%d|\n", a, b, c);
-  while (getchar() != '\n')
-    ;
+    scanf("%d -%d -%d", &a, &b, &c);
+    printf("|%d|%d|%d|\n", a, b, c);
+    while (getchar() != '\n')
+        ;
 
-  /*
+    /*
 
   === b ===
   1-2-3
@@ -67,22 +66,22 @@ int main()
 
    */
 
-  ////////////////////////////
-  printf("\n=== c ===\n");
+    ////////////////////////////
+    printf("\n=== c ===\n");
 
-  scanf("%f", &x);
-  printf("|%f|\n", x);
-  while (getchar() != '\n')
-    ;
+    scanf("%f", &x);
+    printf("|%f|\n", x);
+    while (getchar() != '\n')
+        ;
 
-  printf("vs\n");
+    printf("vs\n");
 
-  scanf("%f ", &x);
-  printf("|%f|\n", x);
-  while (getchar() != '\n')
-    ;
+    scanf("%f ", &x);
+    printf("|%f|\n", x);
+    while (getchar() != '\n')
+        ;
 
-  /*
+    /*
 
   === c ===
   1.23
@@ -96,22 +95,22 @@ int main()
 
    */
 
-  ////////////////////////////
-  printf("\n=== d ===\n");
+    ////////////////////////////
+    printf("\n=== d ===\n");
 
-  scanf("%f,%f", &x, &y);
-  printf("|%f|%f|\n", x, y);
-  while (getchar() != '\n')
-    ;
+    scanf("%f,%f", &x, &y);
+    printf("|%f|%f|\n", x, y);
+    while (getchar() != '\n')
+        ;
 
-  printf("vs\n");
+    printf("vs\n");
 
-  scanf("%f, %f", &x, &y);
-  printf("|%f|%f|\n", x, y);
-  while (getchar() != '\n')
-    ;
+    scanf("%f, %f", &x, &y);
+    printf("|%f|%f|\n", x, y);
+    while (getchar() != '\n')
+        ;
 
-  /*
+    /*
 
   === d ===
   1.23,4.56
@@ -122,5 +121,5 @@ int main()
 
   */
 
-  return 0;
+    return 0;
 }

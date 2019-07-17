@@ -9,19 +9,18 @@
 
 #include <stdio.h>
 
-int main()
-{
-  float x;
-  x = 123456.654321f;
+int main() {
+    float x;
+    x = 123456.654321f;
 
-  printf("%-8.1e\n", x);
-  printf("%10.6e\n", x);
-  printf("%-8.3f\n", x);
-  printf("%6.0f\n", x);
-  // 1.2e+005
-  // 1.234567e+005
-  // 123456.656
-  // 123456.656250
+    printf("%-8.1e\n", x);
+    printf("%10.6e\n", x);
+    printf("%-8.3f\n", x);
+    printf("%6.0f\n", x);
+    // 1.2e+005
+    // 1.234567e+005
+    // 123456.656
+    // 123456.656250
 
-  return 0;
+    return 0;
 }

@@ -16,34 +16,33 @@ Hint: Each month, the balance is decreased by the amount of the payment, but inc
 
 #include <stdio.h>
 
-int main()
-{
-  float amount_of_loan, interest_rate, monthly_payment;
+int main() {
+    float amount_of_loan, interest_rate, monthly_payment;
 
-  printf("Enter amount of loan: ");
-  scanf("%f", &amount_of_loan);
-  printf("Enter interest rate (percent): ");
-  scanf("%f", &interest_rate);
-  printf("Enter monthly payment: ");
-  scanf("%f", &monthly_payment);
-  // Enter amount of loan: 20000.00
-  // Enter interest rate (percent): 6.0
-  // Enter monthly payment: 386.66
+    printf("Enter amount of loan: ");
+    scanf("%f", &amount_of_loan);
+    printf("Enter interest rate (percent): ");
+    scanf("%f", &interest_rate);
+    printf("Enter monthly payment: ");
+    scanf("%f", &monthly_payment);
+    // Enter amount of loan: 20000.00
+    // Enter interest rate (percent): 6.0
+    // Enter monthly payment: 386.66
 
-  float monthly_interest_rate = interest_rate / 100 / 12;
-  float balance = amount_of_loan;
+    float monthly_interest_rate = interest_rate / 100 / 12;
+    float balance = amount_of_loan;
 
-  balance = balance * (1 + monthly_interest_rate) - monthly_payment;
-  printf("Balance remaining after first payment: $%.2f\n", balance);
-  // Balance remaining after first payment: $19713.34
+    balance = balance * (1 + monthly_interest_rate) - monthly_payment;
+    printf("Balance remaining after first payment: $%.2f\n", balance);
+    // Balance remaining after first payment: $19713.34
 
-  balance = balance * (1 + monthly_interest_rate) - monthly_payment;
-  printf("Balance remaining after second payment: $%.2f\n", balance);
-  // Balance remaining after second payment: $19425.25
+    balance = balance * (1 + monthly_interest_rate) - monthly_payment;
+    printf("Balance remaining after second payment: $%.2f\n", balance);
+    // Balance remaining after second payment: $19425.25
 
-  balance = balance * (1 + monthly_interest_rate) - monthly_payment;
-  printf("Balance remaining after third payment: $%.2f", balance);
-  // Balance remaining after third payment: $19135.71
+    balance = balance * (1 + monthly_interest_rate) - monthly_payment;
+    printf("Balance remaining after third payment: $%.2f", balance);
+    // Balance remaining after third payment: $19135.71
 
-  return 0;
+    return 0;
 }

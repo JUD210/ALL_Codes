@@ -12,16 +12,15 @@ what will be the values of x, i, and y after the call? (Assume that x and y are 
 
 #include <stdio.h>
 
-int main()
-{
-  int i;
-  float x, y;
+int main() {
+    int i;
+    float x, y;
 
-  scanf("%f%d%f", &x, &i, &y);
-  // 12.3 45.6 789
+    scanf("%f%d%f", &x, &i, &y);
+    // 12.3 45.6 789
 
-  printf("|%f|%d|%f|", x, i, y);
-  // |12.300000|45|0.600000|
+    printf("|%f|%d|%f|", x, i, y);
+    // |12.300000|45|0.600000|
 
-  return 0;
+    return 0;
 }

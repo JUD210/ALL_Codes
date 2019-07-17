@@ -16,29 +16,28 @@ Hint: Use tabs to line up the columns.
 
 #include <stdio.h>
 
-int main()
-{
-  int item_number, month, day, year;
-  float unit_price;
+int main() {
+    int item_number, month, day, year;
+    float unit_price;
 
-  printf("Enter item number: ");
-  scanf("%d", &item_number);
-  printf("Enter unit price: ");
-  scanf("%f", &unit_price);
-  printf("Enter purchase date (mm/dd/yyyy) : ");
-  scanf("%d/%d/%d", &month, &day, &year);
-  // Enter item number: 583
-  // Enter unit price: 13.5
-  // Enter purchase date (mm/dd/yyyy) : 10/24/2010
+    printf("Enter item number: ");
+    scanf("%d", &item_number);
+    printf("Enter unit price: ");
+    scanf("%f", &unit_price);
+    printf("Enter purchase date (mm/dd/yyyy) : ");
+    scanf("%d/%d/%d", &month, &day, &year);
+    // Enter item number: 583
+    // Enter unit price: 13.5
+    // Enter purchase date (mm/dd/yyyy) : 10/24/2010
 
-  printf("\n");
+    printf("\n");
 
-  printf("Item\t\tUnit\t\tPurchase\n");
-  printf("\t\tPrice\t\tDate\n");
-  printf("%-d\t\t$%7.2f\t%d/%d/%d\n", item_number, unit_price, month, day, year);
-  // Item            Unit            Purchase
-  //                 Price           Date
-  // 583             $  13.50        10/24/2010
+    printf("Item\t\tUnit\t\tPurchase\n");
+    printf("\t\tPrice\t\tDate\n");
+    printf("%-d\t\t$%7.2f\t%d/%d/%d\n", item_number, unit_price, month, day, year);
+    // Item            Unit            Purchase
+    //                 Price           Date
+    // 583             $  13.50        10/24/2010
 
-  return 0;
+    return 0;
 }

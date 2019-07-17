@@ -1,0 +1,34 @@
+=== The Comma Operator (Comma Expression)
+ㅇ On occasion, we might like to write a for statement with two (or more) initialization expressions or one that increments several variables each time through the loop. We can do this by using a comma expression as the first or third expression in the for statement.
+
+ㅇ A comma expression has the form:
+expr1, expr2
+
+- First, expr1 is evaluated and its value discarded.
+- Second, expr2 is evaluated; its value is the value of the entire expression. Evaluating expr1 should always have a side effect; if it doesn't, then expr1 serves no purpose.
+
+
+ㅇ The precedence of the comma operator is less than that of all other operators, by the way, so there's no need to put parentheses around ++i and i+j.
+
+ㅇ Occasionally, we'll need to chain together a series of comma expressions, just as we sometimes chain assignments together. The comma operator is left associative.
+
+so the compiler interprets
+i=1, j=2, k=i+j
+
+as
+((i = 1), (j = 2)), (k = (i + j))
+
+Since the left operand in a comma expression is evaluated before the right operand, the assignments i = 1, j = 2, and k = i + j will be performed from left to right.
+
+
+ㅇ Instead of writing
+
+sum = 0;
+
+for (i = 1; i <= N; i++)
+  sum += i;
+
+we can write
+
+for (sum = 0, i = 1; i <= N; i++)
+  sum += i;

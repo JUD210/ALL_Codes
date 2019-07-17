@@ -46,45 +46,44 @@ were replaced by
 
 #include <stdio.h>
 
-int main()
-{
-  int total;
+int main() {
+    int total;
 
-  total = 100;
-  printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
-  printf("(Latter) Check digit: %d\n", 10 - (total % 10));
-  printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
-  // (Former) Check digit: 0
-  // (Latter) Check digit: 10
-  // (Another) Check digit: 0
-  total = 0;
-  printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
-  printf("(Latter) Check digit: %d\n", 10 - (total % 10));
-  printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
-  // (Former) Check digit: 10
-  // (Latter) Check digit: 10
-  // (Another) Check digit: 0
-  total = 5;
-  printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
-  printf("(Latter) Check digit: %d\n", 10 - (total % 10));
-  printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
-  // (Former) Check digit: 5
-  // (Latter) Check digit: 5
-  // (Another) Check digit: 5
-  total = 36;
-  printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
-  printf("(Latter) Check digit: %d\n", 10 - (total % 10));
-  printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
-  // (Former) Check digit: 4
-  // (Latter) Check digit: 4
-  // (Another) Check digit: 4
-  total = -36;
-  printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
-  printf("(Latter) Check digit: %d\n", 10 - (total % 10));
-  printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
-  // (Former) Check digit: 16
-  // (Latter) Check digit: 16
-  // (Another) Check digit: 6
+    total = 100;
+    printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
+    printf("(Latter) Check digit: %d\n", 10 - (total % 10));
+    printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
+    // (Former) Check digit: 0
+    // (Latter) Check digit: 10
+    // (Another) Check digit: 0
+    total = 0;
+    printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
+    printf("(Latter) Check digit: %d\n", 10 - (total % 10));
+    printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
+    // (Former) Check digit: 10
+    // (Latter) Check digit: 10
+    // (Another) Check digit: 0
+    total = 5;
+    printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
+    printf("(Latter) Check digit: %d\n", 10 - (total % 10));
+    printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
+    // (Former) Check digit: 5
+    // (Latter) Check digit: 5
+    // (Another) Check digit: 5
+    total = 36;
+    printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
+    printf("(Latter) Check digit: %d\n", 10 - (total % 10));
+    printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
+    // (Former) Check digit: 4
+    // (Latter) Check digit: 4
+    // (Another) Check digit: 4
+    total = -36;
+    printf("(Former) Check digit: %d\n", 9 - ((total - 1) % 10));
+    printf("(Latter) Check digit: %d\n", 10 - (total % 10));
+    printf("(Another) Check digit: %d\n", (10 - (total % 10)) % 10);
+    // (Former) Check digit: 16
+    // (Latter) Check digit: 16
+    // (Another) Check digit: 6
 
-  return 0;
+    return 0;
 }

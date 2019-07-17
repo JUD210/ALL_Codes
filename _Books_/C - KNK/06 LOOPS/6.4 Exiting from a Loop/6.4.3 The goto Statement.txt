@@ -1,2 +1,27 @@
 === The goto Statement
+ㅇ The goto statement is capable of jumping to any statement in a function, provided that the statement has a label.
 
+ㅇ C99 places an additional restriction on the goto statement: it can't be used to bypass the declaration of a variable-length array.
+
+ㅇ A label is just an identifier placed at the beginning of a statement:
+
+identifier : statement
+
+A statement may have more than one label. The goto statement itself has the form:
+
+goto identifier ;
+
+
+ㅇ Executing the statement goto L; transfers control to the statement that follows the label L, which must be in the same function as the goto statement itself.
+
+ㅇ If C didn't have a break statement, here's how we might use a goto statement to exit prematurely from a loop:
+
+for (d = 2; d < n; d++)
+  if (n % (1 == 0)
+    goto done;
+
+done:
+if (d < n)
+  printf("%d is divisible by %d\n", n, d);
+else
+  printf("%d is prime\n", n);

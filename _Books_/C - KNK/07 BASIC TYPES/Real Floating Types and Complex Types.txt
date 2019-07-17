@@ -1,2 +1,0 @@
-- Real Floating Types: float, double, long double
-- Complex Types: float _Complex, double _Complex, long double _Complex

@@ -167,8 +167,8 @@
 - Advantages of Type Definitions 149
 - Type Definitions and Portability 150
 
-7.6 The eizeof Operator 151
-- The eizeof Operator 151
+7.6 The sizeof Operator 151
+- The sizeof Operator 151
 
 
 8 ARRAYS 161

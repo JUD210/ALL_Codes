@@ -18,32 +18,31 @@
 #define MAX_PARTS 100
 
 struct part {
-  int number;
-  char name[NAME_LEN+1];
-  int on_hand;
+    int number;
+    char name[NAME_LEN + 1];
+    int on_hand;
 } inventory[MAX_PARTS];
 
 int num_parts;
 
-int main()
-{
-  FILE *fp;
-  int i;
+int main() {
+    FILE *fp;
+    int i;
 
-  if ((fp = fopen("inventory.dat", "rb+")) == NULL) {
-    fprintf(stderr, "Can't open inventory file\n");
-    exit(EXIT_FAILURE);
-  }
+    if ((fp = fopen("inventory.dat", "rb+")) == NULL) {
+        fprintf(stderr, "Can't open inventory file\n");
+        exit(EXIT_FAILURE);
+    }
 
-  num_parts = fread(inventory, sizeof(struct part),
-                    MAX_PARTS, fp);
+    num_parts = fread(inventory, sizeof(struct part),
+                      MAX_PARTS, fp);
 
-  for (i = 0; i < num_parts; i++)
-    inventory[i].on_hand = 0;
+    for (i = 0; i < num_parts; i++)
+        inventory[i].on_hand = 0;
 
-  rewind(fp);
-  fwrite(inventory, sizeof(struct part), num_parts, fp);
-  fclose(fp);
+    rewind(fp);
+    fwrite(inventory, sizeof(struct part), num_parts, fp);
+    fclose(fp);
 
-  return 0;
+    return 0;
 }

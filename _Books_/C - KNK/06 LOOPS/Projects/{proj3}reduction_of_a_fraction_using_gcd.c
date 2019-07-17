@@ -7,28 +7,26 @@ Hint: To reduce a fraction to lowest terms, first compute the GCD of the numerat
 
 #include <stdio.h>
 
-int main()
-{
-  int numerator, denominator;
+int main() {
+    int numerator, denominator;
 
-  printf("Enter a fraction: ");
-  scanf("%d/%d", &numerator, &denominator);
-  // Enter a fraction: 6/12
+    printf("Enter a fraction: ");
+    scanf("%d/%d", &numerator, &denominator);
+    // Enter a fraction: 6/12
 
-  int m, n, remainder, gcd;
-  m = denominator;
-  n = numerator;
+    int m, n, remainder, gcd;
+    m = denominator;
+    n = numerator;
 
-  while (n != 0)
-  {
-    remainder = m % n;
-    m = n;
-    n = remainder;
-  }
-  gcd = m;
+    while (n != 0) {
+        remainder = m % n;
+        m = n;
+        n = remainder;
+    }
+    gcd = m;
 
-  printf("In lowest terms: %d/%d", numerator / gcd, denominator / gcd);
-  // In lowest terms: 1/2
+    printf("In lowest terms: %d/%d", numerator / gcd, denominator / gcd);
+    // In lowest terms: 1/2
 
-  return 0;
+    return 0;
 }

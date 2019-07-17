@@ -2,21 +2,20 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int i, j;
+int main() {
+    int i, j;
 
-  i = 1, j = 5;
-  printf("%d\n", (i > j) - (i < j));
-  // -1
+    i = 1, j = 5;
+    printf("%d\n", (i > j) - (i < j));
+    // -1
 
-  i = 5, j = 5;
-  printf("%d\n", (i > j) - (i < j));
-  // 0
+    i = 5, j = 5;
+    printf("%d\n", (i > j) - (i < j));
+    // 0
 
-  i = 9, j = 5;
-  printf("%d\n", (i > j) - (i < j));
-  // 1
+    i = 9, j = 5;
+    printf("%d\n", (i > j) - (i < j));
+    // 1
 
-  return 0;
+    return 0;
 }

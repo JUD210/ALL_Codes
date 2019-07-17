@@ -11,25 +11,23 @@ Hint: To convert the number to octal, f‌irst divide it by 8; the remainder is 
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
+    int num;
+    printf("Enter a number between 0 and 32767: ");
+    scanf("%d", &num);
+    // Enter a number between 0 and 32767: 1953
 
-  int num;
-  printf("Enter a number between 0 and 32767: ");
-  scanf("%d", &num);
-  // Enter a number between 0 and 32767: 1953
+    printf("In octal, your number is: %1d%1d%1d%1d%1d\n",
+           (num / 8 / 8 / 8 / 8) % 8,
+           (num / 8 / 8 / 8) % 8,
+           (num / 8 / 8) % 8,
+           (num / 8) % 8,
+           num % 8);
+    // In octal, your number is: 03641
 
-  printf("In octal, your number is: %1d%1d%1d%1d%1d\n",
-         (num / 8 / 8 / 8 / 8) % 8,
-         (num / 8 / 8 / 8) % 8,
-         (num / 8 / 8) % 8,
-         (num / 8) % 8,
-         num % 8);
-  // In octal, your number is: 03641
+    // ADNAVCED
+    printf("In octal, your number is: %5.5o", num);
+    // In octal, your number is: 03641
 
-  // ADNAVCED
-  printf("In octal, your number is: %5.5o", num);
-  // In octal, your number is: 03641
-
-  return 0;
+    return 0;
 }

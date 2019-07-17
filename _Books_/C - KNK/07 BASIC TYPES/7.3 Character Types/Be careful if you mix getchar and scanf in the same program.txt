@@ -1,0 +1,8 @@
+Be careful if you mix getchar and scanf in the same program. scanf has a tendency to leave behind characters that it has "peeked" at but not read, including the new-line character. Consider what happens if we try to read a number first, then a character:
+
+printf("Enter an integer: ");
+scanf("%d", &i);
+printf("Enter a command: ");
+command = getchar();
+
+The call of scanf will leave behind any characters that weren't consumed during the reading of i, including (but not limited to) the new-line character. getchar will fetch the first leftover character, which wasn't what we had in mind.

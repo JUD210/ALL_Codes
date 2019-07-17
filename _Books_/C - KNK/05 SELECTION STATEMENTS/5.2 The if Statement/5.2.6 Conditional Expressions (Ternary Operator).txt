@@ -1,5 +1,4 @@
 === Conditional Expressions (Ternary Operator)
-
 ㅇ The conditional operator consists of two symbols (? and :), which must be
 used together in the following way:
 

@@ -12,13 +12,11 @@
 
 #include <stdio.h>
 
-void print_pun()
-{
-  printf("To C, or not to C: that is the question.\n");
+void print_pun() {
+    printf("To C, or not to C: that is the question.\n");
 }
 
-int main()
-{
-  print_pun();
-  return 0;
+int main() {
+    print_pun();
+    return 0;
 }

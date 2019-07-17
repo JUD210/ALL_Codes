@@ -1,6 +1,0 @@
-signed int
--> undefined-behavior.
-
-unsigned int
--> modulo 2^n
--> ex) 65535 + 1 => 0 (65536 % 65536)

@@ -15,33 +15,33 @@
 
 #define TEST(f) printf("  %c  ", f(*p) ? 'x' : ' ')
 
-int main()
-{
-  char *p;
+int main() {
+    char *p;
 
-  printf("     alnum     cntrl     graph     print"
-         "     space    xdigit\n"
-         "          alpha     digit     lower     punct"
-         "     upper\n");
+    printf(
+        "     alnum     cntrl     graph     print"
+        "     space    xdigit\n"
+        "          alpha     digit     lower     punct"
+        "     upper\n");
 
-  for (p = "azAZ0 !\t"; *p != '\0'; p++) {
-    if (iscntrl(*p))
-      printf("\\x%02x:", *p);
-    else
-      printf("   %c:", *p);
-    TEST(isalnum);
-    TEST(isalpha);
-    TEST(iscntrl);
-    TEST(isdigit);
-    TEST(isgraph);
-    TEST(islower);
-    TEST(isprint);
-    TEST(ispunct);
-    TEST(isspace);
-    TEST(isupper);
-    TEST(isxdigit);
-    printf("\n");
-  }
+    for (p = "azAZ0 !\t"; *p != '\0'; p++) {
+        if (iscntrl(*p))
+            printf("\\x%02x:", *p);
+        else
+            printf("   %c:", *p);
+        TEST(isalnum);
+        TEST(isalpha);
+        TEST(iscntrl);
+        TEST(isdigit);
+        TEST(isgraph);
+        TEST(islower);
+        TEST(isprint);
+        TEST(ispunct);
+        TEST(isspace);
+        TEST(isupper);
+        TEST(isxdigit);
+        printf("\n");
+    }
 
-  return 0;
+    return 0;
 }

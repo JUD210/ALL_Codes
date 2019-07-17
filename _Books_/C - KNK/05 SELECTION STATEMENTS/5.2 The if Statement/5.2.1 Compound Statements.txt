@@ -1,5 +1,4 @@
 === Compound Statements
-
 ㅇ In our if statement template, notice that statement is singular, not plural:
 
 if ( expression ) statement

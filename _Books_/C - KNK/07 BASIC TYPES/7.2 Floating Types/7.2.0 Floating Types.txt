@@ -1,0 +1,5 @@
+=== Floating Types
+ㅇ Floating Types
+- float          Single-precision floating-point
+- double         Double-precision floating-point
+- long double    Extended-precision floating-point

@@ -12,7 +12,7 @@
 #ifndef STACKADT_H
 #define STACKADT_H
 
-#include <stdbool.h>   /* C99 only */
+#include <stdbool.h> /* C99 only */
 
 typedef int Item;
 

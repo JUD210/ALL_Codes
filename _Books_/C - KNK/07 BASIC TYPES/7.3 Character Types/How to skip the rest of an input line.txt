@@ -1,0 +1,22 @@
+while (getchar() != '\n')  // skips rest of line
+  ;
+/* Better than fflush(stdin); to clear input buffer safely and perfectly */
+
+while ((ch = getchar()) == ' ')  // skips blanks
+  ;
+/* When the loop terminates, ch will contain the first nonblank character that getchar encountered. */
+
+-------------------
+
+do {
+  scanf("%c", &ch);
+} while (ch != '\n');
+
+
+do {
+  ch = getchar();
+} while (ch != '\n');
+
+
+while ((ch = getchar()) != '\n')
+  ;

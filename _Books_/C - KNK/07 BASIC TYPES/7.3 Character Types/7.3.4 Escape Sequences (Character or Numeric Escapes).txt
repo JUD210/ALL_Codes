@@ -1,0 +1,59 @@
+=== Escape Sequences
+ㅇ A character constant is usually one character enclosed in single quotes, as we've seen in previous examples. However, certain special characters --including the new-line character-- can't be written in this way, because they're invisible (non-printing) or because they can't be entered from the keyboard. So that programs can deal with every character in the underlying character set, C provides a special notation, the escape sequence.
+
+
+ㅇ There are two kinds of escape sequences
+- character escapes
+- numeric escapes
+
+Name            | Escape Sequence
+-------------------------------
+Alert (bell)    | \a
+Backspace       | \b
+Form feed       | \f
+Carriage return | \r
+Horizontal tab  | \t
+Vertical tab    | \v
+
+New line        | \n
+
+Backslash       | \\
+Single quote    | \'
+Double quote    | \"
+Question mark   | \?
+
+
+ㅇ Character escapes are handy, but they have a problem: the list of character escapes doesn't include all the nonprinting ASCII characters, just the most common.
+
+Character escapes are also useless for representing characters beyond the basic 128 ASCII characters.
+
+
+ㅇ Numeric escapes, which can represent any character, are the solution to this problem.
+
+To write a numeric escape for a particular character, first look up the character's octal or hexadecimal value in a table like the one in Appendix E.
+
+For example, the ASCII escape character (decimal value: 27) has the value 33 in octal and 1B in hex. Either of these codes can be used to write an escape sequence:
+
+
+- An octal escape sequence consists of the \ character followed by an octal number with at most three digits. (This number must be representable as an unsigned character, so its maximum value is normally 377 octal.)
+
+For example, the escape character could be written \33 or \033. Octal numbers in escape sequences --unlike octal constants-- don't have to begin with O.
+
+
+- A hexadecimal escape sequence consists of \x followed by a hexadecimal number. Although C places no limit on the number of digits in the hexadecimal number, it must be representable as an unsigned character (hence it can't exceed FF if characters are eight bits long).
+
+Using this notation, the escape character would be written \x1b or \x1B. The x must be in lower case. but the hex digits (such as b) can be upper or lower case.
+
+
+ㅇ When used as a character constant, an escape sequence must be enclosed in single quotes. For example, a constant representing the escape character would be written '\33 ' (or '\x1b'). Escape sequences tend to get a bit cryptic. so it's often a good idea to give them names using #define:
+
+#define ESC '\33'  // ASCII escape character
+
+
+ㅇ Escape sequences can be embedded in strings as well, as we saw in Section 3.1.
+
+
+ㅇ Escape sequences aren't the only special notations for representing characters. Trigraph sequences provide a way to represent the characters #, [, \, ], ^, {,
+|, }, and ~, which may not be available on keyboards in some countries.
+
+C99 adds universal character names, which resemble escape sequences. Unlike escape sequences, however, universal character names are allowed in identifiers.

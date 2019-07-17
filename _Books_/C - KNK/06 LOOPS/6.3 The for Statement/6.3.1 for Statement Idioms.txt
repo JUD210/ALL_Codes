@@ -1,2 +1,23 @@
 === for Statement Idioms
+ㅇ Counting up from 0 to n--l:
+  for (i = O; i < n; i++) m
 
+ㅇ Counting up from 1 to n:
+  for (i = l; i <= n; i++) m
+
+ㅇ Counting down from n--l to 0:
+  for (i = n - l; i >2 0; i--) m
+
+ㅇ Counting down from n to 1:
+  for (i = n; i > O; i~-) m
+
+
+ㅇ Imitating these patterns will help you avoid some of the following errors,
+which beginning C programmers often make:
+
+- Using < instead of > (or vice versa) in the controlling expression. Notice that "counting up" loops use the < or <= operator, while "counting down" loops rely on > or >=.
+
+- Using == in the controlling expression instead of <, <=, >, or >=. A controlling expression needs to be true at the beginning of the loop, then later become false so that the loop can terminate. A test such as i == n doesn't make much sense, because it won't be true initially.
+
+- "Off-by-one" errors such as writing the controlling expression as i <= n
+instead of i < n.

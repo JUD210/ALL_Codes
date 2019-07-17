@@ -1,0 +1,10 @@
+=== Reading and Writing Integers
+ㅇ Suppose that a program isn't working because one of its int variables is overflowing. Our first thought is to change the type of the variable from int to long int. But we're not done yet; we need to see how the change will affect the rest of the program.
+
+In particular, we must check whether the variable is used in a call of printf or scanf. If so, the format string in the call will need to be changed, since the %d conversion works only for the int type.
+
+Reading and writing unsigned, short, and long integers requires several new
+conversion specifiers:
+
+
+ㅇ Refer conversion_specifiers_for_integer.c

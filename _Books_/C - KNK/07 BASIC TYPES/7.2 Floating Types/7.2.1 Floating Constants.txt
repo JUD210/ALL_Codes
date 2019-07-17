@@ -1,2 +1,20 @@
 === Floating Constants
+ㅇ Floating constants can be written in a variety of ways. The following constants, for example, are all valid ways of writing the number 57.0:
 
+- 57.0
+- 57.
+- 57.0e0
+- 57E0
+- 5.7e1
+- 5.7e+1
+- .57e2
+- 570.e-1
+
+ㅇ On occasion, it may be necessary to force the compiler to store a floating constant in float or long double format. To indicate that only single precision is desired, put the letter F (or f) at the end of the constant.
+ex) 57.0F or 57.0f
+
+To indicate that a constant should be stored in long double format, put the letter L (or l) at the end.
+ex) 57.0L or 57.0l
+
+
+ㅇ C99 has a provision for writing floating constants in hexadecimal. Such a constant begins with 0x or 0X (like a hexadecimal integer constant). This feature is rarely used.

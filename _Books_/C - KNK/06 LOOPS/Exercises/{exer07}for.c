@@ -18,13 +18,11 @@ int main()
 
 #include <stdio.h>
 
-int main()
-{
-  for (int i = 9384; i > 0; i /= 10)
-  {
-    printf("%d ", i);
-  }
-  // 9384 938 93 9
+int main() {
+    for (int i = 9384; i > 0; i /= 10) {
+        printf("%d ", i);
+    }
+    // 9384 938 93 9
 
-  return 0;
+    return 0;
 }

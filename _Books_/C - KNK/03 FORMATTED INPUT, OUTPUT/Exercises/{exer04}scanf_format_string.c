@@ -12,16 +12,15 @@ what will be the values of i, x, and j after the call? (Assume that i and j are 
 
 #include <stdio.h>
 
-int main()
-{
-  int i, j;
-  float x;
+int main() {
+    int i, j;
+    float x;
 
-  scanf("%d%f%d", &i, &x, &j);
-  // 10.3 5 6
+    scanf("%d%f%d", &i, &x, &j);
+    // 10.3 5 6
 
-  printf("|%d|%f|%d|", i, x, j);
-  // |10|0.300000|5|
+    printf("|%d|%f|%d|", i, x, j);
+    // |10|0.300000|5|
 
-  return 0;
+    return 0;
 }

@@ -27,36 +27,35 @@ Hint: See the upc.c program of Section 4.1.
 
 #include <stdio.h>
 
-int main()
-{
-  int num2;
+int main() {
+    int num2;
 
-  printf("Enter a two-digit: number: ");
-  scanf("%d", &num2);
-  // Enter a two-digit: number: 28
+    printf("Enter a two-digit: number: ");
+    scanf("%d", &num2);
+    // Enter a two-digit: number: 28
 
-  printf("The reversal is: %d%d\n", num2 % 10, num2 / 10);
-  // The reversal is: 82
+    printf("The reversal is: %d%d\n", num2 % 10, num2 / 10);
+    // The reversal is: 82
 
-  ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
 
-  int num3;
-  printf("Enter a three-digit number: ");
-  scanf("%d", &num3);
-  // Enter a three-digit number: 159
+    int num3;
+    printf("Enter a three-digit number: ");
+    scanf("%d", &num3);
+    // Enter a three-digit number: 159
 
-  printf("The reversal is: %d%d%d\n", num3 % 10, (num3 / 10) % 10, num3 / 100);
-  // The reversal is: 951
+    printf("The reversal is: %d%d%d\n", num3 % 10, (num3 / 10) % 10, num3 / 100);
+    // The reversal is: 951
 
-  ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
 
-  int n1, n2, n3;
-  printf("Enter a three-digit number: ");
-  scanf("%1d%1d%1d", &n1, &n2, &n3);
-  // Enter a three-digit number: 159
+    int n1, n2, n3;
+    printf("Enter a three-digit number: ");
+    scanf("%1d%1d%1d", &n1, &n2, &n3);
+    // Enter a three-digit number: 159
 
-  printf("The reversal is: %1d%1d%1d\n", n3, n2, n1);
-  // The reversal is: 951
+    printf("The reversal is: %1d%1d%1d\n", n3, n2, n1);
+    // The reversal is: 951
 
-  return 0;
+    return 0;
 }

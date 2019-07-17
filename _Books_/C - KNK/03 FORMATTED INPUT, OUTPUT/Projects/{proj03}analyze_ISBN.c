@@ -21,24 +21,23 @@ Note: the number of digits in each group may vary; you can't assume that groups 
 
 #include <stdio.h>
 
-int main()
-{
-  int prefix, group, publisher, item, check_digit;
+int main() {
+    int prefix, group, publisher, item, check_digit;
 
-  printf("Enter ISBN: ");
-  scanf("%d-%d-%d-%d-%d", &prefix, &group, &publisher, &item, &check_digit);
-  // Enter ISBN: 978-0-393-97950-3
+    printf("Enter ISBN: ");
+    scanf("%d-%d-%d-%d-%d", &prefix, &group, &publisher, &item, &check_digit);
+    // Enter ISBN: 978-0-393-97950-3
 
-  printf("GS1 prefix: %d\n", prefix);
-  printf("Group identifier: %d\n", group);
-  printf("Publisher code: %d\n", publisher);
-  printf("Item number: %d\n", item);
-  printf("Check digit: %d\n", check_digit);
-  // GS1 prefix: 978
-  // Group identifier: 0
-  // Publisher code: 393
-  // Item number: 97950
-  // Check digit: 3
+    printf("GS1 prefix: %d\n", prefix);
+    printf("Group identifier: %d\n", group);
+    printf("Publisher code: %d\n", publisher);
+    printf("Item number: %d\n", item);
+    printf("Check digit: %d\n", check_digit);
+    // GS1 prefix: 978
+    // Group identifier: 0
+    // Publisher code: 393
+    // Item number: 97950
+    // Check digit: 3
 
-  return 0;
+    return 0;
 }

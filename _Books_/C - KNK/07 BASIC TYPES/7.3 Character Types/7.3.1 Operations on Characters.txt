@@ -1,2 +1,40 @@
 === Operations on Characters
+ㅇ Working with characters in C is simple, because of one fact: C treats characters as small integers.
 
+After all, characters are encoded in binary, and it doesn't take much imagination to view these binary codes as integers.
+
+In ASCII, for example, character codes range from 0000000 to 1111111, which we can think of as the integers from 0 to 127.
+
+
+ㅇ The character 'a' has the value 97, 'A' has the value 65, '0' has the value 48, and ' ' has the value 32.
+
+
+ㅇ The connection between characters and integers in C is so strong that character constants actually have int type rather than char type (an interesting fact, but not one that will often matter to us).
+
+
+When a character appears in a computation, C simply uses its integer value. Consider the following examples, which assume the ASCII character set:
+
+char ch;
+int i;
+
+i = 'a';      // i is now 97
+ch = 65;      // ch is now 'A'
+ch = ch + 1;  // ch is now 'B'
+ch++;         // ch is now 'C'
+
+
+ㅇ Characters can be compared, just as numbers can. The following if statement
+checks whether ch contains a lower-case letter; if so, it converts ch to upper case.
+
+if ('a' <= ch && ch <= 'z')
+  ch = ch - 'a' + 'A';
+
+
+ㅇ The fact that characters have the same properties as numbers has some advantages. For example, we can easily write a for statement whose control variable steps through all the upper-case letters:
+
+for (ch = 'A'; ch <= 'Z'; ch++) ...
+
+
+ㅇ On the other hand, treating characters as numbers can lead to various programming errors that won't be caught by the compiler, and lets us write meaningless expressions such as 'a' * 'b ' / 'c '.
+
+It can also hamper portability, since our programs may be based on assumptions about the underlying character set. (Our for loop, for example, assumes that the letters from A to Z have consecutive codes.)

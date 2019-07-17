@@ -7,24 +7,23 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int i;
+int main() {
+    int i;
 
-  for (i = 0; i < 10; i++)
-    continue;
-  printf("i: %d\n", i);
-  // i: 10
+    for (i = 0; i < 10; i++)
+        continue;
+    printf("i: %d\n", i);
+    // i: 10
 
-  for (i = 0; i < 10; ++i)
-    continue;
-  printf("i: %d\n", i);
-  // i: 10
+    for (i = 0; i < 10; ++i)
+        continue;
+    printf("i: %d\n", i);
+    // i: 10
 
-  for (i = 0; i++ < 10;)
-    continue;
-  printf("i: %d\n", i);
-  // i: 11
+    for (i = 0; i++ < 10;)
+        continue;
+    printf("i: %d\n", i);
+    // i: 11
 
-  return 0;
+    return 0;
 }

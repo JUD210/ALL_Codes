@@ -1,2 +1,5 @@
 === Character-Handling Functions
+ㅇ A faster and portable way to convert case is to call C's toupper/tolower library function:
 
+ch = toupper(ch); /* converts ch to upper case */
+ch = tolower(ch); /* converts ch to lower case */

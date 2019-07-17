@@ -1,0 +1,8 @@
+=== The for Statement
+ㅇ for ( expr1 ; expr2 ; expr3 ) statement
+
+for (i = 10; i > O; i--)
+  printf("T minus %d and counting\n", i);
+
+
+ㅇ The for statement is ideal for loops that have a "counting" variable, but it's versatile enough to be used for other kinds of loops as well.

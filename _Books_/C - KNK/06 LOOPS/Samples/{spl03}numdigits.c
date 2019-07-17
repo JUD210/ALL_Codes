@@ -12,22 +12,20 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int digits = 0, n;
+int main() {
+    int digits = 0, n;
 
-  printf("Enter a nonnegative integer: ");
-  scanf("%d", &n);
-  // Enter a nonnegative integer: 12627
+    printf("Enter a nonnegative integer: ");
+    scanf("%d", &n);
+    // Enter a nonnegative integer: 12627
 
-  do
-  {
-    n /= 10;
-    digits++;
-  } while (n > 0);
+    do {
+        n /= 10;
+        digits++;
+    } while (n > 0);
 
-  printf("The number has %d digit(s).\n", digits);
-  // The number has 5 digit(s).
+    printf("The number has %d digit(s).\n", digits);
+    // The number has 5 digit(s).
 
-  return 0;
+    return 0;
 }

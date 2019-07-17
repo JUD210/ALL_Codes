@@ -3,30 +3,28 @@
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
+    int i, j;
 
-  int i, j;
+    i = 1, j = 2;
+    i += j;
+    printf("i:%d, j:%d\n", i, j);
+    // i:3, j:2
 
-  i = 1, j = 2;
-  i += j;
-  printf("i:%d, j:%d\n", i, j);
-  // i:3, j:2
+    i = 1, j = 2;
+    i--;
+    printf("i:%d, j:%d\n", i, j);
+    // i:0, j:2
 
-  i = 1, j = 2;
-  i--;
-  printf("i:%d, j:%d\n", i, j);
-  // i:0, j:2
+    i = 1, j = 2;
+    i *j / i;
+    printf("i:%d, j:%d\n", i, j);
+    // i:1, j:2
 
-  i = 1, j = 2;
-  i *j / i;
-  printf("i:%d, j:%d\n", i, j);
-  // i:1, j:2
+    i = 1, j = 2;
+    i % ++j;
+    printf("i:%d, j:%d\n", i, j);
+    // i:1, j:3
 
-  i = 1, j = 2;
-  i % ++j;
-  printf("i:%d, j:%d\n", i, j);
-  // i:1, j:3
-
-  return 0;
+    return 0;
 }

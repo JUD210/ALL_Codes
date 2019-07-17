@@ -17,13 +17,13 @@
 #define NAME_LEN 25
 
 struct part {
-  int number;
-  char name[NAME_LEN+1];
-  int on_hand;
-  struct part *next;
+    int number;
+    char name[NAME_LEN + 1];
+    int on_hand;
+    struct part *next;
 };
 
-struct part *inventory = NULL;   /* points to first part */
+struct part *inventory = NULL; /* points to first part */
 
 struct part *find_part(int number);
 void insert();
@@ -38,29 +38,34 @@ void print();
  *       command 'q'. Prints an error message if the user *
  *       enters an illegal code.                          *
  **********************************************************/
-int main()
-{
-  char code;
+int main() {
+    char code;
 
-  for (;;) {
-    printf("Enter operation code: ");
-    scanf(" %c", &code);
-    while (getchar() != '\n')   /* skips to end of line */
-      ;
-    switch (code) {
-      case 'i': insert();
+    for (;;) {
+        printf("Enter operation code: ");
+        scanf(" %c", &code);
+        while (getchar() != '\n') /* skips to end of line */
+            ;
+        switch (code) {
+            case 'i':
+                insert();
                 break;
-      case 's': search();
+            case 's':
+                search();
                 break;
-      case 'u': update();
+            case 'u':
+                update();
                 break;
-      case 'p': print();
+            case 'p':
+                print();
                 break;
-      case 'q': return 0;
-      default:  printf("Illegal code\n");
+            case 'q':
+                return 0;
+            default:
+                printf("Illegal code\n");
+        }
+        printf("\n");
     }
-    printf("\n");
-  }
 }
 
 /**********************************************************
@@ -69,17 +74,16 @@ int main()
  *            containing the part number; if the part     *
  *            number is not found, returns NULL.          *
  **********************************************************/
-struct part *find_part(int number)
-{
-  struct part *p;
+struct part *find_part(int number) {
+    struct part *p;
 
-  for (p = inventory;
-       p != NULL && number > p->number;
-       p = p->next)
-    ;
-  if (p != NULL && number == p->number)
-    return p;
-  return NULL;
+    for (p = inventory;
+         p != NULL && number > p->number;
+         p = p->next)
+        ;
+    if (p != NULL && number == p->number)
+        return p;
+    return NULL;
 }
 
 /**********************************************************
@@ -90,39 +94,38 @@ struct part *find_part(int number)
  *         returns prematurely if the part already exists *
  *         or space could not be allocated for the part.  *
  **********************************************************/
-void insert()
-{
-  struct part *cur, *prev, *new_node;
+void insert() {
+    struct part *cur, *prev, *new_node;
 
-  new_node = malloc(sizeof(struct part));
-  if (new_node == NULL) {
-    printf("Database is full; can't add more parts.\n");
-    return;
-  }
+    new_node = malloc(sizeof(struct part));
+    if (new_node == NULL) {
+        printf("Database is full; can't add more parts.\n");
+        return;
+    }
 
-  printf("Enter part number: ");
-  scanf("%d", &new_node->number);
+    printf("Enter part number: ");
+    scanf("%d", &new_node->number);
 
-  for (cur = inventory, prev = NULL;
-       cur != NULL && new_node->number > cur->number;
-       prev = cur, cur = cur->next)
-    ;
-  if (cur != NULL && new_node->number == cur->number) {
-    printf("Part already exists.\n");
-    free(new_node);
-    return;
-  }
+    for (cur = inventory, prev = NULL;
+         cur != NULL && new_node->number > cur->number;
+         prev = cur, cur = cur->next)
+        ;
+    if (cur != NULL && new_node->number == cur->number) {
+        printf("Part already exists.\n");
+        free(new_node);
+        return;
+    }
 
-  printf("Enter part name: ");
-  read_line(new_node->name, NAME_LEN);
-  printf("Enter quantity on hand: ");
-  scanf("%d", &new_node->on_hand);
+    printf("Enter part name: ");
+    read_line(new_node->name, NAME_LEN);
+    printf("Enter quantity on hand: ");
+    scanf("%d", &new_node->on_hand);
 
-  new_node->next = cur;
-  if (prev == NULL)
-    inventory = new_node;
-  else
-    prev->next = new_node;
+    new_node->next = cur;
+    if (prev == NULL)
+        inventory = new_node;
+    else
+        prev->next = new_node;
 }
 
 /**********************************************************
@@ -131,19 +134,18 @@ void insert()
  *         exists, prints the name and quantity on hand;  *
  *         if not, prints an error message.               *
  **********************************************************/
-void search()
-{
-  int number;
-  struct part *p;
+void search() {
+    int number;
+    struct part *p;
 
-  printf("Enter part number: ");
-  scanf("%d", &number);
-  p = find_part(number);
-  if (p != NULL) {
-    printf("Part name: %s\n", p->name);
-    printf("Quantity on hand: %d\n", p->on_hand);
-  } else
-    printf("Part not found.\n");
+    printf("Enter part number: ");
+    scanf("%d", &number);
+    p = find_part(number);
+    if (p != NULL) {
+        printf("Part name: %s\n", p->name);
+        printf("Quantity on hand: %d\n", p->on_hand);
+    } else
+        printf("Part not found.\n");
 }
 
 /**********************************************************
@@ -153,20 +155,19 @@ void search()
  *         change in quantity on hand and updates the     *
  *         database.                                      *
  **********************************************************/
-void update()
-{
-  int number, change;
-  struct part *p;
+void update() {
+    int number, change;
+    struct part *p;
 
-  printf("Enter part number: ");
-  scanf("%d", &number);
-  p = find_part(number);
-  if (p != NULL) {
-    printf("Enter change in quantity on hand: ");
-    scanf("%d", &change);
-    p->on_hand += change;
-  } else
-    printf("Part not found.\n");
+    printf("Enter part number: ");
+    scanf("%d", &number);
+    p = find_part(number);
+    if (p != NULL) {
+        printf("Enter change in quantity on hand: ");
+        scanf("%d", &change);
+        p->on_hand += change;
+    } else
+        printf("Part not found.\n");
 }
 
 /**********************************************************
@@ -175,13 +176,13 @@ void update()
  *        quantity on hand. Part numbers will appear in   *
  *        ascending order.                                *
  **********************************************************/
-void print()
-{
-  struct part *p;
+void print() {
+    struct part *p;
 
-  printf("Part Number   Part Name                  "
-         "Quantity on Hand\n");
-  for (p = inventory; p != NULL; p = p->next)
-    printf("%7d       %-25s%11d\n", p->number, p->name,
-           p->on_hand);
+    printf(
+        "Part Number   Part Name                  "
+        "Quantity on Hand\n");
+    for (p = inventory; p != NULL; p = p->next)
+        printf("%7d       %-25s%11d\n", p->number, p->name,
+               p->on_hand);
 }

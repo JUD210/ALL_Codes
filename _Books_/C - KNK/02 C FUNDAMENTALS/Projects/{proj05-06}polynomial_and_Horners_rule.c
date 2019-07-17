@@ -20,22 +20,21 @@ Note that the modified program performs fewer multiplications. This technique fo
 
 #include <stdio.h>
 
-int main()
-{
-  int x;
-  printf("Enter the value of x: ");
-  scanf("%d", &x);
-  // Enter the value of x: 10
+int main() {
+    int x;
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+    // Enter the value of x: 10
 
-  int result_1, result_2;
+    int result_1, result_2;
 
-  result_1 = 3 * x * x * x * x * x + 2 * x * x * x * x - 5 * x * x * x - x * x + 7 * x - 6;
-  result_2 = ((((3 * x + 2) * x - 5) * x - 1) * x + 7) * x - 6;
+    result_1 = 3 * x * x * x * x * x + 2 * x * x * x * x - 5 * x * x * x - x * x + 7 * x - 6;
+    result_2 = ((((3 * x + 2) * x - 5) * x - 1) * x + 7) * x - 6;
 
-  printf("Result 1. normal: %d\n", result_1);
-  printf("Result 2. Horner's Rule: %d", result_2);
-  // Result 1. normal: 314964
-  // Result 2. Horner's Rule: 314964
+    printf("Result 1. normal: %d\n", result_1);
+    printf("Result 2. Horner's Rule: %d", result_2);
+    // Result 1. normal: 314964
+    // Result 2. Horner's Rule: 314964
 
-  return 0;
+    return 0;
 }

@@ -1,2 +1,2 @@
 === Program - Summing a Series of Numbers
-
+ㅇ {spl02}sum.c

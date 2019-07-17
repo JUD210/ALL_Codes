@@ -15,18 +15,17 @@
 #define FREEZING_PT 32.0f
 #define SCALE_FACTOR (5.0f / 9.0f)
 
-int main()
-{
-  float fahrenheit, celsius;
+int main() {
+    float fahrenheit, celsius;
 
-  printf("Enter Fahrenheit temperature: ");
-  scanf("%f", &fahrenheit);
-  // Enter Fahrenheit temperature: 100
+    printf("Enter Fahrenheit temperature: ");
+    scanf("%f", &fahrenheit);
+    // Enter Fahrenheit temperature: 100
 
-  celsius = (fahrenheit - FREEZING_PT) * SCALE_FACTOR;
+    celsius = (fahrenheit - FREEZING_PT) * SCALE_FACTOR;
 
-  printf("Celsius equivalent: %.1f\n", celsius);
-  // Celsius equivalent: 37.8
+    printf("Celsius equivalent: %.1f\n", celsius);
+    // Celsius equivalent: 37.8
 
-  return 0;
+    return 0;
 }

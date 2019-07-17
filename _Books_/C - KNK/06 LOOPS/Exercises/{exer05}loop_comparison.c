@@ -8,26 +8,24 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int i;
+int main() {
+    int i;
 
-  while (i < 10)
-    i++;
-  printf("i: %d\n", i);
-  // i: 10
+    while (i < 10)
+        i++;
+    printf("i: %d\n", i);
+    // i: 10
 
-  for (; i < 10;)
-    i++;
-  printf("i: %d\n", i);
-  // i: 10
+    for (; i < 10;)
+        i++;
+    printf("i: %d\n", i);
+    // i: 10
 
-  do
-  {
-    i++;
-  } while (i < 10);
-  printf("i: %d\n", i);
-  // i: 11
+    do {
+        i++;
+    } while (i < 10);
+    printf("i: %d\n", i);
+    // i: 11
 
-  return 0;
+    return 0;
 }

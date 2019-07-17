@@ -1,0 +1,14 @@
+=== Integer Overflow
+ㅇ When arithmetic operations are performed on integers, it's possible that the result will be too large to represent.
+
+For example, when an arithmetic operation is performed on two int values, the result must be able to be represented as an int. If the result can't be represented as an int (because it requires too many hits), we say that overflow has occurred.
+
+
+ㅇ The behavior when integer overflow occurs depends on whether the operands were signed or unsigned. When overflow occurs during an operation on signed integers, the program's behavior is undefined. Recall from Section 4.4 that the consequences of undefined behavior may vary.
+
+Most likely the result of the operation will simply be wrong, but the program could crash or exhibit other undesirable behavior.
+
+
+ㅇ When overflow occurs during an operation on unsigned integers, though, the result is defined: we get the correct answer modulo 2^n. where n is the number of bits used to store the result.
+
+For example, if we add 1 to the unsigned 16-bit number 65,535, the result is guaranteed to be 0.

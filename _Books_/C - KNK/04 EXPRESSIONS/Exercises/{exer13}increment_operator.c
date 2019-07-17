@@ -6,21 +6,20 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int i;
+int main() {
+    int i;
 
-  i = 5;
-  printf("%d\n", ++i);
-  // 6
+    i = 5;
+    printf("%d\n", ++i);
+    // 6
 
-  i = 5;
-  printf("%d\n", i += 1);
-  // 6
+    i = 5;
+    printf("%d\n", i += 1);
+    // 6
 
-  i = 5;
-  printf("%d\n", i++);
-  // 5
+    i = 5;
+    printf("%d\n", i++);
+    // 5
 
-  return 0;
+    return 0;
 }

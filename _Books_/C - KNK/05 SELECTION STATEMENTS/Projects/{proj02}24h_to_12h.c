@@ -7,24 +7,23 @@ Be careful not to display 12:00 as 0:00. */
 
 #include <stdio.h>
 
-int main()
-{
-  int hours, minutes;
+int main() {
+    int hours, minutes;
 
-  printf("Enter a 24-hour time: ");
-  scanf("%d:%d", &hours, &minutes);
-  // Enter a 24-hour time: 12:00
+    printf("Enter a 24-hour time: ");
+    scanf("%d:%d", &hours, &minutes);
+    // Enter a 24-hour time: 12:00
 
-  printf("Equivalent 12-hour time: ");
-  if (hours == 0)
-    printf("12:%.2d AM\n", minutes);
-  else if (hours < 12)
-    printf("%d:%.2d AM\n", hours, minutes);
-  else if (hours == 12)
-    printf("%d:%.2d PM\n", hours, minutes);
-  else
-    printf("%d:%.2d PM\n", hours - 12, minutes);
-  // Equivalent 12-hour time: 12:00 PM
+    printf("Equivalent 12-hour time: ");
+    if (hours == 0)
+        printf("12:%.2d AM\n", minutes);
+    else if (hours < 12)
+        printf("%d:%.2d AM\n", hours, minutes);
+    else if (hours == 12)
+        printf("%d:%.2d PM\n", hours, minutes);
+    else
+        printf("%d:%.2d PM\n", hours - 12, minutes);
+    // Equivalent 12-hour time: 12:00 PM
 
-  return 0;
+    return 0;
 }

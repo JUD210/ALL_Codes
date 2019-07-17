@@ -1,5 +1,4 @@
 === The 'Dangling else' Problem
-
 ㅇ When if statements are nested, we've got to watch out for the notorious "dangling else" problem. Consider the following example:
 
 if (y != 0)

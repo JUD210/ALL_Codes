@@ -1,6 +1,5 @@
-1. fflush(stdin);
-Which is not recommended because as it's not a standard, Some OS like Linux doesn't support this.
-
-
-2. while((getchar())!='\n');
+1. while((getchar())!='\n');
 Which is recommended.
+
+2. fflush(stdin);
+Which is NOT recommended because as it's not a standard, Some OS like Linux doesn't support this.

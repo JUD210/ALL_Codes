@@ -14,56 +14,50 @@
 #include "stack.h"
 
 struct node {
-  int data;
-  struct node *next;
+    int data;
+    struct node *next;
 };
 
 static struct node *top = NULL;
 
-static void terminate(const char *message)
-{
-  printf("%s\n", message);
-  exit(EXIT_FAILURE);
+static void terminate(const char *message) {
+    printf("%s\n", message);
+    exit(EXIT_FAILURE);
 }
 
-void make_empty()
-{
-  while (!is_empty())
-    pop();
+void make_empty() {
+    while (!is_empty())
+        pop();
 }
 
-bool is_empty()
-{
-  return top == NULL;
+bool is_empty() {
+    return top == NULL;
 }
 
-bool is_full()
-{
-  return false;
+bool is_full() {
+    return false;
 }
 
-void push(int i)
-{
-  struct node *new_node = malloc(sizeof(struct node));
-  if (new_node == NULL)
-    terminate("Error in push: stack is full.");
+void push(int i) {
+    struct node *new_node = malloc(sizeof(struct node));
+    if (new_node == NULL)
+        terminate("Error in push: stack is full.");
 
-  new_node->data = i;
-  new_node->next = top;
-  top = new_node;
+    new_node->data = i;
+    new_node->next = top;
+    top = new_node;
 }
 
-int pop()
-{
-  struct node *old_top;
-  int i;
+int pop() {
+    struct node *old_top;
+    int i;
 
-  if (is_empty())
-    terminate("Error in pop: stack is empty.");
+    if (is_empty())
+        terminate("Error in pop: stack is empty.");
 
-  old_top = top;
-  i = top->data;
-  top = top->next;
-  free(old_top);
-  return i;
+    old_top = top;
+    i = top->data;
+    top = top->next;
+    free(old_top);
+    return i;
 }

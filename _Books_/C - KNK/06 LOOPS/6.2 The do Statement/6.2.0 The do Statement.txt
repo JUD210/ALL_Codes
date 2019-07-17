@@ -1,0 +1,16 @@
+=== The do Statement
+ㅇ do  statement  while  ( expression ) ;
+
+i=1O;
+
+do {
+  printf("T minus %d and counting\n", i);
+  --i;
+} while (i > 0);
+
+
+ㅇ When a do statement is executed, the loop body is executed first, then the controlling expression is evaluated.
+
+ㅇ If the value of the expression is nonzero, the loop body is executed again and then the expression is evaluated once more.
+
+ㅇ Execution of the do statement terminates when the controlling expression has the value 0 after the loop body has been executed.

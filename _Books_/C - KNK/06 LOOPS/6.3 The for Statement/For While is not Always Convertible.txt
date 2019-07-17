@@ -1,0 +1,26 @@
+Q: Section 6.3 says that, except in rare cases, for loops can be converted to while loops using a standard pattern. Can you give an example of such a case? [p. 106]
+
+A: When the body of a for loop contains a continue statement, the while pattern shown in Section 6.3 is no longer valid. Consider the following example from Section 6.4:
+
+sum = 0;
+n = 0;
+while (n < 10) {
+  scanf("%d", &i);
+  if (i == 0)
+    continue;
+  sum += i;
+  n++;
+}
+
+At first glance, it looks as though we could convert the while loop into a for
+loop:
+
+sum = O;
+for (n = 0; n < 10; n++) {
+  scanf("%d", &i);
+  if (i == 0)
+    continue;
+  sum += i;
+}
+
+Unfortunately, this loop isn't equivalent to the original. When i is equal to O, the original loop doesn't increment n, but the new loop does.

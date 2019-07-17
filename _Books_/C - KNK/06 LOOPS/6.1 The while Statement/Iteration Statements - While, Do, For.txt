@@ -1,0 +1,4 @@
+ㅇ C provides three iteration statements
+- while
+- do
+- for

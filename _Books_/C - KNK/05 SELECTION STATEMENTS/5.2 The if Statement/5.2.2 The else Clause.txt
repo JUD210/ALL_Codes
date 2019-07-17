@@ -1,5 +1,4 @@
 === The else Clause
-
 ㅇ if ( expression ) statement else statement
 
 ㅇ The inner statements are usually indented.

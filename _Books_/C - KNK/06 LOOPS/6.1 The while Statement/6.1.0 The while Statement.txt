@@ -1,0 +1,9 @@
+=== The while Statement
+ㅇ while ( expression ) statement
+The expression inside the parentheses is the controlling expression; the statement after the parentheses is the loop body.
+
+Here's an example:
+while (i < n) /* controlling expression */
+  i = i * 2;  /* loop body */
+
+Note that the parentheses are mandatory and that nothing goes between the right parenthesis and the loop body. (Some languages require the word do.)

@@ -8,28 +8,26 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int n;
+int main() {
+    int n;
 
-  printf("Enter limit on maximum square: ");
-  scanf("%d", &n);
-  // Enter limit on maximum square: 100
+    printf("Enter limit on maximum square: ");
+    scanf("%d", &n);
+    // Enter limit on maximum square: 100
 
-  for (int i = 2, square = i * i;
-       square <= n;
-       i += 2, square = i * i)
-  {
-    printf("%d\n", square);
-  }
-  // 4
-  // 16
-  // 36
-  // 64
-  // 100
+    for (int i = 2, square = i * i;
+         square <= n;
+         i += 2, square = i * i) {
+        printf("%d\n", square);
+    }
+    // 4
+    // 16
+    // 36
+    // 64
+    // 100
 
-  // for (i = 2; i * i <= n; i += 2)
-  //   printf("%d\n", i * i);
+    // for (i = 2; i * i <= n; i += 2)
+    //   printf("%d\n", i * i);
 
-  return 0;
+    return 0;
 }

@@ -1,2 +1,7 @@
 === Infinite Loops
+ㅇ A while statement won't terminate if the controlling expression always has a nonzero value. In fact, C programmers sometimes deliberately create an inf inite loop by using a nonzero constant as the controlling expression:
 
+while (1) ...
+
+
+ㅇ A while statement of this form will execute forever unless its body contains a statement that transfers control out of the loop (break, goto, return) or calls a function that causes the program to terminate.

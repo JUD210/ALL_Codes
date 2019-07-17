@@ -1,0 +1,4 @@
+#include <ctype.h>
+
+ch = toupper(ch);
+ch = tolower(ch);

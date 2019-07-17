@@ -11,10 +11,9 @@
 
 #include <stdio.h>
 
-int main()
-{
-  printf("To C, or not to C: that is the question.\n");
-  // To C, or not to C: that is the question.
+int main() {
+    printf("To C, or not to C: that is the question.\n");
+    // To C, or not to C: that is the question.
 
-  return 0;
+    return 0;
 }

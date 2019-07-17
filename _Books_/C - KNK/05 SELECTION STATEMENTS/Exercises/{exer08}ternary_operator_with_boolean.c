@@ -18,14 +18,13 @@ else if (age < 13)
 #define true 1
 #define false 0
 
-int main()
-{
-  int age;
-  bool teenager;
+int main() {
+    int age;
+    bool teenager;
 
-  age = 15;
+    age = 15;
 
-  /*
+    /*
   if (age >= 13)
     if (age <= 19)
       teenager = true;
@@ -34,12 +33,12 @@ int main()
   else if (age < 13)
     teenager = false;
    */
-  teenager = age >= 13 && age <= 19 ? true : false;
+    teenager = age >= 13 && age <= 19 ? true : false;
 
-  printf("Age: %d\n", age);
-  // Age: 15
-  printf("Teenager: %s", teenager ? "true" : "false");
-  // Teenager: true
+    printf("Age: %d\n", age);
+    // Age: 15
+    printf("Teenager: %s", teenager ? "true" : "false");
+    // Teenager: true
 
-  return 0;
+    return 0;
 }

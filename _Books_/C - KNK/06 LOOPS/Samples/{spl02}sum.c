@@ -12,27 +12,25 @@
 
 #include <stdio.h>
 
-int main()
-{
-  int n, sum = 0;
+int main() {
+    int n, sum = 0;
 
-  printf("This program sums a series of integers.\n");
-  printf("Enter integers (0 to terminate): ");
-  scanf("%d", &n);
-  // This program sums a series of integers.
-  // Enter integers (0 to terminate): 1
-
-  while (n != 0)
-  {
-    sum += n;
+    printf("This program sums a series of integers.\n");
+    printf("Enter integers (0 to terminate): ");
     scanf("%d", &n);
-  }
-  // 10 100
-  // 1000
-  // 0
+    // This program sums a series of integers.
+    // Enter integers (0 to terminate): 1
 
-  printf("The sum is: %d\n", sum);
-  // The sum is: 1111
+    while (n != 0) {
+        sum += n;
+        scanf("%d", &n);
+    }
+    // 10 100
+    // 1000
+    // 0
 
-  return 0;
+    printf("The sum is: %d\n", sum);
+    // The sum is: 1111
+
+    return 0;
 }

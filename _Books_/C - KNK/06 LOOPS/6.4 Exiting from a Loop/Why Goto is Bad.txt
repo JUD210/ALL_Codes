@@ -1,0 +1,7 @@
+Q: What's so bad about the goto statement? [p. 114]
+
+A: The goto statement isn't inherently evil; it's just that we usually have better alternatives. Programs that use more than a few goto statements can quickly degenerate into "spaghetti code", with control blithely jumping from here to there. Spaghetti code is hard to understand and hard to modify.
+
+goto statements make programs hard to read because they can jump either forward or backward. (In contrast, break and continue only jump forward.) A program that contains goto statements often requires the reader to jump back and forth in an attempt to follow the flow of control.
+
+goto statements can make programs hard to modify, since they make it possible for a section of code to serve more than one purpose. For example, a statement that is preceded by a label might be reachable either by "falling through" from the previous statement or by executing one of several goto statements.

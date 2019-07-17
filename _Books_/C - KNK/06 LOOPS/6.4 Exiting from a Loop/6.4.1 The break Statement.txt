@@ -1,2 +1,26 @@
 === The break Statement
+ㅇ We've already discussed how a break statement can transfer control out of a switch statement. The break statement can also be used to jump out of a while, do, or for loop.
 
+ㅇ A program that checks whether a number n is prime:
+
+for (d = 2; d < n; d++)
+  if (n % d == 0)
+    break;
+
+if (d < n)
+  printf("%d is divisible by %d\n", n, d);
+else
+  printf("%d'is prime\n", n);
+
+
+ㅇ A break statement transfers control out of the innermost enclosing while, do, for, or switch statement. Thus, when these statements are nested, the break statement can escape only one level of nesting. Consider the case of a switch statement nested inside a while statement:
+
+while (...) {
+  switch (...) {
+    ...
+    break;
+    ...
+  }
+}
+
+The break statement transfers control out of the switch statement, but not out of the while loop. l'll return to this point later.

@@ -12,7 +12,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include <stdbool.h>   /* C99 only */
+#include <stdbool.h> /* C99 only */
 
 void make_empty();
 bool is_empty();

@@ -1,2 +1,2 @@
 === Program - Printing a Date in Legal Form
-
+ㅇ {spl02}date.c

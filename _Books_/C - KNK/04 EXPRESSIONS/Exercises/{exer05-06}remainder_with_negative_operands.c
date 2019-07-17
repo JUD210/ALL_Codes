@@ -16,18 +16,17 @@ Repeat Exercise 3 for C99.
  */
 
 #include <stdio.h>
-int main()
-{
-  // ONLY in C99
+int main() {
+    // ONLY in C99
 
-  printf("%d\n", 8 % 5);
-  // 3
-  printf("%d\n", -8 % 5);
-  // -3
-  printf("%d\n", 8 % -5);
-  // 3
-  printf("%d\n", -8 % -5);
-  // -3
+    printf("%d\n", 8 % 5);
+    // 3
+    printf("%d\n", -8 % 5);
+    // -3
+    printf("%d\n", 8 % -5);
+    // 3
+    printf("%d\n", -8 % -5);
+    // -3
 
-  return 0;
+    return 0;
 }

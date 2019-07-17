@@ -7,16 +7,15 @@ You entered 404.817.6900
 
 #include <stdio.h>
 
-int main()
-{
-  int num1, num2, num3;
+int main() {
+    int num1, num2, num3;
 
-  printf("Enter phone number [(xxx) xxx-xxxx]: ");
-  scanf("(%d) %d-%d", &num1, &num2, &num3);
-  // Enter phone number [(xxx) xxx-xxxx]: (404) 817-6900
+    printf("Enter phone number [(xxx) xxx-xxxx]: ");
+    scanf("(%d) %d-%d", &num1, &num2, &num3);
+    // Enter phone number [(xxx) xxx-xxxx]: (404) 817-6900
 
-  printf("You entered %d.%d.%d", num1, num2, num3);
-  // You entered 404.817.6900
+    printf("You entered %d.%d.%d", num1, num2, num3);
+    // You entered 404.817.6900
 
-  return 0;
+    return 0;
 }

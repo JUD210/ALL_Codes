@@ -1,2 +1,15 @@
 === The continue Statement
+ㅇ A continue statement transfers control to a point just before the end of the loop body. (remaining inside the loop)
 
+ㅇ Example
+
+n=0;
+sum = 0;
+while (n < 10) {
+  scanf("%d", &i);
+  if (i == 0)
+    continue;
+  sum += i;
+  n++;
+  /* continue jumps to here */
+}

@@ -10,31 +10,29 @@
 /* prime.c (Chapter 9, page 190) */
 /* Tests whether a number is prime */
 
-#include <stdbool.h>   /* C99 only */
+#include <stdbool.h> /* C99 only */
 #include <stdio.h>
 
-bool is_prime(int n)
-{
-  int divisor;
+bool is_prime(int n) {
+    int divisor;
 
-  if (n <= 1)
-    return false;
-  for (divisor = 2; divisor * divisor <= n; divisor++)
-    if (n % divisor == 0)
-      return false;
-  return true;
+    if (n <= 1)
+        return false;
+    for (divisor = 2; divisor * divisor <= n; divisor++)
+        if (n % divisor == 0)
+            return false;
+    return true;
 }
 
-int main()
-{
-  int n;
+int main() {
+    int n;
 
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  if (is_prime(n))
-    printf("Prime\n");
-  else
-    printf("Not prime\n");
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (is_prime(n))
+        printf("Prime\n");
+    else
+        printf("Not prime\n");
 
-  return 0;
+    return 0;
 }

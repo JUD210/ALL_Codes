@@ -13,29 +13,27 @@ Notice that the numbers aren't necessarily integers. */
 
 #include <stdio.h>
 
-int main()
-{
-  float num, max;
+int main() {
+    float num, max;
 
-  max = 0;
-  do
-  {
-    printf("Enter a number: ");
-    scanf("%f", &num);
-    // Enter a number: 60
-    // Enter a number: 38.3
-    // Enter a number: 4.89
-    // Enter a number: 100.62
-    // Enter a number: 75.2295
-    // Enter a number: 0
+    max = 0;
+    do {
+        printf("Enter a number: ");
+        scanf("%f", &num);
+        // Enter a number: 60
+        // Enter a number: 38.3
+        // Enter a number: 4.89
+        // Enter a number: 100.62
+        // Enter a number: 75.2295
+        // Enter a number: 0
 
-    if (num > max)
-      max = num;
+        if (num > max)
+            max = num;
 
-  } while (num > 0);
+    } while (num > 0);
 
-  printf("The largest number entered was %.2f", max);
-  // The largest number entered was 100.62
+    printf("The largest number entered was %.2f", max);
+    // The largest number entered was 100.62
 
-  return 0;
+    return 0;
 }

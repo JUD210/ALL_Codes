@@ -3,11 +3,19 @@ __pycache__
 .mypy_cache
 ipch
 
-.md
+**/*.md
 
-/*Books*/C - KNK/*/*.exe
-/*Books*/C - KNK/*/*/*.exe
+/*Books*/C - KNK/**/*.exe
 
-# Save all videos to the OneDrive.
-/*Courses*/*eGreen/*/*.mp4
-/*Courses*/*eGreen/*/*.mkv
+##########################################################################
+# DO NOT CHANGE BELOW AGAIN IF YOU ARE NOT PREPARED FOR LARGE FILE ISSUE #
+##########################################################################
+
+# Save large files to the OneDrive ONLY.
+**/*.mp4
+**/*.mkv
+**/*.mov
+
+**/*.pdf
+**/*.ppt
+**/*.hwp

@@ -1,0 +1,10 @@
+=== Character Types
+ㅇ A variable of type char can be assigned any single character:
+
+char ch;
+ch = 'a'; /* lower--case a */
+ch = 'A'; /* upper-case A */
+ch = '0'; /* zero */
+ch = ' '; /* space */
+
+Notice that character constants are enclosed in single quotes, not double quotes.
