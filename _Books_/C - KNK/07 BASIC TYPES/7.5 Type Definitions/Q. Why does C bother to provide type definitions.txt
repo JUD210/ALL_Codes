@@ -1,0 +1,21 @@
+Q: Why does C bother to provide type definitions? Isn't defining a BOOL macro just as good as defining a Bool type using typedef?
+[p. 149]
+
+A: There are two important differences between type definitions and macro def initions.
+
+- First, type definitions are more powerful than macro definitions. In particular, array and pointer types can't be defined as macros. Suppose that we try to use a macro to define a "pointer to integer" type:
+
+#define PTR_TO_INT int *
+
+The declaration
+
+PTR_TO_INT p, q, r;
+
+will become
+
+int * p, q, r;
+
+after preprocessing, Unfortunately, only p is a pointer; q and r are ordinary integer variables. Type definitions don't have this problem.
+
+
+- Second, typedef names are subject to the same scope rules as variables; a typedef name defined inside a function body wouldn't be recognized outside the function. Macro names, on the other hand, are replaced by the preprocessor wherever they appear.

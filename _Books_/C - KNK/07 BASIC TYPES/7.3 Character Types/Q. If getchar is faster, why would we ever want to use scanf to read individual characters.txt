@@ -1,0 +1,6 @@
+Q: If getchar is faster, why would we ever want to use scanf to read individual characters?
+[p. 140]
+
+A: Although it's not as fast as getchar, the scanf function is more flexible. As we saw previously, the "%c" format string causes scanf to read the next input character; " %c" causes it to read the next non-white-space character.
+
+Also, scanf is good at reading characters that are mixed in with other kinds of data. Let's say that our input data consists of an integer, then a single nonnumeric character, then another integer. By using the format string "%d%c%d", we can get scanf to read all three items.

@@ -3,6 +3,8 @@
 
 double d;
 scanf("%lf", &d);
+printf("%f", d);
+printf("%lf", d);  // in C99
 
 Note: Use l only in a scanf format string, not a printf string. In a printf format string, the e, f, and g conversions can be used to write either float or double values. (C99 legalizes the use of %le, %lf, and %lg in calls of printf, although the l has no effect.)
 

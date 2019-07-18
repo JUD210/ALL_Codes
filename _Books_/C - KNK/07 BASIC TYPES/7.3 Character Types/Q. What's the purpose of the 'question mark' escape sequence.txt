@@ -1,0 +1,3 @@
+Q: What's the purpose of the \? escape sequence? [p. 138]
+
+A: The \? escape is related to trigraph sequences, which begin with ??. if you should put ?? in a string, there's a possibility that the compiler will mistake it for the beginning of a trigraph. Replacing the second ? by \? fixes the problem.

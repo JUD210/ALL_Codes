@@ -1,0 +1,7 @@
+Q: Exactly what happens if I assign a value to a variable that's not large enough to hold it?
+[p. 146]
+
+
+A: Roughly speaking, if the value is of an integral type and the variable is of an unsigned type, the extra bits are thrown away; if the variable has a signed type, the result is implementation-defined.
+
+Assigning a floating-point number to a variable ㅡinteger or floatingㅡ that's too small to hold it produces undefined behavior; anything can happen, including program temrination.

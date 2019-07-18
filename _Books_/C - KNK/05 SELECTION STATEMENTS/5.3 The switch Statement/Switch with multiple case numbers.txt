@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/20208628/c-switch-with-multiple-case-numbers
+
+With GCC and CLang, you can use case ranges, like this:
+
+switch (x){
+
+case 1 ... 30:
+    printf ("The number you entered is >= 1 and <= 30\n");
+    break;
+}
+The only cross-compiler solution is to use case statements like this:
+
+switch (x){
+
+case 1:
+case 2:
+case 3:
+case 4:
+case 5:
+case 6:
+    printf ("The number you entered is >= 1 and <= 6\n");
+    break;
+}
+Edit: Using something to the effect of switch (x / 10) is another good way of doing this. It may be simpler to use GCC case ranges when the ranges aren't differences of 10, but on the other hand your professor might not take a GCC extension as an answer.
+

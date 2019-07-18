@@ -1,0 +1,8 @@
+Q: Why are floating constants stored in double form rather than float form?
+[p. 133]
+
+A: For historical reasons, C gives preference to the double type; float is treated as a second-class citizen. Consider, for instance, the discussion of float in Kernighan and Ritchie's The C Programming Language:
+
+"The main reason for using float is to save storage in large arrays. or, less often, to save time on machines where double-precision arithmetic is particularly expensive."
+
+C originally mandated that all floating-point arithmetic be done in double precision. (C89 and C99 have no such requirement.)

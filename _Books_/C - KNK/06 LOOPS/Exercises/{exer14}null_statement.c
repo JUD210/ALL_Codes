@@ -1,4 +1,4 @@
-/* Find the error in the following program fragment and f‌ix it.
+/* Find the error in the following program fragment and fix it.
 
 if (n % 2 == 0);
   printf("n is even\n");

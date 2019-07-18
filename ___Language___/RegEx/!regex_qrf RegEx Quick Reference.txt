@@ -10,7 +10,7 @@ abc 123         | "abc 123"
 [0-9]           | A character of: the range(0-9)
 
 [abx-z]	        | A character of: a, b, or the range(x-z)
-[^abx-z]	    | A character except: a, b, or the range(x-z)
+[^abx-z]	      | A character except: a, b, or the range(x-z)
 
 \d	            | A character digit character (same as [0-9])
 \D	            | A non-digit character (same as [^0-9])
@@ -26,9 +26,9 @@ abc 123         | "abc 123"
 \n              | A Newline
 
 
-a{4}	        | Exactly 4 a'ss
+a{4}	          | Exactly 4 a'ss
 a{0,8}	        | Between (inclusive) zero and 8 a's
-a{9,}	        | 9 or more a's
+a{9,}	          | 9 or more a's
 
 a{3}{1,2}       | == a{3} or a{6}
 
@@ -85,8 +85,8 @@ ex)
 
 o
 
-(a?)o\1           | Matches 'o'
-(a)?o\1           | Fails to match 'o' (excluding JavaScript)
+(a?)o\1         | Matches 'o'
+(a)?o\1         | Fails to match 'o' (excluding JavaScript)
 
 
 

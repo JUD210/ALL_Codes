@@ -1,0 +1,11 @@
+Q: I don't understand how the new-line character can be the ASCII line-feed character. When a user enters input and presses the Enter key, doesn't the program read this as a carriage-return character or a carriage return plus a line feed?
+[p. 137]
+
+
+A: Nope. As part of C's UNIX heritage, it always regards the end of a line as being marked by a single line-feed character. (In UNIX text files, a single line-feed character ㅡbut no carriage returnㅡ appears at the end of each line.)
+
+The C library takes care of translating the user's keypress into a line-feed character. When a program reads from a file, the I/O library translates the file's end-of-line marker (whatever it may be) into a single line-feed  character.
+
+The same transformations occur ㅡin reverseㅡ when output is written to the screen or to a file. (See Section 22.1 for details.)
+
+Although these translations may seem confusing, they serve an important purpose: insulating programs from details that may vary from one operating system to another.

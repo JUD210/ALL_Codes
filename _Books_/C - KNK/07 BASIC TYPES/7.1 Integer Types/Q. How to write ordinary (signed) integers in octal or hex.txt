@@ -1,0 +1,16 @@
+Q: Section 7.1 says that %o and %x are used to write unsigned integers in octal and hex notation. How do I write ordinary (signed) integers in octal or hex?
+[p. 130]
+
+A: You can use %o and %x to print a signed integer as long as its value isn't negative.
+
+These conversions cause printf to treat a signed integer as though it were unsigned: in other words, printf will assume that the sign bit is part of the number's magnitude. As long as the sign bit is O, there's no problem. If the sign bit is 1, printf will print an unexpectedly large number.
+
+
+Q: But what if the number is negative? How can I write it in octal or hex?
+
+A: There's no direct way to print a negative number in octal or hex. Fortunately, the need to do so is pretty rare. You can, of course, test whether the number is negative and print a minus sign yourself:
+
+if (i < O)
+  printf("-%x", -i);
+else
+  printf("%x", i);

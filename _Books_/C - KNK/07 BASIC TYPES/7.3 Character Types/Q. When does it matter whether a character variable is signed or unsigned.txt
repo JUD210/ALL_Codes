@@ -1,0 +1,10 @@
+Q: When does it matter whether a character variable is signed or unsigned?
+[p.136]
+
+A: If we store only 7-bit characters in the variable, it doesn't matter, since the sign bit will be zero. If we plan to store 8-bit characters, however, we'll probably want the variable to have unsigned char type. Consider the following example:
+
+Ch = '\xdb';
+
+If ch has been declared to have type char, the compiler may choose to treat it as a signed character (many compilers do). As long as ch is used only as a character, there won't be any problem. But if ch is ever used in a context that requires the compiler to convert its value to an integer, we're likely to have trouble: the resulting integer will be negative, since ch's sign bit is 1.
+
+Here's another situation: In some kinds of programs, it's customary to use char variables to store one-byte integers. If we're writing such a program, we'll have to decide whether each variable should be signed char or unsigned char, just as we must decide whether ordinary integer variables should have type int or unsigned int.

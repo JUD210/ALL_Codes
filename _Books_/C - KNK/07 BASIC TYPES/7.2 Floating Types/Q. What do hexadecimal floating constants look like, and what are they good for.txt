@@ -1,0 +1,16 @@
+Q: What do hexadecimal floating constants look like, and what are they good
+for? [p. 134]
+
+A: A hexadecimal floating constant begins with 0x or 0X and must contain an exponent. which is preceded by the letter P (or p). The exponent may have a sign, and the constant may end with f, F, l, or L. The exponent is expressed in decimal, but represents a power of 2, not a power of 10.
+
+For example, 0x1.Bp3 represents the number 1.6875 * 2^3 = 13.5.
+
+The hex digit B corresponds to the bit pattern 1011.
+
+The B occurs to the right of the period, so each 1 bit represents a negative power of 2. Summing these powers of 2 (2^-1 + 2^-3 + 2^-4) yields .6875.
+
+Hexadecimal floating constants are primarily useful for specifying constants that require great precision (including mathematical constants such as e and π).
+
+Hex numbers have a precise binary representation. whereas a constant written in decimal may be subject to a tiny rounding error when converted to binary.
+
+Hexadecimal numbers are also useful for defining constants with extreme values, such as the values of the macros in the <float.h> header. These constants are easy to write in hex but difficult to write in decimal.

@@ -1,0 +1,5 @@
+Q: What's the proper way to pronounce char? [p. 134]
+
+A: There's no universally accepted pronunciation. Some people pronounce char in the same way as the first syllable of "character". Others say "char", as in
+
+char broiled;   // char-broiled

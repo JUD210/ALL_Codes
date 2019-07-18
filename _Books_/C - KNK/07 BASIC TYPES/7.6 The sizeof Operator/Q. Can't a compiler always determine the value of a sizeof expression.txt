@@ -1,0 +1,4 @@
+Q: You said that compilers "can usually determine the value of a sizeof expression". Can't a compiler always determine the value of a sizeof expression?
+[p. 151]
+
+A: In C89, yes. In C99, however, there's one exception. The compiler can't determine the size of a variable-length array, because the number of elements in the array may change during the execution of the program.
