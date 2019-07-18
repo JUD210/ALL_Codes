@@ -1,11 +1,46 @@
+# A file starting with '~' prefix means 'Now editing'
 ~*
+
+# Python related folder
 __pycache__
 .mypy_cache
+
+# C++ related folder
 ipch
 
-**/*.md
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
 
-/*Books*/C - KNK/**/*.exe
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
 
 ##########################################################################
 # DO NOT CHANGE BELOW AGAIN IF YOU ARE NOT PREPARED FOR LARGE FILE ISSUE #
@@ -14,10 +49,12 @@ ipch
 # Save large files to the OneDrive ONLY.
 # If you commit a file over 100MB, that commit will be tracing the file (in sort of history) all the time before you take action, and that would be disable to use git push normally.
 
-**/*.mp4
-**/*.mkv
-**/*.mov
+# Videos
+*.mp4
+*.mkv
+*.mov
 
-**/*.pdf
-**/*.ppt
-**/*.hwp
+# Documents
+*.pdf
+*.ppt
+*.hwp
