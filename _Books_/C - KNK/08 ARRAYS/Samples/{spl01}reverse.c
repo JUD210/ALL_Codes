@@ -28,3 +28,6 @@ int main() {
 
     return 0;
 }
+
+// Enter 10 numbers: 34 82 49 102 7 94 23 11 50 31
+// In reverse order: 31 50 11 23 94 7 102 49 82 34

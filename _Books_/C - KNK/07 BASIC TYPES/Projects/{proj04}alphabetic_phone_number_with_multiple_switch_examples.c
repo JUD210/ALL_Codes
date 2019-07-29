@@ -13,7 +13,7 @@ If the original phone number contains nonalphabetic characters (digits or punctu
 Enter phone number: 1-800-COL-LECT (input)
 1-800-265-5328
 
-You may assume that any letters entered by the user are upper case.
+You may assume that any letters entered by the user are upper-case.
  */
 
 #include <ctype.h>

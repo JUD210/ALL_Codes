@@ -1,0 +1,14 @@
+=== Expressions and Operators
+ㅇ One of C's distinguishing characteristics is its emphasis on expressions ㅡformulas that show how to compute a valueㅡ rather than statements.
+
+ㅇ The simplest expressions are variables and constants. A variable represents a value to be computed as the program runs; a constant represents a value that doesn't change. More complicated expressions apply operators to operands (which are themselves expressions).
+
+In the expression a + (b * c), the + operator is applied to the operands a and (b * c), both of which are expressions in their own right.
+
+ㅇ Operators are the basic tools for building expressions, and C has an unusually rich collection of them. To start off, C provides the rudimentary operators that are found in most programming languages:
+
+- Arithmetic operators, including addition, subtraction, multiplication, and division.
+- Relational operators to perform comparisons such as "i is greater than 0".
+- Logical operators to build conditions such as "i is greater than 0 and i is less than 10".
+
+But C doesn't stop here; it goes on to provide dozens of other operators. There are so many operators, in fact, that we'll need to introduce them gradually over the first twenty chapters of this book. Mastering so many operators can be a chore, but it's essential to becoming proficient at C.

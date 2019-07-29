@@ -1,0 +1,8 @@
+=== Array
+ㅇ So far, the only variables we've seen are scalar: capable of holding a single data item.
+
+ㅇ C also supports aggregate variables, which can store collections of values.
+
+ㅇ There are two kinds of aggregates in C
+- arrays
+- structures

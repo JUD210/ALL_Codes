@@ -3,7 +3,7 @@
 int main() {
     int i, j;
     float x, y;
-    char c;
+    char c1, c2;
 
     printf("\n====== INPUT ======\n");
     scanf("%d  %d   %f  \n\n  \n\n\n\n\n %f", &i, &j, &x, &y);
@@ -33,17 +33,23 @@ int main() {
     printf("\n====== INPUT ======\n");
 
     scanf("  %d  \n   \n   \n", &i);
-    scanf("%c", &c);
+    scanf("%c", &c1);
+    scanf(" %c", &c2);
     printf("\n====== PRINT ======\n");
-    printf("%d, %c", i, c);
+    printf("%d, %c, %c", i, c1, c2);
     // ====== INPUT ======
     // 222
     //
     //
     // y
     //
+    //
+    //
+    //
+    //      test
+    //
     // ====== PRINT ======
-    // 222, y
+    // 222, y, t
 
     /* 2.
         When scanf encounters a character that can't be part of the current item, the character is "put back" to be read again during the scanning of the next input item or during the next call of scanf.

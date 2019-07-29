@@ -1,0 +1,13 @@
+Be careful when an array subscript has a side effect. For example, the following loop ㅡwhich is supposed to copy the elements of the array b into the array aㅡ may not work properly:
+
+i = 0;
+while (i < N)
+  a[i] = b[i++];
+
+The expression a[i] = b[i++] accesses the value of i and also modifies i elsewhere in the expression, which ㅡas we saw in Section 4.4ㅡ causes undefined behavior.
+
+Of course, we can easily avoid the problem by removing the increment
+from the subscript:
+for (i = O; i < N; i++)
+  a[i] = b[i];
+  

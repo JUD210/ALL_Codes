@@ -1,2 +1,2 @@
 === Program - Checking a Number for Repeated Digits
-
+ㅇ {spl02}repdigit.c

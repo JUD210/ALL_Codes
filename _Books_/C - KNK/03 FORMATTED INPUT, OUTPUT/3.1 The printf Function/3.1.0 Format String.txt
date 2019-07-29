@@ -1,7 +1,7 @@
 === Format String
 ㅇ The printf function is designed to display the contents of a string, known as the format string.
 
-printf(string, expr1, expr2, ...);
+printf(format_string, expr1, expr2, ...);
 
 
 ㅇ The format string may contain both ordinary characters and conversion specifications.

@@ -1,0 +1,13 @@
+C doesn't require that subscript bounds be checked; if a subscript goes out of range, the program's behavior is undefined. One cause of a subscript going out of bounds: forgetting that an array with n elements is indexed from 0 to n-1, not 1 to n. (As one of my professors liked to say, "In this business, you're always off by one." He was right, of course.)
+
+The following example illustrates a bizarre effect that can be caused by this common blunder:
+
+int a[10], i;
+
+for (i = 1; i <= 10; i++)
+  a[i] = 0;
+
+
+With some compilers, this innocent-looking for statement causes an infinite loop! When i reaches 10, the program stores 0 into a[10], But a[10] doesn't exist, so 0 goes into memory immediately after a[9].
+
+If the variable i happens to follow a[9] in memory ㅡas might be the caseㅡ then i will be reset to 0, causing the loop to start over.

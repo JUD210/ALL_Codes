@@ -1,0 +1,18 @@
+=== Array
+ㅇ An array is a data structure containing a number of data values, all of which have the same type.
+
+ㅇ These values, known as elements, can be individually selected by their position within the array.
+
+ㅇ The simplest kind of array has just one dimension. The elements of a one-dimensional array are conceptually arranged one after another in a single row (or column, if you prefer).
+
+ㅇ To declare an array, we must specify the type of the army's elements and the number of elements. For example, to declare that the array a has 10 elements of
+type int, we would write:
+
+int a[1O];
+
+
+ㅇ The elements of an array may be of any type; the length of the array can be specified by any (integer) constant expression. Since array lengths may need to be adjusted when the program is later changed, using a macro to define the length of an array is an excellent practice:
+
+#define N 10
+...
+int a [N];

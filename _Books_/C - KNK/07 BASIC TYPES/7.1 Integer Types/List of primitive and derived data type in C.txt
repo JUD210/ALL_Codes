@@ -1,0 +1,12 @@
+https://codeforwin.org/2017/08/list-data-types-c-programming.html
+
+In the series of learning programming, we learned about data types. Data type is a system for defining various properties of data stored in memory. Properties such as, type of data, range of data, bytes occupied etc.
+
+Data type in C programming is categorized three categories.
+Primitive data type
+Derived data type
+User defined type
+
+Below is the list of all primitive and derived type in C programming.
+
+List of primitive and derived data type in C.png

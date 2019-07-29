@@ -16,7 +16,7 @@ However, parentheses may be needed anyway because of operator precedence. The co
 
 printf("size of int: %lu\n", (unsigned long) sizeof(int));
 
-In C99, the size_t type can be larger than unsigned long. However, the
+ㅇ In C99, the size_t type can be larger than unsigned long. However, the
 printf function in C99 is capable of displaying size_t values directly, without needing a cast. The trick is to use the letter z in the conversion specification, followed by one of the usual integer codes (typically u):
 
 printf("size of int: %zu\n", sizeof(int)); /* C99 only */

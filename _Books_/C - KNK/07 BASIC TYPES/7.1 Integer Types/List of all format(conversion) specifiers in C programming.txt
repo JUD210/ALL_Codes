@@ -1,0 +1,5 @@
+https://codeforwin.org/2015/05/list-of-all-format-specifiers-in-c-programming.html
+
+In C programming we need lots of format specifier to work with various data types. Format specifiers defines the type of data to be printed on standard output. Whether to print formatted output or to take formatted input we need format specifiers. Format specifiers are also called as format string.
+
+Here is a complete list of all format specifiers used in C programming language.

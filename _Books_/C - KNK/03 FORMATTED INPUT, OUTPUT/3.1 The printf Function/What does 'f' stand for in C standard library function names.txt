@@ -1,0 +1,19 @@
+https://stackoverflow.com/questions/27949512/what-does-f-stand-for-in-c-standard-library-function-names
+
+Your question in general is too general but I can explain a few examples.
+
+ㅇ fgets, fopen, fclose, …
+: The "f" stands for "file". These functions accept or return a FILE * pointer as opposed to a file number as the POSIX functions do.
+
+ㅇ printf, scanf, …
+: The "f" stands for "formatted". These functions accept a format string.
+
+ㅇ fprintf, fscanf
+: This is a combination of the above two.
+
+ㅇ sinf, cosf, …
+: The "f" stands for float (to distinguish from the double alternatives). Note that this fits quite nicely with suffixing floating point literals with an f as in 1.5f.
+
+ㅇ Finally, as Deduplicator points out, there are some names such as free, floor or setbuf ("set buffer") where the "f" simply appears as a natural language character.
+
+The tradition of pre- or suffixing names with single letters that indicate the type of the arguments is a necessity in C that has become obsolete in C++ thanks to overloading. Actually, overloading in C++ works by the compiler automatically adding those suffixes again under the hood to the generated symbols by a process called name mangling.
