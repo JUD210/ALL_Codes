@@ -1,2 +1,42 @@
 === Initializing a Multidimensional Array
+ㅇ We can create an initializer for a two-dimensional array by nesting one-dimensional initializers:
+
+int m[5][9] = {{1, 1, 1, 1, 1, 0, 1, 1, 1},
+               {0, 1, 0, 1, 0, 1, 0, 1, 0},
+               {0, 1, 0, 1, 1, 0, 0, 1, 0},
+               {1, 1, 0, 1, 0, 0, 0, 1, 0},
+               {1, 1, 0, 1, 0, 0, 1, 1, 1}};
+
+Each inner initializer provides values for one row of the matrix. Initializers for higher-dimensional arrays are constructed in a similar fashion.
+
+
+ㅇ C provides a variety of ways to abbreviate initializers for multidimensional arrays:
+
+- If an initializer isn't large enough to fill a multidimensional array, the remaining elements are given the value 0. For example, the following initializer fills only the first three rows of m; the last two rows will contain zeros:
+
+int m[5][9] = {{1, 1, 1, 1, 1, 0, 1, 1, 1},
+               {0, 1, 0, 1, 0, 1, 0, 1, 0},
+               {0, 1, 0, 1, 1, 0, 0, 1, 0}};
+
+- If an inner list isn't long enough to fill a row, the remaining elements in the row are initialized to 0:
+
+int m[5][9] = {{1, 1, 1, 1, 1, 0, 1, 1, 1},
+               {0, 1, 0, 1, 0, 1, 0, 1},
+               {0, 1, 0, 1, 1, 0, 0, 1},
+               {1, 1, 0, 1, 0, 0, 0, 1},
+               {1, 1, 0, 1, 0, 0, 1, 1, 1}};
+
+- We can even omit the inner braces:
+
+int m[5][9] = {1, 1, 1, 1, 1, 0, 1, 1, 1,
+               0, 1, 0, 1, 0, 1, 0, 1, 0,
+               0, 1, 0, 1, 1, 0, 0, 1, 0,
+               1, 1, 0, 1, 0, 0, 0, 1, 0,
+               1, 1, 0, 1, 0, 0, 1, 1, 1};
+
+Once the compiler has seen enough values to fill one row, it begins filling the
+next.
+
+
+ㅇ WARNING! Omitting the inner braces in a multidimensional array initializer can be risky, since an extra element (or even worse, a missing element) will affect the rest of the initializer. Leaving out the braces causes some compilers to produce a warning message such as "missing braces around initializer".
 

@@ -5,7 +5,9 @@
 #define false 0
 
 int flag;
+// or
+typedef int bool;
+bool flag;
 
 flag = true;
-...
 flag = false;

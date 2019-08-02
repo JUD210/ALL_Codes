@@ -1,0 +1,3 @@
+Q: Section 6.4 mentioned that C99 doesn't allow a goto statement to bypass the declaration of a variable-length array. What's the reason for this restriction?
+
+A: The memory used to store a variable-length array is usually allocated when the declaration of the array is reached during program execution. Bypassing the declaration using a goto statement could result in a program accessing the elements of an array that was never allocated.

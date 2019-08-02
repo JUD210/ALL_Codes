@@ -1,2 +1,34 @@
 === Using the sizeof Operator with Arrays
+ㅇ The sizeof operator can determine the size of an array (in bytes). If a is an array of 10 integers, then sizeof(a) is typically 40 (assuming that each integer requires four bytes).
 
+
+ㅇ We can also use sizeof to measure the size of an array element, such as a[0]. Dividing the array size by the element size gives the length of the array:
+
+sizeof(a) / sizeof(a[0])
+
+Some programmers use this expression when the length of the array is needed. To clear the array a, for example, we could write
+
+for (i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+  a[i] = 0;
+
+With this technique, the loop doesn't have to be modified if the array length should change at a later date. Using a macro to represent the array length has the same advantage, of course, but the sizeof technique is slightly better, since there's no macro name to remember (and possibly get wrong).
+
+One minor annoyance is that some compilers produce a warning message for the expression i < sizeof(a) / sizeof(a[0]). The variable i probably has type int (a signed type), whereas sizeof produces a value of type size_t: (an unsigned type).
+
+We know from Section 7.4 that comparing a signed integer with an unsigned integer is a dangerous practice. although in this case it's safe because both i and sizeof(a) / sizeof(a[0]) have nonnegative values.
+
+
+ㅇ To avoid a warning, we can add a cast that converts sizeof(a) / sizeof(a[0]) to a signed integer:
+
+for (i = O; i < (int) (sizeof(a) / sizeof(a[0])); i++)
+  a[i] = 0;
+
+Writing (int) (sizeof(a) / sizeof(a[0])) is a bit unwieldy; defining a macro that represents it is often helpful:
+
+#define SIZE ((int) (sizeof(a) / sizeof(a[0])))
+for (i = 0; i < SIZE; i++)
+  a[i] = 0;
+
+If we're back to using a macro, though, what's the advantage of sizeof? We'll
+answer that question in a later chapter (the trick is to add a parameter to the
+macro).

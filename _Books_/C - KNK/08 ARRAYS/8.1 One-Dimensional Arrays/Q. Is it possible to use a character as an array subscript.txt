@@ -1,0 +1,15 @@
+Q: Is it possible to use a character as an array subscript?
+
+A: Yes, because C treats characters as integers. You'll probably need to "scale" the character before you use it as a subscript, though. Let's say that we want the letter_count array to keep track of a count for each letter in the alphabet. The array will need 26 elements, so we'd declare it in the following way:
+
+int letter_count[26];
+
+However, we can't use letters to subscript letter_count directly, because their
+integer values don't fall between 0 and 25. To scale a lower-case letter to the
+proper range, we can simply subtract 'a'; to scale an upper-case letter, we'll subtract 'A'.
+
+For example, if ch contains a lower-case letter, we'd write
+
+letter_count [ch-'a'] = 0;
+
+to clear the count that corresponds to ch. A minor caveat: this technique isn't completely portable, because it assumes that letters have consecutive codes. However, it works with most character sets, including ASCII.

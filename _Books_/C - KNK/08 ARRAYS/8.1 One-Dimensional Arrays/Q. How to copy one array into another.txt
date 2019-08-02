@@ -1,0 +1,21 @@
+Q: The compiler gives me an error message if I try to copy one array into another by using the assignment operator. What's wrong?
+
+A: Although it looks quite plausible, the assignment
+
+a = b; /* a and b are arrays */
+
+is indeed illegal.
+
+The reason for its illegality isn't obvious; it has to do with the peculiar relationship between arrays and pointers in C, a topic we'll explore in Chapter 12.
+
+The simplest way to copy one array into another is to use a loop that copies the elements, one by one:
+
+for (i = O; i < N; i++)
+  a[i] = b[i];
+
+
+Another possibility is to use the memcpy ("memory copy") function from the <string.h> header. memcpy is a low-level function that simply copies bytes from one place to another. To copy the array b into the array a, use memcpy as follows:
+
+memcpy(a, b, sizeof(a));
+
+Many programmers prefer memcpy, especially for large arrays, because it's potentially faster than an ordinary loop.

@@ -1,0 +1,3 @@
+Q: Why do array subscripts start at 0 instead of 1? [p. 162]
+
+A: Having subscripts begin at 0 simplifies the compiler a bit. Also, it can make array subscripting marginally faster.

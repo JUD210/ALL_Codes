@@ -32,3 +32,11 @@ int main() {
 
     return 0;
 }
+
+// How many numbers do you want to reverse? 10
+// Enter 10 numbers: 34 82 49 102 7 94 23 11 50 31
+// In reverse order: 31 50 11 23 94 7 102 49 82 34
+
+// How many numbers do you want to reverse? 5
+// Enter 5 numbers: 1 2 3 4 5 6
+// In reverse order: 5 4 3 2 1

@@ -1,0 +1,10 @@
+The Q&A section shows how to use a letter as an array subscript. Describe how to use a digit (in character form) as a subscript.
+
+---
+
+Answer: To use a digit d (in character form) as a subscript into the array a, we would write a[d-'0']. This assumes that digits have consecutive codes in the underlying character set, which is true of ASCII and other popular character sets.
+
+My Answer: As the ASCII code of the character '0' to '9' is consecutive (48 to 57), just subtracting '0' from the letter '0' to '9' would be the answer.
+
+ex) arr['5'-'0'] = 32;
+

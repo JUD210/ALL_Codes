@@ -5,6 +5,7 @@ If c is a variable of type char, which one of the following statements is illega
 (c) putchar(c);
 (d) printf(c);
 
+
 The printf statement in (d) is illegal, since printf requires a string, not a character, as its first argument.
 
 We can either do:

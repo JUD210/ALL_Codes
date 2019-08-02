@@ -1,4 +1,4 @@
-=== Boolean Values in C99 (Stdbool.h)
+=== Boolean Values in C99 (stdbool.h)
 ㅇ _Bool
 - Just an integer type (more precisely, an unsigned integer type) in disguise.
 - Unlike an ordinary integer variable, however, a _Bool variable can only be assigned 0 or 1.

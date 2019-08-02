@@ -1,0 +1,31 @@
+Q: It seems like a designated initializer could end up initializing an array element more than once. Consider the following array declaration:
+
+int a[] = {4, 9, 1, 8, [0] = 5, 7};
+
+Is this declaration legal, and if so, what is the length of the array? [p. 166]
+
+
+A: Yes, the declaration is legal. Here's how it works: as it processes an initializer list, the compiler keeps track of which array element is to be initialized next.
+
+Normally, the next element is the one following the element that was last initialized. However, when a designator appears in the list, it forces the next element be the one represented by the designator, even if that element has already been initialized.
+
+Here's a step-by-step look at how the compiler will process the initializer for the array a:
+
+The 4 initializes element 0; the next element to be initialized is element 1.
+The 9 initializes element 1: the next element to be initialized is element 2.
+The 1 initializes element 2; the next element to be initialized is element 3.
+The 8 initializes element 3; the next element to be initialized is element 4.
+
+The [0] designator causes the next element to become 0, so the 5 initializes
+element 0 (replacing the 4 previously stored there). The next element to
+be initialized is element 1.
+
+The 7 initializes element 1 (replacing the 9 previously stored there). The next
+element to be initialized is element 2 (which is irrelevant since we're at
+the end of the list).
+
+The net effect is the same as if we had written
+
+int a[] = {5, 7, 1, 8};
+
+Thus, the length of this array is four.

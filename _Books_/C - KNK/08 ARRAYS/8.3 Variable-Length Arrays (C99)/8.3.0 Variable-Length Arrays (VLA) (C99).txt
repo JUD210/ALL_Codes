@@ -1,0 +1,25 @@
+=== Variable-Length Arrays (VLA) (C99)
+ㅇ Section 8.1 stated that the length of an array variable must be specified by a constant expression. In C99, however, it's sometimes possible to use an expression that's not constant.
+
+The following modification of the reverse.C program (Section 8.1) illustrates this ability:
+
+
+ㅇ {spl05}reverse2.c
+The array a in this program is an example of a variable-length array (or VLA for short). The length of a VLA is computed when the program is executed, not when the program is compiled. The chief advantage of a VLA is that the programmer doesn't have to pick an arbitrary length when declaring an array; instead, the program itself can calculate exactly how many elements are needed.
+
+If the programmer makes the choice, it's likely that the array will be too long (wasting memory) or too short (causing the program to fail).
+
+In the reverse2.c program, the number entered by the user determines the length of a; the programmer doesn't have to choose a fixed length, unlike in the original version of the program.
+
+
+ㅇ The length of a VLA doesn't have to be specified by a single variable. Arbitrary expressions, possibly containing operators, are also legal. For example:
+
+int a[3*i+5];
+int b[j+k];
+
+Like other arrays, VLAs can be multidimensional:
+int c[m][n];
+
+The primary restriction on VLAs is that they can't have static storage duration. (We haven't yet seen any arrays with this property.) Another restriction is that a VLA may not have an initializer.
+
+Variable-length arrays are most often seen in functions other than main. One big advantage of a VLA that belongs to a function f is that it can have a different length each time f is called. We'll explore this feature in Section 9.3.

@@ -1,0 +1,5 @@
+C99's designated initializers work with multidimensional arrays. For example, We could create a 2 X 2 identity matrix as follows:
+
+double ident[2][2] = {[0][0] = 1.0, [1][1] = 1.0};
+
+As usual, all elements for which no value is specified will default to zero.
