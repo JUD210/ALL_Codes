@@ -1,2 +1,2 @@
 === Program - Computing Averages
-
+ㅇ {spl01}average.c

@@ -1,2 +1,2 @@
 === Program - Testing Whether a Number Is Prime
-
+ㅇ {spl04}prime.c

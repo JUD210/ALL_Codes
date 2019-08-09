@@ -29,6 +29,7 @@ int main() {
 
     printf("Enter a number: ");
     scanf("%d", &n);
+
     if (is_prime(n))
         printf("Prime\n");
     else
@@ -36,3 +37,9 @@ int main() {
 
     return 0;
 }
+
+// Enter a number: 34
+// Not prime
+
+// Enter a number: 7
+// Prime

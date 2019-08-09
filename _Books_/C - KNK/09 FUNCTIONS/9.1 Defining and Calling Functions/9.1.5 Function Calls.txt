@@ -1,2 +1,57 @@
 === Function Calls
+ㅇ A function call consists of a function name followed by a list of arguments, enclosed in parentheses:
 
+average(x, y)
+print_count(i)
+print_pun()
+
+If the parentheses are missing, the function won't get called:
+
+print_pun; /*** WRONG ***/
+
+The result is a legal (albeit meaningless) expression statement that looks correct, but has no effect.
+
+Some compilers issue a warning such as "statement with no effect".
+
+
+ㅇ A call of a void function is always followed by a semicolon to turn it into a statement:
+
+print_count(i);
+print_pun();
+
+A call of a non-void function, on the other hand, produces a value that can be stored in a variable, tested, printed, or used in some other way:
+
+avg = average(x, y);
+
+if (average(x, y) > O)
+  printf("Average is positive\n");
+
+printf("The average is %g\n", average(x, y));
+
+
+ㅇ The value returned by a non-void function can always be discarded if it's not needed:
+
+average(x, y);  // discards return value
+
+This call of average is an example of an expression statement: a statement that evaluates an expression but then discards the result.
+
+Ignoring the return value of average is an odd thing to do, but for some functions it makes sense.
+
+The printf function, for example, returns the number of characters that it prints. After the following call, num_chars will have the value 9:
+num_chars = printf("Hi, Mom! \n");
+
+Since we're probably not interested in the number of characters printed, we'll normally discard printf's return value:
+
+printf("Hi, Mom!\n");  // discards return value
+
+To make it clear that we're deliberately discarding the return value of a function, C allows us to put (void) before the call:
+
+(void) printf("Hi, Mom!\n");
+
+
+ㅇ What we're doing is casting (converting) the return value of printf to type
+void. (In C, "casting to void" is a polite way of saying "throwing away".)
+
+Using (void) makes it clear to others that you deliberately discarded the return value, not just forgot that there was one.
+
+Unfortunately, there are a great many functions in the C library whose values are routinely ignored: using (void) when calling them all can get tiresome, so I haven't done so in this book.

@@ -1,2 +1,63 @@
 === Function Definitions
+ㅇ Now that we've seen several examples, let's look at the general form of a function definition:
 
+return_type function_name(parameters) {
+  declarations
+  statements
+}
+
+
+ㅇ The return type of a function is the type of value that the function returns. The following rules govern the return type:
+
+- Functions may not return arrays, but there are no other restrictions on the return type.
+- Specifying that the return type is void indicates that the function doesn't return a value.
+- If the return type is omitted in C89, the function is presumed to return a value of type int. in C99, it's illegal to omit the return type of a function.
+
+
+ㅇ As a matter of style, some programmers put the return type above the function
+name:
+
+double
+average(double a, double b)
+{
+  return (a + b) / 2;
+}
+
+Putting the return type on a separate line is especially useful if the return type is lengthy, like unsigned long int.
+
+
+ㅇ After the function name comes a list of parameters. Each parameter is preceded by a specification of its type; parameters are separated by commas. If the function has no parameters, the word void should appear between the parentheses.
+
+Note: A separate type must be specified for each parameter, even when several
+parameters have the same type:
+
+double average(double a, b)  /*** WRONG ***/
+{
+  return (a + b) / 2;
+}
+
+The body of a function may include both declarations and statements. For
+example, the average function could be written
+
+double average(double a, double b)
+{
+  double sum;      // declaration
+  sum = a + b;     // statement
+  return sum / 2;  // statement
+}
+
+
+ㅇ Variables declared in the body of a function belong exclusively to that function; they can't be examined or modified by other functions.
+
+In C89, variable declarations must come first, before all statements in the body of a function.
+
+In C99, variable declarations and statements can be mixed, as long as each variable is declared prior to the first statement that uses the variable. (Some pre-C99 compilers also allow mixing of declarations and statements.)
+
+
+ㅇ The body of a function whose return type is void (which I'll call a "void function") can be empty:
+
+void print_pun(void)
+{
+}
+
+Leaving the body empty may make sense during program development; we can leave room for the function without taking the time to complete it, then come back later and write the body.

@@ -10,6 +10,13 @@
 /* deal.c (Chapter 8, page 173) */
 /* Deals a random hand of cards */
 
+/* To pick cards randomly, we'll use several C library functions.
+
+- The time function (from <time.h>) returns the current time, encoded in a single number.
+- The srand function (from <stdlib.h>) initializes C's random number generator. Passing the return value of time to srand prevents the program from dealing the same cards every time we run it.
+- The rand function (also from <stdlib.h>) produces an apparently random number each time it's called. By using the % operator, we can scale the return value from rand so that it falls between 0 and 3 (for suits) or between 0 and 12 (for ranks).
+ */
+
 #include <stdbool.h> /* C99 only */
 #include <stdio.h>
 #include <stdlib.h>

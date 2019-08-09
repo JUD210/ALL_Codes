@@ -1,6 +1,6 @@
 /* In the SCRABBLE Crossword Game, players form words using small tiles, each containing a letter and a face value. The face value varies from one letter to another, based on the letter's rarity. (Here are the face values: 1: AEILNORSTU, 2: DG, 3: BCMP, 4: FHVWY, 5: K, 8: JX, 9: QZ.)
 
-Write a program that computes the value of a word by summing the values of its letters:
+Write a program that computes the value of a word by word_valueming the values of its letters:
 
 Enter a word: pitfall (input)
 Scrabble value: 12
@@ -12,8 +12,8 @@ Hint: Use the toupper library Function.
 #include <ctype.h>
 #include <stdio.h>
 
-int main(void) {
-    int sum = 0;
+int main() {
+    int word_value = 0;
     char ch;
 
     printf("Enter a word: ");
@@ -22,38 +22,41 @@ int main(void) {
         switch (toupper(ch)) {
             case 'D':
             case 'G':
-                sum += 2;
+                word_value += 2;
                 break;
             case 'B':
             case 'C':
             case 'M':
             case 'P':
-                sum += 3;
+                word_value += 3;
                 break;
             case 'F':
             case 'H':
             case 'V':
             case 'W':
             case 'Y':
-                sum += 4;
+                word_value += 4;
                 break;
             case 'K':
-                sum += 5;
+                word_value += 5;
                 break;
             case 'J':
             case 'X':
-                sum += 8;
+                word_value += 8;
                 break;
             case 'Q':
             case 'Z':
-                sum += 10;
+                word_value += 10;
                 break;
             default:
-                sum++;
+                word_value++;
                 break;
         }
 
-    printf("Scrabble value: %d\n", sum);
+    printf("Scrabble value: %d\n", word_value);
 
     return 0;
 }
+
+// Enter a word: example
+// Scrabble value: 18

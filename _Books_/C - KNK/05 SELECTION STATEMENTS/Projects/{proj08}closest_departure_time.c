@@ -28,7 +28,7 @@ For example, 13:15 is 13 x 60 + 15 = 795 minutes since midnight, which is closer
 
 #include <stdio.h>
 
-int main(void) {
+int main() {
     int hour, minute, mins_since_midnight;
     printf("Enter a 24-hour time (hh:mm): ");
     scanf("%2d:%2d", &hour, &minute);

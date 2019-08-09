@@ -52,7 +52,7 @@ int main() {
             // ('A' or 'B' or 'C') - 'A' => (0 or 1 or 2) / 3 => 0 => print 2
             // ('D' or 'E' or 'F') - 'A' => (3 or 4 or 5) / 3 => 1 => print 3
             // (skip)
-            printf("%d", ((ch - 'A') / 3) + 2);
+            printf("%c", (((ch - 'A') / 3) + 2) + '0');
         } else {
             printf("%c", ch);
         }

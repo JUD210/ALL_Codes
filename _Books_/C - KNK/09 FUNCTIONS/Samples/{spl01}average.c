@@ -21,9 +21,15 @@ int main() {
 
     printf("Enter three numbers: ");
     scanf("%lf%lf%lf", &x, &y, &z);
+
     printf("Average of %g and %g: %g\n", x, y, average(x, y));
-    printf("Average of %g and %g: %g\n", y, z, average(y, z));
-    printf("Average of %g and %g: %g\n", x, z, average(x, z));
+    printf("Average of %.5g and %.5g: %.5g\n", y, z, average(y, z));
+    printf("Average of %f and %f: %.2f\n", x, z, average(x, z));
 
     return 0;
 }
+
+// Enter three numbers: 3.0 9.6 10
+// Average of 3 and 9.6: 6.3
+// Average of 9.6 and 10: 9.8
+// Average of 3.000000 and 10.000000: 6.50

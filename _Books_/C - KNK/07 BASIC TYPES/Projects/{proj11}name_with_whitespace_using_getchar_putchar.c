@@ -15,7 +15,7 @@ int main() {
     printf("Enter a first and last name: ");
 
     while ((ch = getchar()) == ' ')
-        //Skip initial whitespace until first char
+        // Skip initial whitespace until first char
         ;
     first_name_initial = ch;
 

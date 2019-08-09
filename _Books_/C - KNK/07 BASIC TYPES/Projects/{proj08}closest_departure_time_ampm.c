@@ -19,7 +19,7 @@ You may assume that the input has one of these forms; there is no need to test f
 #include <ctype.h>
 #include <stdio.h>
 
-int main(void) {
+int main() {
     int hour, minute,
         offset,
         mins_since_midnight;

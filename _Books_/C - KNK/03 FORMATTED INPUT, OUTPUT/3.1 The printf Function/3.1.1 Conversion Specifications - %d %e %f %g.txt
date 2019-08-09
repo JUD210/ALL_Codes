@@ -11,6 +11,7 @@ S: conversion specifier
 ㅇ %d: integer in decimal form.
 - p indicates the minimum number of digits to display
 - If p is omitted, it is assumed to have the value 1. (%d == %.1d)
+- ex) printf("%5.3d", 9);  // '  009'
 
 ㅇ %e: floating-point number in exponential format (scientific notation).
 - p indicates how many digits should appear after the decimal point

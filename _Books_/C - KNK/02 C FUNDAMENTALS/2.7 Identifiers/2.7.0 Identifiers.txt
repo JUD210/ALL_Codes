@@ -20,5 +20,5 @@ job != joB != jOb != jOB != JOB != ...
 - get-next-char
 
 ㅇ Good conventions
-- symbol_table, current_page, name_and_address (C)
+- symbol_table, current_page, name_and_address (C, Python)
 - symbolTable, currentPage, nameAndAddress (Java, C#, C++)

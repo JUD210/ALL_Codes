@@ -1,4 +1,4 @@
-/* Write a declaration for a two-dimensional array named temperature_readings that stores one month of hourly temperature readings. (For simplicity, assume that a month has 30 days.) The rows of the array should represent days of the month: the columns should represent hours of the day.
+/* Using the array of Exercise 8, write a program fragment that computes the average temperature for a month (averaged over all days of the month and all hours of the day).
  */
 
 #include <stdio.h>
@@ -36,6 +36,23 @@ int main() {
         {11, 17, 11, 15, 7, 14, 14, 2, 6, 0, 14, 23, 8, 29, 33, 21, 18, 23, 9, 14, 31, 18, 0, 24},
         {28, 15, 20, 24, 13, 2, 4, 0, 32, 12, 6, 16, 20, 35, 3, 34, 15, 28, 29, 2, 26, 11, 8, 6},
         {8, 2, 24, 11, 26, 4, 6, 7, 25, 35, 2, 25, 11, 2, 15, 13, 33, 27, 32, 28, 12, 32, 14, 3}};
+
+    float month_average, month_sum = 0.0f;
+
+    for (int day = 0; day < 30; day++) {  // iterate through days
+
+        float day_average, day_sum = 0.0f;
+        for (int hour = 0; hour < 24; hour++) {  // iterate through hours
+            day_sum += temperature_readings[day][hour];
+        }
+
+        day_average = day_sum / 24;
+        month_sum += day_average;
+    }
+    month_average = month_sum / 30;
+
+    printf("Avrage temperature for a month: %.2f", month_average);
+    // Avrage temperature for a month: 17.06
 
     return 0;
 }

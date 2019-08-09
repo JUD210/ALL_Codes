@@ -15,14 +15,14 @@ int main() {
 
     printf("Enter a sentence: ");
     while ((ch = getchar()) != '\n') {
-        if (ch == ' ') {  //assume one space per word
+        if (ch == ' ') {  // assume one space per word
             word_count++;
         } else {
             character_count++;
         }
     }
 
-    word_count += 1;  //last word isn't counted due to break on \n, so increment by one.
+    word_count += 1;  // last word isn't counted due to break on \n, so increment by one.
 
     printf("Average word length: %.1f",
            (float)character_count / word_count);

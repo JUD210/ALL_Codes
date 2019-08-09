@@ -2,16 +2,22 @@
   "configurations": [
     {
       "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:/Mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/tr1/**",
+        "C:/Mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/**",
+        "C:/Mingw-w64/mingw32/i686-w64-mingw32/include/**"
+      ],
       "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-      "compilerPath": "C:/Mingw-w64/mingw32/bin/g++.exe",
+      "compilerPath": "C:\\Mingw-w64\\mingw32\\bin\\g++.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
       "intelliSenseMode": "gcc-x64",
       "browse": {
         "path": ["${workspaceFolder}"],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
-      },
-      "cStandard": "c99",
-      "cppStandard": "${default}"
+      }
     }
   ],
   "version": 4

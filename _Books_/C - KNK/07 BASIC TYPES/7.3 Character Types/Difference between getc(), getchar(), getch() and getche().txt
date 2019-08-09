@@ -27,7 +27,7 @@ int main()
 The difference between getc() and getchar() is getc() can read from any input stream, but getchar() reads from standard input. So getchar() is equivalent to getc(stdin).
 
 - Syntax:
-int getchar(void);
+int getchar();
 
 - Example:
 #include <stdio.h>
@@ -68,7 +68,7 @@ Like getch(), this is also a non-standard function present in conio.h. It reads 
 
 - Syntax:
 
-int getche(void);
+int getche();
 
 - Example:
 #include <stdio.h>

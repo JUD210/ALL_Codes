@@ -24,3 +24,14 @@ int main() {
 
     return 0;
 }
+
+// T minus 10 and counting
+// T minus 9 and counting
+// T minus 8 and counting
+// T minus 7 and counting
+// T minus 6 and counting
+// T minus 5 and counting
+// T minus 4 and counting
+// T minus 3 and counting
+// T minus 2 and counting
+// T minus 1 and counting

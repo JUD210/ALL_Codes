@@ -1,0 +1,17 @@
+=== Functions
+ㅇ We saw in Chapter 2 that a function is simply a series of statements that have been grouped together and given a name. Although the term "function" comes from mathematics, C functions don't always resemble math functions.
+
+In C, a function doesn't necessarily have arguments, nor does it necessarily compute a value. (In some programming languages, a "function" retuns a value, whereas a "procedure" doesn't. C lacks this distinction.)
+
+
+ㅇ Functions are the building blocks of C programs. Each function is essentially a small program, with its own declarations and statements. Using functions, we can divide a program into small pieces that are easier for us ㅡand othersㅡ to understand and modify.
+
+Functions can take some of the tedium out of programming by allowing us to avoid duplicating code that's used more than once. Moreover, functions are reusable: we can take a function that was originally part of one program and use it in others.
+
+
+ㅇ Our programs so far have consisted of just the main function. In this chapter, we'll see how to write functions other than main, and we'll learn more about main itself. 
+
+- Section 9.1 shows how to define and call functions. 
+- Section 9.2 then discusses function declarations and how they differ from function definitions.
+- Section 9.3 examines how arguments are passed to functions. 
+- The remainder of the chapter covers the return statement (Section 9.4), the related issue of program termination (Section 9.5), and recursion (Section 9.6).

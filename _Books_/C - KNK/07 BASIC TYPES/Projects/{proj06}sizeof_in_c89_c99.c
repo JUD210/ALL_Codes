@@ -10,7 +10,7 @@ sizeof(long double)
 
 #include <stdio.h>
 
-int main(void) {
+int main() {
     printf(
         "Size of int: %d(%%d from C89) | "
         "%zu(%%zu from C99)\n",

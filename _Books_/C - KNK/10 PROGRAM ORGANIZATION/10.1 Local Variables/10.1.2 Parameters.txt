@@ -1,2 +1,2 @@
 === Parameters
-
+ㅇ A function parameter is essentially a variable whose initial value will be supplied later, when the function is called.

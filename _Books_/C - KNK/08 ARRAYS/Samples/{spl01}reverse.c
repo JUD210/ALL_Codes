@@ -24,7 +24,6 @@ int main() {
     printf("In reverse order:");
     for (i = N - 1; i >= 0; i--)
         printf(" %d", a[i]);
-    printf("\n");
 
     return 0;
 }
