@@ -1,5 +1,0 @@
-=== 조인(JOIN, ▷◁) 연산
-
-ㅇ 조인(JOIN, ▷◁) 연산
-- 공통 속성을 중심으로 두 개의 릴레이션을 하나로 합쳐서 새로운 릴레이션을 생성
-- 연산자의 종류: 세타 조인(Theta Join), 동등 조인(Equi Join), 자연 조인(Natural Join), 외부 조인(Outer Join), 세미 조인(Semi Join) 등

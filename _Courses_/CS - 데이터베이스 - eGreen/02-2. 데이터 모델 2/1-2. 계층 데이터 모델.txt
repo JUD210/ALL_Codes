@@ -1,4 +1,0 @@
-=== 계층(Hierarchical) 데이터 모델
-
-ㅇ 계층(Hierarchical) 데이터 모델
-- 데이터를 저장하는 단위(Entity)의 구조가 상하 종속적인 관계로 구성

@@ -1,6 +1,0 @@
-=== 트랜잭션 처리어(TCL)
-
-ㅇ 트랜잭션 처리어(TCL: Transaction Control Language) 명령문
-- COMMIT    : 트랜잭션의 정상적인 종료처리
-- ROLLBACK  : 트랜잭션 취소
-- SAVEPOINT : 트랜잭션 내에 임시 저장점 설정
