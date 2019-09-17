@@ -1,0 +1,13 @@
+1. 3색 LED로 Brown 컬러를 표시
+RGB 색상표에서 Brown 컬러의 값은 0xA5, 0x2A, 0x2A 임
+3색 LED의 R, G, B 핀을 PWM이 가능한 핀(3, 5, 6, 9, 10, 11)과 연결
+다음과 같은 명령어 사용 analogWrite(R_PIN, 0xA5);
+analogWrite(G_PIN, 0x2A);
+analogWrite(B_PIN, 0x2A);
+
+PWM 출력핀은 별도로 설정할 필요는 없음
+
+2. FND나 도트 매트릭스 사용 방법
+Common Anode 방식인지, Common Cathode 방식인지 반드시 확인
+LED에 불이 켜지게 하려면 Anode에 HIGH(+) 신호를 Cathode에 LOW(-) 신호를 인가하면 됨
+

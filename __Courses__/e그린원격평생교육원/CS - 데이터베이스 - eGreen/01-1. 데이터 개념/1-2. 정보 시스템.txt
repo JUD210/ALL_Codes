@@ -1,0 +1,24 @@
+=== 정보 시스템
+
+ㅇ 정보 시스템(Information System)
+- 조직체에 필요한 자료를 수집, 저장해 두었다가 필요 시에 처리해서 의사결정에 필요한 정보를 만들어 내고 분배하는 수단으로 사용되는 시스템
+
+ㅇ 경영 정보 시스템(MIS: Management Information System)
+- 기업 업무를 기획(planning), 운영(operation) 그리고 통제(control)에 필요한 의사결정을 위한 정보를 제공하는 수단으로 사용
+- 오늘날 대부분의 기업체가 보편적으로 사용
+
+ㅇ 그 밖의 정보 시스템
+- 군사 정보 시스템(MIS: Military Information System)
+- 행정 정보 시스템(AIS: Administration Information System)
+- 인사 정보 시스템(PIS: Personnel Information System)
+- 지식 관리 시스템(KMS: Knowledge Management System)
+- 의사 결정 지원 시스템(DSS: Decision Support System)
+
+ㅇ 의사 결정 지원 시스템
+- 하나의 전문적인 목적보다는 여러 가지 복합적이고 광범위한 의사결정 목적을 위해 통합적인 기능을 수행
+
+ㅇ 데이터 웨어하우스
+- 조직이나 기업체의 중심이 되는 주요 업무 시스템에서 추출되어 새로이 생성된 데이터베이스로서 의사 결정 지원 시스템을 지원하는 주체적, 통합적, 시간적 데이터의 집합체
+
+ㅇ 데이터 마이닝(Data Mining)
+- 데이터 웨어하우스 규모가 대형화되고 복잡하게 될 때 관련된 데이터를 찾아내고 필요한 정보 또는 지식을 생성하는 과정

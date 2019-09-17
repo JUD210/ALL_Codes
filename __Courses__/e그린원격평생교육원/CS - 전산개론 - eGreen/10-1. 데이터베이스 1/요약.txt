@@ -1,0 +1,14 @@
+1. 데이터베이스의 특징
+실시간 접근성(real-time accessibility)
+계속적 변화(continuous evolution)
+동시 공유(concurrent sharing)
+내용에 의한 참조(content reference)
+
+2. DBMS의 장점
+데이터의 공유(data sharing) 가능
+데이터 중복성 최소화
+데이터의 일관성 유지
+데이터의 무결성 유지
+데이터의 보안 유지
+표준화 기능
+

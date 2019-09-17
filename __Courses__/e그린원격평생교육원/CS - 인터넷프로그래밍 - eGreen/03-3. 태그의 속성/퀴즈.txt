@@ -1,0 +1,20 @@
+Q1. 웹 문서의 구조적 태그 중에서 '독립된 주요 콘텐츠 영역을 정의'하기 위해 사용하는 태그는?
+1. <section>
+2. <nav>
+3. <content>
+4. <article>
+
+
+<article> 독립된 주요 콘텐츠 영역을 정의. 하나의 <section> 태그 내에 여러 개의 <article> 태그를 구성할 수 있음
+4
+
+
+Q2. <hr> 태그에 사용할 수 있는 속성이 아닌 것은?
+1. align
+2. size
+3. href
+4. width
+
+
+<hr> 요소에 사용할 수 있는 속성에는 align, noshade, size, width 등이 있다.
+3

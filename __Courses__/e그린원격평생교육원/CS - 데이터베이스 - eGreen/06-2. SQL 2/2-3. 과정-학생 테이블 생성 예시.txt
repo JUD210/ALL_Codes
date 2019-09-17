@@ -1,0 +1,26 @@
+=== 테이블 생성 예시
+
+
+CREATE TABLE COURSE (
+  COU_ID        INT           NOT NULL,     -- 과정 번호
+  COU_NAME      VARCHAR(20)   NULL,         -- 과정명
+  TEA_NAME      VARCHAR(20)   NULL,         -- 강사명
+  PRIMARY KEY(COU_ID)                           -- 과정 번호를 외래키로 지정
+)
+GO
+
+
+CREATE TABLE STUDENT (
+  STU_ID        INTEGER        NOT NULL,    -- 학생번호, 널 값 허용 안 함
+  STU_NAME      VARCHAR(20)    NULL,        -- 학생명
+  AGE           INTEGER        NULL,        -- 나이
+  STU_EMAIL     VARCHAR(20)    NULL,        -- 이메일
+  COU_ID        INTEGER        NULL,        -- 소속된 과정의 과정 번호
+  PRIMARY KEY(STU_ID),                          -- 학생 번호를 기본키로 지정
+  FOREIGN KEY(COU_ID) REFERENCES COURSE(COU_ID) -- 과정 번호를 외래키로 지정
+)
+GO
+
+
+□COURSE --1-- ◇수강 --N-- □STUDENT
+: COURSE의 P.K가 STUDENT에서 F.K로 참조되는 중

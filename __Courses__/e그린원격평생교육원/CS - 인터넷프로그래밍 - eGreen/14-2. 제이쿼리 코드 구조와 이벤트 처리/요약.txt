@@ -1,0 +1,14 @@
+1. 제이쿼리 코드 구조
+기본형 : jQuery(선택자).메소드
+단축형 : $(선택자).메소드
+
+2. 제이쿼리 이벤트
+
+이벤트 | 메소드
+
+Browser Events   | error, resize, scroll
+Document Loading | load, unload, ready
+Form Events      | submit, focus, change, select, blur
+Keyboard Events  | Keydown, keypress, keyup
+Mouse Events     | click, dblclick, moseenter, mouseleave, mousedown, mouseup
+

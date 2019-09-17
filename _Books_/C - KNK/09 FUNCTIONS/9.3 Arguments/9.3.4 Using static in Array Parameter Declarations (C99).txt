@@ -1,0 +1,14 @@
+=== Using static in Array Parameter Declarations
+ㅇ C99 allows the use of the keyword static in the declaration of array parameters. (The keyword itself existed before C99. Section 18.2 discusses its traditional uses.)
+
+In the following example, putting static in front of the number 3 indicates that the length of a is guaranteed to be at least 3:
+
+int sum_array(int a[static 3], int n)
+{
+  ...
+}
+
+Using static in this way has no effect on the behavior of the program. The presence of static is merely a "hint" that may allow a C compiler to generate faster instructions for accessing the array. (If the compiler knows that an array will always have a certain minimum length, it can arrange to "prefetch" these elements from memory when the function is called, before the elements are actually needed by statements within the function.)
+
+
+ㅇ One last note about static: If an array parameter has more than one dimension, static can be used only in the first dimension (for example, when specifying the number of rows in a two-dimensional array).

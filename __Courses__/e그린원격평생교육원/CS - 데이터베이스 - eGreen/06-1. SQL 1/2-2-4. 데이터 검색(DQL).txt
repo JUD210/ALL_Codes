@@ -1,0 +1,4 @@
+=== 데이터 검색(DQL)
+
+ㅇ 데이터 검색(DQL: Data Query Language) 명령문
+- SELECT : 데이터 검색 시 사용

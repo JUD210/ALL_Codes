@@ -1,0 +1,16 @@
+1.
+이동통신 규격의 발전 과정
+
+이동통신 세대별 속도비교.png
+
+2.
+이동통신 서비스진화 맵
+CDMA -> WCDMA -> HSDPA -> HSDPA+ -> LTE -> LTE-Advanced
+WIMAX -> MOBILE WIMAX
+WIBRO -> WIBRO Evolution -> WIBRO-Advanced
+WI-FI
+Femtocell
+
+
+3.
+1895년에 마르코니라는 이탈이라 과학자가 2.8km 가 떨어진 거리에 모르스 신호를 보내고 1900년 12월에는 영국과 캐나다간 대서양 횡단 무선통신에 성공하면서 무선통신이 실생활에 활용될 수 있다는 사실이 증명되었다. 1906년 크리스마스 이브에 최초의 육성 무선통신을 이뤄내고 국가간 국제무선전신조약이 체결되면서

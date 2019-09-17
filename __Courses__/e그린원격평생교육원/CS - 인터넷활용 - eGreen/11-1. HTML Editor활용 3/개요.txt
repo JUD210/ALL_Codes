@@ -1,0 +1,13 @@
+1) 강의주제: HTML Editor활용 3
+① 포토 앨범
+② 미디어와 수식
+③ Layer
+④ Style Sheet
+⑤ Form Field
+
+2) 강의세부내용:
+① 포토 앨범을 만들 수 있다.
+② 미디어와 수식을 만들 수 있다.
+③ Layer를 만들 수 있다.
+④ Style Sheet를 만들 수 있다.
+⑤ Form Field를 만들 수 있다.

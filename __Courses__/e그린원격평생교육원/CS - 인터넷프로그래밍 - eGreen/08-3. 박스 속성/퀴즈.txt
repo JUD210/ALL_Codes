@@ -1,0 +1,57 @@
+
+
+
+1. 박스의 모서리 부분을 둥글게 처리하는 속성은?
+
+
+
+
+
+
+
+border-radius
+
+
+
+border-top-left-radius
+
+
+
+border-top-right-radius
+
+
+
+border-bottom-right-radius
+
+
+1
+border-radius 속성은 네 개의 모서리를 둥글게 처리하는 속성이다.
+
+
+
+
+2. 박스에 그림자 번짐 기능은 무엇인가?
+
+
+
+
+
+
+
+blur
+
+
+
+spread
+
+
+
+color
+
+
+
+inset
+
+
+2
+그림자의 번짐 정도를 지정하는 것은 spread이다.

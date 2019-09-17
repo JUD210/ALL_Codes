@@ -1,2 +1,118 @@
 === Array Arguments
+ㅇ Arrays are often used as arguments. When a function parameter is a one-dimensional array, the length of the array can be (and is normally) left unspecified:
 
+int f(int a[])  /* no length specified */
+{
+  ...
+}
+
+The argument can be any one-dimensional array whose elements are of the proper type. There's just one problem: how will f know how long the array is?
+
+Unfortunately, C doesn't provide any easy way for a function to determine the length of an array passed to it. Instead, we'll have to supply the length ㅡif the function needs itㅡ as an additional argument.
+
+Although we can use the sizeof operator to help determine the length of an array variable, it doesn't give the correct answer for an array parameter:
+
+int f(int a[])
+{
+  int len = sizeof(a) / sizeof(a[0]);
+    /*** WRONG: not the number of elements in a ***/
+  ...
+}
+
+Section 12.3 explains why.
+
+
+ㅇ The following function illustrates the use of one-dimensional array  arguments. When given an array a of int values, sum_array returns the sum of the elements in a. Since sum_array needs to know the length of a, we must supply it as a second argument.
+
+int sum_array (int a[], int n)
+{
+  int i, sum = 0;
+
+  for (i = 0; i < n; i++)
+    sum += a[i];
+
+  return sum;
+}
+
+The prototype for sum_array has the following appearance:
+
+int sum_array(int a[], int n);
+
+As usual, we can omit the parameter names if we wish:
+
+int sum_array(int [], int);
+
+When sum_array is called, the first argument will be the name of an array, and the second will be its length. For example:
+
+#define LEN 100
+
+int main()
+{
+  int b[LEN], total;
+  ...
+  total = sum_array(b, LEN);
+}
+
+Notice that we don't put brackets after an array name when passing it to a function:
+
+total = sum_array(b[], LEN);  /*** WRONG ***/
+
+
+ㅇ An important point about array arguments: A function has no way to check that we've passed it the correct array length. We can exploit this fact by telling the function that the array is smaller than it really is.
+
+Suppose that we've only stored 50 numbers in the b array, even though it can hold 100. We can sum just the first 50 elements by writing
+
+total = sum_array(b, 50);  /* sums first 50 elements */
+
+sum_array will ignore the other 50 elements. (Indeed, it won't know that they
+even exist!)
+
+
+ㅇ Be careful not to tell a function that an array argument is larger than it really is:
+
+total = sum_array(b, 150);  /*** WRONG ***/
+
+In this example, sum_array will go past the end of the array, causing undefined behavior.
+
+
+ㅇ Another important thing to know is that a function is allowed to change the elements of an array parameter, and the change is reflected in the corresponding argument.
+
+For example, the following function modifies an array by storing zero into each of its elements:
+
+void store_zeros(int a[], int n)
+{
+  int i;
+
+  for (i = 0; i < n; i++)
+    a[i] = O;
+}
+
+The call
+
+store_zeros(b, 100);
+
+will store zero into the first 100 elements of the array b. This ability to modify the elements of an array argument may seem to contradict the fact that C passes arguments by value.
+
+In fact, there's no contradiction, but I won't be able to explain why until Section 12.3.
+
+
+ㅇ If a parameter is a multidimensional array, only the length of the first dimension may be omitted when the parameter is declared.
+
+For example, if we revise the sum_array function so that a is a two-dimensional array, we must specify the number of columns in a, although we don't have to indicate the number of rows:
+
+#define LEN 10
+
+int sum_two_dimensional_array(int a[][LEN], int n)
+{
+  int i, j, sum = O;
+
+  for (i = 0; i < n; i++)
+    for (j = 0; j < LEN; j++)
+      sum += a[i][j];
+
+  return sum;
+}
+
+Not being able to pass multidimensional arrays with an arbitrary number of columns can be a nuisance. Fortunately, we can often work around this difficulty by using arrays of pointers.
+
+C99's variable-length array parameters provide an even better solution to the problem.

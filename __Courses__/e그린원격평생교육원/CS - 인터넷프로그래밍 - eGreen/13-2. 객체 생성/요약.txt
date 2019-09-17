@@ -1,0 +1,13 @@
+1. 객체 변수를 이용하는 방법
+innerHTML 속성 이용
+textContent 속성 이용
+
+2. 생성자 함수를 이용하는 방법
+Object 함수 이용
+var car = new Object();        //객체 생성
+car.name = 'Sonata';        //속성 정의
+car.speed = 100;
+car.color = 'blue';
+car.speedup = function() {        //메소드 정의
+        return this.speed+10;
+};

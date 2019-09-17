@@ -1,0 +1,61 @@
+=== Arguments
+
+ㅇ Let's review the difference between a parameter and an argument.
+- Parameters appear in function definitions; they're dummy names that represent values to be supplied when the function is called.
+- Arguments are expressions that appear in function calls. When the distinction between argument and parameter isn't important, I'll sometimes use argument to mean either.
+
+ㅇ In C, arguments are passed by value: when a function is called, each argument is evaluated and its value assigned to the corresponding parameter. Since the parameter contains a copy of the argument's value, any changes made to the parameter during the execution of the function don't affect the argument.
+
+In effect, each parameter behaves like a variable that's been initialized to the value of the matching argument.
+
+
+ㅇ The fact that arguments are passed by value has both advantages and disadvantages.
+
+Since a parameter can be modified without affecting the corresponding argument, we can use parameters as variables within the function, thereby reducing the number of genuine variables needed.
+
+Consider the following function, which raises a number x to a power n:
+
+int power(int x, int n)
+{
+  int i, result = 1;
+
+  for (i = 1; i <= n; i++)
+    result = result * x;
+
+  return result;
+}
+
+Since n is a copy of the original exponent, we can modify it inside the function, thus removing the need for i:
+
+int power(int x, int n)
+{
+  int result = 1;
+
+  while (n-- > 0)
+    result = result * x;
+
+  return result;
+}
+
+
+ㅇ Unfortunately, C's requirement that arguments be passed by value makes it difficult to write certain kinds of functions.
+
+For example, suppose that we need a function that will decompose a double value into an integer part and a fractional part.
+
+Since a function can't return two numbers, we might try passing a pair of variables to the function and having it modify them:
+
+void decompose (double x, long int_part, double frac_part)
+{
+  int_part = (long) x;  /* drops the fractional part of x */
+  frac_part = x - int_part;
+}
+
+Suppose that we call the function in the following way:
+
+decompose (3.14159, i, d);
+
+At the beginning of the call, 3.14159 is copied into x, i's value is copied into int_part, and d's value is copied into frac_part. The statements inside decompose then assign 3 to int_part and .14159 to frac_part, and the function returns.
+
+Unfortunately, i and d weren't affected by the assignments to int_part and frac_part, so they have the same values after the call as they did before the call.
+
+With a little extra effort, decompose can be made to work, as we'll see in Section 11.4. However, we'll need to cover more of CS features first.

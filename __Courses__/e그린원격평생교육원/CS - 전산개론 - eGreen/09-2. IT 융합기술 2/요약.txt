@@ -1,0 +1,18 @@
+1. IPTV(Internet Protocol Television)
+인터넷을 이용하여 방송 및 기타 컨텐츠를 TV 수상기로 제공하는 서비스 방식임
+
+2. DMB(Digital Multimedia Broadcasting)
+셀 방송 서비스 방식을 이용하여 실시간으로 뉴스, 증권 정보, 일기 정보, 음악, 드라마, 엔터테인먼트 정보 등을 이동전화 가입자 들에게 제공하는 서비스임
+
+3. 와이브로(Wireless Broadband Internet)
+Wireless Broadband Internet의 줄임말로서 언제 어디서나 이동 중에도 높은 전송 속도로 무선 인터넷 접속이 가능한 서비스
+
+4. RFID(Radio Frequency Identification System)
+무선 주파수를 이용한 비접촉 인식장치로서 태그와 리더기로 구성된 시스템으로서, 자동 인식과 데이터 수집용 무선통신 시스템임
+
+5. M-커머스(M-Commerce)
+휴대전화를 이용하여 상품을 구매하거나 금융거래를 하는 서비스를 통칭함
+
+6. U-City
+유비쿼터스 컴퓨팅, 정보통신 기술 등을 기반으로 도시 전반의 영역을 융합하여, 통합되고(integrated), 지능적이며(intelligent), 혁신적인(innovative) 미래형 최첨단 도시임
+

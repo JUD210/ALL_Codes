@@ -1,0 +1,12 @@
+1. 2차원 변환 함수의 종류
+
+함수        | 설명                 | 사용 예
+
+translate() | 평행 이동 변환       | transform:translate(50px, 100px);
+rotate()    | 회전 변환            | transform:rotate(20deg);
+scale()     | 크기 변환            | transform:scale(2, 3);
+skewX()     | X축 기울기 변환      | transform:skewX(20deg);
+skewY()     | Y축 기울기 변환      | transform:skewY(20deg);
+skew()      | X, Y축 기울기 변환   | transform:skew(20deg, 10deg);
+matrix()    | 2차원 행렬 구조 변환 | transform:matrix(1, -0.3, 0, 1, 0, 0);
+

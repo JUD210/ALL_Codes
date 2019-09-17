@@ -1,0 +1,14 @@
+1. 표 레이아웃
+셀 안 내용의 양에 따라 셀 너비를 조절
+
+속성값                | 설명
+
+table-layout:auto;    | 내용 분량에 따라 셀 너비가 자동으로 조절된다.(기본값)
+table-layout:fixed;   | 내용 분량과 관계없이 셀 너비를 조정한다.
+table-layout:initial; | 변경된 테이블 레이아웃을 기본값 상태(auto)로 설정한다.
+table-layout:inherit; | 부모 요소의 값을 상속 받아 셀 너비를 결정한다.
+
+
+2. 표 테두리
+표 테두리에서 빈 셀을 숨기는 기능은 empty-cells:hide이다.
+

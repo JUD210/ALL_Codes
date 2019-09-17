@@ -1,0 +1,5 @@
+=== 튜플 관계 해석(Tuple Relational Calculus)
+
+ㅇ 튜플 관계 해석(Tuple Relational Calculus)
+- 원하는 릴레이션을 튜플 해석식(Tuple Calculus Expression)으로 정의하는 표기법
+- 대표적인 언어: QUEL

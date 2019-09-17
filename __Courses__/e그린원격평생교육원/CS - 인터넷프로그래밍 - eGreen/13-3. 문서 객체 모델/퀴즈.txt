@@ -1,0 +1,57 @@
+
+
+
+1. 웹 문서를 메모리로 읽어 들여 트리(tree) 구조로 변환하는 모델은?
+
+
+
+
+
+
+
+XML
+
+
+
+DOM
+
+
+
+SAX
+
+
+
+Array
+
+
+2
+웹 문서를 메모리로 읽어 들여 트리(tree) 구조로 변환하는 모델은 DOM이다.
+
+
+
+
+2. 문서 객체의 속성값을 설정하는 속성 메소드는 무엇인가?
+
+
+
+
+
+
+
+setAttrbute
+
+
+
+saveAttrbute
+
+
+
+innerAttrbute
+
+
+
+modifyAttrbute
+
+
+1
+문서 객체의 속성값을 설정하는 속성 메소드는 setAttrbute이다.

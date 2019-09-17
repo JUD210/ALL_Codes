@@ -1,0 +1,19 @@
+1. I2C LCD가 아두이노와 연결이 된 상태에서 프로그램에서 이용하는 방법
+
+LiquidCrystal_I2C 라이브러리 설치
+
+사용가능한 명령(method)
+begin(), clear(), home(), setCursor(), write(), print(), cursor(), noCursor(), blink(), noBlink(), display(), noDisplay(), scrollDisplayLeft(), scrollDisplayRight(), autoscroll(), noAutoscroll(), leftToRight(), rightToLeft(), createChar(), backlight(), noBacklight()
+
+프로그램 선언부에 LiquidCrystal_I2C 라이브러리 포함
+include <LiquidCrystal_I2C.h>
+
+객체 생성
+LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C 주소, 열의 개수, 행의 갯수
+
+이 이후에 위의 사용가능한 명령(method)을 적절히 사용하면 됨
+lcd.begin(16, 2);
+lcd.print("Arduino LCD");
+lcd.setCursor(0, 1)
+lcd.print("Welcome");
+

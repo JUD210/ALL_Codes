@@ -1,0 +1,18 @@
+1. 프로그래밍 언어의 특성 간결성(simplicity),직교성(orthogonality),가독성(readability),정확성(preciseness),기계 독립성(machine independence)
+
+2. 프로그래밍 언어
+저급언어
+ㄴ 기계어
+ㄴ 어셈블리 언어
+
+고급언어
+ㄴ FORTRAN
+ㄴ COBOL
+ㄴ Pascal
+ㄴ Basic
+ㄴ Lisp
+ㄴ C
+ㄴ Ada
+ㄴ C++
+ㄴ Java
+ㄴ 기타

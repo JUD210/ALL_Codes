@@ -1,0 +1,88 @@
+=== Variable-Length Array Parameters
+ㅇ C99 adds several new twists to array arguments. The first has to do with variable-length arrays (VLAs), a feature of C99 that allows the length of an array to be specified using a non-constant expression. Variable-length arrays can also be parameters, as it turns out.
+
+
+ㅇ Consider the sum_array function discussed earlier in this section. Here's
+the definition of sum_array, with the body omitted:
+
+int sum_array(int a[], int n)
+{
+  ...
+}
+
+As it stands now, there's no direct link between n and the length of the array a. Although the function body treats n as a's length, the actual length of the array could in fact be larger than n (or smaller, in which case the function won't work correctly).
+
+Using a variable-length array parameter, we can explicitly state that a's length is n:
+
+int sum_array(int n, int a[n])
+{
+  ...
+}
+
+The value of the first parameter (n) specifies the length of the second  parameter (a). Note that the order of the parameters has been switched; order is important when variable-length array parameters are used.
+
+The following version of sum_array is illegal:
+
+int sum_array (int a[n], int n)  /*** WRONG ***/
+{
+  ...
+}
+
+The compiler will issue an error message at int a[n], because it hasn't yet seen n.
+
+
+ㅇ There are several ways to write the prototype for our new version of sum_array. One possibility is to make it look exactly like the function definition:
+
+int sum_array(int n, int a[n]);  /* Version 1 */
+
+Another possibility is to replace the array length by an asterisk (*):
+
+int sum_array(int n, int a[*]);  /* Version 2a */
+
+The reason for using the * notation is that parameter names are optional in function declarations. If the name of the first parameter is omitted, it wouldn't be possible to specify that the length of the array is n, but the * provides a clue that the length of the array is related to parameters that come earlier in the list:
+
+int sum_array(int, int [*]);  /* Version 2b */
+
+It's also legal to leave the brackets empty, as we normally do when declaring an array parameter:
+
+int sum_array(int n, int a[]);  /* Version 3a */
+int sum_array(int, int []);     /* Version 3b */
+
+Leaving the brackets empty isn't a good choice, because it doesn't expose the relationship between n and a.
+
+
+ㅇ In general, the length of a variable-length array parameter can be any expression. For example, suppose that we were to write a function that concatenates two arrays a and b by copying the elements of a, followed by the elements of b, into a third array named c:
+
+int concatenate (int m, int n, int a[m] , int b[n] , int c[m+n])
+{
+  ...
+}
+
+The length of c is the sum of the lengths of a and b. The expression used to specify the length of c involves two other parameters, but in general it could refer to variables outside the function or even call other functions.
+
+
+ㅇ Variable-length array parameters with a single dimension ㅡas in all our examples so farㅡ have limited usefulness. They make a function declaration or definition more descriptive by stating the desired length of an array argument.
+
+However, no additional error-checking is performed: it's still possible for an array argument to be too long or too short.
+
+
+ㅇ It turns out that variable-length array parameters are most useful for multidimensional arrays. Earlier in this section, we tried to write a function that sums the elements in a two-dimensional array. Our original function was limited to arrays with a fixed number of columns. If we use a variable-length array parameter, we can generalize the function to any number of columns:
+
+int sum_two_dimensional_array(int n, int m, int a[n][m])
+{
+  int i, j, sum = O;
+
+  for (i = O; i < n; i++)
+    for (j = 0; j < m; j++)
+      sum += a[i][j];
+
+  return sum;
+}
+
+Prototypes for this function include the following:
+
+int sum_two_dimensional_array(int n, int m, int a[n][m]);
+int sum_two_dimensional_array(int n, int m, int a[*][*]);
+int sum_two_dimensiona1_array(int n, int m, int a[][m]);
+int sum_two_dimensional_array(int n, int m, int a[][*]);
+

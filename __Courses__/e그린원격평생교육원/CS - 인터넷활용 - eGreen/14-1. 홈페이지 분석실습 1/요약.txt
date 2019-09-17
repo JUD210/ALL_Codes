@@ -1,0 +1,15 @@
+1. 청와대 홈페이지 분석
+청와대 홈페이지의 분석은 www.president.go.kr에서 함
+
+2. 국회 홈페이지 분석
+국회 홈페이지의 분석은 www.assembly.go.kr에서 함
+
+3. 법원 홈페이지 분석
+법원 홈페이지의 분석은 www.scourt.go.kr에서 함
+
+4. MRO : www.speedmall.co.kr 기업소모성 자재사이트 분석
+MRO(기업소모성 자재) 홈페이지의 분석은 www.speedmall.co.kr에서 함
+
+5. Logistics : www.dalogis.com 동아물류사이트 분석
+물류 홈페이지의 분석은 www.dalogis.com에서 함
+

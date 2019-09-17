@@ -1,0 +1,20 @@
+Q1. 데이터베이스의 특징으로 틀린 것은?
+1. 실시간 접근성(real-time accessibility)
+2. 내용에 의한 참조(content reference)
+3. 동시 공유(concurrent sharing)
+4. 이산적 변화(discrete evolution)
+
+
+계속적인 변화(continuous evolution) - 새로운 데이터의 삽입(insertion)이나, 삭제(deletion), 갱신(update)으로 항상 변하고, 그 속에서 현재의 정확한 데이터를 유지할 수 있음
+4
+
+
+Q2. 다음 중 데이터베이스의 개념에 포함되지 않는 것은?
+1. 통합된 데이터(integrated data)
+2. 저장 데이터(stored data)
+3. 운영 데이터(operational data)
+4. 빅 데이터(big data)
+
+
+데이터베이스의 개념: 통합된 데이터, 저장 데이터, 운영 데이터, 공용 데이터
+4

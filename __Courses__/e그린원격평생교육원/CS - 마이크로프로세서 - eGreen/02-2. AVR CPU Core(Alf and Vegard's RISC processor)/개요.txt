@@ -1,0 +1,11 @@
+1) 강의제목: AVR CPU Core(AVR: Alf and Vegard's RISC processor)
+
+2) 강의주제:
+① AVR 구조
+② ALU, 레지스터
+③ Stack Pointer
+
+3) 강의내용(학습목표):
+① AVR 구조에 대해 설명할 수 있다
+② CPU Core인 ALU, 레지스터 등에 대해 설명할 수 있다.
+③ 스택과 스택 포인터에 대해 설명할 수 있다

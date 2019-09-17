@@ -1,0 +1,11 @@
+1. 문서 객체 생성
+
+메소드           | 설명
+
+createElement()  | 요즘 노드를 생성한다.
+createTextNode() | 텍스트 노드를 생성한다.
+appendChild()    | 요소 노드를 body 객체에 추가한다.
+
+2. 문서 객체 스타일 변경
+document.getElementById(id).style.속성명 = "속성값";
+

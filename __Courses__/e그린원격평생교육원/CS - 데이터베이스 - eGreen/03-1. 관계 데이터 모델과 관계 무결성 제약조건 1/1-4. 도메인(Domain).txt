@@ -1,0 +1,14 @@
+=== 도메인(Domain)
+
+ㅇ 도메인
+- 릴레이션에 포함된 각각의 속성들이 취할 수 있는 같은 타입의 원자(Atomic)값들의 집합
+
+ㅇ 도메인의 정의에 대한 예
+- CREATE DOMAIN DEMPNO INTEGER        // DEMPNO = Department Employee Number
+- CREATE DOMAIN DEMPNAME VARCH8AR(30)
+- CREATE DOMAIN DSALARY INTEGERW
+
+ㅇ 도메인이라는 개념이 필요한 이유
+- 릴레이션에 저장되는 데이터 값들이 본래 의도했던 값들만 저장되고 관리되도록 하는데 있음
+
+ex) '성별'이라는 속성이 있다면 이 속성이 가질 수 있는 값은 {남, 여}

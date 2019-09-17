@@ -1,0 +1,10 @@
+1. 함수 일반
+함수란 복잡한 수식을 쉽게 계산할 수 있게 미리 정의해 놓은 식
+함수사용법은 자동합계, 라이브러리, 마법사, 직접입력이 있음
+
+2. 다양한 함수
+조건부 함수: SUMIF, SUMIF, AVERAGEIF, COUNTIF
+조회 및 참조함수: VLOOKUP, HLOOKUP
+텍스트 함수: PROPER, UPPER, LOWER, LEFT, RIGHT, MID, SUBSTITUTE
+논리 함수: IF, AND, OR, NOT, IFERROR
+

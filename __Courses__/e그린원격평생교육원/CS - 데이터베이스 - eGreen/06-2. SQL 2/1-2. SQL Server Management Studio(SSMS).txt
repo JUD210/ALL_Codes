@@ -1,0 +1,23 @@
+=== SQL Server Management Studio(SSMS)
+
+ㅇ SQL Server에서 SSMS를 사용한 데이터베이스 생성하기
+- 쿼리 편집기에 다음과 같이 입력한 후 <실행>을 클릭
+- USE master
+- GO
+
+ㅇ SSMS의 각 창
+- (이미지)
+
+ㅇ 쿼리 분석기를 실행한 후 아래 T-SQL 구문을 작성
+- ex) CREATE DATABASE EduManager
+- (이미지)
+
+ㅇ 쿼리 편집기
+- SQL Server에서 SQL문을 입력하는 곳
+- SQL문을 입력 및 실행하는 텍스트 에디터
+
+ㅇ 쿼리 편집기 사용법
+쿼리를 실행할 대상 서버(인스턴스)를 선택
+-> <새 쿼리>를 클릭하여 쿼리 편집기를 열음
+-> SQL 구문을 입력
+-> <실행> 버튼을 눌러 SQL문장을 실행

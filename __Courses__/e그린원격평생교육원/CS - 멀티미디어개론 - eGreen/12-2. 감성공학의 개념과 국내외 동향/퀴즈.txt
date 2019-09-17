@@ -1,0 +1,60 @@
+
+
+1. 사용자 감성과 교감하고 사용자의 감성을 콘텐츠/다른 사용자에게 표현하고 전송하여 감성 교감을 극대화 할 수 있는 기술은?
+
+
+
+
+
+
+
+
+감성 추론/인지 분야
+
+
+
+감성 인터랙션 분야
+
+
+
+감성 콘텐츠 제작분야
+
+
+
+감성측정/평가 분야
+
+
+2
+사용자 감성과 교감하고 사용자의 감성을 콘텐츠/다른 사용자에게 표현하고 전송하여 감성 교감을 극대화할 수 있는 인터랙션 기술
+
+
+
+
+
+
+2. BCI의 약자는 무엇인가?
+
+
+
+
+
+
+
+Battery Council International
+
+
+
+Broadcasting Commission of Ireland
+
+
+
+Better Cotton initiative
+
+
+
+Brain-Computer Interface
+
+
+4
+Brain-Computer Interface의 약자
+

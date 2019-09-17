@@ -1,0 +1,149 @@
+
+
+1. 다음 중 홈페이지에 Video를 삽입과 무관한 것은?
+
+
+
+
+
+
+
+
+Embed Tag
+
+
+
+HTML5
+
+
+
+Dreamweaver
+
+
+
+USN
+
+
+4
+USN은 Ubiquitous Sensor Network이다.
+
+
+
+
+
+
+2. 다음 중 홈페이지에서 Hyper Link와 무관한 것은?
+
+
+
+
+
+
+
+초연결
+
+
+
+CCTV
+
+
+
+특정 위치
+
+
+
+Web Site
+
+
+2
+CCTV는 Closed Circuit TeleVision이다.
+
+
+
+
+
+3. 다음 중 홈페이지에서 Name Anker와 무관한 것은?
+
+
+
+
+
+
+
+문서의 특정 위치
+
+
+
+ID 속성
+
+
+
+WSN
+
+
+
+Hyper Link
+
+
+3
+WSN은 Wireless Sensor Network이다.
+
+
+
+
+
+4. 다음 중 홈페이지에서 Image Map 지정과 관계없는 것은?
+
+
+
+
+
+
+
+LED
+
+
+
+Shape 속성
+
+
+
+Hot Spot 영역
+
+
+
+<area> Tag
+
+
+1
+LED는 발광Diode이다.
+
+
+
+
+
+5. 다음 중 In-Line Frame과 무관한 것은?
+
+
+
+
+
+
+
+Iframe
+
+
+
+Scroll Bar
+
+
+
+CGI
+
+
+
+FET
+
+
+4
+FET는 Field Effect Transistor이다.

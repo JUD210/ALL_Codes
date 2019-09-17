@@ -1,0 +1,18 @@
+1. 3차원 애니메이션 제작 도구
+- 3D Animation 제작 도구는 3차원 입체 애니메이션을 제작
+
+
+2. 플래시 애니메이션 제작 도구
+- Flash Animation 제작 도구는 Adobe사의 애니메이션 제작용 소프트웨어
+
+
+3. 비디오의 원리
+- Video는 인간의 시각(눈)을 통해서 입력되는 신호를 두뇌가 인지한 영상물
+
+
+4. 비디오 파일 형식과 분류
+- Video File 형식들은 mp4, avi, flv, ogv, webm
+
+
+5. 동영상 제작 도구
+- 동영상 제작 도구는 Moviva, Camtasia Studio

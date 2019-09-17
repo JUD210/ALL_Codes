@@ -1,0 +1,17 @@
+
+1.
+아두이노 이외 오픈소스 하드웨어 종류
+
+라즈베리파이(Raspberry PI)
+갈릴레오(Galileo)
+비글본 블랙(Beagle-bone Black)
+에디슨(Edison)
+
+
+2.
+시리얼로 데이터를 수신할 때 사용하는 방법
+
+Serial.available() 명령을 사용하여 수신된 데이터가 있는지 확인하고
+결과값이 참이면 Serial.read() 명령을 사용하여 데이터를 읽고
+결과값이 거짓이면 계속해서 Serial.available() 명령을 사용하여 데이터가 있는지 확인하는 과정을 반복함
+

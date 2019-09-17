@@ -1,0 +1,6 @@
+1. 변화 속성
+효과가 적용되는 과정을 좀 더 부드럽게 보여주거나, 그 과정을 시간적으로 조정할 수 있도록 해주는 속성
+transition-property : 변화 효과를 적용할 속성들 나열
+transition-duration : 변화가 지속되는 시간 지정
+transition-timing-function : 변화의 시작과 끝 타이밍 지정
+transition-delay : 변화 효과가 지연되는 시간 지정

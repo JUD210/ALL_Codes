@@ -1,0 +1,15 @@
+1. 웹 사이트 개발 및 서비스 절차
+Web Site 개발은 견적 의뢰 ~ 홈페이지 오픈(Open)으로서 유지보수가 요구됨
+Web Service 절차는 홈페이지에 회원가입 ~ 사용 ~ 회원탈퇴 방식임
+
+2. 도메인 주소와 DNS
+
+3. 클라이언트 구성요소
+하드웨어 기기, 소프트웨어, Web Browser, Media Player
+
+4. 서버 구성요소
+하드웨어 기기, 소프트웨어, 데이터베이스, Web Browser, Media Service, Web Service
+
+5. Visual Studio 통합개발환경
+Visual Studio IDE는 마이크로소프트가 공급하는 통합개발환경
+

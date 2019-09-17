@@ -1,0 +1,43 @@
+=== Function Declarations
+ㅇ In the programs in Section 9.1, the definition of each function was always placed above the point at which it was called. In fact, C doesn't require that the definition of a function precede its calls.
+
+
+ㅇ Suppose that we rearrange the average.c program by putting the definition of average after the definition of main:
+
+When the compiler encounters the first call of average in main, it has no information about average: it doesn't know how many parameters average has, what the types of these parameters are, or what kind of value average returns.
+
+Instead of producing an error message, though, the compiler assumes that average returns an int value (recall from Section 9.1 that the return type of a function is int by default in C89).
+
+We say that the compiler has created an implicit declaration of the function. The compiler is unable to check that we're passing average the right number of arguments and that the arguments have the proper type. Instead, it performs the default argument promotions and hopes for the best.
+
+When it encounters the definition of average later in the program, the compiler notices that the function's return type is actually double, not int, and so we get an error message.
+
+
+ㅇ One way to avoid the problem of call-before-definition is to arrange the program so that the definition of each function precedes all its calls.
+
+Unfortunately, such an arrangement doesn't always exist, and even when it does, it may make the program harder to understand by putting its function definitions in an unnatural order.
+
+
+ㅇ Fortunately, C offers a better solution: declare each function before calling it.
+
+A function declaration provides the compiler with a brief glimpse at a function whose full definition will appear later. A function declaration resembles the first line of a function definition with a semicolon added at the end:
+
+return-type function-name (parameters) ;
+double average(double a, double b);
+
+Needless to say, the declaration of a function must be consistent with the function's definition.
+
+Function declarations of the kind we've been discussing are known as function prototypes to distinguish them from an older style of function declaration in which the parentheses are left empty.
+
+A prototype provides a complete description of how to call a function: how many arguments to supply, what their types should be, and what type of result will be retuned.
+
+
+ㅇ Incidentally, a function prototype doesn't have to specify the names of the function's parameters, as long as their types are present:
+
+double average(double, double);
+
+It's usually best not to omit parameter names, since they help document the purpose of each parameter and remind the programmer of the order in which arguments must appear when the function is called.
+
+However, there are legitimate reasons for omitting parameter names, and some programmers prefer to do so.
+
+C99 has adopted the rule that either a declaration or a definition of a function must be present prior to any call of the function. Calling a function for which the compiler has not yet seen a declaration or definition is an error.

@@ -1,0 +1,13 @@
+1) 강의주제: 홈페이지 제작 실습 2
+① 문서 제작용 웹 브라우저 설정
+② HTML5에 추가된 시맨틱 요소
+③ Power Unit Edit Plus에서 HTML5 템플릿 문서
+④ Power Unit Edit Plus에서 HTML5 클립 텍스트
+⑤ Power Unit 드림위버에서 HTML5 문서
+
+2) 강의세부내용:
+① 문서 제작용 웹 브라우저 설정에 대해 설명할 수 있다.
+② HTML5에서 추가된 시맨틱 요소에 대해 설명할 수 있다.
+③ Power Unit Edit Plus에서 HTML5 템플릿 문서에 대해 설명할 수 있다.
+④ Power Unit Edit Plus에서 HTML5 클립 텍스트에 대해 설명할 수 있다.
+⑤ Power Unit 드림위버에서 HTML5 문서에 대해 설명할 수 있다.

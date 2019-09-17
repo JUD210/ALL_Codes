@@ -1,0 +1,60 @@
+
+
+1. 박스 모델의 margin 속성 적용 시 { margin: 20px 20px 30px 20px }라는 형태로 속성값이 적용되었을 때의 순서로 알맞은 것은?
+
+
+
+
+
+
+
+top → bottom → left → right
+
+
+
+top → right → bottom → left
+
+
+
+top → left → bottom → right
+
+
+
+top → left → bottom → right
+
+
+2
+top → right → bottom → left 순서이다.
+
+
+
+
+
+2. 박스 모델의 속성에 대한 설명으로 옳지 않은 것은?
+
+
+
+
+
+
+
+content : 실제 내용이 표현되는 곳
+
+
+
+padding : 콘텐츠와 테두리 사이의 여백
+
+
+
+padding : 박스의 테두리 두께
+
+
+
+margin : 테두리와 박스의 최종 경계 사이의 여백
+
+
+3
+박스의 테두리 두께 속성은 border이다.
+
+
+
